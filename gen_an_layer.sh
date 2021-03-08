@@ -70,7 +70,7 @@ for dr in */*toml; do
         $comma
         {
 			"techniqueID": $(get_info "$dr" 'rule.threat.[0].technique.[0].id'),
-			"color": "#33ff99",
+			"color": "#11ff33",
 			"comment": $(get_info "$dr" "rule.description" ),
 			"enabled": true,
 			"metadata": [
@@ -96,7 +96,7 @@ done
 cat <<_EOM_
     ],
     "showTacticRowBackground": true,
-    "tacticRowBackground": "#6699ff",
+    "tacticRowBackground": "#bbddff",
     "selectTechniquesAcrossTactics": false,
     "selectSubtechniquesWithParent": false
 }
