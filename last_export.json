@@ -1,0 +1,1356 @@
+{
+    "name": "Elastic Security",
+    "versions": {
+        "attack": "8",
+        "navigator": "4.2",
+        "layer": "4.1"
+    },
+    "domain": "enterprise-attack",
+    "description": "Mapping Elastic Secrity Detection Rules (https://github.com/elastic/detection-rules) to ATTACK Navigator",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "macOS",
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "showName": true,
+        "showID": true
+    },
+    "hideDisabled": false,
+    "techniques": [
+        
+        {
+			"techniqueID": "T1530",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of an AWS log trail that specifies the settings for delivery of log data.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudTrail Log Created"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1110",
+			"color": "#33ff99",
+			"comment": "Identifies a high number of failed attempts to assume an AWS Identity and Access Management (IAM) role. IAM roles areused to delegate access to users or services. An adversary may attempt to enumerate IAM roles in order to determine if arole exists before attempting to assume or hijack the discovered role.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Brute Force of Assume Role Policy"},
+                {"name": "Rule type", "value": "threshold"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "null",
+			"color": "#33ff99",
+			"comment": "Identifies the addition of a user to a specified group in AWS Identity and Access Management (IAM).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM User Addition to Group"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1110",
+			"color": "#33ff99",
+			"comment": "Identifies a high number of failed authentication attempts to the AWS management console for the Root user identity. Anadversary may attempt to brute force the password for the Root user identity, as it has complete access to all servicesand resources for the AWS account.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Management Console Brute Force of Root User Identity"},
+                {"name": "Rule type", "value": "threshold"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1528",
+			"color": "#33ff99",
+			"comment": "An adversary may attempt to access the secrets in secrets manager to steal certificates, credentials, or other sensitivematerial",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Access Secret in Secrets Manager"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Data Protection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an AWS log trail. An adversary may delete trails in an attempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudTrail Log Deleted"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies suspending the recording of AWS API calls and log file delivery for the specified trail. An adversary maysuspend trails in an attempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudTrail Log Suspended"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an AWS CloudWatch alarm. An adversary may delete alarms in an attempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudWatch Alarm Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies attempts to delete an AWS Config Service rule. An adversary may tamper with Config rules in order to reducevisibiltiy into the security posture of an account and / or its workload instances.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Config Service Tampering"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies an AWS configuration change to stop recording a designated set of resources.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Configuration Recorder Stopped"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of one or more flow logs in AWS Elastic Compute Cloud (EC2). An adversary may delete flow logsin an attempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS EC2 Flow Log Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an Amazon Elastic Compute Cloud (EC2) network access control list (ACL) or one of itsingress/egress entries.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS EC2 Network Access Control List Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an Amazon GuardDuty detector. Upon deletion, GuardDuty stops monitoring the environment andall existing findings are lost.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS GuardDuty Detector Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of various Amazon Simple Storage Service (S3) bucket configuration components.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS S3 Bucket Configuration Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a specified AWS Web Application Firewall (WAF) access control list.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS WAF Access Control List Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a specified AWS Web Application Firewall (WAF) rule or rule group.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS WAF Rule or Rule Group Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1537",
+			"color": "#33ff99",
+			"comment": "An attempt was made to modify AWS EC2 snapshot attributes. Snapshots are sometimes shared by threat actors in order toexfiltrate bulk data from an EC2 fleet. If the permissions were modified, verify the snapshot was not shared with anunauthorized or unexpected AWS account.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS EC2 Snapshot Activity"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1565",
+			"color": "#33ff99",
+			"comment": "Identifies an update to an AWS log trail setting that specifies the delivery of log files.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudTrail Log Updated"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1485",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a specified AWS CloudWatch log group. When a log group is deleted, all the archived logevents associated with the log group are also permanently deleted.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudWatch Log Group Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1485",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an AWS CloudWatch log stream, which permanently deletes all associated archived log eventswith the stream.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS CloudWatch Log Stream Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1565",
+			"color": "#33ff99",
+			"comment": "Identifies disabling of Amazon Elastic Block Store (EBS) encryption by default in the current region. Disablingencryption by default does not change the encryption status of your existing volumes.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS EC2 Encryption Disabled"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Data Protection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1531",
+			"color": "#33ff99",
+			"comment": "Identifies the deactivation of a specified multi-factor authentication (MFA) device and removes it from association withthe user name for which it was originally enabled. In AWS Identity and Access Management (IAM), a device must bedeactivated before it can be deleted.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Deactivation of MFA Device"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1531",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a specified AWS Identity and Access Management (IAM) resource group. Deleting a resourcegroup does not delete resources that are members of the group; it only deletes the group structure.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Group Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1485",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an Amazon Relational Database Service (RDS) Aurora database cluster or global databasecluster.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS RDS Cluster Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1489",
+			"color": "#33ff99",
+			"comment": "Identifies that an Amazon Relational Database Service (RDS) cluster or instance has been stopped.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS RDS Instance/Cluster Stoppage"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies a successful login to the AWS Management Console by the Root user.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Management Console Root Login"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies AWS IAM password recovery requests. An adversary may attempt to gain unauthorized AWS access by abusingpassword recovery mechanisms.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Password Recovery Requested"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566",
+			"color": "#33ff99",
+			"comment": "Identifies the execution of commands and scripts via System Manager. Execution methods such as RunShellScript,RunPowerShellScript, and alike can be abused by an authenticated attacker to install a backdoor or to interact with acompromised instance via reverse-shell using system only commands.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Execution via System Manager"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1133",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of an AWS Elastic Compute Cloud (EC2) network access control list (ACL) or an entry in a networkACL with a specified rule number.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS EC2 Network Access Control List Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1136",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of a group in AWS Identity and Access Management (IAM). Groups specify permissions for multipleusers. Any user in a group automatically has the permissions that are assigned to the group.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Group Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1133",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of a new Amazon Relational Database Service (RDS) Aurora DB cluster or global database spreadacross multiple regions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS RDS Cluster Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies attempts to login to AWS as the root user without using multi-factor authentication (MFA). Amazon AWS bestpractices indicate that the root user should be protected by MFA.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS Root Login Without MFA"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies attempts to modify an AWS IAM Assume Role Policy. An adversary may attempt to modify the AssumeRolePolicy ofa misconfigured role in order to gain the privileges of that role.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AWS IAM Assume Role Policy Update"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1530",
+			"color": "#33ff99",
+			"comment": "Identifies when an Event Hub Authorization Rule is created or updated in Azure. An authorization rule is associated withspecific rights, and carries a pair of cryptographic keys. When you create an Event Hubs namespace, a policy rule namedRootManageSharedAccessKey is created for the namespace. This has manage permissions for the entire namespace and it'srecommended that you treat this rule like an administrative root account and don't use it in your application.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Event Hub Authorization Rule Created or Updated"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1552",
+			"color": "#33ff99",
+			"comment": "Identifies modifications to a Key Vault in Azure. The Key Vault is a service that safeguards encryption keys and secretslike certificates, connection strings, and passwords. Because this data is sensitive and business critical, access tokey vaults should be secured to allow only authorized applications and users.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Key Vault Modified"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Data Protection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1528",
+			"color": "#33ff99",
+			"comment": "Identifies a rotation to storage account access keys in Azure. Regenerating access keys can affect any applications orAzure services that are dependent on the storage account key. Adversaries may regenerate a key as a means of acquiringcredentials to access systems and resources.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Storage Account Key Regenerated"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1550",
+			"color": "#33ff99",
+			"comment": "Identifies when a new credential is added to an application in Azure. An application may use a certificate or secretstring to prove its identity when requesting a token. Multiple certificates and secrets can be added for an applicationand an adversary may abuse this by creating an additional authentication method to evade defenses or persist in anenvironment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Application Credential Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of diagnostic settings in Azure, which send platform logs and metrics to different destinations.An adversary may delete diagnostic settings in an attempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Diagnostic Settings Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1550",
+			"color": "#33ff99",
+			"comment": "Identifies when a new service principal is added in Azure. An application, hosted service, or automated tool thataccesses or modifies resources needs an identity created. This identity is known as a service principal. For securityreasons, it's always recommended to use service principals with automated tools rather than allowing them to log in witha user identity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Service Principal Addition"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies an Event Hub deletion in Azure. An Event Hub is an event processing service that ingests and processes largevolumes of events and data. An adversary may delete an Event Hub in an attempt to evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Event Hub Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a firewall policy in Azure. An adversary may delete a firewall policy in an attempt to evadedefenses and/or to eliminate barriers in carrying out their initiative.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Firewall Policy Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a Network Watcher in Azure. Network Watchers are used to monitor, diagnose, view metrics, andenable or disable logs for resources in an Azure virtual network. An adversary may delete a Network Watcher in anattempt to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Network Watcher Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Network Security]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1526",
+			"color": "#33ff99",
+			"comment": "Identifies changes to container access levels in Azure. Anonymous public read access to containers and blobs in Azure isa way to share data broadly, but can present a security risk if access to sensitive data is not managed judiciously.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Blob Container Access Level Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Asset Visibility]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#33ff99",
+			"comment": "Identifies command execution on a virtual machine (VM) in Azure. A Virtual Machine Contributor role lets you managevirtual machines, but not access them, nor access the virtual network or storage account they’re connected to. However,commands can be run via PowerShell on the VM, which execute as System. Other roles, such as certain Administrator rolesmay be able to execute commands on a VM as well.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Command Execution on Virtual Machine"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1485",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a resource group in Azure, which includes all resources within the group. Deletion ispermanent and irreversible. An adversary may delete a resource group in an attempt to evade defenses or intentionallydestroy data.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Resource Group Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies high risk Azure Active Directory (AD) sign-ins by leveraging Microsoft's Identity Protection machine learningand heuristics. Identity Protection categorizes risk into three tiers: low, medium, and high. While Microsoft does notprovide specific details about how risk is calculated, each level brings higher confidence that the user or sign-in iscompromised.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Active Directory High Risk Sign-in"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies a sign-in using the Azure Active Directory PowerShell module. PowerShell for Azure Active Directory allowsfor managing settings from the command line, which is intended for users who are members of an admin role.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Active Directory PowerShell Sign-in"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566",
+			"color": "#33ff99",
+			"comment": "Detects when a user grants permissions to an Azure-registered application or when an administrator grants tenant-widepermissions to an application. An adversary may create an Azure-registered application that requests access to data suchas contact information, email, or documents.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Possible Consent Grant Attack via Azure-Registered Application"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies an invitation to an external user in Azure Active Directory (AD). Azure AD is extended to includecollaboration, allowing you to invite people from outside your organization to be guest users in your cloud account.Unless there is a business need to provision guest access, it is best practice avoid creating guest users. Guest userscould potentially be overlooked indefinitely leading to a potential vulnerability.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure External Guest User Invitation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies when an Azure Automation account is created. Azure Automation accounts can be used to automate managementtasks and orchestrate actions across systems. An adversary may create an Automation account in order to maintainpersistence in their target's environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Automation Account Created"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies when an Azure Conditional Access policy is modified. Azure Conditional Access policies control access toresources via if-then statements. For example, if a user wants to access a resource, then they must complete an actionsuch as using multi-factor authentication to access it. An adversary may modify a Conditional Access policy in order toweaken their target's security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Conditional Access Policy Modified"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies an Azure Active Directory (AD) Global Administrator role addition to a Privileged Identity Management (PIM)user account. PIM is a service that enables you to manage, control, and monitor access to important resources in anorganization. Users who are assigned to the Global administrator role can read and modify any administrative setting inyour Azure AD organization.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Global Administrator Role Addition to PIM User"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Azure Active Directory (AD) Privileged Identity Management (PIM) is a service that enables you to manage, control, andmonitor access to important resources in an organization. PIM can be used to manage the built-in Azure resource rolessuch as Global Administrator and Application Administrator. An adversary may add a user to a PIM role in order tomaintain persistence in their target's environment or modify a PIM role to weaken their target's security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Azure Privilege Identity Management Role Modified"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies when multi-factor authentication (MFA) is disabled for an Azure user account. An adversary may disable MFAfor a user account in order to weaken the authentication requirements for the account.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Multi-Factor Authentication Disabled for an Azure User"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies when a user is added as an owner for an Azure application. An adversary may add a user account as an ownerfor an Azure application in order to grant additional permissions and modify the application's configuration usinganother account.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "User Added as Owner for Azure Application"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies when a user is added as an owner for an Azure service principal. The service principal object defines whatthe application can do in the specific tenant, who can access the application, and what resources the app can access. Aservice principal object is created when an application is given permission to access resources in a tenant. Anadversary may add a user account as an owner for a service principal and use that account in order to define what anapplication can do in the Azure AD tenant.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "User Added as Owner for Azure Service Principal"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Azure Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1539",
+			"color": "#33ff99",
+			"comment": "Identifies the execution of a Chromium based browser with the debugging process argument, which may indicate an attemptto steal authentication cookies. An adversary may steal web application or service session cookies and use them to gainaccess web applications or Internet services as an authenticated user without needing credentials.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Cookies Theft via Browser Debugging"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Windows macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of WebServer access logs. This may indicate an attempt to evade detection or destroy forensicevidence on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "WebServer Access Logs Deleted"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Windows macOS Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1518",
+			"color": "#33ff99",
+			"comment": "Identifies the use of the grep command to discover known third-party macOS and Linux security tools, such asAntivirus or Host Firewall details.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Security Software Discovery via Grep"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Linux Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#33ff99",
+			"comment": "Identifies when a Python script is executed using command line input and imports the sys module. Attackers often usethis method to execute malicious scripts and avoiding writing it to disk.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Python Script Execution via Command Line"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#33ff99",
+			"comment": "Identifies the execution of a shell process with suspicious arguments which may be indicative of reverse shell activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Reverse Shell Activity via Terminal"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#33ff99",
+			"comment": "Identifies suspicious child processes of a Java Archive (JAR) file. JAR files may be used to deliver malware in order toevade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious JAR Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1565",
+			"color": "#33ff99",
+			"comment": "The hosts file on endpoints is used to control manual IP address to hostname resolutions. The hosts file is the firstpoint of lookup for DNS hostname resolution so if adversaries can modify the endpoint hosts file, they can route trafficto malicious infrastructure. This rule detects modifications to the hosts file on Microsoft Windows, Linux (Ubuntu orRHEL) and macOS systems.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Hosts File Modified"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Windows macOS Threat Detection Impact]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1190",
+			"color": "#33ff99",
+			"comment": "This rule identifies Zoom meetings that are created without a passcode. Meetings without a passcode are susceptible toZoombombing. Zoombombing is carried out by taking advantage of Zoom sessions that are not protected with a passcode.Zoombombing refers to the unwanted, disruptive intrusion, generally by Internet trolls and hackers, into a videoconference call. In a typical Zoombombing incident, a teleconferencing session is hijacked by the insertion of materialthat is lewd, obscene, racist, or antisemitic in nature, typically resulting of the shutdown of the session.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Zoom Meeting with no Passcode"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Application Communication Zoom Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543",
+			"color": "#33ff99",
+			"comment": "Adversaries may modify the standard authentication module for persistence via patching the normal authorization processor modifying the login configuration to allow unauthorized access or elevate privileges.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Modification of Standard Authentication Module or Configuration"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Linux Threat Detection Credential Access Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1053",
+			"color": "#33ff99",
+			"comment": "Identifies the creation or execution of a cron job. Adversaries may abuse cron jobs to perform task scheduling forinitial or recurring execution of malicious code.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Persistence via Cron Job"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546",
+			"color": "#33ff99",
+			"comment": "Both ~/.bash_profile and ~/.bashrc are files containing shell commands that are run when Bash is invoked. These filesare executed in a user's context, either interactively or non-interactively, when a user logs in so that theirenvironment is set correctly. Adversaries may abuse this to establish persistence by executing malicious contenttriggered by a user’s shell.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Bash Shell Profile Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Linux Threat Detection Execution Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "The Secure Shell (SSH) authorized_keys file specifies which users are allowed to log into a server using public key authentication.Adversaries may modify it to maintain persistence on a victim host by adding their own public key(s).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "SSH Authorized Keys File Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548",
+			"color": "#33ff99",
+			"comment": "A sudoers file specifies the commands users or groups can run and from which terminals. Adversaries can take advantageof these configurations to execute commands as other users or spawn processes with higher privileges.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Privilege Escalation via Sudoers File Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548",
+			"color": "#33ff99",
+			"comment": "An adversary may add the setuid or setgid bit to a file or directory in order to run a file with the privileges of theowning user or group. An adversary can take advantage of this to either do a shell escape or exploit a vulnerability inan application with the setuid or setgid bit to get code running in a different user’s context. Additionally,adversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in thefuture.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Setuid / Setgid Bit Set via chmod"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1068",
+			"color": "#33ff99",
+			"comment": "Identifies the attempted use of a heap-based buffer overflow vulnerability for the Sudo binary in Unix-like systems(CVE-2021-3156). Successful exploitation allows an unprivileged user to escalate to the root user.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Sudo Heap-Based Buffer Overflow Attempt"},
+                {"name": "Rule type", "value": "threshold"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548",
+			"color": "#33ff99",
+			"comment": "A sudoers file specifies the commands that users or groups can run and from which terminals. Adversaries can takeadvantage of these configurations to execute commands as other users or spawn processes with higher privileges.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Sudoers File Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1530",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of a subscription in Google Cloud Platform (GCP). In GCP, the publisher-subscriber relationship(Pub/Sub) is an asynchronous messaging service that decouples event-producing and event-processing services. Asubscription is a named resource representing the stream of messages to be delivered to the subscribing application.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Pub/Sub Subscription Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1530",
+			"color": "#33ff99",
+			"comment": "Identifies the creation of a topic in Google Cloud Platform (GCP). In GCP, the publisher-subscriber relationship(Pub/Sub) is an asynchronous messaging service that decouples event-producing and event-processing services. A topic isused to forward messages from publishers to subscribers.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Pub/Sub Topic Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies when a firewall rule is created in Google Cloud Platform (GCP). Virtual Private Cloud (VPC) firewall rulescan be configured to allow or deny connections to or from virtual machine (VM) instances. An adversary may create a newfirewall rule in order to weaken their target's security controls and allow more permissive ingress or egress trafficflows for their benefit.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Firewall Rule Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies when a firewall rule is deleted in Google Cloud Platform (GCP). Virtual Private Cloud (VPC) firewall rulescan be configured to allow or deny connections to or from virtual machine (VM) instances. An adversary may delete afirewall rule in order to weaken their target's security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Firewall Rule Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies when a firewall rule is modified in Google Cloud Platform (GCP). Virtual Private Cloud (VPC) firewall rulescan be configured to allow or deny connections to or from virtual machine (VM) instances. An adversary may modify afirewall rule in order to weaken their target's security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Firewall Rule Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Configuration Audit]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies a Logging bucket deletion in Google Cloud Platform (GCP). Log buckets are containers that store and organizelog data. A deleted bucket stays in a pending state for 7 days, and Logging continues to route logs to the bucket duringthat time. To stop routing logs to a deleted bucket, the log sinks can be deleted that have the bucket as a destination,or the filter for the sinks can be modified to stop routing logs to the deleted bucket. An adversary may delete a logbucket to evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Logging Bucket Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies a Logging sink deletion in Google Cloud Platform (GCP). Every time a log entry arrives, Logging compares thelog entry to the sinks in that resource. Each sink whose filter matches the log entry writes a copy of the log entry tothe sink's export destination. An adversary may delete a Logging sink to evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Logging Sink Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a subscription in Google Cloud Platform (GCP). In GCP, the publisher-subscriber relationship(Pub/Sub) is an asynchronous messaging service that decouples event-producing and event-processing services. Asubscription is a named resource representing the stream of messages to be delivered to the subscribing application.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Pub/Sub Subscription Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of a topic in Google Cloud Platform (GCP). In GCP, the publisher-subscriber relationship(Pub/Sub) is an asynchronous messaging service that decouples event-producing and event-processing services. A publisherapplication creates and sends messages to a topic. Deleting a topic can interrupt message flow in the Pub/Sub pipeline.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Pub/Sub Topic Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1222",
+			"color": "#33ff99",
+			"comment": "Identifies when the Identity and Access Management (IAM) permissions are modified for a Google Cloud Platform (GCP)storage bucket. An adversary may modify the permissions on a storage bucket to weaken their target's security controlsor an administrator may inadvertently modify the permissions, which could lead to data exposure or loss.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Storage Bucket Permissions Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1537",
+			"color": "#33ff99",
+			"comment": "Identifies a modification to a Logging sink in Google Cloud Platform (GCP). Logging compares the log entry to the sinksin that resource. Each sink whose filter matches the log entry writes a copy of the log entry to the sink's exportdestination. An adversary may update a Logging sink to exfiltrate logs to a different export destination.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Logging Sink Modification"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Log Auditing]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1531",
+			"color": "#33ff99",
+			"comment": "Identifies an Identity and Access Management (IAM) role deletion in Google Cloud Platform (GCP). A role contains a setof permissions that allows you to perform specific actions on Google Cloud resources. An adversary may delete an IAMrole to inhibit access to accounts utilized by legitimate users.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP IAM Role Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1531",
+			"color": "#33ff99",
+			"comment": "Identifies when a service account is deleted in Google Cloud Platform (GCP). A service account is a special type ofaccount used by an application or a virtual machine (VM) instance, not a person. Applications use service accounts tomake authorized API calls, authorized as either the service account itself, or as G Suite or Cloud Identity usersthrough domain-wide delegation. An adversary may delete a service account in order to disrupt their target's businessoperations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Service Account Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1531",
+			"color": "#33ff99",
+			"comment": "Identifies when a service account is disabled in Google Cloud Platform (GCP). A service account is a special type ofaccount used by an application or a virtual machine (VM) instance, not a person. Applications use service accounts tomake authorized API calls, authorized as either the service account itself, or as G Suite or Cloud Identity usersthrough domain-wide delegation. An adversary may disable a service account in order to disrupt to disrupt their target'sbusiness operations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Service Account Disabled"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1485",
+			"color": "#33ff99",
+			"comment": "Identifies when a Google Cloud Platform (GCP) storage bucket is deleted. An adversary may delete a storage bucket inorder to disrupt their target's business operations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Storage Bucket Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Monitoring]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#33ff99",
+			"comment": "Identifies an Identity and Access Management (IAM) custom role creation in Google Cloud Platform (GCP). Custom roles areuser-defined, and allow for the bundling of one or more supported permissions to meet specific needs. Custom roles willnot be updated automatically and could lead to privilege creep if not carefully scrutinized.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP IAM Custom Role Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of an Identity and Access Management (IAM) service account key in Google Cloud Platform (GCP).Each service account is associated with two sets of public/private RSA key pairs that are used to authenticate. If a keyis deleted, the application will no longer be able to access Google Cloud resources using that key. A security bestpractice is to rotate your service account keys regularly.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP IAM Service Account Key Deletion"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Identifies when a new key is created for a service account in Google Cloud Platform (GCP). A service account is aspecial type of account used by an application or a virtual machine (VM) instance, not a person. Applications useservice accounts to make authorized API calls, authorized as either the service account itself, or as G Suite or CloudIdentity users through domain-wide delegation. If private keys are not tracked and managed properly, they can present asecurity risk. An adversary may create a new key for a service account in order to attempt to abuse the permissionsassigned to that account and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Service Account Key Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1136",
+			"color": "#33ff99",
+			"comment": "Identifies when a new service account is created in Google Cloud Platform (GCP). A service account is a special type ofaccount used by an application or a virtual machine (VM) instance, not a person. Applications use service accounts tomake authorized API calls, authorized as either the service account itself, or as G Suite or Cloud Identity usersthrough domain-wide delegation. If service accounts are not tracked and managed properly, they can present a securityrisk. An adversary may create a new service account to use during their operations in order to avoid using a standarduser account and attempt to evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "GCP Service Account Creation"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud GCP Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Detects when an admin role is assigned to a Google Workspace user. An adversary may assign an admin role to a user inorder to elevate the permissions of another user account and persist in their target’s environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Google Workspace Admin Role Assigned to a User"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Google Workspace Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Detects when a domain-wide delegation of authority is granted to a service account. Domain-wide delegation can beconfigured to grant third-party and internal applications to access the data of Google Workspace users. An adversary mayconfigure domain-wide delegation to maintain access to their target’s data.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Google Workspace Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Detects when a custom admin role is created in Google Workspace. An adversary may create a custom admin role in order toelevate the permissions of other user accounts and persist in their target’s environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Google Workspace Custom Admin Role Created"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Google Workspace Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1098",
+			"color": "#33ff99",
+			"comment": "Detects when a custom admin role or its permissions are modified. An adversary may modify a custom admin role in orderto elevate the permissions of other user accounts and persist in their target’s environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Google Workspace Role Modified"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Cloud Google Workspace Continuous Monitoring SecOps Identity and Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1552",
+			"color": "#33ff99",
+			"comment": "Identifies the use of a compression utility to collect known files containing sensitive information, such as credentialsand system configurations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Sensitive Files Compression"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Collection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1556",
+			"color": "#33ff99",
+			"comment": "Identifies a Secure Shell (SSH) client or server process creating or writing to a known SSH backdoor log file.Adversaries may modify SSH related binaries for persistence or credential access via patching sensitive functions toenable unauthorized access or to log SSH credentials for exfiltration.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential OpenSSH Backdoor Logging Activity"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Persistence Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1040",
+			"color": "#33ff99",
+			"comment": "The Tcpdump program ran on a Linux host. Tcpdump is a network monitoring or packet sniffing tool that can be used tocapture insecure credentials or data in motion. Sniffing can also be used to discover details of network services as aprelude to lateral movement or defense evasion.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Sniffing via Tcpdump"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Adversaries may attempt to disable the iptables or firewall service in an attempt to affect how a host is allowed toreceive or send network traffic.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Attempt to Disable IPTables or Firewall"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Adversaries may attempt to disable the syslog service in an attempt to an attempt to disrupt event logging and evadedetection by security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Attempt to Disable Syslog Service"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1140",
+			"color": "#33ff99",
+			"comment": "Adversaries may encode/decode data in an attempt to evade detection by host- or network-based security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Base16 or Base32 Encoding/Decoding Activity"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1140",
+			"color": "#33ff99",
+			"comment": "Adversaries may encode/decode data in an attempt to evade detection by host- or network-based security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Base64 Encoding/Decoding Activity"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensicinvestigations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Tampering of Bash Command-Line History"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Identifies potential attempts to disable Security-Enhanced Linux (SELinux), which is a Linux kernel security feature tosupport access control policies. Adversaries may disable security tools to avoid possible detection of their tools andactivities.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Disabling of SELinux"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Malware or other files dropped or created on a system by an adversary may leave traces behind as to what was done withina network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low orremove them at the end as part of the post-intrusion cleanup process.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "File Deletion via Shred"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1222",
+			"color": "#33ff99",
+			"comment": "Identifies file permission modifications in common writable directories by a non-root user. Adversaries often drop filesor payloads into a writable directory and change permissions prior to execution.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "File Permission Modification in Writable Directory"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1140",
+			"color": "#33ff99",
+			"comment": "Adversaries may encode/decode data in an attempt to evade detection by host- or network-based security controls.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Hex Encoding/Decoding Activity"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1564",
+			"color": "#33ff99",
+			"comment": "Users can mark specific files as hidden simply by putting a \".\" as the first character in the file or folder name.Adversaries can use this to their advantage to hide files and folders on the system for persistence and defense evasion.This rule looks for hidden files or folders in common writable directories.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Creation of Hidden Files and Directories"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562",
+			"color": "#33ff99",
+			"comment": "Kernel modules are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend thefunctionality of the kernel without the need to reboot the system. This rule identifies attempts to remove a kernelmodule.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Kernel Module Removal"},
+                {"name": "Rule type", "value": "query"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Identifies the deletion of sensitive Linux system logs. This may indicate an attempt to evade detection or destroy forensicevidence on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "System Log File Deletion"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#33ff99",
+			"comment": "Timestomping is an anti-forensics technique which is used to modify the timestamps of a file, often to mimic files thatare in the same folder.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Timestomping using Touch Command"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Defense Evasion]"}
+			]
+        }
