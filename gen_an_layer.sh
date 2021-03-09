@@ -129,7 +129,29 @@ _EOM_
     
 done
 
-cat <<"_EOM_"
+cat <<_EOM_
+    ],
+    "legendItems": [
+        {
+            "label": "No Detction Rule taged with this Technique",
+            "color": "#FFFFFF"
+        },
+        {
+            "label": "EQL rule: https://www.elastic.co/guide/en/elasticsearch/reference/master/eql.html",
+            "color": "${COLOUR_eql}"
+        },
+        {
+            "label": "Query/KQL rule: https://www.elastic.co/guide/en/kibana/current/kuery-query.html",
+            "color": "${COLOUR_query}"
+        },
+        {
+            "label": "Machine Learning rule: https://www.elastic.co/guide/en/security/current/machine-learning.html",
+            "color": "${COLOUR_machine_learning}"
+        },
+        {
+            "label": "Threshold rule",
+            "color": "${COLOUR_threshold}"
+        }
     ],
     "showTacticRowBackground": true,
     "tacticRowBackground": "#bbddff",

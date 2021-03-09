@@ -114,6 +114,28 @@
 			]
         }
     ],
+    "legendItems": [
+        {
+            "label": "No Detction Rule taged with this Technique",
+            "color": "#FFFFFF"
+        },
+        {
+            "label": "EQL rule: https://www.elastic.co/guide/en/elasticsearch/reference/master/eql.html",
+            "color": "#fa744e"
+        },
+        {
+            "label": "Query/KQL rule: https://www.elastic.co/guide/en/kibana/current/kuery-query.html",
+            "color": "#54bcb2"
+        },
+        {
+            "label": "Machine Learning rule: https://www.elastic.co/guide/en/security/current/machine-learning.html",
+            "color": "#0077cc"
+        },
+        {
+            "label": "Threshold rule",
+            "color": "#fec514"
+        }
+    ],
     "showTacticRowBackground": true,
     "tacticRowBackground": "#bbddff",
     "selectTechniquesAcrossTactics": false,
