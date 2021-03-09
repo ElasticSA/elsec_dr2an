@@ -2,6 +2,10 @@
 
 Use the gen_an_layer.sh script to generate an ATT&CK Navigator (AN) [https://mitre-attack.github.io/attack-navigator/] dashboard layer
 
+### Quick start!
+
+*Just click on*: https://ela.st/tj-mitre-an
+
 ## Getting Started
 
 Ensure you have the following shell tools installed: jq, dasel, & git
@@ -12,14 +16,6 @@ Navigate to https://mitre-attack.github.io/attack-navigator/ and chose "Open Exi
 click on "Upload from local" and select the generated file.
 
 For just a specific rule type run: .\gen_an_layer.sh TYPE > output.json
-
-### Quick start!
-
-Use the already generated AN layer in this repository:
-
-
-Navigate to https://mitre-attack.github.io/attack-navigator/ and chose "Open Existing Layer", 
-In "Load from URL" paste: `https://raw.githubusercontent.com/ElasticSA/elsec_dr2an/master/last_export.json`
 
 ### Prerequisites
 
