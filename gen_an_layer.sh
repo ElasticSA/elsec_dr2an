@@ -106,10 +106,11 @@ for dr in */*toml; do
         {
 			"techniqueID": $TID,
 			"color": "${!COLOUR}",
-			"comment": $(get_info "$dr" "rule.description" ),
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": $(get_info "$dr" "rule.name")},
+                {"name": "Rule descr.", "value": $(get_info "$dr" "rule.description")},
                 {"name": "Rule type", "value": $(get_info "$dr" "rule.type")},
                 {"name": "Rule tags", "value": $(get_info "$dr" "rule.tags")}
 			]

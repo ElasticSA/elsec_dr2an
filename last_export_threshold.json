@@ -26,10 +26,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies a high number of failed attempts to assume an AWS Identity and Access Management (IAM) role. IAM roles areused to delegate access to users or services. An adversary may attempt to enumerate IAM roles in order to determine if arole exists before attempting to assume or hijack the discovered role.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "AWS IAM Brute Force of Assume Role Policy"},
+                {"name": "Rule descr.", "value": "Identifies a high number of failed attempts to assume an AWS Identity and Access Management (IAM) role. IAM roles areused to delegate access to users or services. An adversary may attempt to enumerate IAM roles in order to determine if arole exists before attempting to assume or hijack the discovered role."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -38,10 +39,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies a high number of failed authentication attempts to the AWS management console for the Root user identity. Anadversary may attempt to brute force the password for the Root user identity, as it has complete access to all servicesand resources for the AWS account.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "AWS Management Console Brute Force of Root User Identity"},
+                {"name": "Rule descr.", "value": "Identifies a high number of failed authentication attempts to the AWS management console for the Root user identity. Anadversary may attempt to brute force the password for the Root user identity, as it has complete access to all servicesand resources for the AWS account."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Cloud AWS Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -50,10 +52,11 @@
         {
 			"techniqueID": "T1068",
 			"color": "#fec514",
-			"comment": "Identifies the attempted use of a heap-based buffer overflow vulnerability for the Sudo binary in Unix-like systems(CVE-2021-3156). Successful exploitation allows an unprivileged user to escalate to the root user.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Sudo Heap-Based Buffer Overflow Attempt"},
+                {"name": "Rule descr.", "value": "Identifies the attempted use of a heap-based buffer overflow vulnerability for the Sudo binary in Unix-like systems(CVE-2021-3156). Successful exploitation allows an unprivileged user to escalate to the root user."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Privilege Escalation]"}
 			]
@@ -62,10 +65,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies a high number (20) of macOS SSH KeyGen process executions from the same host. An adversary may attempt abrute force attack to obtain unauthorized access to user accounts.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Potential SSH Brute Force Detected"},
+                {"name": "Rule descr.", "value": "Identifies a high number (20) of macOS SSH KeyGen process executions from the same host. An adversary may attempt abrute force attack to obtain unauthorized access to user accounts."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Credential Access]"}
 			]
@@ -74,10 +78,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies attempts to brute force a Microsoft 365 user account. An adversary may attempt a brute force attack to obtainunauthorized access to user accounts.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Attempts to Brute Force a Microsoft 365 User Account"},
+                {"name": "Rule descr.", "value": "Identifies attempts to brute force a Microsoft 365 user account. An adversary may attempt a brute force attack to obtainunauthorized access to user accounts."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Cloud Microsoft 365 Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -86,10 +91,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies a high number (25) of failed Microsoft 365 user authentication attempts from a single IP address within 30minutes, which could be indicative of a password spraying attack. An adversary may attempt a password spraying attack toobtain unauthorized access to user accounts.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Potential Password Spraying of Microsoft 365 User Accounts"},
+                {"name": "Rule descr.", "value": "Identifies a high number (25) of failed Microsoft 365 user authentication attempts from a single IP address within 30minutes, which could be indicative of a password spraying attack. An adversary may attempt a password spraying attack toobtain unauthorized access to user accounts."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Cloud Microsoft 365 Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -98,10 +104,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies when an Okta user account is locked out 3 times within a 3 hour window. An adversary may attempt a bruteforce or password spraying attack to obtain unauthorized access to user accounts. The default Okta authentication policyensures that a user account is locked out after 10 failed authentication attempts.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Attempts to Brute Force an Okta User Account"},
+                {"name": "Rule descr.", "value": "Identifies when an Okta user account is locked out 3 times within a 3 hour window. An adversary may attempt a bruteforce or password spraying attack to obtain unauthorized access to user accounts. The default Okta authentication policyensures that a user account is locked out after 10 failed authentication attempts."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Identity Okta Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -110,10 +117,11 @@
         {
 			"techniqueID": "T1110",
 			"color": "#fec514",
-			"comment": "Identifies a high number of failed Okta user authentication attempts from a single IP address, which could be indicativeof a brute force or password spraying attack. An adversary may attempt a brute force or password spraying attack toobtain unauthorized access to user accounts.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Okta Brute Force or Password Spraying Attack"},
+                {"name": "Rule descr.", "value": "Identifies a high number of failed Okta user authentication attempts from a single IP address, which could be indicativeof a brute force or password spraying attack. An adversary may attempt a brute force or password spraying attack toobtain unauthorized access to user accounts."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Identity Okta Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -122,10 +130,11 @@
         {
 			"techniqueID": "T1078",
 			"color": "#fec514",
-			"comment": "Identifies a high number of Okta user password reset or account unlock attempts. An adversary may attempt to obtainunauthorized access to an Okta user account using these methods and attempt to blend in with normal activity in theirtarget's environment and evade detection.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "High Number of Okta User Password Reset or Unlock Attempts"},
+                {"name": "Rule descr.", "value": "Identifies a high number of Okta user password reset or account unlock attempts. An adversary may attempt to obtainunauthorized access to an Okta user account using these methods and attempt to blend in with normal activity in theirtarget's environment and evade detection."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Identity Okta Continuous Monitoring SecOps Identity and Access]"}
 			]
@@ -134,10 +143,11 @@
         {
 			"techniqueID": "T1071",
 			"color": "#fec514",
-			"comment": "This rule identifies a large number (15) of nslookup.exe executions with an explicit query type from the same host. Thismay indicate command and control activity utilizing the DNS protocol.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "Potential DNS Tunneling via NsLookup"},
+                {"name": "Rule descr.", "value": "This rule identifies a large number (15) of nslookup.exe executions with an explicit query type from the same host. Thismay indicate command and control activity utilizing the DNS protocol."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
 			]
@@ -146,10 +156,11 @@
         {
 			"techniqueID": "T1562.001",
 			"color": "#fec514",
-			"comment": "This rule identifies a high number (10) of process terminations (stop, delete, or suspend) from the same host within ashort time period. This may indicate a defense evasion attempt.",
+			"comment": "Showing at least one example detection rules:",
 			"enabled": true,
 			"metadata": [
                 {"name": "Rule name", "value": "High Number of Process and/or Service Terminations"},
+                {"name": "Rule descr.", "value": "This rule identifies a high number (10) of process terminations (stop, delete, or suspend) from the same host within ashort time period. This may indicate a defense evasion attempt."},
                 {"name": "Rule type", "value": "threshold"},
                 {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
 			]
