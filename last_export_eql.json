@@ -1,0 +1,2286 @@
+{
+    "name": "Elastic Security (eql)",
+    "versions": {
+        "attack": "8",
+        "navigator": "4.2",
+        "layer": "4.1"
+    },
+    "domain": "enterprise-attack",
+    "description": "Mapping Elastic Secrity Detection Rules (https://github.com/elastic/detection-rules) to ATTACK Navigator",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "macOS",
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "showName": true,
+        "showID": true
+    },
+    "hideDisabled": false,
+    "techniques": [
+        
+        {
+			"techniqueID": "T1539",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a Chromium based browser with the debugging process argument, which may indicate an attemptto steal authentication cookies. An adversary may steal web application or service session cookies and use them to gainaccess web applications or Internet services as an authenticated user without needing credentials.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Cookies Theft via Browser Debugging"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Windows macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#fa744e",
+			"comment": "Identifies the deletion of WebServer access logs. This may indicate an attempt to evade detection or destroy forensicevidence on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "WebServer Access Logs Deleted"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Windows macOS Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059.006",
+			"color": "#fa744e",
+			"comment": "Identifies when a Python script is executed using command line input and imports the sys module. Attackers often usethis method to execute malicious scripts and avoiding writing it to disk.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Python Script Execution via Command Line"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a shell process with suspicious arguments which may be indicative of reverse shell activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Reverse Shell Activity via Terminal"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059.007",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious child processes of a Java Archive (JAR) file. JAR files may be used to deliver malware in order toevade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious JAR Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1556",
+			"color": "#fa744e",
+			"comment": "Identifies a Secure Shell (SSH) client or server process creating or writing to a known SSH backdoor log file.Adversaries may modify SSH related binaries for persistence or credential access via patching sensitive functions toenable unauthorized access or to log SSH credentials for exfiltration.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential OpenSSH Backdoor Logging Activity"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Persistence Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070.003",
+			"color": "#fa744e",
+			"comment": "Adversaries may attempt to clear or disable the Bash command-line history in an attempt to evade detection or forensicinvestigations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Tampering of Bash Command-Line History"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#fa744e",
+			"comment": "Identifies the deletion of sensitive Linux system logs. This may indicate an attempt to evade detection or destroyforensic evidence on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "System Log File Deletion"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070.006",
+			"color": "#fa744e",
+			"comment": "Timestomping is an anti-forensics technique which is used to modify the timestamps of a file, often to mimic files thatare in the same folder.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Timestomping using Touch Command"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux macOS Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Telnet provides a command line interface for communication with a remote device or server. This rule identifies Telnetnetwork connections to publicly routable IP addresses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Connection to External Network via Telnet"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Telnet provides a command line interface for communication with a remote device or server. This rule identifies Telnetnetwork connections to non-publicly routable IP addresses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Connection to Internal Network via Telnet"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547",
+			"color": "#fa744e",
+			"comment": "Identifies the creation or modification of a K Desktop Environment (KDE) AutoStart script or desktop file that willexecute upon each user logon. Adversaries may abuse this method for persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via KDE AutoStart Script or Desktop File Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1555.003",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a process with arguments pointing to known browser files that store passwords and cookies.Adversaries may acquire credentials from web browsers by reading files specific to the target browser.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Access of Stored Browser Credentials"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1555.001",
+			"color": "#fa744e",
+			"comment": "Adversaries may collect the keychain storage data from a system to acquire credentials. Keychains are the built-in wayfor macOS to keep track of users' passwords and credentials for many services and features such as WiFi passwords,websites, secure notes and certificates.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Access to Keychain Credentials Directories"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1555.001",
+			"color": "#fa744e",
+			"comment": "Adversaries may dump the content of the keychain storage data from a system to acquire credentials. Keychains are thebuilt-in way for macOS to keep track of users' passwords and credentials for many services and features, including Wi-Fiand website passwords, secure notes, certificates, and Kerberos.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Dumping of Keychain Content via Security Command"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1056.002",
+			"color": "#fa744e",
+			"comment": "Identifies the use of osascript to execute scripts via standard input that may prompt a user with a rogue dialog forcredentials.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Prompt for Credentials with OSASCRIPT"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies a potential Gatekeeper bypass. In macOS, when applications or programs are downloaded from the internet,there is a quarantine flag set on the file. This attribute is read by Apple's Gatekeeper defense program at executiontime. An adversary may disable this attribute to evade defenses.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Attempt to Remove File Quarantine Attribute"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies the use of sqlite3 to directly modify the Transparency, Consent, and Control (TCC) SQLite database. This mayindicate an attempt to bypass macOS privacy controls, including access to sensitive resources like the system camera,microphone, address book, and calendar.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Privacy Control Bypass via TCCDB Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548",
+			"color": "#fa744e",
+			"comment": "Identifies use of the Secure Copy Protocol (SCP) to copy files locally by abusing the auto addition of the Secure ShellDaemon (sshd) to the authorized application list for Full Disk Access. This may indicate attempts to bypass macOSprivacy controls to access sensitive files.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Privacy Control Bypass via Localhost Secure Copy"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Privilege Escalation Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1069",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of macOS built-in commands related to account or group enumeration.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Enumeration of Users or Groups via Built-in Commands"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1203",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a suspicious browser child process. Adversaries may gain access to a system through a uservisiting a website over the normal course of browsing. With this technique, the user's web browser is typically targetedfor exploitation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Browser Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Initial Access Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059.007",
+			"color": "#fa744e",
+			"comment": "Identifies when the built in macOS Installer program generates a network event after attempting to install a .pkg file.This activity has been observed being leveraged by malware.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "macOS Installer Spawns Network Event"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of the Automator Workflows process followed by a network connection from it's XPC service.Adversaries may drop a custom workflow template that hosts malicious JavaScript for Automation (JXA) code as analternative to using osascript.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Automator Workflows Execution"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "Detects execution via the Apple script interpreter (osascript) followed by a network connection from the same processwithin a short time period. Adversaries may use malicious scripts for execution and command and control.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Apple Script Execution followed by Network Connection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Command and Control Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of the shell process (sh) via scripting (JXA or AppleScript). Adversaries may use thedoShellScript functionality in JXA or do shell script in AppleScript to execute system commands.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Shell Execution via Apple Scripting"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566.001",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious child processes of frequently targeted Microsoft Office applications (Word, PowerPoint, andExcel). These child processes are often launched during exploitation of Office applications or by documents withmalicious macros.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious macOS MS Office Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021.002",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of macOS built-in commands to mount a Server Message Block (SMB) network share. Adversaries mayuse valid accounts to interact with a remote network share using SMB.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Attempt to Mount SMB Share via Command Line"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of macOS built-in commands to connect to an existing Virtual Private Network (VPN).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Virtual Private Network Connection Attempt"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543.001",
+			"color": "#fa744e",
+			"comment": "An adversary can establish persistence by installing a new launch agent that executes at login by using launchd orlaunchctl to load a plist into the appropriate directories.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Launch Agent Creation or Modification and Immediate Loading"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.011",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of osascript to create a hidden login item. This may indicate an attempt to persist a maliciousprogram while concealing its presence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Creation of Hidden Login Item via Apple Script"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543",
+			"color": "#fa744e",
+			"comment": "Adversaries may create or modify launch daemons to repeatedly execute malicious payloads as part of persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "LaunchDaemon Creation or Modification and Immediate Loading"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.014",
+			"color": "#fa744e",
+			"comment": "Identifies the creation or modification of the Event Monitor Daemon (emond) rules. Adversaries may abuse this service bywriting a rule to execute commands when a defined event occurs, such as system start up or user authentication.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Emond Rules Creation or Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.014",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a suspicious child process of the Event Monitor Daemon (emond). Adversaries may abuse thisservice by writing a rule to execute commands when a defined event occurs, such as system start up or userauthentication.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Emond Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543.001",
+			"color": "#fa744e",
+			"comment": "Identifies the creation of a hidden launch agent or daemon. An adversary may establish persistence by installing a newlaunch agent or daemon which executes at login.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Creation of Hidden Launch Agent or Daemon"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543",
+			"color": "#fa744e",
+			"comment": "Finder Sync plugins enable users to extend Finder’s functionality by modifying the user interface. Adversaries may abusethis feature by adding a rogue Finder Plugin to repeatedly execute malicious payloads for persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Finder Sync Plugin Registered and Enabled"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1037",
+			"color": "#fa744e",
+			"comment": "A Folder Action script is executed when the folder to which it is attached has items added or removed, or when itswindow is opened, closed, moved, or resized. Adversaries may abuse this feature to establish persistence by utilizing amalicious script.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Folder Action Script"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Execution Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1037",
+			"color": "#fa744e",
+			"comment": "Identifies use of the Defaults command to install a login or logoff hook in MacOS. An adversary may abuse thiscapability to establish persistence in an environment by inserting code to be executed at login or logout.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Login or Logout Hook"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1554",
+			"color": "#fa744e",
+			"comment": "Adversaries may create or modify the Sublime application plugins or scripts to execute a malicious payload each time theSublime application is started.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Sublime Plugin or Application Script Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1078",
+			"color": "#fa744e",
+			"comment": "Identifies execution of the Apple script interpreter (osascript) without a password prompt and with administratorprivileges.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Apple Scripting Execution with Administrator Privileges"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host macOS Threat Detection Execution Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1114",
+			"color": "#fa744e",
+			"comment": "Identifies the use of the Exchange PowerShell cmdlet, New-MailBoxExportRequest, to export the contents of a primarymailbox or archive to a .pst file. Adversaries may target user email to collect sensitive information.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Exporting Exchange Mailbox via PowerShell"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Collection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1114",
+			"color": "#fa744e",
+			"comment": "Identifies the use of the Exchange PowerShell cmdlet, Set-CASMailbox, to add a new ActiveSync allowed device.Adversaries may target user email to collect sensitive information.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "New ActiveSyncAllowedDeviceID Added via PowerShell"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Collection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1560",
+			"color": "#fa744e",
+			"comment": "Identifies use of WinRar or 7z to create an encrypted files. Adversaries will often compress and encrypt data inpreparation for exfiltration.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Encrypting Files with WinRar or 7z"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Collection]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1105",
+			"color": "#fa744e",
+			"comment": "Identifies certutil.exe making a network connection. Adversaries could abuse certutil.exe to download a certificate, ormalware, from a remote URL.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via Certutil"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1102",
+			"color": "#fa744e",
+			"comment": "Adversaries may implement command and control communications that use common web services in order to hide theiractivity. This attack technique is typically targeted to an organization and uses web services common to the victimnetwork which allows the adversary to blend into legitimate traffic. activity. These popular services are typicallytargeted since they have most likely been used before a compromise and allow adversaries to blend in the network.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Connection to Commonly Abused Web Services"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1573",
+			"color": "#fa744e",
+			"comment": "Identifies unusual processes connecting to domains using known free SSL certificates. Adversaries may employ a knownencryption algorithm to conceal command and control traffic.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Connection to Commonly Abused Free SSL Certificate Providers"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1071",
+			"color": "#fa744e",
+			"comment": "Identifies instances of Internet Explorer (iexplore.exe) being started via the Component Object Model (COM) makingunusual network connections. Adversaries could abuse Internet Explorer via COM to avoid suspicious processes makingnetwork connections and bypass host-based firewall restrictions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Command and Control via Internet Explorer"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1105",
+			"color": "#fa744e",
+			"comment": "Identifies powershell.exe being used to download an executable file from an untrusted remote destination.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote File Download via PowerShell"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1105",
+			"color": "#fa744e",
+			"comment": "Identifies built-in Windows script interpreters (cscript.exe or wscript.exe) being used to download an executable filefrom a remote destination.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote File Download via Script Interpreter"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Command and Control]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of known Windows utilities often abused to dump LSASS memory or the Active Directory database(NTDS.dit) in preparation for credential access.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Credential Access via Windows Utilities"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Identifies a copy operation of the Active Directory Domain Database (ntds.dit) or Security Account Manager (SAM) files.Those files contain sensitive information including hashed domain and/or local credentials.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "NTDS or SAM Database File Copied"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to export a registry hive which may contain credentials using the Windows reg.exe tool.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Credential Acquisition via Registry Hive Dumping"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Identifies the Internet Information Services (IIS) command-line tool, AppCmd, being used to list passwords. An attackerwith IIS web server access via a web shell can decrypt and dump the IIS AppPool service account password using AppCmd.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Microsoft IIS Service Account Password Dumped"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Identifies use of aspnet_regiis to decrypt Microsoft IIS connection strings. An attacker with Microsoft IIS web serveraccess via a webshell or alike can decrypt and dump any hardcoded connection strings, such as the MSSQL service accountpassword using aspnet_regiis command.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Microsoft IIS Connection Strings Decryption"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1558",
+			"color": "#fa744e",
+			"comment": "Identifies network connections to the standard Kerberos port from an unusual process. On Windows, the only process thatnormally performs Kerberos traffic from a domain joined host is lsass.exe.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Kerberos Traffic from Unusual Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Mimikatz is a credential dumper capable of obtaining plaintext Windows account logins and passwords, along with manyother features that make it useful for testing the security of networks. This rule detects the Invoke-MimikatzPowerShell command.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Mimikatz Powershell Module Activity Detected"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003.001",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to modify the WDigest security provider in the registry to force the user's password to be stored inclear text in memory. This behavior can be indicative of an adversary attempting to weaken the security configuration ofan endpoint. Once the UseLogonCredential value is modified, the adversary may attempt to dump clear text passwords frommemory.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Modification of WDigest Security Provider"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1003",
+			"color": "#fa744e",
+			"comment": "Windows Credential Manager allows you to create, view, or delete saved credentials for signing into websites, connectedapplications, and networks. An adversary may abuse this to list or dump credentials stored in the Credential Manager forsaved usernames and passwords. This may also be performed in preparation of lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Searching for Saved Credentials via VaultCmd"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Credential Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1553.004",
+			"color": "#fa744e",
+			"comment": "Identifies the creation or modification of a local trusted root certificate in Windows. The install of a malicious rootcertificate would allow an attacker the ability to masquerade malicious files as valid signed components from any entity(e.g. Microsoft). It could also allow an attacker to decrypt SSL traffic.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Creation or Modification of Root Certificate"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.006",
+			"color": "#fa744e",
+			"comment": "Identifies modifications to the Windows Defender registry settings to disable the service or set the service to bestarted manually.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Windows Defender Disabled via Registry Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1055",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious .NET code execution. connections.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious .NET Code Compilation"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies use of the network shell utility (netsh.exe) to enable inbound Remote Desktop Protocol (RDP) connections inthe Windows Firewall.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote Desktop Enabled in Windows Firewall"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218",
+			"color": "#fa744e",
+			"comment": "Identifies abuse of the Windows Update Auto Update Client (wuauclt.exe) to load an arbitrary DLL. This behavior is usedas a defense evasion technique to blend-in malicious activity with legitimate Windows software.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "ImageLoad via Windows Update Auto Update Client"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036.004",
+			"color": "#fa744e",
+			"comment": "Masquerading can allow an adversary to evade defenses and better blend in with the environment. One way it occurs iswhen the name or location of a file is manipulated as a means of tricking a user into executing what they think is abenign file type but is actually executable code.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Executable File Creation with Multiple Extensions"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1140",
+			"color": "#fa744e",
+			"comment": "Identifies registry write modifications to hide an encoded portable executable. This could be indicative of adversarydefense evasion by avoiding the storing of malicious content directly on disk.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Encoded Executable Stored in the Registry"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.004",
+			"color": "#fa744e",
+			"comment": "Identifies InstallUtil.exe making outbound network connections. This may indicate adversarial activity as InstallUtil isoften leveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "InstallUtil Process Making Network Connections"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "A suspicious Endpoint Security parent process was detected. This may indicate a process hollowing or other form of codeinjection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Endpoint Security Parent Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "Identifies a suspicious AutoIt process execution. Malware written as an AutoIt script tends to rename the AutoItexecutable to avoid detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Renamed AutoIt Scripts Interpreter"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "Identifies execution from a directory masquerading as the Windows Program Files directories. These paths are trusted andusually host trusted third party programs. An adversary may leverage masquerading, along with low privileges to bypassdetections whitelisting those folders.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Program Files Directory Masquerading"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious instances of the Windows Error Reporting process (WerFault.exe or Wermgr.exe) with matchingcommand-line and process executable values performing outgoing network connections. This may be indicative of amasquerading attempt to evade suspicious child process behavior detections.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Windows Error Manager Masquerading"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218",
+			"color": "#fa744e",
+			"comment": "Binaries signed with trusted digital certificates can execute on Windows systems protected by digital signaturevalidation. Adversaries may use these binaries to 'live off the land' and execute malicious files that could bypassapplication allowlists and signature validation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via Signed Binary"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1127",
+			"color": "#fa744e",
+			"comment": "Identifies MsBuild.exe making outbound network connections. This may indicate adversarial activity as MsBuild is oftenleveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "MsBuild Network Connection Sequence"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1127",
+			"color": "#fa744e",
+			"comment": "Identifies MsBuild.exe making outbound network connections. This may indicate adversarial activity as MsBuild is oftenleveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "MsBuild Making Network Connections"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.005",
+			"color": "#fa744e",
+			"comment": "Identifies Mshta.exe making outbound network connections. This may indicate adversarial activity as Mshta is oftenleveraged by adversaries to execute malicious scripts and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Mshta Making Network Connections"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.005",
+			"color": "#fa744e",
+			"comment": "Identifies mshta.exe making a network connection. This may indicate adversarial activity as mshta.exe is often leveragedby adversaries to execute malicious scripts and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via Mshta"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1220",
+			"color": "#fa744e",
+			"comment": "Identifies MsXsl.exe making outbound network connections. This may indicate adversarial activity as MsXsl is oftenleveraged by adversaries to execute malicious scripts and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "MsXsl Making Network Connections"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1220",
+			"color": "#fa744e",
+			"comment": "Identifies msxsl.exe making a network connection. This may indicate adversarial activity as msxsl.exe is often leveragedby adversaries to execute malicious scripts and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via MsXsl"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1127",
+			"color": "#fa744e",
+			"comment": "Identifies network activity from unexpected system applications. This may indicate adversarial activity as theseapplications are often leveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Network Activity from a Windows System Binary"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies the creation of a new port forwarding rule. An adversary may abuse this technique to bypass networksegmentation restrictions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Port Forwarding Rule Addition"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "Identifies process execution followed by a file overwrite of an executable by the same parent process. This may indicatean evasion attempt to execute malicious code in a stealthy way.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Process Herpaderping Attempt"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070",
+			"color": "#fa744e",
+			"comment": "Identifies a process termination event quickly followed by the deletion of its executable file. Malware tools and othernon-native files dropped or created on a system by an adversary may leave traces to indicate to what occurred. Removalof these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary'sfootprint.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Process Termination followed by Deletion"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.009",
+			"color": "#fa744e",
+			"comment": "Identifies registration utilities making outbound network connections. This includes regsvcs, regasm, and regsvr32. Thismay indicate adversarial activity as these tools are often leveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Registration Tool Making Network Connections"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.011",
+			"color": "#fa744e",
+			"comment": "Identifies child processes of unusual instances of RunDLL32 where the command line parameters were suspicious. Misuse ofRunDLL32 could indicate malicious activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Child Processes of RunDLL32"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to enable the Windows scheduled tasks AT command via the registry. Attackers may use this method tomove laterally or persist locally. The AT command has been deprecated since Windows 8 and Windows Server 2012, but stillexists for backwards compatibility.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Scheduled Tasks AT Command Enabled"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1070.004",
+			"color": "#fa744e",
+			"comment": "Detects file name patterns generated by the use of Sysinternals SDelete utility to securely delete a file via multiplefile overwrite and rename operations.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Secure File Deletion via SDelete Utility"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1553.003",
+			"color": "#fa744e",
+			"comment": "Identifies modifications to the registered Subject Interface Package (SIP) providers. SIP providers are used by theWindows cryptographic system to validate file signatures on the system. This may be an attempt to bypass signaturevalidation checks or inject code into critical processes.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "SIP Provider Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1562.001",
+			"color": "#fa744e",
+			"comment": "Identifies a SolarWinds binary modifying the start type of a service to be disabled. An adversary may abuse thistechnique to manipulate relevant security services.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "SolarWinds Process Disabling Services via Registry"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1220",
+			"color": "#fa744e",
+			"comment": "Identifies WMIC whitelisting bypass techniques by alerting on suspicious execution of scripts. When WMIC loads scriptinglibraries it may be indicative of a whitelist bypass.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious WMIC XSL Script Execution"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1036",
+			"color": "#fa744e",
+			"comment": "A suspicious Zoom child process was detected, which may indicate an attempt to run unnoticed. Verify process detailssuch as command line, network connections, file writes and associated file signature details as well.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Zoom Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1564.004",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious creation of Alternate Data Streams on highly targeted files. This is uncommon for legitimate filesand sometimes done by adversaries to hide malware.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual File Creation - Alternate Data Stream"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1564",
+			"color": "#fa744e",
+			"comment": "Identifies processes running from an Alternate Data Stream. This is uncommon for legitimate processes and sometimes doneby adversaries to hide malware.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Process Execution Path - Alternate Data Stream"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218.011",
+			"color": "#fa744e",
+			"comment": "Identifies unusual instances of rundll32.exe making outbound network connections. This may indicate adversarial Commandand Control activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Network Connection via RunDLL32"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1127",
+			"color": "#fa744e",
+			"comment": "Identifies network activity from unexpected system applications. This may indicate adversarial activity as theseapplications are often leveraged by adversaries to execute code and evade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Process Network Connection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1069.002",
+			"color": "#fa744e",
+			"comment": "This rule detects the Active Directory query tool, AdFind.exe. AdFind has legitimate purposes, but it is frequentlyleveraged by threat actors to perform post-exploitation Active Directory reconnaissance. The AdFind tool has beenobserved in Trickbot, Ryuk, Maze, and FIN6 campaigns. For Winlogbeat, this rule requires Sysmon.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "AdFind Command Activity"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1069",
+			"color": "#fa744e",
+			"comment": "Identifies instances of lower privilege accounts enumerating Administrator accounts or groups using built-in Windowstools.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Enumeration of Administrator Accounts"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1083",
+			"color": "#fa744e",
+			"comment": "Enumeration of files and directories using built-in tools. Adversaries may use the information discovered to planfollow-on activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "File and Directory Discovery"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1018",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to enumerate hosts in a network using the built-in Windows net.exe tool.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Windows Network Enumeration"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1120",
+			"color": "#fa744e",
+			"comment": "Identifies use of the Windows file system utility (fsutil.exe ) to gather information about attached peripheral devicesand components connected to a computer system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Peripheral Device Discovery"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1012",
+			"color": "#fa744e",
+			"comment": "Enumeration or discovery of the Windows registry using reg.exe. This information can be used to perform follow-onactivities.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Query Registry via reg.exe"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1018",
+			"color": "#fa744e",
+			"comment": "Discovery of remote system information using built-in commands, which may be used to mover laterally.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote System Discovery Commands"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1518",
+			"color": "#fa744e",
+			"comment": "Identifies the use of Windows Management Instrumentation Command (WMIC) to discover certain System Security Settingssuch as AntiVirus or Host Firewall details.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Security Software Discovery using WMIC"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Discovery]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "A suspicious SolarWinds child process (Cmd.exe or Powershell.exe) was detected.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Command Execution via SolarWinds Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1106",
+			"color": "#fa744e",
+			"comment": "A suspicious SolarWinds child process was detected, which may indicate an attempt to execute malicious programs.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious SolarWinds Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1559.001",
+			"color": "#fa744e",
+			"comment": "Windows Component Object Model (COM) is an inter-process communication (IPC) component of the native Windows applicationprogramming interface (API) that enables interaction between software objects or executable code. Xwizard can be used torun a COM object created in registry to evade defensive counter measures.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution of COM object via Xwizard"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059",
+			"color": "#fa744e",
+			"comment": "Identifies cmd.exe making a network connection. Adversaries could abuse cmd.exe to download or execute malware from aremote URL.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Command Prompt Network Connection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059.001",
+			"color": "#fa744e",
+			"comment": "Identifies command shell activity started via RunDLL32, which is commonly abused by attackers to host malicious code.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Command Shell Activity Started via RunDLL32"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1204",
+			"color": "#fa744e",
+			"comment": "Identifies .lnk shortcut file downloaded from outside the local network. These shortcut files are commonly used inphishing campaigns.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Downloaded Shortcut Files"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1204",
+			"color": "#fa744e",
+			"comment": "Identifies .url shortcut files downloaded from outside the local network. These shortcut files are commonly used inphishing campaigns.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Downloaded URL Files"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1047",
+			"color": "#fa744e",
+			"comment": "Identifies native Windows host and network enumeration commands spawned by the Windows Management InstrumentationProvider Service (WMIPrvSE).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Enumeration Command Spawned via WMIPrvSE"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218",
+			"color": "#fa744e",
+			"comment": "Compiled HTML files (.chm) are commonly distributed as part of the Microsoft HTML Help system. Adversaries may concealmalicious code in a CHM file and deliver it to a victim for execution. CHM content is loaded by the HTML Help executableprogram (hh.exe).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via Compiled HTML File"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566",
+			"color": "#fa744e",
+			"comment": "Identifies an executable created by a Microsoft Office application and subsequently executed. These processes are oftenlaunched via scripts inside documents or during exploitation of MS Office applications.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution of File Written or Modified by Microsoft Office"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566",
+			"color": "#fa744e",
+			"comment": "Identifies a suspicious file that was written by a PDF reader application and subsequently executed. These processes areoften launched via exploitation of PDF applications.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution of File Written or Modified by PDF Reader"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1569.002",
+			"color": "#fa744e",
+			"comment": "Identifies use of the SysInternals tool PsExec.exe making a network connection. This could be an indication of lateralmovement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "PsExec Network Connection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1218",
+			"color": "#fa744e",
+			"comment": "Identifies the native Windows tools regsvr32.exe, regsvr64.exe, RegSvcs.exe, or RegAsm.exe making a network connection.This may be indicative of an attacker bypassing allowlists or running arbitrary scripts via a signed Microsoft binary.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Network Connection via Registration Utility"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1053",
+			"color": "#fa744e",
+			"comment": "Identifies the PowerShell process loading the Task Scheduler COM DLL followed by an outbound RPC network connectionwithin a short time period. This may indicate lateral movement or remote discovery via scheduled tasks.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Outbound Scheduled Task Activity via PowerShell"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1129",
+			"color": "#fa744e",
+			"comment": "Identifies the creation, change, or deletion of a DLL module within a Windows SxS local folder. Adversaries may abuseshared modules to execute malicious payloads by instructing the Windows module loader to load DLLs from arbitrary localpaths.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution via local SxS Shared Module"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1047",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious command execution (cmd) via Windows Management Instrumentation (WMI) on a remote host. This couldbe indicative of adversary lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Cmd Execution via WMI"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1047",
+			"color": "#fa744e",
+			"comment": "Identifies a suspicious image load (wmiutils.dll) from Microsoft Office processes. This behavior may indicateadversarial activity where child processes are spawned via Windows Management Instrumentation (WMI). This technique canbe used to execute code and evade traditional parent/child processes spawned from MS Office products.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious WMI Image Load from MS Office"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1059.001",
+			"color": "#fa744e",
+			"comment": "Identifies the PowerShell engine being invoked by unexpected processes. Rather than executing PowerShell functionalitywith powershell.exe, some attackers do this to operate more stealthily.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious PowerShell Engine ImageLoad"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1569.002",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious psexec activity which is executing from the psexec service that has been renamed, possibly toevade detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Process Execution via Renamed PsExec Executable"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Execution]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566.001",
+			"color": "#fa744e",
+			"comment": "Identifies use of the built-in Windows script interpreters (cscript.exe or wscript.exe) being used to execute a processvia Windows Management Instrumentation (WMI). This may be indicative of malicious activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Windows Script Interpreter Executing Process via WMI"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1190",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious files being written by the Microsoft Exchange Server Unified Messaging (UM) service. This activityhas been observed exploiting CVE-2021-26858.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Microsoft Exchange Server UM Writing Suspicious Files"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1190",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious processes being spawned by the Microsoft Exchange Server Unified Messaging (UM) service. Thisactivity has been observed exploiting CVE-2021-26857.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Microsoft Exchange Server UM Spawning Suspicious Processes"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1190",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious processes being spawned by the Microsoft Exchange Server worker process (w3wp). This activity mayindicate exploitation activity or access to an existing web shell backdoor.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Microsoft Exchange Worker Spawning Suspicious Processes"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566.001",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious child processes of frequently targeted Microsoft Office applications (Word, PowerPoint, Excel).These child processes are often launched during exploitation of Office applications or from documents with maliciousmacros.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious MS Office Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1566.001",
+			"color": "#fa744e",
+			"comment": "Identifies a suspicious Windows explorer child process. Explorer.exe can be abused to launch malicious scripts orexecutables from a trusted parent process.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Explorer Child Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Initial Access]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies use of sc.exe to create, modify, or start services on remote hosts. This could be indicative of adversarylateral movement but will be noisy if commonly done by admins.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Service Command Lateral Movement"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies the use of Distributed Component Object Model (DCOM) to execute commands from a remote host, which arelaunched via the HTA Application COM Object. This behavior may indicate an attacker abusing a DCOM application to movelaterally while attempting to evading detection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Incoming DCOM Lateral Movement via MSHTA"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies the use of Distributed Component Object Model (DCOM) to run commands from a remote host, which are launchedvia the MMC20 Application COM Object. This behavior may indicate an attacker abusing a DCOM application to movelaterally.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Incoming DCOM Lateral Movement with MMC"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies use of Distributed Component Object Model (DCOM) to run commands from a remote host, which are launched viathe ShellBrowserWindow or ShellWindows Application COM Object. This behavior may indicate an attacker abusing a DCOMapplication to stealthily move laterally.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1210",
+			"color": "#fa744e",
+			"comment": "Identifies unexpected processes making network connections over port 445. Windows File Sharing is typically implementedover Server Message Block (SMB), which communicates between hosts using port 445. When legitimate, these networkconnections are established by the kernel. Processes making 445/tcp connections may be port scanners, exploits, orsuspicious user-level processes moving laterally.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Direct Outbound SMB Connection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1570",
+			"color": "#fa744e",
+			"comment": "Identifies the creation or change of a Windows executable file over network shares. Adversaries may transfer tools orother files between systems in a compromised environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Lateral Tool Transfer"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies execution from the Remote Desktop Protocol (RDP) shared mountpoint tsclient on the target host. This mayindicate a lateral movement attempt.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution via TSClient Mountpoint"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021.002",
+			"color": "#fa744e",
+			"comment": "Identifies the execution of a file that was created by the virtual system process. This may indicate lateral movementvia network file shares.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote Execution via File Shares"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies remote execution via Windows Remote Management (WinRM) remote shell on a target host. This could be anindication of lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Incoming Execution via WinRM Remote Shell"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1047",
+			"color": "#fa744e",
+			"comment": "Identifies processes executed via Windows Management Instrumentation (WMI) on a remote host. This could be indicative ofadversary lateral movement, but could be noisy if administrators use WMI to remotely manage hosts.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "WMI Incoming Lateral Movement"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021.002",
+			"color": "#fa744e",
+			"comment": "Identifies the use of net.exe to mount a WebDav or hidden remote share. This may indicate lateral movement orpreparation for data exfiltration.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Mounting Hidden or WebDav Remote Shares"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies remote execution via Windows PowerShell remoting. Windows PowerShell remoting allows for running any WindowsPowerShell command on one or more remote computers. This could be an indication of lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Incoming Execution via PowerShell Remoting"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies registry write modifications to enable Remote Desktop Protocol (RDP) access. This could be indicative ofadversary lateral movement preparation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "RDP Enabled via Registry"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies potential behavior of SharpRDP, which is a tool that can be used to perform authenticated command executionagainst a remote target via Remote Desktop Protocol (RDP) for the purposes of lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential SharpRDP Behavior"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies potential use of an SSH utility to establish RDP over a reverse SSH Tunnel. This could be indicative ofadversary lateral movement to interactively access restricted networks.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Remote Desktop Tunneling Detected"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021.002",
+			"color": "#fa744e",
+			"comment": "Identifies a remote file copy attempt to a hidden network share. This may indicate lateral movement or data stagingactivity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote File Copy to a Hidden Share"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies remote execution of Windows services over remote procedure call (RPC). This could be indicative of lateralmovement, but will be noisy if commonly done by administrators.\"",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remotely Started Services via RPC"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies remote scheduled task creations on a target host. This could be indicative of adversary lateral movement.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Remote Scheduled Task Creation"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious Image Loading of the Remote Desktop Services ActiveX Client (mstscax), this may indicate thepresence of RDP lateral movement capability.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious RDP ActiveX Client Loaded"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1021",
+			"color": "#fa744e",
+			"comment": "Identifies suspicious file creations in the startup folder of a remote system. An adversary could abuse this to movelaterally by dropping a malicious script or executable that will be executed after a reboot or user logon.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Lateral Movement via Startup Folder"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Lateral Movement]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.011",
+			"color": "#fa744e",
+			"comment": "Identifies the installation of custom Application Compatibility Shim databases. This Windows functionality has beenabused by attackers to stealthily gain persistence and arbitrary code execution in legitimate Windows processes.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Installation of Custom Shim Databases"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.009",
+			"color": "#fa744e",
+			"comment": "Detects attempts to maintain persistence by creating registry keys using AppCert DLLs. AppCert DLLs are loaded by everyprocess using the common API functions to create processes.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Registry Persistence via AppCert DLL"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.010",
+			"color": "#fa744e",
+			"comment": "Attackers may maintain persistence by creating registry keys using AppInit DLLs. AppInit DLLs are loaded by everyprocess using the common library, user32.dll.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Registry Persistence via AppInit DLL"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1136",
+			"color": "#fa744e",
+			"comment": "Identifies the creation of a hidden local user account by appending the dollar sign to the account name. This issometimes done by attackers to increase access to a system and avoid appearing in the results of accounts listing usingthe net users command.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Creation of a Hidden Local User Account"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.012",
+			"color": "#fa744e",
+			"comment": "The Debugger and SilentProcessExit registry keys can allow an adversary to intercept the execution of files, causing adifferent process to be executed. This functionality can be abused by an adversary to establish persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Image File Execution Options Injection"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1053",
+			"color": "#fa744e",
+			"comment": "A scheduled task was created by a Windows script via cscript.exe, wscript.exe or powershell.exe. This can be abused byan adversary to establish persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Scheduled Task Created by a Windows Script"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1137",
+			"color": "#fa744e",
+			"comment": "Detects attempts to establish persistence on an endpoint by abusing Microsoft Office add-ins.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Microsoft Office AddIns"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1137",
+			"color": "#fa744e",
+			"comment": "Detects attempts to establish persistence on an endpoint by installing a rogue Microsoft Outlook VBA Template.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Microsoft Outlook VBA"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.008",
+			"color": "#fa744e",
+			"comment": "Windows contains accessibility features that may be launched with a key combination before a user has logged in. Anadversary can modify the way these programs are launched to get a command prompt or backdoor without logging in to thesystem.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Modification of Accessibility Binaries"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1112",
+			"color": "#fa744e",
+			"comment": "Detects changes to registry persistence keys that are uncommonly used or modified by legitimate programs. This could bean indication of an adversary's attempt to persist in a stealthy manner.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Uncommon Registry Persistence Change"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies run key or startup key registry modifications. In order to survive reboots and other system interrupts,attackers will modify run keys within the registry or leverage startup folder items as a form of persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Startup or Run Key Registry Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies execution of suspicious persistent programs (scripts, rundll32, etc.) by looking at process lineage andcommand line usage.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Execution of Persistent Suspicious Program"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543.003",
+			"color": "#fa744e",
+			"comment": "Identifies processes modifying the services registry key directly, instead of through the expected Windows APIs. Thiscould be an indication of an adversary attempting to stealthily persist through abnormal service creation ormodification of an existing service.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Persistence via Services Registry"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies files written to or modified in the startup folder by commonly abused processes. Adversaries may use thistechnique to maintain persistence.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Shortcut File Written or Modified for Persistence"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies files written or modified in the startup folder by unsigned processes. Adversaries may abuse this techniqueto maintain persistence in an environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Startup Folder Persistence via Unsigned Process"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies script engines creating files in the startup folder, or the creation of script files in the startup folder.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistent Scripts in the Startup Directory"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546.015",
+			"color": "#fa744e",
+			"comment": "Identifies Component Object Model (COM) hijacking via registry modification. Adversaries may establish persistence byexecuting malicious content triggered by hijacked references to COM objects.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Component Object Model Hijacking"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1053",
+			"color": "#fa744e",
+			"comment": "Identifies a suspicious image load (taskschd.dll) from Microsoft Office processes. This behavior may indicateadversarial activity where a scheduled task is configured via Windows Component Object Model (COM). This technique canbe used to configure persistence and evade monitoring by avoiding the usage of the traditional Windows binary(schtasks.exe) used to manage scheduled tasks.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Image Load (taskschd.dll) from MS Office"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1053",
+			"color": "#fa744e",
+			"comment": "Identifies execution of a suspicious program via scheduled tasks by looking at process lineage and command line usage.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Execution via Scheduled Task"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543.003",
+			"color": "#fa744e",
+			"comment": "Identifies the creation of a suspicious ImagePath value. This could be an indication of an adversary attempting tostealthily persist or escalate privileges through abnormal service creation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious ImagePath Service Creation"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.003",
+			"color": "#fa744e",
+			"comment": "Windows operating systems are utilizing the time provider architecture in order to obtain accurate time stamps fromother network devices or clients in the network. Time providers are implemented in the form of a DLL file which residesin System32 folder. The service W32Time initiates during the startup of Windows and loads w32time.dll. Adversaries mayabuse this architecture to establish persistence, specifically by registering and enabling a malicious DLL as a timeprovider.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Persistence via Time Provider Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.001",
+			"color": "#fa744e",
+			"comment": "Identifies a persistence mechanism that utilizes the NtSetValueKey native API to create a hidden (null terminated)registry key. An adversary may use this method to hide from system utilities such as the Registry Editor (regedit).",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Hidden Run Key Detected"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.005",
+			"color": "#fa744e",
+			"comment": "Identifies registry modifications related to the Windows Security Support Provider (SSP) configuration. Adversaries mayabuse this to establish persistence in an environment.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Installation of Security Support Provider"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1543.003",
+			"color": "#fa744e",
+			"comment": "Identifies potential hijacking of the Microsoft Update Orchestrator Service to establish persistence with an integritylevel of SYSTEM.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via Update Orchestrator Service Hijack"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1546",
+			"color": "#fa744e",
+			"comment": "An adversary can use Windows Management Instrumentation (WMI) to install event filters, providers, consumers, andbindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to anevent and execute arbitrary code when that event occurs, providing persistence on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Persistence via WMI Event Subscription"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "User Account Control (UAC) can help mitigate the impact of malware on Windows hosts. With UAC, apps and tasks always runin the security context of a non-administrator account, unless an administrator specifically authorizesadministrator-level access to the system. This rule identifies registry value changes to bypass User Access Control(UAC) protection.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Disabling User Account Control via Registry Modification"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.002",
+			"color": "#fa744e",
+			"comment": "Adversaries can use the autostart mechanism provided by the Local Security Authority (LSA) authentication packages forprivilege escalation or persistence by placing a reference to a binary in the Windows registry. The binary will then beexecuted by SYSTEM when the authentication packages are loaded.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential LSA Authentication Package Abuse"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1134",
+			"color": "#fa744e",
+			"comment": "Identifies a privilege escalation attempt via named pipe impersonation. An adversary may abuse this technique byutilizing a framework such Metasploit's meterpreter getsystem command.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Privilege Escalation via Named Pipe Impersonation"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1574.002",
+			"color": "#fa744e",
+			"comment": "Identifies the loading of a non Microsoft signed DLL that is missing on a default Windows install (phantom DLL) or onethat can be loaded from a different location by a native Windows process. This may be abused to persist or elevateprivileges via privileged file write vulnerabilities.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Persistence Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1547.010",
+			"color": "#fa744e",
+			"comment": "Identifies port monitor and print processor registry modifications. Adversaries may abuse port monitor and printprocessors to run malicious DLLs during system boot that will be executed as SYSTEM for privilege escalation and/orpersistence, if permissions allow writing a fully-qualified pathname for that DLL.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Potential Port Monitor or Print Processor Registration Abuse"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1068",
+			"color": "#fa744e",
+			"comment": "Detects attempts to exploit a privilege escalation vulnerability (CVE-2020-1030) related to the print spooler service.Exploitation involves chaining multiple primitives to load an arbitrary DLL into the print spooler process running asSYSTEM.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Suspicious Print Spooler Point and Print DLL"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1574.007",
+			"color": "#fa744e",
+			"comment": "Identifies a privilege escalation attempt via a rogue Windows directory (Windir) environment variable. This is a knownprimitive that is often combined with other vulnerabilities to elevate privileges.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Privilege Escalation via Windir Environment Variable"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to bypass User Account Control (UAC) by abusing an elevated COM Interface to launch a rogue WindowsClipUp program. Attackers may attempt to bypass UAC to stealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies User Account Control (UAC) bypass attempts by abusing an elevated COM Interface to launch a maliciousprogram. Attackers may attempt to bypass UAC to stealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies User Account Control (UAC) bypass attempts via the ICMLuaUtil Elevated COM interface. Attackers may attemptto bypass UAC to stealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies User Account Control (UAC) bypass via hijacking DiskCleanup Scheduled Task. Attackers bypass UAC tostealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to bypass User Account Control (UAC) via DLL side-loading. Attackers may attempt to bypass UAC tostealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies an attempt to bypass User Account Control (UAC) by masquerading as a Microsoft trusted Windows directory.Attackers may bypass UAC to stealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass Attempt via Windows Directory Masquerading"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies attempts to bypass User Account Control (UAC) by hijacking the Microsoft Management Console (MMC) WindowsFirewall snap-in. Attackers bypass UAC to stealthily execute code with elevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "UAC Bypass via Windows Firewall Snap-In Hijack"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548.002",
+			"color": "#fa744e",
+			"comment": "Identifies User Account Control (UAC) bypass via sdclt.exe. Attackers bypass UAC to stealthily execute code withelevated permissions.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Bypass UAC via Sdclt"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1055.012",
+			"color": "#fa744e",
+			"comment": "Identifies Windows programs run from unexpected parent processes. This could indicate masquerading or other strangeactivity on a system.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Parent-Child Relationship"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1055.012",
+			"color": "#fa744e",
+			"comment": "Identifies unusual child processes of Service Host (svchost.exe) that traditionally do not spawn any child processes.This may indicate a code injection or an equivalent form of exploitation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Service Host Child Process - Childless Service"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Defense Evasion Privilege Escalation]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1068",
+			"color": "#fa744e",
+			"comment": "Identifies probable exploitation of the Web Proxy Auto-Discovery Protocol (WPAD) service. Attackers who have access tothe local network or upstream DNS traffic can inject malicious JavaScript to the WPAD service which can lead to a fullsystem compromise.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "WPAD Service Exploit"},
+                {"name": "Rule type", "value": "eql"},
+                {"name": "Rule tags", "value": "[Elastic Host Windows Threat Detection Privilege Escalation]"}
+			]
+        }
+    ],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#bbddff",
+    "selectTechniquesAcrossTactics": false,
+    "selectSubtechniquesWithParent": false
+}

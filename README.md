@@ -11,6 +11,8 @@ Run the script: .\gen_an_layer.sh > output.json
 Navigate to https://mitre-attack.github.io/attack-navigator/ and chose "Open Existing Layer", 
 click on "Upload from local" and select the generated file.
 
+For just a specific rule type run: .\gen_an_layer.sh TYPE > output.json
+
 ### Quick start!
 
 Use the already generated AN layer in this repository:
@@ -21,7 +23,10 @@ In "Load from URL" paste: `https://raw.githubusercontent.com/ElasticSA/elsec_dr2
 
 ### Prerequisites
 
-None, the scripts are standalone
+ - bash (v3+)
+ - dasel: https://github.com/TomWright/dasel/releases
+ - jq
+ - git 
 
 ### Installing
 

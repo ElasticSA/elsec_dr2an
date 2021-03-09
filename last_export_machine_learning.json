@@ -1,0 +1,114 @@
+{
+    "name": "Elastic Security (machine_learning)",
+    "versions": {
+        "attack": "8",
+        "navigator": "4.2",
+        "layer": "4.1"
+    },
+    "domain": "enterprise-attack",
+    "description": "Mapping Elastic Secrity Detection Rules (https://github.com/elastic/detection-rules) to ATTACK Navigator",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "macOS",
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "showName": true,
+        "showID": true
+    },
+    "hideDisabled": false,
+    "techniques": [
+        
+        {
+			"techniqueID": "T1547.006",
+			"color": "#0077cc",
+			"comment": "Looks for unusual kernel module activity. Kernel modules are sometimes used by malware and persistence mechanisms forstealth.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Anomalous Kernel Module Activity"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1548",
+			"color": "#0077cc",
+			"comment": "Looks for sudo activity from an unusual user context. An unusual sudo user could be due to troubleshooting activity orit could be a sign of credentialed access via compromised accounts.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Sudo Activity"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1082",
+			"color": "#0077cc",
+			"comment": "Looks for commands related to system information discovery from an unusual user context. This can be due to uncommontroubleshooting activity or due to a compromised account. A compromised account may be used to engage in systeminformation discovery in order to gather detailed information about system configuration and software versions. This maybe a precursor to selection of a persistence mechanism or a method of privilege elevation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Linux System Information Discovery Activity"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1016",
+			"color": "#0077cc",
+			"comment": "Looks for commands related to system network configuration discovery from an unusual user context. This can be due touncommon troubleshooting activity or due to a compromised account. A compromised account may be used by a threat actorto engage in system network configuration discovery in order to increase their understanding of connected networks andhosts. This information may be used to shape follow-up behaviors such as lateral movement or additional discovery.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Linux System Network Configuration Discovery"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1049",
+			"color": "#0077cc",
+			"comment": "Looks for commands related to system network connection discovery from an unusual user context. This can be due touncommon troubleshooting activity or due to a compromised account. A compromised account may be used by a threat actorto engage in system network connection discovery in order to increase their understanding of connected services andsystems. This information may be used to shape follow-up behaviors such as lateral movement or additional discovery.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Linux Network Connection Discovery"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1057",
+			"color": "#0077cc",
+			"comment": "Looks for commands related to system process discovery from an unusual user context. This can be due to uncommontroubleshooting activity or due to a compromised account. A compromised account may be used by a threat actor to engagein system process discovery in order to increase their understanding of software applications running on a target hostor network. This may be a precursor to selection of a persistence mechanism or a method of privilege elevation.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Linux Process Discovery Activity"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+        ,
+        {
+			"techniqueID": "T1033",
+			"color": "#0077cc",
+			"comment": "Looks for commands related to system user or owner discovery from an unusual user context. This can be due to uncommontroubleshooting activity or due to a compromised account. A compromised account may be used to engage in system owner oruser discovery in order to identify currently active or primary users of a system. This may be a precursor to additionaldiscovery, credential dumping or privilege elevation activity.",
+			"enabled": true,
+			"metadata": [
+                {"name": "Rule name", "value": "Unusual Linux System Owner or User Discovery Activity"},
+                {"name": "Rule type", "value": "machine_learning"},
+                {"name": "Rule tags", "value": "[Elastic Host Linux Threat Detection ML]"}
+			]
+        }
+    ],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#bbddff",
+    "selectTechniquesAcrossTactics": false,
+    "selectSubtechniquesWithParent": false
+}
