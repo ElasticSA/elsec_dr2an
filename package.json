@@ -1,0 +1,29 @@
+{
+  "name": "elsec_dr2an",
+  "version": "0.2.0",
+  "description": "Create Mitre Attack Navigator dashboards for Elastic Security Detection Rule coverage",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElasticSA/elsec_dr2an.git"
+  },
+  "author": "Thorben Jändling",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ElasticSA/elsec_dr2an/issues"
+  },
+  "homepage": "https://github.com/ElasticSA/elsec_dr2an#readme",
+  "bin": {
+    "elsec_dr2an": "./main.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^7.2.0",
+    "superagent": "^6.1.0"
+  }
+}
