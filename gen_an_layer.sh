@@ -137,7 +137,7 @@ cat <<_EOM_
             "color": "#FFFFFF"
         },
         {
-            "label": "EQL rule: https://www.elastic.co/guide/en/elasticsearch/reference/master/eql.html",
+            "label": "EQL rule: https://www.elastic.co/guide/en/elasticsearch/reference/current/eql.html",
             "color": "${COLOUR_eql}"
         },
         {
