@@ -31,15 +31,19 @@
                     "value": "User Discovery via Whoami [Duplicate]"
                 },
                 {
+                    "name": "machine_learning",
+                    "value": "Unusual Linux System Owner or User Discovery Activity"
+                },
+                {
                     "name": "query",
                     "value": "User Discovery via Whoami"
                 },
                 {
                     "name": "query",
-                    "value": "User Discovery via Whoami"
+                    "value": "Whoami Process Activity"
                 }
             ],
-            "score": 3
+            "score": 4
         },
         {
             "techniqueID": "T1110",
@@ -67,11 +71,11 @@
                 },
                 {
                     "name": "threshold",
-                    "value": "Okta Brute Force or Password Spraying Attack"
+                    "value": "Attempts to Brute Force an Okta User Account"
                 },
                 {
                     "name": "threshold",
-                    "value": "Attempts to Brute Force an Okta User Account"
+                    "value": "Okta Brute Force or Password Spraying Attack"
                 }
             ],
             "score": 7
@@ -145,8 +149,24 @@
                     "value": "Potential Remote Desktop Tunneling Detected"
                 },
                 {
+                    "name": "query",
+                    "value": "Remote SSH Login Enabled via systemsetup Command"
+                },
+                {
+                    "name": "query",
+                    "value": "SSH (Secure Shell) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "Local Service Commands"
+                },
+                {
                     "name": "eql",
                     "value": "Connection to External Network via Telnet"
+                },
+                {
+                    "name": "query",
+                    "value": "RDP (Remote Desktop Protocol) from the Internet"
                 },
                 {
                     "name": "eql",
@@ -157,19 +177,11 @@
                     "value": "Telnet Port Activity"
                 },
                 {
-                    "name": "query",
-                    "value": "Local Service Commands"
-                },
-                {
-                    "name": "query",
-                    "value": "Remote SSH Login Enabled via systemsetup Command"
-                },
-                {
-                    "name": "query",
-                    "value": "SSH (Secure Shell) from the Internet"
+                    "name": "eql",
+                    "value": "Connection to Internal Network via Telnet"
                 }
             ],
-            "score": 22
+            "score": 24
         },
         {
             "techniqueID": "T1021.002",
@@ -239,14 +251,6 @@
                 },
                 {
                     "name": "query",
-                    "value": "Possible FIN7 DGA Command and Control Behavior"
-                },
-                {
-                    "name": "query",
-                    "value": "Cobalt Strike Command and Control Beacon"
-                },
-                {
-                    "name": "query",
                     "value": "Cobalt Strike Command and Control Beacon"
                 },
                 {
@@ -258,7 +262,7 @@
                     "value": "Halfbaked Command and Control Beacon"
                 }
             ],
-            "score": 10
+            "score": 8
         },
         {
             "techniqueID": "T1053",
@@ -290,15 +294,15 @@
                 },
                 {
                     "name": "query",
-                    "value": "Creation or Modification of a new GPO Scheduled Task or Service"
-                },
-                {
-                    "name": "query",
                     "value": "Persistence via TelemetryController Scheduled Task Hijack"
                 },
                 {
                     "name": "query",
                     "value": "Local Scheduled Task Commands"
+                },
+                {
+                    "name": "query",
+                    "value": "Creation or Modification of a new GPO Scheduled Task or Service"
                 }
             ],
             "score": 9
@@ -360,31 +364,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "PowerShell spawning Cmd"
-                },
-                {
-                    "name": "query",
-                    "value": "Interactive Terminal Spawned via Perl"
-                },
-                {
-                    "name": "query",
-                    "value": "Svchost spawning Cmd"
-                },
-                {
-                    "name": "eql",
-                    "value": "Command Prompt Network Connection"
-                },
-                {
-                    "name": "query",
                     "value": "Unusual Parent Process for cmd.exe"
-                },
-                {
-                    "name": "query",
-                    "value": "Unusual Parent Process for cmd.exe"
-                },
-                {
-                    "name": "query",
-                    "value": "Conhost Spawned By Suspicious Parent Process"
                 },
                 {
                     "name": "query",
@@ -392,10 +372,30 @@
                 },
                 {
                     "name": "query",
+                    "value": "Conhost Spawned By Suspicious Parent Process"
+                },
+                {
+                    "name": "query",
                     "value": "Interactive Terminal Spawned via Python"
+                },
+                {
+                    "name": "query",
+                    "value": "Interactive Terminal Spawned via Perl"
+                },
+                {
+                    "name": "query",
+                    "value": "PowerShell spawning Cmd"
+                },
+                {
+                    "name": "eql",
+                    "value": "Command Prompt Network Connection"
+                },
+                {
+                    "name": "query",
+                    "value": "Svchost spawning Cmd"
                 }
             ],
-            "score": 18
+            "score": 17
         },
         {
             "techniqueID": "T1078",
@@ -681,14 +681,26 @@
                 },
                 {
                     "name": "query",
+                    "value": "Kernel Module Removal"
+                },
+                {
+                    "name": "query",
+                    "value": "Attempt to Disable Syslog Service"
+                },
+                {
+                    "name": "query",
+                    "value": "Potential Disabling of SELinux"
+                },
+                {
+                    "name": "query",
                     "value": "Attempt to Disable IPTables or Firewall"
                 },
                 {
                     "name": "query",
-                    "value": "Kernel Module Removal"
+                    "value": "Disable Windows Firewall Rules via Netsh"
                 }
             ],
-            "score": 40
+            "score": 43
         },
         {
             "techniqueID": "T1562.001",
@@ -796,14 +808,26 @@
                 },
                 {
                     "name": "query",
+                    "value": "Kernel Module Removal"
+                },
+                {
+                    "name": "query",
+                    "value": "Attempt to Disable Syslog Service"
+                },
+                {
+                    "name": "query",
+                    "value": "Potential Disabling of SELinux"
+                },
+                {
+                    "name": "query",
                     "value": "Attempt to Disable IPTables or Firewall"
                 },
                 {
                     "name": "query",
-                    "value": "Kernel Module Removal"
+                    "value": "Disable Windows Firewall Rules via Netsh"
                 }
             ],
-            "score": 27
+            "score": 30
         },
         {
             "techniqueID": "T1105",
@@ -823,6 +847,10 @@
                 },
                 {
                     "name": "query",
+                    "value": "Remote File Copy via TeamViewer"
+                },
+                {
+                    "name": "query",
                     "value": "Remote File Download via MpCmdRun"
                 },
                 {
@@ -834,15 +862,15 @@
                     "value": "Remote File Download via Desktopimgdownldr Utility"
                 },
                 {
-                    "name": "query",
-                    "value": "Remote File Copy via TeamViewer"
+                    "name": "eql",
+                    "value": "Network Connection via Certutil"
                 },
                 {
                     "name": "query",
-                    "value": "Remote File Copy via TeamViewer"
+                    "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet"
                 }
             ],
-            "score": 8
+            "score": 9
         },
         {
             "techniqueID": "T1543",
@@ -867,9 +895,13 @@
                 {
                     "name": "eql",
                     "value": "Service Command Lateral Movement"
+                },
+                {
+                    "name": "query",
+                    "value": "System Shells via Services"
                 }
             ],
-            "score": 5
+            "score": 6
         },
         {
             "techniqueID": "T1543.001",
@@ -916,9 +948,13 @@
                 {
                     "name": "query",
                     "value": "Suspicious PrintSpooler Service Executable File Creation"
+                },
+                {
+                    "name": "query",
+                    "value": "Suspicious PrintSpooler SPL File Created"
                 }
             ],
-            "score": 2
+            "score": 3
         },
         {
             "techniqueID": "T1547",
@@ -961,19 +997,15 @@
                     "value": "Anomalous Kernel Module Activity"
                 },
                 {
-                    "name": "machine_learning",
-                    "value": "Anomalous Kernel Module Activity"
+                    "name": "query",
+                    "value": "Kernel Module Removal"
                 },
                 {
                     "name": "query",
                     "value": "Persistence via Kernel Module Modification"
-                },
-                {
-                    "name": "query",
-                    "value": "Kernel Module Removal"
                 }
             ],
-            "score": 12
+            "score": 11
         },
         {
             "techniqueID": "T1547.001",
@@ -1035,23 +1067,27 @@
                     "value": "Possible Consent Grant Attack via Azure-Registered Application"
                 },
                 {
-                    "name": "eql",
-                    "value": "Suspicious MS Office Child Process"
-                },
-                {
-                    "name": "eql",
-                    "value": "Suspicious MS Office Child Process"
+                    "name": "query",
+                    "value": "Windows Script Executing PowerShell"
                 },
                 {
                     "name": "eql",
                     "value": "Execution of File Written or Modified by PDF Reader"
                 },
                 {
+                    "name": "eql",
+                    "value": "Suspicious MS Office Child Process"
+                },
+                {
                     "name": "query",
-                    "value": "Windows Script Executing PowerShell"
+                    "value": "Suspicious MS Outlook Child Process"
+                },
+                {
+                    "name": "eql",
+                    "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 10
+            "score": 11
         },
         {
             "techniqueID": "T1566.001",
@@ -1066,23 +1102,27 @@
                     "value": "Suspicious Explorer Child Process"
                 },
                 {
-                    "name": "eql",
-                    "value": "Suspicious MS Office Child Process"
-                },
-                {
-                    "name": "eql",
-                    "value": "Suspicious MS Office Child Process"
+                    "name": "query",
+                    "value": "Windows Script Executing PowerShell"
                 },
                 {
                     "name": "eql",
                     "value": "Execution of File Written or Modified by PDF Reader"
                 },
                 {
+                    "name": "eql",
+                    "value": "Suspicious MS Office Child Process"
+                },
+                {
                     "name": "query",
-                    "value": "Windows Script Executing PowerShell"
+                    "value": "Suspicious MS Outlook Child Process"
+                },
+                {
+                    "name": "eql",
+                    "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 6
+            "score": 7
         },
         {
             "techniqueID": "T1070",
@@ -1110,22 +1150,6 @@
                 },
                 {
                     "name": "query",
-                    "value": "Deleting Backup Catalogs with Wbadmin"
-                },
-                {
-                    "name": "query",
-                    "value": "Deletion of Bash Command Line History"
-                },
-                {
-                    "name": "query",
-                    "value": "IIS HTTP Logging Disabled"
-                },
-                {
-                    "name": "query",
-                    "value": "IIS HTTP Logging Disabled"
-                },
-                {
-                    "name": "query",
                     "value": "File Deletion via Shred"
                 },
                 {
@@ -1139,9 +1163,29 @@
                 {
                     "name": "query",
                     "value": "Modification of Boot Configuration"
+                },
+                {
+                    "name": "query",
+                    "value": "Deleting Backup Catalogs with Wbadmin"
+                },
+                {
+                    "name": "query",
+                    "value": "Deletion of Bash Command Line History"
+                },
+                {
+                    "name": "query",
+                    "value": "IIS HTTP Logging Disabled"
+                },
+                {
+                    "name": "query",
+                    "value": "Clearing Windows Event Logs"
+                },
+                {
+                    "name": "query",
+                    "value": "Volume Shadow Copy Deletion via WMIC"
                 }
             ],
-            "score": 13
+            "score": 14
         },
         {
             "techniqueID": "T1036",
@@ -1156,12 +1200,20 @@
                     "value": "Program Files Directory Masquerading"
                 },
                 {
-                    "name": "eql",
-                    "value": "Potential Windows Error Manager Masquerading"
+                    "name": "query",
+                    "value": "Microsoft Build Engine Using an Alternate Name"
+                },
+                {
+                    "name": "query",
+                    "value": "Potential DLL SideLoading via Trusted Microsoft Programs"
                 },
                 {
                     "name": "eql",
                     "value": "Potential Windows Error Manager Masquerading"
+                },
+                {
+                    "name": "query",
+                    "value": "Suspicious WerFault Child Process"
                 },
                 {
                     "name": "eql",
@@ -1169,19 +1221,11 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Renamed AutoIt Scripts Interpreter"
-                },
-                {
-                    "name": "eql",
                     "value": "Suspicious Zoom Child Process"
                 },
                 {
-                    "name": "query",
-                    "value": "Microsoft Build Engine Using an Alternate Name"
-                },
-                {
-                    "name": "query",
-                    "value": "Potential DLL SideLoading via Trusted Microsoft Programs"
+                    "name": "eql",
+                    "value": "Renamed AutoIt Scripts Interpreter"
                 }
             ],
             "score": 9
@@ -1201,9 +1245,13 @@
                 {
                     "name": "query",
                     "value": "AWS CloudTrail Log Updated"
+                },
+                {
+                    "name": "query",
+                    "value": "Hosts File Modified"
                 }
             ],
-            "score": 3
+            "score": 4
         },
         {
             "techniqueID": "T1565.001",
@@ -1220,9 +1268,13 @@
                 {
                     "name": "query",
                     "value": "AWS CloudTrail Log Updated"
+                },
+                {
+                    "name": "query",
+                    "value": "Hosts File Modified"
                 }
             ],
-            "score": 3
+            "score": 4
         },
         {
             "techniqueID": "T1489",
@@ -1281,13 +1333,9 @@
                 {
                     "name": "query",
                     "value": "Attempt to Create Okta API Token"
-                },
-                {
-                    "name": "query",
-                    "value": "User Account Creation"
                 }
             ],
-            "score": 5
+            "score": 4
         },
         {
             "techniqueID": "T1098",
@@ -1351,10 +1399,14 @@
                 },
                 {
                     "name": "query",
-                    "value": "Attempt to Reset MFA Factors for an Okta User Account"
+                    "value": "Attempt to Deactivate MFA for an Okta User Account"
+                },
+                {
+                    "name": "query",
+                    "value": "Administrator Privileges Assigned to an Okta Group"
                 }
             ],
-            "score": 15
+            "score": 16
         },
         {
             "techniqueID": "T1530",
@@ -1406,9 +1458,13 @@
                 {
                     "name": "eql",
                     "value": "Execution of File Written or Modified by PDF Reader"
+                },
+                {
+                    "name": "eql",
+                    "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 4
+            "score": 5
         },
         {
             "techniqueID": "T1531",
@@ -1437,9 +1493,13 @@
                 {
                     "name": "query",
                     "value": "AWS IAM Group Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "Attempt to Revoke Okta API Token"
                 }
             ],
-            "score": 6
+            "score": 7
         },
         {
             "techniqueID": "T1136.003",
@@ -1512,20 +1572,8 @@
                     "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"
                 },
                 {
-                    "name": "machine_learning",
-                    "value": "Unusual Sudo Activity"
-                },
-                {
-                    "name": "machine_learning",
-                    "value": "Unusual Sudo Activity"
-                },
-                {
                     "name": "query",
-                    "value": "Setuid Bit Set via chmod"
-                },
-                {
-                    "name": "eql",
-                    "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"
+                    "value": "Setgid Bit Set via chmod"
                 },
                 {
                     "name": "query",
@@ -1533,10 +1581,10 @@
                 },
                 {
                     "name": "query",
-                    "value": "Setgid Bit Set via chmod"
+                    "value": "Sudoers File Modification"
                 }
             ],
-            "score": 15
+            "score": 12
         },
         {
             "techniqueID": "T1548.002",
@@ -1567,15 +1615,11 @@
                     "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"
                 },
                 {
-                    "name": "eql",
-                    "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"
-                },
-                {
                     "name": "query",
                     "value": "Bypass UAC via Event Viewer"
                 }
             ],
-            "score": 8
+            "score": 7
         },
         {
             "techniqueID": "T1055",
@@ -1591,11 +1635,15 @@
                 },
                 {
                     "name": "query",
-                    "value": "Suspicious Process from Conhost"
+                    "value": "Suspicious Managed Code Hosting Process"
                 },
                 {
                     "name": "query",
-                    "value": "Suspicious Managed Code Hosting Process"
+                    "value": "Suspicious Process from Conhost"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Parent-Child Relationship"
                 },
                 {
                     "name": "eql",
@@ -1603,18 +1651,22 @@
                 },
                 {
                     "name": "query",
-                    "value": "Suspicious Process from Conhost"
+                    "value": "Process Injection by the Microsoft Build Engine"
                 },
                 {
                     "name": "query",
-                    "value": "Suspicious Managed Code Hosting Process"
+                    "value": "Process Injection by the Microsoft Build Engine"
                 },
                 {
                     "name": "eql",
-                    "value": "Unusual Parent-Child Relationship"
+                    "value": "Suspicious .NET Code Compilation"
+                },
+                {
+                    "name": "query",
+                    "value": "Unusual Child Process from a System Virtual Process"
                 }
             ],
-            "score": 8
+            "score": 10
         },
         {
             "techniqueID": "T1055.012",
@@ -1660,12 +1712,8 @@
                     "value": "Potential Application Shimming via Sdbinst"
                 },
                 {
-                    "name": "query",
-                    "value": "Potential Application Shimming via Sdbinst"
-                },
-                {
-                    "name": "query",
-                    "value": "Potential Application Shimming via Sdbinst"
+                    "name": "eql",
+                    "value": "Potential Modification of Accessibility Binaries"
                 },
                 {
                     "name": "eql",
@@ -1673,10 +1721,10 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Potential Modification of Accessibility Binaries"
+                    "value": "Installation of Custom Shim Databases"
                 }
             ],
-            "score": 10
+            "score": 9
         },
         {
             "techniqueID": "T1546.009",
@@ -1757,9 +1805,21 @@
                 {
                     "name": "query",
                     "value": "Microsoft Build Engine Loading Windows Credential Libraries"
+                },
+                {
+                    "name": "eql",
+                    "value": "Microsoft IIS Service Account Password Dumped"
+                },
+                {
+                    "name": "query",
+                    "value": "Mimikatz Memssp Log File Detected"
+                },
+                {
+                    "name": "eql",
+                    "value": "Microsoft IIS Connection Strings Decryption"
                 }
             ],
-            "score": 7
+            "score": 10
         },
         {
             "techniqueID": "T1195",
@@ -1878,13 +1938,9 @@
                 {
                     "name": "query",
                     "value": "Net command via SYSTEM account"
-                },
-                {
-                    "name": "query",
-                    "value": "Net command via SYSTEM account"
                 }
             ],
-            "score": 3
+            "score": 2
         },
         {
             "techniqueID": "T1574",
@@ -1897,13 +1953,9 @@
                 {
                     "name": "query",
                     "value": "Adobe Hijack Persistence"
-                },
-                {
-                    "name": "query",
-                    "value": "Adobe Hijack Persistence"
                 }
             ],
-            "score": 3
+            "score": 2
         },
         {
             "techniqueID": "T1574.007",
@@ -1953,9 +2005,13 @@
                 {
                     "name": "eql",
                     "value": "Service Command Lateral Movement"
+                },
+                {
+                    "name": "query",
+                    "value": "System Shells via Services"
                 }
             ],
-            "score": 3
+            "score": 4
         },
         {
             "techniqueID": "T1102",
@@ -2147,9 +2203,13 @@
                 {
                     "name": "query",
                     "value": "Azure Key Vault Modified"
+                },
+                {
+                    "name": "query",
+                    "value": "Creation or Modification of Domain Backup DPAPI private key"
                 }
             ],
-            "score": 2
+            "score": 3
         },
         {
             "techniqueID": "T1552.001",
@@ -2184,7 +2244,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "Unusual File Modification by dns.exe"
+                    "value": "Unusual Child Process of dns.exe"
                 }
             ],
             "score": 4
@@ -2210,19 +2270,19 @@
                 },
                 {
                     "name": "query",
-                    "value": "Base16 or Base32 Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Hex Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
                     "value": "Hex Encoding/Decoding Activity"
                 },
                 {
                     "name": "query",
                     "value": "Encoding or Decoding Files via CertUtil"
+                },
+                {
+                    "name": "query",
+                    "value": "Base16 or Base32 Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Base64 Encoding/Decoding Activity"
                 }
             ],
             "score": 5
@@ -2259,22 +2319,6 @@
                 },
                 {
                     "name": "query",
-                    "value": "SMB (Windows File Sharing) Activity to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "RPC (Remote Procedure Call) from the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "Inbound Connection to an Unsecure Elasticsearch Node"
-                },
-                {
-                    "name": "query",
-                    "value": "Telnet Port Activity"
-                },
-                {
-                    "name": "query",
                     "value": "VNC (Virtual Network Computing) from the Internet"
                 },
                 {
@@ -2288,9 +2332,29 @@
                 {
                     "name": "query",
                     "value": "RDP (Remote Desktop Protocol) to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "SMB (Windows File Sharing) Activity to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RPC (Remote Procedure Call) to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RDP (Remote Desktop Protocol) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "Telnet Port Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "RPC (Remote Procedure Call) from the Internet"
                 }
             ],
-            "score": 9
+            "score": 10
         },
         {
             "techniqueID": "T1222",
@@ -2306,18 +2370,18 @@
                 },
                 {
                     "name": "query",
-                    "value": "File Permission Modification in Writable Directory"
+                    "value": "Potential Evasion via Filter Manager"
                 }
             ],
             "score": 3
         },
         {
-            "techniqueID": "T1057",
+            "techniqueID": "T1049",
             "enabled": true,
             "metadata": [
                 {
                     "name": "machine_learning",
-                    "value": "Unusual Linux Process Discovery Activity"
+                    "value": "Unusual Linux Network Connection Discovery"
                 }
             ],
             "score": 1
@@ -2331,27 +2395,8 @@
                     "value": "Unusual Linux System Network Configuration Discovery"
                 },
                 {
-                    "name": "machine_learning",
-                    "value": "Unusual Linux System Network Configuration Discovery"
-                },
-                {
                     "name": "query",
                     "value": "Public IP Reconnaissance Activity"
-                }
-            ],
-            "score": 3
-        },
-        {
-            "techniqueID": "T1049",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "machine_learning",
-                    "value": "Unusual Linux Network Connection Discovery"
-                },
-                {
-                    "name": "machine_learning",
-                    "value": "Unusual Linux Network Connection Discovery"
                 }
             ],
             "score": 2
@@ -2371,17 +2416,9 @@
                 {
                     "name": "query",
                     "value": "Virtual Machine Fingerprinting"
-                },
-                {
-                    "name": "query",
-                    "value": "Virtual Machine Fingerprinting"
-                },
-                {
-                    "name": "machine_learning",
-                    "value": "Unusual Linux System Information Discovery Activity"
                 }
             ],
-            "score": 5
+            "score": 3
         },
         {
             "techniqueID": "T1547.006",
@@ -2392,74 +2429,20 @@
                     "value": "Anomalous Kernel Module Activity"
                 },
                 {
-                    "name": "machine_learning",
-                    "value": "Anomalous Kernel Module Activity"
+                    "name": "query",
+                    "value": "Kernel Module Removal"
                 },
                 {
                     "name": "query",
                     "value": "Persistence via Kernel Module Modification"
-                },
-                {
-                    "name": "query",
-                    "value": "Kernel Module Removal"
                 }
             ],
-            "score": 4
-        },
-        {
-            "techniqueID": "T1218",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "InstallUtil Process Making Network Connections"
-                },
-                {
-                    "name": "eql",
-                    "value": "Network Connection via Signed Binary"
-                },
-                {
-                    "name": "eql",
-                    "value": "Network Connection via Signed Binary"
-                },
-                {
-                    "name": "eql",
-                    "value": "Unusual Network Connection via RunDLL32"
-                },
-                {
-                    "name": "eql",
-                    "value": "Mshta Making Network Connections"
-                },
-                {
-                    "name": "query",
-                    "value": "Process Activity via Compiled HTML File"
-                },
-                {
-                    "name": "eql",
-                    "value": "Network Connection via Compiled HTML File"
-                }
-            ],
-            "score": 7
-        },
-        {
-            "techniqueID": "T1218.004",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "InstallUtil Process Making Network Connections"
-                }
-            ],
-            "score": 1
+            "score": 3
         },
         {
             "techniqueID": "T1070.004",
             "enabled": true,
             "metadata": [
-                {
-                    "name": "query",
-                    "value": "Deleting Backup Catalogs with Wbadmin"
-                },
                 {
                     "name": "query",
                     "value": "File Deletion via Shred"
@@ -2475,71 +2458,37 @@
                 {
                     "name": "query",
                     "value": "Modification of Boot Configuration"
+                },
+                {
+                    "name": "query",
+                    "value": "Deleting Backup Catalogs with Wbadmin"
+                },
+                {
+                    "name": "query",
+                    "value": "Volume Shadow Copy Deletion via WMIC"
                 }
             ],
-            "score": 5
+            "score": 6
         },
         {
-            "techniqueID": "T1220",
+            "techniqueID": "T1219",
             "enabled": true,
             "metadata": [
                 {
-                    "name": "eql",
-                    "value": "Suspicious WMIC XSL Script Execution"
+                    "name": "query",
+                    "value": "VNC (Virtual Network Computing) from the Internet"
                 },
                 {
-                    "name": "eql",
-                    "value": "Network Connection via MsXsl"
+                    "name": "query",
+                    "value": "VNC (Virtual Network Computing) to the Internet"
                 }
             ],
             "score": 2
         },
         {
-            "techniqueID": "T1027",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Base16 or Base32 Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Hex Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Hex Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Microsoft Build Engine Started an Unusual Process"
-                }
-            ],
-            "score": 4
-        },
-        {
-            "techniqueID": "T1070.003",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Deletion of Bash Command Line History"
-                }
-            ],
-            "score": 1
-        },
-        {
             "techniqueID": "T1048",
             "enabled": true,
             "metadata": [
-                {
-                    "name": "query",
-                    "value": "SMB (Windows File Sharing) Activity to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "SMTP on Port 26/TCP"
-                },
                 {
                     "name": "query",
                     "value": "SMTP to the Internet"
@@ -2555,146 +2504,93 @@
                 {
                     "name": "query",
                     "value": "RDP (Remote Desktop Protocol) to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "SMB (Windows File Sharing) Activity to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "SMTP on Port 26/TCP"
                 }
             ],
             "score": 6
         },
         {
-            "techniqueID": "T1574.010",
+            "techniqueID": "T1027",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Adobe Hijack Persistence"
+                    "value": "Hex Encoding/Decoding Activity"
                 },
                 {
                     "name": "query",
-                    "value": "Adobe Hijack Persistence"
+                    "value": "Microsoft Build Engine Started an Unusual Process"
+                },
+                {
+                    "name": "query",
+                    "value": "Base16 or Base32 Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Base64 Encoding/Decoding Activity"
                 }
             ],
-            "score": 2
+            "score": 4
         },
         {
-            "techniqueID": "T1111",
+            "techniqueID": "T1568",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Attempted Bypass of Okta MFA"
+                    "value": "Cobalt Strike Command and Control Beacon"
                 },
                 {
                     "name": "query",
-                    "value": "Attempted Bypass of Okta MFA"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1210",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Abnormally Large DNS Response"
+                    "value": "Possible FIN7 DGA Command and Control Behavior"
                 },
                 {
                     "name": "query",
-                    "value": "Abnormally Large DNS Response"
-                },
-                {
-                    "name": "eql",
-                    "value": "Direct Outbound SMB Connection"
+                    "value": "Halfbaked Command and Control Beacon"
                 }
             ],
             "score": 3
         },
         {
-            "techniqueID": "T1555",
+            "techniqueID": "T1568.002",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Compression of Keychain Credentials Directories"
+                    "value": "Cobalt Strike Command and Control Beacon"
+                },
+                {
+                    "name": "query",
+                    "value": "Possible FIN7 DGA Command and Control Behavior"
+                },
+                {
+                    "name": "query",
+                    "value": "Halfbaked Command and Control Beacon"
                 }
             ],
-            "score": 1
+            "score": 3
         },
         {
-            "techniqueID": "T1555.001",
+            "techniqueID": "T1548.001",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Compression of Keychain Credentials Directories"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1569",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Service Command Lateral Movement"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1569.002",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Service Command Lateral Movement"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1218.011",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Unusual Network Connection via RunDLL32"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1218.005",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Mshta Making Network Connections"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1498",
-            "enabled": true,
-            "metadata": [
+                    "value": "Setuid Bit Set via chmod"
+                },
                 {
                     "name": "query",
-                    "value": "Possible Okta DoS Attack"
+                    "value": "Setgid Bit Set via chmod"
                 }
             ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1499",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Possible Okta DoS Attack"
-                }
-            ],
-            "score": 1
+            "score": 2
         },
         {
             "techniqueID": "T1546.011",
@@ -2709,88 +2605,11 @@
                     "value": "Potential Application Shimming via Sdbinst"
                 },
                 {
-                    "name": "query",
-                    "value": "Potential Application Shimming via Sdbinst"
-                },
-                {
-                    "name": "query",
-                    "value": "Potential Application Shimming via Sdbinst"
-                }
-            ],
-            "score": 4
-        },
-        {
-            "techniqueID": "T1548.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Setuid Bit Set via chmod"
-                },
-                {
-                    "name": "query",
-                    "value": "Setuid Bit Set via chmod"
-                },
-                {
-                    "name": "query",
-                    "value": "Setgid Bit Set via chmod"
+                    "name": "eql",
+                    "value": "Installation of Custom Shim Databases"
                 }
             ],
             "score": 3
-        },
-        {
-            "techniqueID": "T1568",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Possible FIN7 DGA Command and Control Behavior"
-                },
-                {
-                    "name": "query",
-                    "value": "Cobalt Strike Command and Control Beacon"
-                },
-                {
-                    "name": "query",
-                    "value": "Cobalt Strike Command and Control Beacon"
-                },
-                {
-                    "name": "query",
-                    "value": "Possible FIN7 DGA Command and Control Behavior"
-                },
-                {
-                    "name": "query",
-                    "value": "Halfbaked Command and Control Beacon"
-                }
-            ],
-            "score": 5
-        },
-        {
-            "techniqueID": "T1568.002",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Possible FIN7 DGA Command and Control Behavior"
-                },
-                {
-                    "name": "query",
-                    "value": "Cobalt Strike Command and Control Beacon"
-                },
-                {
-                    "name": "query",
-                    "value": "Cobalt Strike Command and Control Beacon"
-                },
-                {
-                    "name": "query",
-                    "value": "Possible FIN7 DGA Command and Control Behavior"
-                },
-                {
-                    "name": "query",
-                    "value": "Halfbaked Command and Control Beacon"
-                }
-            ],
-            "score": 5
         },
         {
             "techniqueID": "T1170",
@@ -2799,117 +2618,9 @@
                 {
                     "name": "query",
                     "value": "Network Connection via Mshta"
-                },
-                {
-                    "name": "query",
-                    "value": "Network Connection via Mshta"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1219",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "VNC (Virtual Network Computing) to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "VNC (Virtual Network Computing) from the Internet"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1564",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Creation of Hidden Files and Directories"
                 }
             ],
             "score": 1
-        },
-        {
-            "techniqueID": "T1564.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Creation of Hidden Files and Directories"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1211",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Unusual Executable File Creation by a System Critical Process"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1127",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Unusual Network Activity from a Windows System Binary"
-                },
-                {
-                    "name": "query",
-                    "value": "Microsoft Build Engine Started by a System Process"
-                },
-                {
-                    "name": "query",
-                    "value": "Microsoft Build Engine Started by a Script Process"
-                }
-            ],
-            "score": 3
-        },
-        {
-            "techniqueID": "T1553",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall)"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1553.002",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall)"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1218.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Process Activity via Compiled HTML File"
-                },
-                {
-                    "name": "eql",
-                    "value": "Network Connection via Compiled HTML File"
-                }
-            ],
-            "score": 2
         },
         {
             "techniqueID": "T1546.008",
@@ -2922,6 +2633,64 @@
                 {
                     "name": "eql",
                     "value": "Potential Modification of Accessibility Binaries"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1218",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Process Activity via Compiled HTML File"
+                },
+                {
+                    "name": "eql",
+                    "value": "Network Connection via Compiled HTML File"
+                },
+                {
+                    "name": "eql",
+                    "value": "InstallUtil Process Making Network Connections"
+                },
+                {
+                    "name": "eql",
+                    "value": "Network Connection via Signed Binary"
+                },
+                {
+                    "name": "eql",
+                    "value": "Mshta Making Network Connections"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Network Connection via RunDLL32"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Child Processes of RunDLL32"
+                },
+                {
+                    "name": "eql",
+                    "value": "Network Connection via Registration Utility"
+                },
+                {
+                    "name": "query",
+                    "value": "Execution via Regsvcs/Regasm"
+                }
+            ],
+            "score": 9
+        },
+        {
+            "techniqueID": "T1218.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Process Activity via Compiled HTML File"
+                },
+                {
+                    "name": "eql",
+                    "value": "Network Connection via Compiled HTML File"
                 }
             ],
             "score": 2
@@ -2942,12 +2711,62 @@
             "score": 2
         },
         {
-            "techniqueID": "T1027.004",
+            "techniqueID": "T1127",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Microsoft Build Engine Started an Unusual Process"
+                    "value": "Microsoft Build Engine Started by a Script Process"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft Build Engine Started by a System Process"
+                },
+                {
+                    "name": "eql",
+                    "value": "MsBuild Making Network Connections"
+                },
+                {
+                    "name": "query",
+                    "value": "Trusted Developer Application Usage"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Network Activity from a Windows System Binary"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Process Network Connection"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft Build Engine Started by an Office Application"
+                }
+            ],
+            "score": 7
+        },
+        {
+            "techniqueID": "T1220",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Network Connection via MsXsl"
+                },
+                {
+                    "name": "eql",
+                    "value": "Suspicious WMIC XSL Script Execution"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1204",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Suspicious PDF Reader Child Process"
                 }
             ],
             "score": 1
@@ -3008,12 +2827,301 @@
             "score": 1
         },
         {
-            "techniqueID": "T1204",
+            "techniqueID": "T1027.004",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Suspicious PDF Reader Child Process"
+                    "value": "Microsoft Build Engine Started an Unusual Process"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1218.004",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "InstallUtil Process Making Network Connections"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1070.003",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Deletion of Bash Command Line History"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1111",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Attempted Bypass of Okta MFA"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1574.010",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Adobe Hijack Persistence"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1210",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Abnormally Large DNS Response"
+                },
+                {
+                    "name": "eql",
+                    "value": "Direct Outbound SMB Connection"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1569",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Suspicious Process Execution via Renamed PsExec Executable"
+                },
+                {
+                    "name": "eql",
+                    "value": "Service Command Lateral Movement"
+                },
+                {
+                    "name": "eql",
+                    "value": "PsExec Network Connection"
+                }
+            ],
+            "score": 3
+        },
+        {
+            "techniqueID": "T1569.002",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Suspicious Process Execution via Renamed PsExec Executable"
+                },
+                {
+                    "name": "eql",
+                    "value": "Service Command Lateral Movement"
+                },
+                {
+                    "name": "eql",
+                    "value": "PsExec Network Connection"
+                }
+            ],
+            "score": 3
+        },
+        {
+            "techniqueID": "T1564",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Creation of Hidden Files and Directories"
+                },
+                {
+                    "name": "query",
+                    "value": "Adding Hidden File Attribute via Attrib"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1564.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Creation of Hidden Files and Directories"
+                },
+                {
+                    "name": "query",
+                    "value": "Adding Hidden File Attribute via Attrib"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1555",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Compression of Keychain Credentials Directories"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1555.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Compression of Keychain Credentials Directories"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1211",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Unusual Executable File Creation by a System Critical Process"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1498",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Possible Okta DoS Attack"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1499",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Possible Okta DoS Attack"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1218.005",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Mshta Making Network Connections"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1218.011",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Unusual Network Connection via RunDLL32"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Child Processes of RunDLL32"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1218.010",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Network Connection via Registration Utility"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1552.004",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Creation or Modification of Domain Backup DPAPI private key"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1218.009",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Execution via Regsvcs/Regasm"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1548.003",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Sudoers File Modification"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1057",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "machine_learning",
+                    "value": "Unusual Linux Process Discovery Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Process Discovery via Tasklist"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1553",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall)"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1553.002",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall)"
                 }
             ],
             "score": 1

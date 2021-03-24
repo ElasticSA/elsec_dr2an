@@ -67,7 +67,6 @@ program
 //    .option('-p, --password <password>', 'The user\'s password')
     .action(function(file) {
         
-        console.error(file)
         var creds = JSON.parse(fs.readFileSync(file))
         
         co(function *() {
@@ -88,10 +87,13 @@ program
                     .accept('json')
 
                 console.error(`Page(${page}) Total(${res.body.total})`)
+                
                 res.body.data.forEach(dr => {
+                    
                     console.error(`Rule Name(${dr.name}) ID(${dr.id}) Type(${dr.params.type})`)
                     
                     dr.params.threat.forEach( threat => {
+                        
                         if (threat.framework != "MITRE ATT&CK") return
                         console.error("^ Has MITRE ATT&CK info")
                         
@@ -118,6 +120,7 @@ program
                                 "value": dr.name
                             })
                             
+                            // very ugly repetition
                             if (techn.subtechnique === undefined) return
                             techn.subtechnique.forEach( subtn => {
                                 var manstq = manav.techniques.find(o => o.techniqueID == subtn.id)
@@ -143,6 +146,7 @@ program
                         })
                     })
                 })
+                
                 page+=1
                 total = res.body.total
 
