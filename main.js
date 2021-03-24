@@ -34,8 +34,8 @@ var manav = {
     "legendItems": [],
     "gradient": {
             "colors": [
-                    "#bbddff",
-                    "#4488ff"
+                    "#bbffdd",
+                    "#44ff66"
             ],
             "minValue": 0,
             "maxValue": 20

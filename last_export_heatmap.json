@@ -122,23 +122,7 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Execution via TSClient Mountpoint"
-                },
-                {
-                    "name": "eql",
-                    "value": "Mounting Hidden or WebDav Remote Shares"
-                },
-                {
-                    "name": "eql",
-                    "value": "Remote File Copy to a Hidden Share"
-                },
-                {
-                    "name": "eql",
-                    "value": "RDP Enabled via Registry"
-                },
-                {
-                    "name": "eql",
-                    "value": "Potential Remote Desktop Tunneling Detected"
+                    "value": "Suspicious RDP ActiveX Client Loaded"
                 },
                 {
                     "name": "eql",
@@ -169,19 +153,19 @@
                     "value": "RDP (Remote Desktop Protocol) from the Internet"
                 },
                 {
-                    "name": "eql",
-                    "value": "Service Command Lateral Movement"
-                },
-                {
                     "name": "query",
                     "value": "Telnet Port Activity"
+                },
+                {
+                    "name": "eql",
+                    "value": "Service Command Lateral Movement"
                 },
                 {
                     "name": "eql",
                     "value": "Connection to Internal Network via Telnet"
                 }
             ],
-            "score": 24
+            "score": 20
         },
         {
             "techniqueID": "T1021.002",
@@ -190,17 +174,9 @@
                 {
                     "name": "eql",
                     "value": "Remote Execution via File Shares"
-                },
-                {
-                    "name": "eql",
-                    "value": "Mounting Hidden or WebDav Remote Shares"
-                },
-                {
-                    "name": "eql",
-                    "value": "Remote File Copy to a Hidden Share"
                 }
             ],
-            "score": 3
+            "score": 1
         },
         {
             "techniqueID": "T1047",
@@ -212,18 +188,10 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Suspicious WMI Image Load from MS Office"
-                },
-                {
-                    "name": "eql",
-                    "value": "Suspicious Cmd Execution via WMI"
-                },
-                {
-                    "name": "eql",
                     "value": "Suspicious Cmd Execution via WMI"
                 }
             ],
-            "score": 4
+            "score": 2
         },
         {
             "techniqueID": "T1071",
@@ -236,14 +204,6 @@
                 {
                     "name": "threshold",
                     "value": "Potential DNS Tunneling via NsLookup"
-                },
-                {
-                    "name": "query",
-                    "value": "Default Cobalt Strike Team Server Certificate"
-                },
-                {
-                    "name": "query",
-                    "value": "SUNBURST Command and Control Activity"
                 },
                 {
                     "name": "query",
@@ -262,7 +222,7 @@
                     "value": "Halfbaked Command and Control Beacon"
                 }
             ],
-            "score": 8
+            "score": 6
         },
         {
             "techniqueID": "T1053",
@@ -286,7 +246,7 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Suspicious Image Load (taskschd.dll) from MS Office"
+                    "value": "Suspicious Execution via Scheduled Task"
                 },
                 {
                     "name": "eql",
@@ -314,13 +274,9 @@
                 {
                     "name": "eql",
                     "value": "Persistence via Folder Action Script"
-                },
-                {
-                    "name": "eql",
-                    "value": "Persistence via Login or Logout Hook"
                 }
             ],
-            "score": 2
+            "score": 1
         },
         {
             "techniqueID": "T1059",
@@ -351,16 +307,16 @@
                     "value": "Azure Command Execution on Virtual Machine"
                 },
                 {
+                    "name": "query",
+                    "value": "Azure Command Execution on Virtual Machine"
+                },
+                {
                     "name": "eql",
                     "value": "Command Execution via SolarWinds Process"
                 },
                 {
                     "name": "eql",
                     "value": "Suspicious PowerShell Engine ImageLoad"
-                },
-                {
-                    "name": "eql",
-                    "value": "Command Shell Activity Started via RunDLL32"
                 },
                 {
                     "name": "query",
@@ -411,6 +367,10 @@
                 },
                 {
                     "name": "query",
+                    "value": "AWS Root Login Without MFA"
+                },
+                {
+                    "name": "query",
                     "value": "Azure Automation Account Created"
                 },
                 {
@@ -423,39 +383,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "AWS IAM Assume Role Policy Update"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS Management Console Root Login"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS Management Console Root Login"
-                },
-                {
-                    "name": "query",
-                    "value": "GCP IAM Custom Role Creation"
-                },
-                {
-                    "name": "query",
-                    "value": "GCP IAM Custom Role Creation"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure External Guest User Invitation"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure External Guest User Invitation"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Privilege Identity Management Role Modified"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Privilege Identity Management Role Modified"
+                    "value": "AWS IAM Password Recovery Requested"
                 },
                 {
                     "name": "query",
@@ -510,7 +438,7 @@
                     "value": "Suspicious Activity Reported by Okta User"
                 }
             ],
-            "score": 27
+            "score": 20
         },
         {
             "techniqueID": "T1570",
@@ -588,6 +516,66 @@
                     "value": "AWS EC2 Flow Log Deletion"
                 },
                 {
+                    "name": "query",
+                    "value": "GCP Firewall Rule Modification"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Log Stream Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudTrail Log Deleted"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS WAF Access Control List Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "GCP Logging Sink Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Log Group Deletion"
+                },
+                {
+                    "name": "eql",
+                    "value": "Remote Desktop Enabled in Windows Firewall"
+                },
+                {
+                    "name": "query",
+                    "value": "GCP Pub/Sub Subscription Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "GCP Firewall Rule Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Alarm Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "GCP Firewall Rule Creation"
+                },
+                {
+                    "name": "query",
+                    "value": "Azure Diagnostic Settings Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft 365 Exchange Malware Filter Policy Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft 365 Exchange Malware Filter Rule Modification"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS EC2 Flow Log Deletion"
+                },
+                {
                     "name": "eql",
                     "value": "SolarWinds Process Disabling Services via Registry"
                 },
@@ -601,55 +589,11 @@
                 },
                 {
                     "name": "query",
-                    "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled"
+                    "value": "AWS GuardDuty Detector Deletion"
                 },
                 {
                     "name": "query",
-                    "value": "Azure Firewall Policy Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS WAF Rule or Rule Group Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "GCP Pub/Sub Topic Deletion"
-                },
-                {
-                    "name": "eql",
-                    "value": "Scheduled Tasks AT Command Enabled"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Event Hub Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "GCP Logging Bucket Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "Microsoft 365 Exchange DLP Policy Removed"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Resource Group Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS Config Service Tampering"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS EC2 Network Access Control List Deletion"
-                },
-                {
-                    "name": "eql",
-                    "value": "Attempt to Remove File Quarantine Attribute"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Network Watcher Deletion"
+                    "value": "AWS CloudTrail Log Suspended"
                 },
                 {
                     "name": "query",
@@ -685,11 +629,11 @@
                 },
                 {
                     "name": "query",
-                    "value": "Attempt to Disable Syslog Service"
+                    "value": "Potential Disabling of SELinux"
                 },
                 {
                     "name": "query",
-                    "value": "Potential Disabling of SELinux"
+                    "value": "Attempt to Disable Syslog Service"
                 },
                 {
                     "name": "query",
@@ -700,7 +644,7 @@
                     "value": "Disable Windows Firewall Rules via Netsh"
                 }
             ],
-            "score": 43
+            "score": 47
         },
         {
             "techniqueID": "T1562.001",
@@ -709,6 +653,38 @@
                 {
                     "name": "threshold",
                     "value": "High Number of Process and/or Service Terminations"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Log Stream Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudTrail Log Deleted"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS WAF Access Control List Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Log Group Deletion"
+                },
+                {
+                    "name": "eql",
+                    "value": "Remote Desktop Enabled in Windows Firewall"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Alarm Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "Azure Diagnostic Settings Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS EC2 Flow Log Deletion"
                 },
                 {
                     "name": "query",
@@ -756,39 +732,11 @@
                 },
                 {
                     "name": "query",
-                    "value": "Azure Firewall Policy Deletion"
+                    "value": "AWS GuardDuty Detector Deletion"
                 },
                 {
                     "name": "query",
-                    "value": "AWS WAF Rule or Rule Group Deletion"
-                },
-                {
-                    "name": "eql",
-                    "value": "Scheduled Tasks AT Command Enabled"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Event Hub Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Resource Group Deletion"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS Config Service Tampering"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS EC2 Network Access Control List Deletion"
-                },
-                {
-                    "name": "eql",
-                    "value": "Attempt to Remove File Quarantine Attribute"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Network Watcher Deletion"
+                    "value": "AWS CloudTrail Log Suspended"
                 },
                 {
                     "name": "query",
@@ -812,11 +760,11 @@
                 },
                 {
                     "name": "query",
-                    "value": "Attempt to Disable Syslog Service"
+                    "value": "Potential Disabling of SELinux"
                 },
                 {
                     "name": "query",
-                    "value": "Potential Disabling of SELinux"
+                    "value": "Attempt to Disable Syslog Service"
                 },
                 {
                     "name": "query",
@@ -827,7 +775,7 @@
                     "value": "Disable Windows Firewall Rules via Netsh"
                 }
             ],
-            "score": 30
+            "score": 31
         },
         {
             "techniqueID": "T1105",
@@ -854,12 +802,12 @@
                     "value": "Remote File Download via MpCmdRun"
                 },
                 {
-                    "name": "eql",
-                    "value": "Command Prompt Network Connection"
-                },
-                {
                     "name": "query",
                     "value": "Remote File Download via Desktopimgdownldr Utility"
+                },
+                {
+                    "name": "eql",
+                    "value": "Command Prompt Network Connection"
                 },
                 {
                     "name": "eql",
@@ -886,7 +834,7 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Unusual Persistence via Services Registry"
+                    "value": "Suspicious ImagePath Service Creation"
                 },
                 {
                     "name": "query",
@@ -927,15 +875,11 @@
                     "value": "Suspicious PowerShell Engine ImageLoad"
                 },
                 {
-                    "name": "eql",
-                    "value": "Command Shell Activity Started via RunDLL32"
-                },
-                {
                     "name": "query",
                     "value": "PowerShell spawning Cmd"
                 }
             ],
-            "score": 4
+            "score": 3
         },
         {
             "techniqueID": "T1068",
@@ -978,15 +922,11 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Shortcut File Written or Modified for Persistence"
+                    "value": "Persistence via Hidden Run Key Detected"
                 },
                 {
                     "name": "eql",
-                    "value": "Installation of Security Support Provider"
-                },
-                {
-                    "name": "eql",
-                    "value": "Persistent Scripts in the Startup Directory"
+                    "value": "Startup or Run Key Registry Modification"
                 },
                 {
                     "name": "eql",
@@ -1005,7 +945,7 @@
                     "value": "Persistence via Kernel Module Modification"
                 }
             ],
-            "score": 11
+            "score": 10
         },
         {
             "techniqueID": "T1547.001",
@@ -1029,11 +969,11 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Shortcut File Written or Modified for Persistence"
+                    "value": "Persistence via Hidden Run Key Detected"
                 },
                 {
                     "name": "eql",
-                    "value": "Persistent Scripts in the Startup Directory"
+                    "value": "Startup or Run Key Registry Modification"
                 }
             ],
             "score": 6
@@ -1055,24 +995,28 @@
                     "value": "Microsoft 365 Exchange Safe Link Policy Disabled"
                 },
                 {
+                    "name": "eql",
+                    "value": "Suspicious Explorer Child Process"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft 365 Exchange Safe Link Policy Disabled"
+                },
+                {
                     "name": "query",
                     "value": "Microsoft 365 Exchange Anti-Phish Rule Modification"
                 },
                 {
                     "name": "query",
-                    "value": "AWS Execution via System Manager"
-                },
-                {
-                    "name": "query",
-                    "value": "Possible Consent Grant Attack via Azure-Registered Application"
-                },
-                {
-                    "name": "query",
-                    "value": "Windows Script Executing PowerShell"
+                    "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion"
                 },
                 {
                     "name": "eql",
                     "value": "Execution of File Written or Modified by PDF Reader"
+                },
+                {
+                    "name": "query",
+                    "value": "Windows Script Executing PowerShell"
                 },
                 {
                     "name": "eql",
@@ -1087,7 +1031,7 @@
                     "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 11
+            "score": 12
         },
         {
             "techniqueID": "T1566.001",
@@ -1102,12 +1046,16 @@
                     "value": "Suspicious Explorer Child Process"
                 },
                 {
-                    "name": "query",
-                    "value": "Windows Script Executing PowerShell"
+                    "name": "eql",
+                    "value": "Suspicious Explorer Child Process"
                 },
                 {
                     "name": "eql",
                     "value": "Execution of File Written or Modified by PDF Reader"
+                },
+                {
+                    "name": "query",
+                    "value": "Windows Script Executing PowerShell"
                 },
                 {
                     "name": "eql",
@@ -1122,7 +1070,7 @@
                     "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 7
+            "score": 8
         },
         {
             "techniqueID": "T1070",
@@ -1133,28 +1081,8 @@
                     "value": "Process Termination followed by Deletion"
                 },
                 {
-                    "name": "eql",
-                    "value": "System Log File Deletion"
-                },
-                {
-                    "name": "eql",
-                    "value": "Timestomping using Touch Command"
-                },
-                {
-                    "name": "eql",
-                    "value": "WebServer Access Logs Deleted"
-                },
-                {
-                    "name": "query",
-                    "value": "AWS S3 Bucket Configuration Deletion"
-                },
-                {
                     "name": "query",
                     "value": "File Deletion via Shred"
-                },
-                {
-                    "name": "query",
-                    "value": "Delete Volume USN Journal with Fsutil"
                 },
                 {
                     "name": "eql",
@@ -1162,7 +1090,15 @@
                 },
                 {
                     "name": "query",
+                    "value": "Delete Volume USN Journal with Fsutil"
+                },
+                {
+                    "name": "query",
                     "value": "Modification of Boot Configuration"
+                },
+                {
+                    "name": "query",
+                    "value": "IIS HTTP Logging Disabled"
                 },
                 {
                     "name": "query",
@@ -1174,10 +1110,6 @@
                 },
                 {
                     "name": "query",
-                    "value": "IIS HTTP Logging Disabled"
-                },
-                {
-                    "name": "query",
                     "value": "Clearing Windows Event Logs"
                 },
                 {
@@ -1185,7 +1117,7 @@
                     "value": "Volume Shadow Copy Deletion via WMIC"
                 }
             ],
-            "score": 14
+            "score": 10
         },
         {
             "techniqueID": "T1036",
@@ -1194,10 +1126,6 @@
                 {
                     "name": "eql",
                     "value": "Potential Process Herpaderping Attempt"
-                },
-                {
-                    "name": "eql",
-                    "value": "Program Files Directory Masquerading"
                 },
                 {
                     "name": "query",
@@ -1217,18 +1145,18 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Suspicious Endpoint Security Parent Process"
-                },
-                {
-                    "name": "eql",
                     "value": "Suspicious Zoom Child Process"
                 },
                 {
                     "name": "eql",
                     "value": "Renamed AutoIt Scripts Interpreter"
+                },
+                {
+                    "name": "eql",
+                    "value": "Suspicious Endpoint Security Parent Process"
                 }
             ],
-            "score": 9
+            "score": 8
         },
         {
             "techniqueID": "T1565",
@@ -1240,7 +1168,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "AWS CloudTrail Log Updated"
+                    "value": "AWS EC2 Encryption Disabled"
                 },
                 {
                     "name": "query",
@@ -1263,7 +1191,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "AWS CloudTrail Log Updated"
+                    "value": "AWS EC2 Encryption Disabled"
                 },
                 {
                     "name": "query",
@@ -1283,9 +1211,13 @@
                 {
                     "name": "query",
                     "value": "AWS RDS Instance/Cluster Stoppage"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS RDS Instance/Cluster Stoppage"
                 }
             ],
-            "score": 1
+            "score": 2
         },
         {
             "techniqueID": "T1485",
@@ -1305,19 +1237,31 @@
                 },
                 {
                     "name": "query",
-                    "value": "Azure Resource Group Deletion"
+                    "value": "AWS CloudWatch Log Stream Deletion"
                 },
                 {
                     "name": "query",
-                    "value": "GCP Storage Bucket Deletion"
+                    "value": "AWS RDS Cluster Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS CloudWatch Log Group Deletion"
                 }
             ],
-            "score": 5
+            "score": 6
         },
         {
             "techniqueID": "T1136",
             "enabled": true,
             "metadata": [
+                {
+                    "name": "query",
+                    "value": "GCP Service Account Creation"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS IAM Group Creation"
+                },
                 {
                     "name": "query",
                     "value": "GCP Service Account Creation"
@@ -1335,12 +1279,36 @@
                     "value": "Attempt to Create Okta API Token"
                 }
             ],
-            "score": 4
+            "score": 6
         },
         {
             "techniqueID": "T1098",
             "enabled": true,
             "metadata": [
+                {
+                    "name": "query",
+                    "value": "GCP IAM Service Account Key Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "Multi-Factor Authentication Disabled for an Azure User"
+                },
+                {
+                    "name": "query",
+                    "value": "User Added as Owner for Azure Application"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS IAM User Addition to Group"
+                },
+                {
+                    "name": "query",
+                    "value": "Google Workspace Admin Role Assigned to a User"
+                },
+                {
+                    "name": "query",
+                    "value": "Administrator Role Assigned to an Okta User"
+                },
                 {
                     "name": "query",
                     "value": "GCP IAM Service Account Key Deletion"
@@ -1375,19 +1343,15 @@
                 },
                 {
                     "name": "query",
-                    "value": "Google Workspace Role Modified"
+                    "value": "Microsoft 365 Teams Guest Access Enabled"
                 },
                 {
                     "name": "query",
-                    "value": "Microsoft 365 Exchange Management Group Role Assignment"
+                    "value": "GCP Service Account Key Creation"
                 },
                 {
                     "name": "query",
-                    "value": "Azure Conditional Access Policy Modified"
-                },
-                {
-                    "name": "query",
-                    "value": "Microsoft 365 Teams External Access Enabled"
+                    "value": "Azure Global Administrator Role Addition to PIM User"
                 },
                 {
                     "name": "query",
@@ -1406,7 +1370,7 @@
                     "value": "Administrator Privileges Assigned to an Okta Group"
                 }
             ],
-            "score": 16
+            "score": 21
         },
         {
             "techniqueID": "T1530",
@@ -1418,15 +1382,11 @@
                 },
                 {
                     "name": "query",
-                    "value": "AWS CloudTrail Log Updated"
+                    "value": "AWS CloudTrail Log Created"
                 },
                 {
                     "name": "query",
-                    "value": "GCP Pub/Sub Topic Creation"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Event Hub Authorization Rule Created or Updated"
+                    "value": "GCP Pub/Sub Subscription Creation"
                 },
                 {
                     "name": "query",
@@ -1437,7 +1397,7 @@
                     "value": "GCP Pub/Sub Topic Creation"
                 }
             ],
-            "score": 6
+            "score": 5
         },
         {
             "techniqueID": "T1566.002",
@@ -1448,12 +1408,8 @@
                     "value": "Suspicious Explorer Child Process"
                 },
                 {
-                    "name": "query",
-                    "value": "AWS Execution via System Manager"
-                },
-                {
-                    "name": "query",
-                    "value": "Possible Consent Grant Attack via Azure-Registered Application"
+                    "name": "eql",
+                    "value": "Suspicious Explorer Child Process"
                 },
                 {
                     "name": "eql",
@@ -1464,7 +1420,7 @@
                     "value": "Execution of File Written or Modified by Microsoft Office"
                 }
             ],
-            "score": 5
+            "score": 4
         },
         {
             "techniqueID": "T1531",
@@ -1484,11 +1440,15 @@
                 },
                 {
                     "name": "query",
-                    "value": "AWS IAM Group Deletion"
+                    "value": "AWS IAM Deactivation of MFA Device"
                 },
                 {
                     "name": "query",
-                    "value": "GCP IAM Role Deletion"
+                    "value": "GCP Service Account Deletion"
+                },
+                {
+                    "name": "query",
+                    "value": "GCP Service Account Disabled"
                 },
                 {
                     "name": "query",
@@ -1499,7 +1459,7 @@
                     "value": "Attempt to Revoke Okta API Token"
                 }
             ],
-            "score": 7
+            "score": 8
         },
         {
             "techniqueID": "T1136.003",
@@ -1508,9 +1468,13 @@
                 {
                     "name": "query",
                     "value": "AWS IAM Group Creation"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS IAM Group Creation"
                 }
             ],
-            "score": 1
+            "score": 2
         },
         {
             "techniqueID": "T1537",
@@ -1526,10 +1490,22 @@
                 },
                 {
                     "name": "query",
-                    "value": "Azure Event Hub Authorization Rule Created or Updated"
+                    "value": "GCP Logging Sink Modification"
+                },
+                {
+                    "name": "query",
+                    "value": "AWS EC2 Snapshot Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft 365 Exchange Transport Rule Creation"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft 365 Exchange Transport Rule Modification"
                 }
             ],
-            "score": 3
+            "score": 6
         },
         {
             "techniqueID": "T1548",
@@ -1545,11 +1521,23 @@
                 },
                 {
                     "name": "eql",
+                    "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface"
+                },
+                {
+                    "name": "eql",
+                    "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer"
+                },
+                {
+                    "name": "eql",
                     "value": "UAC Bypass Attempt via Windows Directory Masquerading"
                 },
                 {
                     "name": "eql",
-                    "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface"
+                    "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface"
+                },
+                {
+                    "name": "eql",
+                    "value": "UAC Bypass via Windows Firewall Snap-In Hijack"
                 },
                 {
                     "name": "eql",
@@ -1584,7 +1572,7 @@
                     "value": "Sudoers File Modification"
                 }
             ],
-            "score": 12
+            "score": 15
         },
         {
             "techniqueID": "T1548.002",
@@ -1600,11 +1588,23 @@
                 },
                 {
                     "name": "eql",
+                    "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface"
+                },
+                {
+                    "name": "eql",
+                    "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer"
+                },
+                {
+                    "name": "eql",
                     "value": "UAC Bypass Attempt via Windows Directory Masquerading"
                 },
                 {
                     "name": "eql",
-                    "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface"
+                    "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface"
+                },
+                {
+                    "name": "eql",
+                    "value": "UAC Bypass via Windows Firewall Snap-In Hijack"
                 },
                 {
                     "name": "eql",
@@ -1619,12 +1619,20 @@
                     "value": "Bypass UAC via Event Viewer"
                 }
             ],
-            "score": 7
+            "score": 10
         },
         {
             "techniqueID": "T1055",
             "enabled": true,
             "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Unusual Service Host Child Process - Childless Service"
+                },
+                {
+                    "name": "eql",
+                    "value": "Unusual Service Host Child Process - Childless Service"
+                },
                 {
                     "name": "eql",
                     "value": "Unusual Service Host Child Process - Childless Service"
@@ -1666,7 +1674,7 @@
                     "value": "Unusual Child Process from a System Virtual Process"
                 }
             ],
-            "score": 10
+            "score": 12
         },
         {
             "techniqueID": "T1055.012",
@@ -1678,10 +1686,14 @@
                 },
                 {
                     "name": "eql",
+                    "value": "Unusual Service Host Child Process - Childless Service"
+                },
+                {
+                    "name": "eql",
                     "value": "Unusual Parent-Child Relationship"
                 }
             ],
-            "score": 2
+            "score": 3
         },
         {
             "techniqueID": "T1546",
@@ -1697,11 +1709,19 @@
                 },
                 {
                     "name": "eql",
+                    "value": "Registry Persistence via AppCert DLL"
+                },
+                {
+                    "name": "eql",
+                    "value": "Component Object Model Hijacking"
+                },
+                {
+                    "name": "eql",
                     "value": "Image File Execution Options Injection"
                 },
                 {
                     "name": "eql",
-                    "value": "Registry Persistence via AppInit DLL"
+                    "value": "Persistence via WMI Event Subscription"
                 },
                 {
                     "name": "query",
@@ -1724,7 +1744,7 @@
                     "value": "Installation of Custom Shim Databases"
                 }
             ],
-            "score": 9
+            "score": 11
         },
         {
             "techniqueID": "T1546.009",
@@ -1733,9 +1753,13 @@
                 {
                     "name": "eql",
                     "value": "Registry Persistence via AppCert DLL"
+                },
+                {
+                    "name": "eql",
+                    "value": "Registry Persistence via AppCert DLL"
                 }
             ],
-            "score": 1
+            "score": 2
         },
         {
             "techniqueID": "T1546.015",
@@ -1744,9 +1768,13 @@
                 {
                     "name": "eql",
                     "value": "Component Object Model Hijacking"
+                },
+                {
+                    "name": "eql",
+                    "value": "Component Object Model Hijacking"
                 }
             ],
-            "score": 1
+            "score": 2
         },
         {
             "techniqueID": "T1528",
@@ -1758,7 +1786,7 @@
                 },
                 {
                     "name": "query",
-                    "value": "Possible Consent Grant Attack via Azure-Registered Application"
+                    "value": "AWS Access Secret in Secrets Manager"
                 }
             ],
             "score": 2
@@ -1770,9 +1798,17 @@
                 {
                     "name": "eql",
                     "value": "Exporting Exchange Mailbox via PowerShell"
+                },
+                {
+                    "name": "eql",
+                    "value": "Exporting Exchange Mailbox via PowerShell"
+                },
+                {
+                    "name": "eql",
+                    "value": "New ActiveSyncAllowedDeviceID Added via PowerShell"
                 }
             ],
-            "score": 1
+            "score": 3
         },
         {
             "techniqueID": "T1003",
@@ -1783,16 +1819,12 @@
                     "value": "NTDS or SAM Database File Copied"
                 },
                 {
+                    "name": "eql",
+                    "value": "NTDS or SAM Database File Copied"
+                },
+                {
                     "name": "query",
                     "value": "LSASS Memory Dump Creation"
-                },
-                {
-                    "name": "eql",
-                    "value": "Credential Acquisition via Registry Hive Dumping"
-                },
-                {
-                    "name": "eql",
-                    "value": "Potential Credential Access via Windows Utilities"
                 },
                 {
                     "name": "eql",
@@ -1819,7 +1851,29 @@
                     "value": "Microsoft IIS Connection Strings Decryption"
                 }
             ],
-            "score": 10
+            "score": 9
+        },
+        {
+            "techniqueID": "T1018",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Windows Network Enumeration"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1135",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Windows Network Enumeration"
+                }
+            ],
+            "score": 1
         },
         {
             "techniqueID": "T1195",
@@ -1827,26 +1881,18 @@
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Command Execution via SolarWinds Process"
-                },
-                {
-                    "name": "eql",
                     "value": "SolarWinds Process Disabling Services via Registry"
                 },
                 {
-                    "name": "query",
-                    "value": "SUNBURST Command and Control Activity"
-                },
-                {
                     "name": "eql",
-                    "value": "Suspicious SolarWinds Child Process"
+                    "value": "Command Execution via SolarWinds Process"
                 },
                 {
                     "name": "query",
                     "value": "SUNBURST Command and Control Activity"
                 }
             ],
-            "score": 5
+            "score": 3
         },
         {
             "techniqueID": "T1195.002",
@@ -1854,26 +1900,18 @@
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Command Execution via SolarWinds Process"
-                },
-                {
-                    "name": "eql",
                     "value": "SolarWinds Process Disabling Services via Registry"
                 },
                 {
-                    "name": "query",
-                    "value": "SUNBURST Command and Control Activity"
-                },
-                {
                     "name": "eql",
-                    "value": "Suspicious SolarWinds Child Process"
+                    "value": "Command Execution via SolarWinds Process"
                 },
                 {
                     "name": "query",
                     "value": "SUNBURST Command and Control Activity"
                 }
             ],
-            "score": 5
+            "score": 3
         },
         {
             "techniqueID": "T1134",
@@ -1917,32 +1955,6 @@
             "score": 2
         },
         {
-            "techniqueID": "T1069",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Enumeration of Administrator Accounts"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1087",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Enumeration of Administrator Accounts"
-                },
-                {
-                    "name": "query",
-                    "value": "Net command via SYSTEM account"
-                }
-            ],
-            "score": 2
-        },
-        {
             "techniqueID": "T1574",
             "enabled": true,
             "metadata": [
@@ -1969,15 +1981,38 @@
             "score": 1
         },
         {
-            "techniqueID": "T1546.012",
+            "techniqueID": "T1069",
             "enabled": true,
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Image File Execution Options Injection"
+                    "value": "Enumeration of Administrator Accounts"
+                },
+                {
+                    "name": "eql",
+                    "value": "AdFind Command Activity"
                 }
             ],
-            "score": 1
+            "score": 2
+        },
+        {
+            "techniqueID": "T1087",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Enumeration of Administrator Accounts"
+                },
+                {
+                    "name": "eql",
+                    "value": "AdFind Command Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Net command via SYSTEM account"
+                }
+            ],
+            "score": 3
         },
         {
             "techniqueID": "T1078.004",
@@ -1991,12 +2026,23 @@
             "score": 1
         },
         {
+            "techniqueID": "T1546.012",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Image File Execution Options Injection"
+                }
+            ],
+            "score": 1
+        },
+        {
             "techniqueID": "T1543.003",
             "enabled": true,
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Unusual Persistence via Services Registry"
+                    "value": "Suspicious ImagePath Service Creation"
                 },
                 {
                     "name": "query",
@@ -2014,217 +2060,37 @@
             "score": 4
         },
         {
-            "techniqueID": "T1102",
+            "techniqueID": "T1069.002",
             "enabled": true,
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Connection to Commonly Abused Web Services"
+                    "value": "AdFind Command Activity"
                 }
             ],
             "score": 1
         },
         {
-            "techniqueID": "T1071.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Default Cobalt Strike Team Server Certificate"
-                },
-                {
-                    "name": "query",
-                    "value": "SUNBURST Command and Control Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "SUNBURST Command and Control Activity"
-                }
-            ],
-            "score": 3
-        },
-        {
-            "techniqueID": "T1070.006",
+            "techniqueID": "T1087.002",
             "enabled": true,
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Timestomping using Touch Command"
+                    "value": "AdFind Command Activity"
                 }
             ],
             "score": 1
         },
         {
-            "techniqueID": "T1546.010",
+            "techniqueID": "T1482",
             "enabled": true,
             "metadata": [
                 {
                     "name": "eql",
-                    "value": "Registry Persistence via AppInit DLL"
+                    "value": "AdFind Command Activity"
                 }
             ],
             "score": 1
-        },
-        {
-            "techniqueID": "T1112",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Uncommon Registry Persistence Change"
-                },
-                {
-                    "name": "eql",
-                    "value": "Uncommon Registry Persistence Change"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1547.005",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Installation of Security Support Provider"
-                },
-                {
-                    "name": "eql",
-                    "value": "Installation of Security Support Provider"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1573",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Connection to Commonly Abused Free SSL Certificate Providers"
-                },
-                {
-                    "name": "eql",
-                    "value": "Connection to Commonly Abused Free SSL Certificate Providers"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1056",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Prompt for Credentials with OSASCRIPT"
-                },
-                {
-                    "name": "eql",
-                    "value": "Prompt for Credentials with OSASCRIPT"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1558",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Kerberos Traffic from Unusual Process"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1120",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Peripheral Device Discovery"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1083",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "File and Directory Discovery"
-                },
-                {
-                    "name": "eql",
-                    "value": "File and Directory Discovery"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1518",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Security Software Discovery using WMIC"
-                },
-                {
-                    "name": "eql",
-                    "value": "Security Software Discovery using WMIC"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1129",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Execution via local SxS Shared Module"
-                },
-                {
-                    "name": "eql",
-                    "value": "Execution via local SxS Shared Module"
-                }
-            ],
-            "score": 2
-        },
-        {
-            "techniqueID": "T1552",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Azure Key Vault Modified"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Key Vault Modified"
-                },
-                {
-                    "name": "query",
-                    "value": "Creation or Modification of Domain Backup DPAPI private key"
-                }
-            ],
-            "score": 3
-        },
-        {
-            "techniqueID": "T1552.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Azure Key Vault Modified"
-                },
-                {
-                    "name": "query",
-                    "value": "Azure Key Vault Modified"
-                }
-            ],
-            "score": 2
         },
         {
             "techniqueID": "T1133",
@@ -2232,7 +2098,7 @@
             "metadata": [
                 {
                     "name": "query",
-                    "value": "AWS RDS Cluster Creation"
+                    "value": "AWS EC2 Network Access Control List Creation"
                 },
                 {
                     "name": "query",
@@ -2248,113 +2114,6 @@
                 }
             ],
             "score": 4
-        },
-        {
-            "techniqueID": "T1106",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Suspicious SolarWinds Child Process"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1140",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Encoded Executable Stored in the Registry"
-                },
-                {
-                    "name": "query",
-                    "value": "Hex Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Encoding or Decoding Files via CertUtil"
-                },
-                {
-                    "name": "query",
-                    "value": "Base16 or Base32 Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Base64 Encoding/Decoding Activity"
-                }
-            ],
-            "score": 5
-        },
-        {
-            "techniqueID": "T1012",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Query Registry via reg.exe"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1560",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Encrypting Files with WinRar or 7z"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1190",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Zoom Meeting with no Passcode"
-                },
-                {
-                    "name": "query",
-                    "value": "VNC (Virtual Network Computing) from the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "Inbound Connection to an Unsecure Elasticsearch Node"
-                },
-                {
-                    "name": "query",
-                    "value": "SSH (Secure Shell) from the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "RDP (Remote Desktop Protocol) to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "SMB (Windows File Sharing) Activity to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "RPC (Remote Procedure Call) to the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "RDP (Remote Desktop Protocol) from the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "Telnet Port Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "RPC (Remote Procedure Call) from the Internet"
-                }
-            ],
-            "score": 10
         },
         {
             "techniqueID": "T1222",
@@ -2376,12 +2135,115 @@
             "score": 3
         },
         {
-            "techniqueID": "T1049",
+            "techniqueID": "T1083",
             "enabled": true,
             "metadata": [
                 {
-                    "name": "machine_learning",
-                    "value": "Unusual Linux Network Connection Discovery"
+                    "name": "eql",
+                    "value": "File and Directory Discovery"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1518",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Security Software Discovery using WMIC"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1129",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Execution via local SxS Shared Module"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1552",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Azure Key Vault Modified"
+                },
+                {
+                    "name": "query",
+                    "value": "Creation or Modification of Domain Backup DPAPI private key"
+                }
+            ],
+            "score": 2
+        },
+        {
+            "techniqueID": "T1552.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Azure Key Vault Modified"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1071.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "SUNBURST Command and Control Activity"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1112",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Uncommon Registry Persistence Change"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1547.005",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Installation of Security Support Provider"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1573",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Connection to Commonly Abused Free SSL Certificate Providers"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1056",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Prompt for Credentials with OSASCRIPT"
                 }
             ],
             "score": 1
@@ -2400,6 +2262,17 @@
                 }
             ],
             "score": 2
+        },
+        {
+            "techniqueID": "T1049",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "machine_learning",
+                    "value": "Unusual Linux Network Connection Discovery"
+                }
+            ],
+            "score": 1
         },
         {
             "techniqueID": "T1082",
@@ -2448,12 +2321,12 @@
                     "value": "File Deletion via Shred"
                 },
                 {
-                    "name": "query",
-                    "value": "Delete Volume USN Journal with Fsutil"
-                },
-                {
                     "name": "eql",
                     "value": "Potential Secure File Deletion via SDelete Utility"
+                },
+                {
+                    "name": "query",
+                    "value": "Delete Volume USN Journal with Fsutil"
                 },
                 {
                     "name": "query",
@@ -2469,21 +2342,6 @@
                 }
             ],
             "score": 6
-        },
-        {
-            "techniqueID": "T1219",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "VNC (Virtual Network Computing) from the Internet"
-                },
-                {
-                    "name": "query",
-                    "value": "VNC (Virtual Network Computing) to the Internet"
-                }
-            ],
-            "score": 2
         },
         {
             "techniqueID": "T1048",
@@ -2517,27 +2375,62 @@
             "score": 6
         },
         {
-            "techniqueID": "T1027",
+            "techniqueID": "T1219",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Hex Encoding/Decoding Activity"
+                    "value": "VNC (Virtual Network Computing) from the Internet"
                 },
                 {
                     "name": "query",
-                    "value": "Microsoft Build Engine Started an Unusual Process"
-                },
-                {
-                    "name": "query",
-                    "value": "Base16 or Base32 Encoding/Decoding Activity"
-                },
-                {
-                    "name": "query",
-                    "value": "Base64 Encoding/Decoding Activity"
+                    "value": "VNC (Virtual Network Computing) to the Internet"
                 }
             ],
-            "score": 4
+            "score": 2
+        },
+        {
+            "techniqueID": "T1190",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "VNC (Virtual Network Computing) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "Inbound Connection to an Unsecure Elasticsearch Node"
+                },
+                {
+                    "name": "query",
+                    "value": "SSH (Secure Shell) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RDP (Remote Desktop Protocol) to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "SMB (Windows File Sharing) Activity to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RPC (Remote Procedure Call) to the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RDP (Remote Desktop Protocol) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "RPC (Remote Procedure Call) from the Internet"
+                },
+                {
+                    "name": "query",
+                    "value": "Telnet Port Activity"
+                }
+            ],
+            "score": 9
         },
         {
             "techniqueID": "T1568",
@@ -2576,6 +2469,52 @@
                 }
             ],
             "score": 3
+        },
+        {
+            "techniqueID": "T1140",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Hex Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Encoding or Decoding Files via CertUtil"
+                },
+                {
+                    "name": "query",
+                    "value": "Base16 or Base32 Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Base64 Encoding/Decoding Activity"
+                }
+            ],
+            "score": 4
+        },
+        {
+            "techniqueID": "T1027",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Hex Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Microsoft Build Engine Started an Unusual Process"
+                },
+                {
+                    "name": "query",
+                    "value": "Base16 or Base32 Encoding/Decoding Activity"
+                },
+                {
+                    "name": "query",
+                    "value": "Base64 Encoding/Decoding Activity"
+                }
+            ],
+            "score": 4
         },
         {
             "techniqueID": "T1548.001",
@@ -2659,11 +2598,11 @@
                 },
                 {
                     "name": "eql",
-                    "value": "Mshta Making Network Connections"
+                    "value": "Unusual Network Connection via RunDLL32"
                 },
                 {
                     "name": "eql",
-                    "value": "Unusual Network Connection via RunDLL32"
+                    "value": "Mshta Making Network Connections"
                 },
                 {
                     "name": "eql",
@@ -2761,17 +2700,6 @@
             "score": 2
         },
         {
-            "techniqueID": "T1204",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Suspicious PDF Reader Child Process"
-                }
-            ],
-            "score": 1
-        },
-        {
             "techniqueID": "T1090",
             "enabled": true,
             "metadata": [
@@ -2789,6 +2717,28 @@
                 {
                     "name": "query",
                     "value": "Tor Activity to the Internet"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1490",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Volume Shadow Copy Deletion via VssAdmin"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1204",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Suspicious PDF Reader Child Process"
                 }
             ],
             "score": 1
@@ -2816,17 +2766,6 @@
             "score": 1
         },
         {
-            "techniqueID": "T1490",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Volume Shadow Copy Deletion via VssAdmin"
-                }
-            ],
-            "score": 1
-        },
-        {
             "techniqueID": "T1027.004",
             "enabled": true,
             "metadata": [
@@ -2849,12 +2788,12 @@
             "score": 1
         },
         {
-            "techniqueID": "T1070.003",
+            "techniqueID": "T1574.010",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Deletion of Bash Command Line History"
+                    "value": "Adobe Hijack Persistence"
                 }
             ],
             "score": 1
@@ -2871,12 +2810,12 @@
             "score": 1
         },
         {
-            "techniqueID": "T1574.010",
+            "techniqueID": "T1070.003",
             "enabled": true,
             "metadata": [
                 {
                     "name": "query",
-                    "value": "Adobe Hijack Persistence"
+                    "value": "Deletion of Bash Command Line History"
                 }
             ],
             "score": 1
@@ -2965,39 +2904,6 @@
             "score": 2
         },
         {
-            "techniqueID": "T1555",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Compression of Keychain Credentials Directories"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1555.001",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Compression of Keychain Credentials Directories"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1211",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Unusual Executable File Creation by a System Critical Process"
-                }
-            ],
-            "score": 1
-        },
-        {
             "techniqueID": "T1498",
             "enabled": true,
             "metadata": [
@@ -3020,17 +2926,6 @@
             "score": 1
         },
         {
-            "techniqueID": "T1218.005",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "eql",
-                    "value": "Mshta Making Network Connections"
-                }
-            ],
-            "score": 1
-        },
-        {
             "techniqueID": "T1218.011",
             "enabled": true,
             "metadata": [
@@ -3044,6 +2939,50 @@
                 }
             ],
             "score": 2
+        },
+        {
+            "techniqueID": "T1218.005",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "eql",
+                    "value": "Mshta Making Network Connections"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1211",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Unusual Executable File Creation by a System Critical Process"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1555",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Compression of Keychain Credentials Directories"
+                }
+            ],
+            "score": 1
+        },
+        {
+            "techniqueID": "T1555.001",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Compression of Keychain Credentials Directories"
+                }
+            ],
+            "score": 1
         },
         {
             "techniqueID": "T1218.010",
@@ -3063,17 +3002,6 @@
                 {
                     "name": "query",
                     "value": "Creation or Modification of Domain Backup DPAPI private key"
-                }
-            ],
-            "score": 1
-        },
-        {
-            "techniqueID": "T1218.009",
-            "enabled": true,
-            "metadata": [
-                {
-                    "name": "query",
-                    "value": "Execution via Regsvcs/Regasm"
                 }
             ],
             "score": 1
@@ -3105,6 +3033,17 @@
             "score": 2
         },
         {
+            "techniqueID": "T1218.009",
+            "enabled": true,
+            "metadata": [
+                {
+                    "name": "query",
+                    "value": "Execution via Regsvcs/Regasm"
+                }
+            ],
+            "score": 1
+        },
+        {
             "techniqueID": "T1553",
             "enabled": true,
             "metadata": [
@@ -3130,8 +3069,8 @@
     "legendItems": [],
     "gradient": {
         "colors": [
-            "#bbddff",
-            "#4488ff"
+            "#bbffdd",
+            "#44ff66"
         ],
         "minValue": 0,
         "maxValue": 20
