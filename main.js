@@ -5,6 +5,7 @@ const prompt = require('co-prompt');
 const program = require('commander');
 const req = require('superagent');
 const fs = require('fs');
+const uuidb64 = require('uuid-base64');
 
 
 var manav = {
@@ -48,16 +49,20 @@ var manav = {
 
 var dr_types = {
     "eql": {
-        "colour": '#fa744e'
+        "colour": '#fa744e',
+        "label": "EQL Rule"
     },
     "machine_learning": {
-        "colour": '#0077cc'
+        "colour": '#0077cc',
+        "label": "ML Rule"
     },
     "query": {
-        "colour": '#54bcb2'
+        "colour": '#54bcb2',
+        "label": "Query Rule"
     },
     "threshold": {
-        "colour": '#fec514'
+        "colour": '#fec514',
+        "label": "Threshold"
     }
 }
     
@@ -78,6 +83,7 @@ program
 //                username, password, file);
             var page = 1
             var total = 1
+            var maxscore = manav.gradient.maxValue
             
             while ( (page-1)*100 < total) {
                 var res = yield req
@@ -91,6 +97,8 @@ program
                 res.body.data.forEach(dr => {
                     
                     console.error(`Rule Name(${dr.name}) ID(${dr.id}) Type(${dr.params.type})`)
+                    
+                    var srid = uuidb64.encode(dr.params.ruleId)
                     
                     dr.params.threat.forEach( threat => {
                         
@@ -113,11 +121,12 @@ program
                             } 
                             else {
                                 mantq.score += 1
+                                if (mantq.score > maxscore) maxscore = mantq.score
                             }
                             
                             mantq.metadata.push({
-                                "name": dr.params.type,
-                                "value": dr.name
+                                "name": dr_types[dr.params.type].label,
+                                "value": `${dr.name} (${srid})`
                             })
                             
                             // very ugly repetition
@@ -136,11 +145,12 @@ program
                                 } 
                                 else {
                                     manstq.score += 1
+                                    if (manstq.score > maxscore) maxscore = manstq.score
                                 }
                                 
                                 manstq.metadata.push({
-                                    "name": dr.params.type,
-                                    "value": dr.name
+                                    "name": dr_types[dr.params.type].label,
+                                    "value": `${dr.name} (${srid})`
                                 })
                             })
                         })
@@ -149,8 +159,11 @@ program
                 
                 page+=1
                 total = res.body.total
+                
 
             }
+            
+            manav.gradient.maxValue = maxscore
             
             console.log(JSON.stringify(manav, null, 4))
             
