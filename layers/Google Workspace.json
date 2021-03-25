@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -54,25 +58,9 @@
         {
           "name": "Query / medium",
           "value": "Google Workspace Role Modified (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Custom Admin Role Created (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Admin Role Assigned to a User (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Role Modified (47)"
         }
       ],
-      "score": 8
+      "score": 4
     }
   ]
 }

@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -78,7 +82,7 @@
         },
         {
           "name": "Query / medium",
-          "value": "Administrator Role Assigned to an Okta User (47)"
+          "value": "Administrator Privileges Assigned to an Okta Group (47)"
         },
         {
           "name": "Query / medium",
@@ -98,9 +102,21 @@
         {
           "name": "Query / low",
           "value": "Attempt to Revoke Okta API Token (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Attempt to Revoke Okta API Token (21)"
         }
       ],
-      "score": 2
+      "score": 5
     },
     {
       "techniqueID": "T1562",
@@ -113,9 +129,17 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1562.001",
@@ -128,9 +152,17 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1078",
@@ -151,9 +183,25 @@
         {
           "name": "Query / medium",
           "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Activity Reported by Okta User (47)"
         }
       ],
-      "score": 4
+      "score": 8
     }
   ]
 }

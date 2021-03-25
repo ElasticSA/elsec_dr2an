@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -46,13 +50,9 @@
         {
           "name": "Query / medium",
           "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Storage Account Key Regenerated (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1526",
@@ -61,13 +61,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1190",
@@ -76,13 +72,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1098",
@@ -99,17 +91,9 @@
         {
           "name": "Query / low",
           "value": "User Added as Owner for Azure Application (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Application (21)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1552",
@@ -219,9 +203,25 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 4
+      "score": 8
     },
     {
       "techniqueID": "T1562.001",
@@ -242,9 +242,25 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 4
+      "score": 8
     },
     {
       "techniqueID": "T1485",
@@ -253,9 +269,13 @@
         {
           "name": "Query / medium",
           "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1059",
@@ -264,9 +284,13 @@
         {
           "name": "Query / medium",
           "value": "Azure Command Execution on Virtual Machine (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1550",

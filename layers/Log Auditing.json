@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -50,9 +54,17 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
         }
       ],
-      "score": 3
+      "score": 5
     },
     {
       "techniqueID": "T1562",
@@ -85,9 +97,33 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 7
+      "score": 13
     },
     {
       "techniqueID": "T1562.001",
@@ -116,9 +152,29 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 6
+      "score": 11
     },
     {
       "techniqueID": "T1530",
@@ -135,9 +191,17 @@
         {
           "name": "Query / low",
           "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Created (21)"
         }
       ],
-      "score": 3
+      "score": 5
     },
     {
       "techniqueID": "T1537",
@@ -157,9 +221,13 @@
         {
           "name": "Query / low",
           "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1566.002",
@@ -168,9 +236,13 @@
         {
           "name": "Query / low",
           "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1059",
@@ -179,9 +251,13 @@
         {
           "name": "Query / medium",
           "value": "Azure Command Execution on Virtual Machine (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
-      "score": 1
+      "score": 2
     }
   ]
 }

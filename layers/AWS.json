@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -50,9 +54,13 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1562",
@@ -85,9 +93,29 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
         }
       ],
-      "score": 7
+      "score": 12
     },
     {
       "techniqueID": "T1562.001",
@@ -120,9 +148,29 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
         }
       ],
-      "score": 7
+      "score": 12
     },
     {
       "techniqueID": "T1133",
@@ -131,9 +179,13 @@
         {
           "name": "Query / low",
           "value": "AWS EC2 Network Access Control List Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS RDS Cluster Creation (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1078",
@@ -142,9 +194,21 @@
         {
           "name": "Query / low",
           "value": "AWS IAM Password Recovery Requested (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Password Recovery Requested (21)"
         }
       ],
-      "score": 1
+      "score": 4
     },
     {
       "techniqueID": "T1566",
@@ -153,9 +217,13 @@
         {
           "name": "Query / low",
           "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1566.002",
@@ -164,9 +232,13 @@
         {
           "name": "Query / low",
           "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1565",
@@ -175,9 +247,13 @@
         {
           "name": "Query / medium",
           "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1565.001",
@@ -186,9 +262,13 @@
         {
           "name": "Query / medium",
           "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1531",
@@ -197,9 +277,17 @@
         {
           "name": "Query / low",
           "value": "AWS IAM Group Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Deletion (21)"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1530",
@@ -208,9 +296,13 @@
         {
           "name": "Query / low",
           "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Created (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1110",
@@ -221,11 +313,15 @@
           "value": "AWS Management Console Brute Force of Root User Identity (73)"
         },
         {
+          "name": "Threshold / medium",
+          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
+        },
+        {
           "name": "Threshold / high",
           "value": "AWS Management Console Brute Force of Root User Identity (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1537",

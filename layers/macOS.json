@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -44,8 +48,8 @@
           "value": "Attempt to Remove File Quarantine Attribute (47)"
         },
         {
-          "name": "Query / high",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+          "name": "EQL / medium",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
         },
         {
           "name": "EQL / medium",
@@ -60,15 +64,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1562.001",
@@ -79,8 +79,8 @@
           "value": "Attempt to Remove File Quarantine Attribute (47)"
         },
         {
-          "name": "Query / high",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+          "name": "EQL / medium",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
         },
         {
           "name": "EQL / medium",
@@ -95,15 +95,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1003",
@@ -115,7 +111,7 @@
         },
         {
           "name": "Query / high",
-          "value": "Dumping Account Hashes via Built-In Commands (73)"
+          "value": "Kerberos Cached Credentials Dumping (73)"
         },
         {
           "name": "Query / high",
@@ -133,6 +129,18 @@
           "value": "Sudoers File Modification (47)"
         },
         {
+          "name": "Query / low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
+        },
+        {
           "name": "Query / medium",
           "value": "Execution via Electron Child Process Node.js Module (47)"
         },
@@ -143,13 +151,9 @@
         {
           "name": "EQL / high",
           "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
-      "score": 5
+      "score": 7
     },
     {
       "techniqueID": "T1548.003",
@@ -160,11 +164,15 @@
           "value": "Sudoers File Modification (47)"
         },
         {
+          "name": "Query / medium",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
           "name": "Query / high",
           "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1021",
@@ -175,15 +183,19 @@
           "value": "Remote SSH Login Enabled via systemsetup Command (47)"
         },
         {
-          "name": "EQL / low",
-          "value": "Virtual Private Network Connection Attempt (21)"
+          "name": "Query / medium",
+          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
         },
         {
           "name": "EQL / low",
           "value": "Attempt to Mount SMB Share via Command Line (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Virtual Private Network Connection Attempt (21)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1070",
@@ -195,10 +207,6 @@
         },
         {
           "name": "EQL / medium",
-          "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "EQL / medium",
           "value": "WebServer Access Logs Deleted (47)"
         },
         {
@@ -206,7 +214,18 @@
           "value": "Timestomping using Touch Command (47)"
         }
       ],
-      "score": 4
+      "score": 3
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1070.006",
@@ -215,13 +234,9 @@
         {
           "name": "EQL / medium",
           "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Timestomping using Touch Command (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1110",
@@ -230,13 +245,9 @@
         {
           "name": "Threshold / medium",
           "value": "Potential SSH Brute Force Detected (47)"
-        },
-        {
-          "name": "Threshold / medium",
-          "value": "Potential SSH Brute Force Detected (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1056",
@@ -245,13 +256,9 @@
         {
           "name": "EQL / high",
           "value": "Prompt for Credentials with OSASCRIPT (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Prompt for Credentials with OSASCRIPT (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1056.002",
@@ -260,30 +267,68 @@
         {
           "name": "EQL / high",
           "value": "Prompt for Credentials with OSASCRIPT (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Prompt for Credentials with OSASCRIPT (73)"
         }
       ],
-      "score": 2
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "LaunchDaemon Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Persistence via Docker Shortcut Modification (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Finder Sync Plugin Registered and Enabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
-        {
-          "name": "EQL / high",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
         {
           "name": "EQL / medium",
           "value": "Apple Script Execution followed by Network Connection (47)"
@@ -317,303 +362,19 @@
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious JAR Child Process (47)"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1555",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Keychain Password Retrieval via Command Line (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SystemKey Access via Command Line (73)"
-        },
-        {
           "name": "EQL / high",
-          "value": "Access to Keychain Credentials Directories (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Access of Stored Browser Credentials (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Dumping of Keychain Content via Security Command (73)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1555.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Keychain Password Retrieval via Command Line (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SystemKey Access via Command Line (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Access to Keychain Credentials Directories (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Dumping of Keychain Content via Security Command (73)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Potential Hidden Local User Account Creation (47)"
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
         },
         {
           "name": "Query / medium",
-          "value": "Attempt to Enable the Root Account (47)"
+          "value": "Execution via Electron Child Process Node.js Module (47)"
         },
-        {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution with Explicit Credentials via Scripting (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Apple Scripting Execution with Administrator Privileges (47)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1078.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Potential Hidden Local User Account Creation (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Enable the Root Account (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1550",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1550.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1558",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Persistence via DirectoryService Plugin Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Persistence via DirectoryService Plugin Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Potential Persistence via Login Hook (47)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1547.011",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Potential Persistence via Login Hook (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059.002",
-      "enabled": true,
-      "metadata": [
         {
           "name": "EQL / medium",
           "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1555.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / high",
-          "value": "Access of Stored Browser Credentials (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1543",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "LaunchDaemon Creation or Modification and Immediate Loading (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Persistence via Docker Shortcut Modification (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Finder Sync Plugin Registered and Enabled (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Standard Authentication Module or Configuration (47)"
-        }
-      ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1543.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1564",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1564.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        }
-      ],
-      "score": 2
+      "score": 11
     },
     {
       "techniqueID": "T1105",
@@ -640,6 +401,33 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Execution with Explicit Credentials via Scripting (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Apple Scripting Execution with Administrator Privileges (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 5
     },
     {
       "techniqueID": "T1518",
@@ -756,6 +544,56 @@
       "score": 2
     },
     {
+      "techniqueID": "T1555",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Dumping of Keychain Content via Security Command (73)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Access to Keychain Credentials Directories (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Access of Stored Browser Credentials (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1555.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Dumping of Keychain Content via Security Command (73)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Access to Keychain Credentials Directories (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SystemKey Access via Command Line (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
       "techniqueID": "T1553",
       "enabled": true,
       "metadata": [
@@ -766,17 +604,9 @@
         {
           "name": "Query / medium",
           "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Disable Gatekeeper (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Install Root Certificate (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1546",
@@ -797,25 +627,9 @@
         {
           "name": "EQL / medium",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Calendar File Modification (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 8
+      "score": 4
     },
     {
       "techniqueID": "T1546.014",
@@ -828,17 +642,9 @@
         {
           "name": "EQL / medium",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1553.004",
@@ -847,13 +653,9 @@
         {
           "name": "Query / medium",
           "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Install Root Certificate (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1069",
@@ -862,13 +664,9 @@
         {
           "name": "EQL / low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1087",
@@ -877,13 +675,32 @@
         {
           "name": "EQL / low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 2
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Persistence via DirectoryService Plugin Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Authorization Plugin Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 4
     },
     {
       "techniqueID": "T1053",
@@ -898,19 +715,11 @@
           "value": "Potential Persistence via Periodic Tasks (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
           "name": "Query / high",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1053.003",
@@ -925,19 +734,11 @@
           "value": "Potential Persistence via Periodic Tasks (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
           "name": "Query / high",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1546.004",
@@ -946,13 +747,9 @@
         {
           "name": "Query / medium",
           "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Bash Shell Profile Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574",
@@ -961,13 +758,9 @@
         {
           "name": "Query / medium",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574.007",
@@ -976,13 +769,9 @@
         {
           "name": "Query / medium",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.002",
@@ -991,13 +780,9 @@
         {
           "name": "Query / medium",
           "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Authorization Plugin Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1059.007",
@@ -1010,13 +795,9 @@
         {
           "name": "EQL / medium",
           "value": "macOS Installer Spawns Network Event (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious JAR Child Process (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1068",
@@ -1027,15 +808,11 @@
           "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
         },
         {
-          "name": "Query / high",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
           "name": "Threshold / high",
           "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1071",
@@ -1069,6 +846,136 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1555.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Access of Stored Browser Credentials (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

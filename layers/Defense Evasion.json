@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -42,13 +46,9 @@
         {
           "name": "Query / high",
           "value": "Unusual Executable File Creation by a System Critical Process (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Unusual Executable File Creation by a System Critical Process (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1036",
@@ -75,16 +75,8 @@
           "value": "Potential Process Herpaderping Attempt (73)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Program Files Directory Masquerading (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious WerFault Child Process (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious Endpoint Security Parent Process (47)"
+          "name": "Query / low",
+          "value": "Microsoft Build Engine Using an Alternate Name (21)"
         },
         {
           "name": "EQL / high",
@@ -97,13 +89,9 @@
         {
           "name": "EQL / medium",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 12
+      "score": 9
     },
     {
       "techniqueID": "T1055",
@@ -134,8 +122,12 @@
           "value": "Process Injection by the Microsoft Build Engine (21)"
         },
         {
-          "name": "Query / high",
-          "value": "Suspicious Managed Code Hosting Process (73)"
+          "name": "Query / low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
         },
         {
           "name": "EQL / medium",
@@ -146,7 +138,7 @@
           "value": "Unusual Service Host Child Process - Childless Service (47)"
         }
       ],
-      "score": 9
+      "score": 10
     },
     {
       "techniqueID": "T1553",
@@ -169,23 +161,11 @@
           "value": "SIP Provider Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Attempt to Disable Gatekeeper (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "SIP Provider Modification (47)"
-        },
-        {
           "name": "EQL / low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 8
+      "score": 5
     },
     {
       "techniqueID": "T1553.002",
@@ -227,28 +207,8 @@
           "value": "Potential Secure File Deletion via SDelete Utility (21)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Process Termination followed by Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "File Deletion via Shred (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "System Log File Deletion (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Windows Event Logs Cleared (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Tampering of Bash Command-Line History (47)"
+          "name": "Query / high",
+          "value": "IIS HTTP Logging Disabled (73)"
         },
         {
           "name": "EQL / medium",
@@ -277,9 +237,13 @@
         {
           "name": "Query / low",
           "value": "Windows Event Logs Cleared (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
-      "score": 19
+      "score": 15
     },
     {
       "techniqueID": "T1070.004",
@@ -302,10 +266,6 @@
           "value": "Potential Secure File Deletion via SDelete Utility (21)"
         },
         {
-          "name": "Query / low",
-          "value": "File Deletion via Shred (21)"
-        },
-        {
           "name": "EQL / low",
           "value": "Potential Secure File Deletion via SDelete Utility (21)"
         },
@@ -314,7 +274,7 @@
           "value": "File Deletion via Shred (21)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1127",
@@ -335,9 +295,13 @@
         {
           "name": "Query / low",
           "value": "Microsoft Build Engine Started by a Script Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Microsoft Build Engine Started by a Script Process (21)"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1564",
@@ -352,12 +316,8 @@
           "value": "Creation of Hidden Files and Directories (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
           "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
+          "value": "Creation of Hidden Files and Directories (47)"
         },
         {
           "name": "EQL / medium",
@@ -366,9 +326,17 @@
         {
           "name": "EQL / medium",
           "value": "Unusual File Creation - Alternate Data Stream (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1564.001",
@@ -383,6 +351,10 @@
           "value": "Creation of Hidden Files and Directories (47)"
         },
         {
+          "name": "Query / medium",
+          "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
           "name": "EQL / medium",
           "value": "Creation of Hidden Launch Agent or Daemon (47)"
         },
@@ -391,7 +363,7 @@
           "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1140",
@@ -415,6 +387,14 @@
         },
         {
           "name": "Query / low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Query / low",
           "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         },
         {
@@ -422,7 +402,7 @@
           "value": "Encoded Executable Stored in the Registry (47)"
         }
       ],
-      "score": 6
+      "score": 8
     },
     {
       "techniqueID": "T1562",
@@ -449,8 +429,20 @@
           "value": "Attempt to Disable Syslog Service (47)"
         },
         {
+          "name": "Query / medium",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
           "name": "Query / high",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Disable Syslog Service (47)"
         },
         {
           "name": "EQL / medium",
@@ -485,15 +477,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 16
+      "score": 18
     },
     {
       "techniqueID": "T1562.001",
@@ -520,8 +508,20 @@
           "value": "Attempt to Disable Syslog Service (47)"
         },
         {
+          "name": "Query / medium",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
           "name": "Query / high",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Disable Syslog Service (47)"
         },
         {
           "name": "EQL / medium",
@@ -556,15 +556,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 16
+      "score": 18
     },
     {
       "techniqueID": "T1218",
@@ -625,10 +621,22 @@
         },
         {
           "name": "Query / low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Query / low",
           "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         }
       ],
-      "score": 4
+      "score": 7
     },
     {
       "techniqueID": "T1547",
@@ -637,9 +645,13 @@
         {
           "name": "Query / high",
           "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Kernel Module Removal (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1547.006",
@@ -648,6 +660,21 @@
         {
           "name": "Query / high",
           "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1027.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
         }
       ],
       "score": 1
@@ -659,95 +686,9 @@
         {
           "name": "EQL / medium",
           "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Timestomping using Touch Command (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1070.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Tampering of Bash Command-Line History (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1543",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1543.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Launch Agent or Daemon (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Suspicious Hidden Child Process of Launchd (47)"
-        }
-      ],
-      "score": 2
     },
     {
       "techniqueID": "T1195",
@@ -791,15 +732,11 @@
           "value": "Attempt to Install Root Certificate (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
           "name": "EQL / low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1036.004",
@@ -808,13 +745,9 @@
         {
           "name": "EQL / medium",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574",
@@ -823,13 +756,9 @@
         {
           "name": "Query / medium",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574.007",
@@ -838,13 +767,9 @@
         {
           "name": "Query / medium",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1553.003",
@@ -853,13 +778,9 @@
         {
           "name": "EQL / medium",
           "value": "SIP Provider Modification (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "SIP Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1564.004",
@@ -882,6 +803,88 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

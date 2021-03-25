@@ -44,6 +44,10 @@ var ma_nav_templ = {
         {
                 "name": "Elastic version",
                 "value": "7.x"
+        },
+        {
+            "name": "Metadata format",
+            "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
         }
     ],
 }
@@ -112,19 +116,12 @@ function update_layer(name, dr, techn)
     
 program
     .arguments('<file>')
-//    .option('-u, --username <username>', 'The user to authenticate as')
-//    .option('-p, --password <password>', 'The user\'s password')
     .action(function(file) {
         
         var conf = JSON.parse(fs.readFileSync(file))
         
         co(function *() {
-            console.error('Hello, world!')
-//            var username = yield prompt('username: ');
-//            var password = yield prompt.password('password: ');
-//            console.error('user: %s pass: %s file: %s',
-//                //program.username, program.password, file);
-//                username, password, file);
+            console.log('Hello, world!')
             
             var knstatus = yield req
                     .get(`${conf.url}/api/status`)
@@ -136,29 +133,26 @@ program
             
             var page = 1
             var total = 1
-
-            var kn_api = "/api"
-            if (conf.space) kn_api = `/s/${conf.space}/api`
+            var kn_api = conf.space ? `/s/${conf.space}/api` : "/api"
         
             while ( (page-1)*100 < total) {
+                
                 var res = yield req
                     .get(`${conf.url}${kn_api}/alerts/_find?per_page=100&page=${page}&search_fields=consumer&search=siem`)
                     .set("kbn-xsrf", "true")
                     .auth(conf.un, conf.pw)
                     .accept('json')
 
-                console.error(`Page(${page}) Total(${res.body.total})`)
+                console.log(`Page(${page}) Total(${res.body.total})`)
                 
                 res.body.data.forEach(dr => {
                     
-                    //To shorten the ID to 22 chars
-                    var srid = uuidb64.encode(dr.params.ruleId)
-                    console.error(`Rule Name(${dr.name}) ID(${dr.id} -> ${srid}) Type(${dr.params.type})`)
+                    console.log(`Rule Name(${dr.name}) ID(${dr.id}) Type(${dr.params.type})`)
                     
                     dr.params.threat.forEach( threat => {
                         
                         if (threat.framework != "MITRE ATT&CK") return
-                        console.error("^ Has MITRE ATT&CK info")
+                        console.log("^ Has MITRE ATT&CK info")
                         
                         if (threat.technique === undefined) return
                         threat.technique.forEach( techn => {

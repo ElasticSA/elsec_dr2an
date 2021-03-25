@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -46,13 +50,9 @@
         {
           "name": "Query / medium",
           "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Storage Account Key Regenerated (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1526",
@@ -61,13 +61,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1190",
@@ -76,13 +72,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1098",
@@ -125,30 +117,6 @@
           "value": "Google Workspace Role Modified (47)"
         },
         {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Application (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Custom Admin Role Created (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Admin Role Assigned to a User (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Google Workspace Role Modified (47)"
-        },
-        {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
         },
@@ -161,7 +129,7 @@
           "value": "Microsoft 365 Teams External Access Enabled (47)"
         }
       ],
-      "score": 18
+      "score": 12
     },
     {
       "techniqueID": "T1552",
@@ -208,9 +176,17 @@
         {
           "name": "Query / medium",
           "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
         }
       ],
-      "score": 5
+      "score": 7
     },
     {
       "techniqueID": "T1562",
@@ -265,6 +241,46 @@
           "value": "Azure Event Hub Deletion (47)"
         },
         {
+          "name": "Query / low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
         },
@@ -281,7 +297,7 @@
           "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
         }
       ],
-      "score": 16
+      "score": 26
     },
     {
       "techniqueID": "T1562.001",
@@ -330,9 +346,45 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 11
+      "score": 20
     },
     {
       "techniqueID": "T1133",
@@ -341,9 +393,13 @@
         {
           "name": "Query / low",
           "value": "AWS EC2 Network Access Control List Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS RDS Cluster Creation (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1566",
@@ -358,8 +414,8 @@
           "value": "AWS Execution via System Manager (21)"
         },
         {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         },
         {
           "name": "Query / medium",
@@ -387,9 +443,13 @@
         {
           "name": "Query / low",
           "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1078",
@@ -416,6 +476,18 @@
           "value": "AWS IAM Password Recovery Requested (21)"
         },
         {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Password Recovery Requested (21)"
+        },
+        {
           "name": "Query / low",
           "value": "Azure Active Directory PowerShell Sign-in (21)"
         },
@@ -424,7 +496,7 @@
           "value": "Azure Active Directory High Risk Sign-in (73)"
         }
       ],
-      "score": 7
+      "score": 10
     },
     {
       "techniqueID": "T1530",
@@ -441,9 +513,17 @@
         {
           "name": "Query / low",
           "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Created (21)"
         }
       ],
-      "score": 3
+      "score": 5
     },
     {
       "techniqueID": "T1537",
@@ -459,18 +539,14 @@
         },
         {
           "name": "Query / medium",
-          "value": "AWS EC2 Snapshot Activity (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Query / medium",
           "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Snapshot Activity (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1222",
@@ -490,9 +566,13 @@
         {
           "name": "Query / medium",
           "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1565.001",
@@ -501,9 +581,13 @@
         {
           "name": "Query / medium",
           "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1531",
@@ -512,9 +596,17 @@
         {
           "name": "Query / low",
           "value": "AWS IAM Group Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Deletion (21)"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1059",
@@ -523,9 +615,13 @@
         {
           "name": "Query / medium",
           "value": "Azure Command Execution on Virtual Machine (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1110",
@@ -534,6 +630,10 @@
         {
           "name": "Threshold / high",
           "value": "AWS Management Console Brute Force of Root User Identity (73)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
         },
         {
           "name": "Threshold / high",
@@ -548,18 +648,7 @@
           "value": "Potential Password Spraying of Microsoft 365 User Accounts (73)"
         }
       ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1070",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "AWS S3 Bucket Configuration Deletion (21)"
-        }
-      ],
-      "score": 1
+      "score": 5
     },
     {
       "techniqueID": "T1550",
@@ -598,6 +687,17 @@
         {
           "name": "Query / low",
           "value": "Azure Active Directory PowerShell Sign-in (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
         }
       ],
       "score": 1

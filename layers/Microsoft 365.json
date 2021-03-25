@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -45,10 +49,6 @@
         },
         {
           "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
-        },
-        {
-          "name": "Query / medium",
           "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
         },
         {
@@ -56,7 +56,7 @@
           "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1537",
@@ -68,14 +68,10 @@
         },
         {
           "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Query / medium",
           "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1562",

@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -94,9 +98,13 @@
         {
           "name": "Query / medium",
           "value": "GCP Logging Bucket Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1530",
@@ -105,9 +113,13 @@
         {
           "name": "Query / low",
           "value": "GCP Pub/Sub Topic Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
         }
       ],
-      "score": 1
+      "score": 2
     }
   ]
 }

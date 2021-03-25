@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -73,13 +77,9 @@
         {
           "name": "EQL / low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 6
+      "score": 5
     },
     {
       "techniqueID": "T1057",
@@ -145,13 +145,9 @@
         {
           "name": "EQL / low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1069.002",
@@ -203,11 +199,15 @@
       "enabled": true,
       "metadata": [
         {
+          "name": "Query / medium",
+          "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
           "name": "Query / high",
           "value": "Virtual Machine Fingerprinting (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1018",

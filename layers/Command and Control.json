@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -46,13 +50,9 @@
         {
           "name": "Query / medium",
           "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1190",
@@ -65,13 +65,9 @@
         {
           "name": "Query / medium",
           "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1090",
@@ -146,6 +142,10 @@
           "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
         },
         {
+          "name": "Query / medium",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        },
+        {
           "name": "EQL / medium",
           "value": "Remote File Download via Script Interpreter (47)"
         },
@@ -158,7 +158,7 @@
           "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1071",
@@ -173,8 +173,12 @@
           "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
-          "name": "Threshold / medium",
-          "value": "Potential DNS Tunneling via NsLookup (47)"
+          "name": "Query / high",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
           "name": "Threshold / medium",
@@ -189,7 +193,7 @@
           "value": "SUNBURST Command and Control Activity (73)"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1568",
@@ -202,9 +206,17 @@
         {
           "name": "Query / high",
           "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1568.002",
@@ -217,9 +229,17 @@
         {
           "name": "Query / high",
           "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1102",
@@ -243,13 +263,9 @@
         {
           "name": "EQL / low",
           "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1059",

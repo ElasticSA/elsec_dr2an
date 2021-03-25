@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -57,6 +61,22 @@
         },
         {
           "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Query / medium",
           "value": "Auditd Max Failed Login Attempts (47)"
         },
         {
@@ -64,7 +84,7 @@
           "value": "Auditd Max Failed Login Attempts (47)"
         }
       ],
-      "score": 6
+      "score": 10
     },
     {
       "techniqueID": "T1190",
@@ -73,6 +93,14 @@
         {
           "name": "Query / high",
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
         },
         {
           "name": "Query / high",
@@ -95,7 +123,7 @@
           "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
         }
       ],
-      "score": 6
+      "score": 8
     },
     {
       "techniqueID": "T1566",

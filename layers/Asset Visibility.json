@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -32,6 +32,10 @@
     {
       "name": "Elastic version",
       "value": "7.12.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
     }
   ],
   "techniques": [
@@ -42,13 +46,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1190",
@@ -57,13 +57,9 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1485",
@@ -72,6 +68,17 @@
         {
           "name": "Query / medium",
           "value": "AWS RDS Cluster Deletion (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS RDS Cluster Creation (21)"
         }
       ],
       "score": 1
