@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,16 +36,102 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1078",
+      "techniqueID": "T1528",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / low",
-          "value": "Azure Automation Account Created (21)"
+          "value": "Azure Storage Account Key Regenerated (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
         },
         {
           "name": "Query / low",
-          "value": "Azure Automation Account Created (21)"
+          "value": "User Added as Owner for Azure Service Principal (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Application (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Key Vault Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
         },
         {
           "name": "Query / low",
@@ -75,76 +161,72 @@
       "score": 8
     },
     {
-      "techniqueID": "T1098",
+      "techniqueID": "T1530",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Azure Global Administrator Role Addition to PIM User (73)"
-        },
-        {
           "name": "Query / medium",
-          "value": "Azure Conditional Access Policy Modified (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Azure Global Administrator Role Addition to PIM User (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Conditional Access Policy Modified (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Application (21)"
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
         }
       ],
-      "score": 6
+      "score": 1
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1562",
       "enabled": true,
       "metadata": [
         {
+          "name": "Query / medium",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
           "name": "Query / low",
           "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1528",
+      "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
-          "value": "Azure Storage Account Key Regenerated (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1526",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1190",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
+          "name": "Query / medium",
+          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
       "score": 1

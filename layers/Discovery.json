@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,19 +36,60 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "User Discovery via Whoami (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Whoami Process Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Net command via SYSTEM account (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Process Discovery via Tasklist (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1016",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / low",
           "value": "Public IP Reconnaissance Activity (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Public IP Reconnaissance Activity (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1082",
@@ -61,13 +102,9 @@
         {
           "name": "Query / high",
           "value": "Virtual Machine Fingerprinting (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Virtual Machine Fingerprinting (73)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1518",
@@ -95,32 +132,9 @@
         {
           "name": "EQL / low",
           "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1087",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        }
-      ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1482",
@@ -171,23 +185,23 @@
       "score": 1
     },
     {
-      "techniqueID": "T1083",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "File and Directory Discovery (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1012",
       "enabled": true,
       "metadata": [
         {
           "name": "EQL / low",
           "value": "Query Registry via reg.exe (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1083",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "File and Directory Discovery (21)"
         }
       ],
       "score": 1

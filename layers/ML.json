@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,27 +36,12 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1082",
+      "techniqueID": "T1033",
       "enabled": true,
       "metadata": [
         {
           "name": "ML / low",
-          "value": "Unusual Linux System Information Discovery Activity (21)"
-        },
-        {
-          "name": "ML / low",
-          "value": "Unusual Linux System Information Discovery Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1057",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "ML / low",
-          "value": "Unusual Linux Process Discovery Activity (21)"
+          "value": "Unusual Linux System Owner or User Discovery Activity (21)"
         }
       ],
       "score": 1
@@ -105,6 +90,32 @@
         {
           "name": "ML / low",
           "value": "Unusual Linux System Network Configuration Discovery (21)"
+        },
+        {
+          "name": "ML / low",
+          "value": "Unusual Linux System Network Configuration Discovery (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / low",
+          "value": "Unusual Linux System Information Discovery Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / low",
+          "value": "Unusual Linux Process Discovery Activity (21)"
         }
       ],
       "score": 1

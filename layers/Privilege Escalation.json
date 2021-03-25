@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -40,6 +40,10 @@
       "enabled": true,
       "metadata": [
         {
+          "name": "EQL / medium",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
           "name": "Query / low",
           "value": "Bypass UAC via Event Viewer (21)"
         },
@@ -48,24 +52,8 @@
           "value": "Setuid / Setgid Bit Set via chmod (21)"
         },
         {
-          "name": "EQL / medium",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+          "name": "Query / medium",
+          "value": "Sudoers File Modification (47)"
         },
         {
           "name": "EQL / high",
@@ -112,7 +100,7 @@
           "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
         }
       ],
-      "score": 18
+      "score": 15
     },
     {
       "techniqueID": "T1055",
@@ -134,63 +122,13 @@
       "score": 3
     },
     {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution with Explicit Credentials via Scripting (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Apple Scripting Execution with Administrator Privileges (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1574",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 6
-    },
-    {
       "techniqueID": "T1068",
       "enabled": true,
       "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
+        },
         {
           "name": "Query / high",
           "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
@@ -198,10 +136,6 @@
         {
           "name": "EQL / high",
           "value": "Suspicious Print Spooler Point and Print DLL (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
         },
         {
           "name": "Threshold / high",
@@ -222,6 +156,48 @@
       "score": 1
     },
     {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Privilege Escalation via Windir Environment Variable (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Execution with Explicit Credentials via Scripting (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Apple Scripting Execution with Administrator Privileges (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
@@ -237,29 +213,6 @@
       "score": 2
     },
     {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
       "techniqueID": "T1053",
       "enabled": true,
       "metadata": [
@@ -269,6 +222,21 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

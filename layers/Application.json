@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Collection",
+  "name": "Elastic Security: Application",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -36,42 +36,12 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1114",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Exporting Exchange Mailbox via PowerShell (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "New ActiveSyncAllowedDeviceID Added via PowerShell (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1552",
+      "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / medium",
-          "value": "Sensitive Files Compression (47)"
+          "value": "Zoom Meeting with no Passcode (47)"
         }
       ],
       "score": 1

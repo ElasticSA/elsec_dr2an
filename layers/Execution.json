@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -40,36 +40,32 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
-          "value": "Svchost spawning Cmd (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Svchost spawning Cmd (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "PowerShell spawning Cmd (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
-        {
           "name": "Query / medium",
           "value": "Unusual Parent Process for cmd.exe (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Command Prompt Network Connection (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Svchost spawning Cmd (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Interactive Terminal Spawned via Python (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Conhost Spawned By Suspicious Parent Process (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Execution via MSSQL xp_cmdshell Stored Procedure (73)"
         },
         {
           "name": "EQL / low",
@@ -109,10 +105,6 @@
         },
         {
           "name": "EQL / medium",
-          "value": "Suspicious JAR Child Process (47)"
-        },
-        {
-          "name": "EQL / medium",
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
@@ -132,19 +124,49 @@
           "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 23
+      "score": 21
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Command Prompt Network Connection (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Apple Script Execution followed by Network Connection (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1569",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
-          "value": "PsExec Network Connection (21)"
+          "name": "EQL / medium",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
         },
         {
           "name": "EQL / low",
           "value": "PsExec Network Connection (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         }
       ],
       "score": 2
@@ -154,27 +176,35 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
-          "value": "Process Activity via Compiled HTML File (21)"
-        },
-        {
           "name": "EQL / low",
           "value": "Network Connection via Compiled HTML File (21)"
         },
         {
           "name": "Query / low",
           "value": "Process Activity via Compiled HTML File (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Execution via Regsvcs/Regasm (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Network Connection via Compiled HTML File (21)"
         }
       ],
-      "score": 3
+      "score": 5
     },
     {
-      "techniqueID": "T1566",
+      "techniqueID": "T1204",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "Query / low",
+          "value": "Suspicious PDF Reader Child Process (21)"
         }
       ],
       "score": 1
@@ -184,50 +214,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
-          "value": "Suspicious WMI Image Load from MS Office (21)"
-        },
-        {
           "name": "EQL / medium",
           "value": "Suspicious Cmd Execution via WMI (47)"
         },
         {
           "name": "EQL / low",
           "value": "Suspicious WMI Image Load from MS Office (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
       "score": 2
@@ -239,17 +231,6 @@
         {
           "name": "EQL / medium",
           "value": "Execution via local SxS Shared Module (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1105",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
       "score": 1
@@ -357,6 +338,28 @@
         {
           "name": "EQL / medium",
           "value": "Execution of COM object via Xwizard (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
       "score": 1

@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,19 +36,48 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "AWS RDS Cluster Deletion (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1489",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / medium",
           "value": "AWS RDS Instance/Cluster Stoppage (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS RDS Instance/Cluster Stoppage (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1133",
@@ -68,13 +97,9 @@
         {
           "name": "Query / medium",
           "value": "AWS EC2 Snapshot Activity (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS EC2 Snapshot Activity (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1070",
@@ -83,32 +108,6 @@
         {
           "name": "Query / low",
           "value": "AWS S3 Bucket Configuration Deletion (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "AWS S3 Bucket Configuration Deletion (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1526",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1190",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
       "score": 1

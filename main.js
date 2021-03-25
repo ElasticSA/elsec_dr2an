@@ -52,6 +52,7 @@ var ma_nav = {
     "All": { ...ma_nav_templ }
 }
 ma_nav.All.techniques = []
+ma_nav.All.name += 'All'
 
 var dr_types = {
     "eql": {

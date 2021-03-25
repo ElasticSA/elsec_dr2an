@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,62 +36,53 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1537",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / low",
-          "value": "GCP Logging Sink Modification (21)"
+          "value": "GCP IAM Service Account Key Deletion (21)"
         },
         {
           "name": "Query / low",
-          "value": "GCP Logging Sink Modification (21)"
+          "value": "GCP Service Account Key Creation (21)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1531",
+      "techniqueID": "T1485",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / medium",
-          "value": "GCP Service Account Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP IAM Role Deletion (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "GCP Service Account Disabled (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "GCP Service Account Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP IAM Role Deletion (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "GCP Service Account Disabled (47)"
+          "value": "GCP Storage Bucket Deletion (47)"
         }
       ],
-      "score": 6
+      "score": 1
     },
     {
-      "techniqueID": "T1136",
+      "techniqueID": "T1222",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
-          "value": "GCP Service Account Creation (21)"
+          "name": "Query / medium",
+          "value": "GCP Storage Bucket Permissions Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "GCP IAM Custom Role Creation (47)"
         },
         {
-          "name": "Query / low",
-          "value": "GCP Service Account Creation (21)"
+          "name": "Query / medium",
+          "value": "GCP IAM Custom Role Creation (47)"
         }
       ],
       "score": 2
@@ -102,19 +93,7 @@
       "metadata": [
         {
           "name": "Query / medium",
-          "value": "GCP Logging Sink Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP Pub/Sub Subscription Deletion (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP Firewall Rule Creation (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP Pub/Sub Topic Deletion (21)"
+          "value": "GCP Logging Bucket Deletion (47)"
         },
         {
           "name": "Query / medium",
@@ -135,9 +114,58 @@
         {
           "name": "Query / low",
           "value": "GCP Firewall Rule Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Firewall Rule Deletion (47)"
         }
       ],
-      "score": 9
+      "score": 8
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Disabled (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Logging Sink Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Service Account Creation (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1530",
@@ -149,7 +177,7 @@
         },
         {
           "name": "Query / low",
-          "value": "GCP Pub/Sub Subscription Creation (21)"
+          "value": "GCP Pub/Sub Topic Creation (21)"
         }
       ],
       "score": 2

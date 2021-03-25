@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,12 +36,51 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        }
+      ],
+      "score": 8
+    },
+    {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
           "name": "Query / low",
@@ -50,6 +89,14 @@
         {
           "name": "Query / high",
           "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
         },
         {
           "name": "EQL / medium",
@@ -64,81 +111,16 @@
           "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
         }
       ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1048",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
-        {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1133",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Unusual File Modification by dns.exe (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Unusual Child Process of dns.exe (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Unusual File Modification by dns.exe (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        }
-      ],
-      "score": 6
+      "score": 8
     },
     {
       "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
         {
           "name": "Query / low",
           "value": "Suspicious MS Outlook Child Process (21)"
@@ -152,6 +134,14 @@
           "value": "Suspicious Explorer Child Process (47)"
         },
         {
+          "name": "Query / low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
           "name": "EQL / medium",
           "value": "Windows Script Interpreter Executing Process via WMI (47)"
         },
@@ -160,7 +150,41 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 5
+      "score": 8
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Unusual Child Process of dns.exe (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual File Modification by dns.exe (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual Child Process of dns.exe (73)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1203",

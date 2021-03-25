@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 37
+    "maxValue": 47
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -36,12 +36,107 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SSH (Secure Shell) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SSH (Secure Shell) from the Internet (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1090",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Tor Activity to the Internet (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "SMTP on Port 26/TCP (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "SMTP to the Internet (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "VNC (Virtual Network Computing) to the Internet (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1105",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
-          "value": "Network Connection via Certutil (21)"
+          "name": "Query / medium",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Remote File Download via MpCmdRun (47)"
         },
         {
           "name": "Query / medium",
@@ -50,6 +145,14 @@
         {
           "name": "EQL / low",
           "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
         },
         {
           "name": "EQL / medium",
@@ -64,49 +167,7 @@
           "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1219",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1190",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
-        }
-      ],
-      "score": 5
+      "score": 9
     },
     {
       "techniqueID": "T1071",
@@ -121,16 +182,12 @@
           "value": "Halfbaked Command and Control Beacon (73)"
         },
         {
-          "name": "Query / critical",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "Query / high",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         },
         {
           "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
-        },
-        {
-          "name": "Threshold / medium",
-          "value": "Potential DNS Tunneling via NsLookup (47)"
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
           "name": "Threshold / medium",
@@ -145,7 +202,7 @@
           "value": "SUNBURST Command and Control Activity (73)"
         }
       ],
-      "score": 8
+      "score": 7
     },
     {
       "techniqueID": "T1568",
@@ -157,44 +214,14 @@
         },
         {
           "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1021",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         },
         {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
+          "name": "Query / high",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
       "score": 3
-    },
-    {
-      "techniqueID": "T1573",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
-        }
-      ],
-      "score": 2
     },
     {
       "techniqueID": "T1102",
@@ -203,6 +230,17 @@
         {
           "name": "EQL / low",
           "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
         }
       ],
       "score": 1
