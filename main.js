@@ -48,11 +48,7 @@ var ma_nav_templ = {
     ],
 }
 
-var ma_nav = {
-    "All": { ...ma_nav_templ }
-}
-ma_nav.All.techniques = []
-ma_nav.All.name += 'All'
+var ma_nav = {}
 
 var dr_types = {
     "eql": {
@@ -107,6 +103,7 @@ function update_layer(name, dr, techn)
         layer = { ...ma_nav_templ }
         layer.name += name
         layer.techniques = []
+//         layer.gradient = { ...ma_nav_templ.gradient }
         ma_nav[name] = layer
     }
     
@@ -166,7 +163,7 @@ program
                         if (threat.technique === undefined) return
                         threat.technique.forEach( techn => {
                             
-                            update_entry(ma_nav.All, dr, techn)
+                            update_layer('All', dr, techn)
                             
                             dr.tags.forEach(tag => {
                                 if (! valid_tag.exec(tag)) return
@@ -176,7 +173,14 @@ program
                             
                             if (techn.subtechnique === undefined) return
                             techn.subtechnique.forEach( subtn => {
-                                update_entry(ma_nav.All, dr, subtn)
+                                
+                                update_layer('All', dr, subtn)
+                                
+                                dr.tags.forEach(tag => {
+                                    if (! valid_tag.exec(tag)) return
+                
+                                    update_layer(tag, dr, subtn)
+                                })
                             })
                         })
                     })

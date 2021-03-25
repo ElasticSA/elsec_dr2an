@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -49,18 +49,29 @@
         },
         {
           "name": "Query / medium",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
+          "value": "AWS WAF Access Control List Deletion (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
         },
         {
-          "name": "Query / low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "name": "Query / medium",
+          "value": "Azure Network Watcher Deletion (47)"
         },
         {
           "name": "Query / medium",
           "value": "AWS WAF Access Control List Deletion (47)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1133",

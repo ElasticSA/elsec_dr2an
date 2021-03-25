@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -47,18 +47,29 @@
       "score": 1
     },
     {
-      "techniqueID": "T1528",
+      "techniqueID": "T1552.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "AWS Access Secret in Secrets Manager (73)"
+          "name": "Query / medium",
+          "value": "Azure Key Vault Modified (47)"
         }
       ],
       "score": 1
     },
     {
       "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Encryption Disabled (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
       "enabled": true,
       "metadata": [
         {

@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -54,9 +54,25 @@
         {
           "name": "Query / medium",
           "value": "Google Workspace Role Modified (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Custom Admin Role Created (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Admin Role Assigned to a User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Role Modified (47)"
         }
       ],
-      "score": 4
+      "score": 8
     }
   ]
 }

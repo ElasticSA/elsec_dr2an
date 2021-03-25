@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -67,6 +67,28 @@
     },
     {
       "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1560.001",
       "enabled": true,
       "metadata": [
         {

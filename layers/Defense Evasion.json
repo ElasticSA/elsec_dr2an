@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -42,9 +42,13 @@
         {
           "name": "Query / high",
           "value": "Unusual Executable File Creation by a System Critical Process (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual Executable File Creation by a System Critical Process (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1036",
@@ -63,18 +67,6 @@
           "value": "Potential Windows Error Manager Masquerading (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Renamed AutoIt Scripts Interpreter (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious Zoom Child Process (47)"
-        },
-        {
           "name": "Query / low",
           "value": "Microsoft Build Engine Using an Alternate Name (21)"
         },
@@ -85,9 +77,33 @@
         {
           "name": "EQL / medium",
           "value": "Program Files Directory Masquerading (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious WerFault Child Process (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious Endpoint Security Parent Process (47)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Potential Process Herpaderping Attempt (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Program Files Directory Masquerading (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Executable File Creation with Multiple Extensions (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 9
+      "score": 12
     },
     {
       "techniqueID": "T1055",
@@ -110,16 +126,16 @@
           "value": "Suspicious Process from Conhost (73)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Zoom Child Process (47)"
-        },
-        {
           "name": "Query / low",
           "value": "Process Injection by the Microsoft Build Engine (21)"
         },
         {
           "name": "Query / low",
           "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Suspicious Managed Code Hosting Process (73)"
         },
         {
           "name": "EQL / medium",
@@ -141,11 +157,46 @@
           "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
         },
         {
+          "name": "Query / medium",
+          "value": "Attempt to Disable Gatekeeper (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "SIP Provider Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Disable Gatekeeper (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "SIP Provider Modification (47)"
+        },
+        {
           "name": "EQL / low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 2
+      "score": 8
+    },
+    {
+      "techniqueID": "T1553.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1070",
@@ -166,14 +217,6 @@
         {
           "name": "Query / low",
           "value": "Clearing Windows Event Logs (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Modification of Boot Configuration (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "IIS HTTP Logging Disabled (73)"
         },
         {
           "name": "EQL / medium",
@@ -206,9 +249,72 @@
         {
           "name": "EQL / medium",
           "value": "Tampering of Bash Command-Line History (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "WebServer Access Logs Deleted (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Process Termination followed by Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "File Deletion via Shred (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "System Log File Deletion (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Windows Event Logs Cleared (21)"
         }
       ],
-      "score": 14
+      "score": 19
+    },
+    {
+      "techniqueID": "T1070.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Delete Volume USN Journal with Fsutil (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "File Deletion via Shred (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "File Deletion via Shred (21)"
+        }
+      ],
+      "score": 7
     },
     {
       "techniqueID": "T1127",
@@ -227,23 +333,11 @@
           "value": "Microsoft Build Engine Started by a System Process (47)"
         },
         {
-          "name": "EQL / low",
-          "value": "Unusual Process Network Connection (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Trusted Developer Application Usage (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Microsoft Build Engine Started by an Office Application (73)"
-        },
-        {
           "name": "Query / low",
           "value": "Microsoft Build Engine Started by a Script Process (21)"
         }
       ],
-      "score": 7
+      "score": 4
     },
     {
       "techniqueID": "T1564",
@@ -259,11 +353,34 @@
         },
         {
           "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / medium",
           "value": "Unusual Process Execution Path - Alternate Data Stream (47)"
         },
         {
           "name": "EQL / medium",
           "value": "Unusual File Creation - Alternate Data Stream (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Adding Hidden File Attribute via Attrib (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Creation of Hidden Files and Directories (47)"
         },
         {
           "name": "EQL / medium",
@@ -274,7 +391,7 @@
           "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 6
+      "score": 4
     },
     {
       "techniqueID": "T1140",
@@ -297,11 +414,15 @@
           "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         },
         {
+          "name": "Query / low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        },
+        {
           "name": "EQL / medium",
           "value": "Encoded Executable Stored in the Registry (47)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1562",
@@ -316,14 +437,6 @@
           "value": "Potential Disabling of SELinux (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Remote Desktop Enabled in Windows Firewall (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Disable IPTables or Firewall (47)"
-        },
-        {
           "name": "Query / high",
           "value": "Kernel Module Removal (73)"
         },
@@ -334,6 +447,10 @@
         {
           "name": "Query / medium",
           "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         },
         {
           "name": "EQL / medium",
@@ -360,11 +477,94 @@
           "value": "Windows Defender Disabled via Registry Modification (21)"
         },
         {
-          "name": "Query / high",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+          "name": "Query / medium",
+          "value": "Modification of Safari Settings via Defaults Command (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SoftwareUpdate Preferences Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Safari Settings via Defaults Command (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SoftwareUpdate Preferences Modification (47)"
         }
       ],
-      "score": 14
+      "score": 16
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Disable Windows Firewall Rules via Netsh (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Potential Disabling of SELinux (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Scheduled Tasks AT Command Enabled (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Port Forwarding Rule Addition (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Process and/or Service Terminations (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Safari Settings via Defaults Command (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SoftwareUpdate Preferences Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Safari Settings via Defaults Command (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SoftwareUpdate Preferences Modification (47)"
+        }
+      ],
+      "score": 16
     },
     {
       "techniqueID": "T1218",
@@ -377,25 +577,24 @@
         {
           "name": "EQL / medium",
           "value": "Unusual Network Connection via RunDLL32 (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "InstallUtil Process Making Network Connections (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Mshta Making Network Connections (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "ImageLoad via Windows Update Auto Update Client (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Network Connection via Signed Binary (21)"
         }
       ],
-      "score": 6
+      "score": 2
+    },
+    {
+      "techniqueID": "T1218.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1222",
@@ -404,32 +603,9 @@
         {
           "name": "Query / low",
           "value": "File Permission Modification in Writable Directory (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Potential Evasion via Filter Manager (21)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1220",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "Network Connection via MsXsl (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious WMIC XSL Script Execution (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Network Connection via MsXsl (21)"
-        }
-      ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1027",
@@ -437,15 +613,15 @@
       "metadata": [
         {
           "name": "Query / low",
-          "value": "Microsoft Build Engine Started an Unusual Process (21)"
-        },
-        {
-          "name": "Query / low",
           "value": "Hex Encoding/Decoding Activity (21)"
         },
         {
           "name": "Query / low",
           "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         },
         {
           "name": "Query / low",
@@ -466,15 +642,30 @@
       "score": 1
     },
     {
-      "techniqueID": "T1195",
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070.006",
       "enabled": true,
       "metadata": [
         {
           "name": "EQL / medium",
-          "value": "SolarWinds Process Disabling Services via Registry (47)"
+          "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Timestomping using Touch Command (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1059",
@@ -507,6 +698,17 @@
       "score": 3
     },
     {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1006",
       "enabled": true,
       "metadata": [
@@ -531,6 +733,155 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1195.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1562.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1553.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Creation or Modification of Root Certificate (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1036.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Executable File Creation with Multiple Extensions (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Executable File Creation with Multiple Extensions (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Modification of Environment Variable via Launchctl (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Environment Variable via Launchctl (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Modification of Environment Variable via Launchctl (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Modification of Environment Variable via Launchctl (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1553.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "SIP Provider Modification (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "SIP Provider Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1055.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

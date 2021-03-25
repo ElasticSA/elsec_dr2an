@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -46,9 +46,13 @@
         {
           "name": "Query / medium",
           "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Storage Account Key Regenerated (21)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1526",
@@ -57,9 +61,13 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1190",
@@ -68,9 +76,13 @@
         {
           "name": "Query / low",
           "value": "Azure Blob Container Access Level Modification (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1098",
@@ -89,12 +101,12 @@
           "value": "User Added as Owner for Azure Application (21)"
         },
         {
-          "name": "Query / high",
-          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Service Principal (21)"
         },
         {
-          "name": "Query / medium",
-          "value": "Azure Conditional Access Policy Modified (47)"
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Application (21)"
         }
       ],
       "score": 5
@@ -111,7 +123,29 @@
       "score": 1
     },
     {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Key Vault Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1566.002",
       "enabled": true,
       "metadata": [
         {
@@ -135,22 +169,6 @@
         },
         {
           "name": "Query / low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Query / low",
           "value": "Azure Active Directory PowerShell Sign-in (21)"
         },
         {
@@ -158,7 +176,7 @@
           "value": "Azure Active Directory High Risk Sign-in (73)"
         }
       ],
-      "score": 8
+      "score": 4
     },
     {
       "techniqueID": "T1530",
@@ -191,8 +209,27 @@
           "value": "Azure Network Watcher Deletion (47)"
         },
         {
-          "name": "Query / low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "name": "Query / medium",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Deletion (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Network Watcher Deletion (47)"
         },
         {
           "name": "Query / medium",
@@ -207,7 +244,7 @@
           "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1485",
@@ -245,6 +282,32 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1550.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Application Credential Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Service Principal Addition (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Active Directory PowerShell Sign-in (21)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

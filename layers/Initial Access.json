@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -49,14 +49,6 @@
         },
         {
           "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
           "value": "Auditd Login Attempt at Forbidden Time (47)"
         },
         {
@@ -72,7 +64,7 @@
           "value": "Auditd Max Failed Login Attempts (47)"
         }
       ],
-      "score": 8
+      "score": 6
     },
     {
       "techniqueID": "T1190",
@@ -81,14 +73,6 @@
         {
           "name": "Query / high",
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
-        },
-        {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         },
         {
           "name": "Query / high",
@@ -111,7 +95,7 @@
           "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
         }
       ],
-      "score": 8
+      "score": 6
     },
     {
       "techniqueID": "T1566",
@@ -122,24 +106,12 @@
           "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "Query / low",
-          "value": "Suspicious MS Outlook Child Process (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Windows Script Executing PowerShell (21)"
-        },
-        {
           "name": "EQL / medium",
           "value": "Suspicious Explorer Child Process (47)"
         },
         {
-          "name": "Query / low",
-          "value": "Suspicious MS Outlook Child Process (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Windows Script Executing PowerShell (21)"
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
         },
         {
           "name": "EQL / medium",
@@ -150,41 +122,49 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 8
+      "score": 5
     },
     {
-      "techniqueID": "T1048",
+      "techniqueID": "T1566.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+          "name": "EQL / medium",
+          "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious macOS MS Office Child Process (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1133",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Unusual Child Process of dns.exe (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Unusual File Modification by dns.exe (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Unusual Child Process of dns.exe (73)"
-        }
-      ],
-      "score": 3
     },
     {
       "techniqueID": "T1203",

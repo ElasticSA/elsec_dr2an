@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -66,9 +66,21 @@
         {
           "name": "Query / medium",
           "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
         }
       ],
-      "score": 7
+      "score": 10
     },
     {
       "techniqueID": "T1110",
@@ -80,7 +92,7 @@
         },
         {
           "name": "Threshold / medium",
-          "value": "Okta Brute Force or Password Spraying Attack (47)"
+          "value": "Attempts to Brute Force an Okta User Account (47)"
         }
       ],
       "score": 2
@@ -119,17 +131,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Create Okta API Token (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
@@ -148,9 +149,17 @@
         {
           "name": "Query / medium",
           "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
         }
       ],
-      "score": 4
+      "score": 6
     },
     {
       "techniqueID": "T1531",

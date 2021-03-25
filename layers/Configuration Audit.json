@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -48,8 +48,12 @@
           "value": "User Added as Owner for Azure Application (21)"
         },
         {
-          "name": "Query / medium",
-          "value": "Azure Conditional Access Policy Modified (47)"
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Service Principal (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Application (21)"
         },
         {
           "name": "Query / medium",
@@ -60,7 +64,7 @@
           "value": "Microsoft 365 Teams External Access Enabled (47)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1190",
@@ -74,61 +78,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "GCP Firewall Rule Creation (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        }
-      ],
-      "score": 12
-    },
-    {
       "techniqueID": "T1537",
       "enabled": true,
       "metadata": [
@@ -138,7 +87,7 @@
         },
         {
           "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
         },
         {
           "name": "Query / medium",
@@ -146,6 +95,29 @@
         }
       ],
       "score": 3
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
+        }
+      ],
+      "score": 4
     },
     {
       "techniqueID": "T1566",
@@ -158,17 +130,9 @@
         {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
         }
       ],
-      "score": 4
+      "score": 2
     }
   ]
 }

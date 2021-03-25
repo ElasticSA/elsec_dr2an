@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 47
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,63 +69,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Attempt to Create Okta API Token (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1531",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "AWS IAM Deactivation of MFA Device (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "AWS IAM Group Deletion (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Attempt to Revoke Okta API Token (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
@@ -136,6 +79,55 @@
         {
           "name": "Query / medium",
           "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Attempt to Revoke Okta API Token (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
         }
       ],
       "score": 2
