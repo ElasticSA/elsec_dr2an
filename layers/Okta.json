@@ -1,0 +1,111 @@
+{
+  "name": "Elastic Security: Okta",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Create Okta API Token (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Create Okta API Token (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Threshold / medium",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Attempts to Brute Force an Okta User Account (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        }
+      ],
+      "score": 3
+    }
+  ]
+}

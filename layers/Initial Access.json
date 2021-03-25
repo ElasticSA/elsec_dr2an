@@ -1,0 +1,188 @@
+{
+  "name": "Elastic Security: Initial Access",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
+        },
+        {
+          "name": "EQL / high",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Unusual File Modification by dns.exe (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual Child Process of dns.exe (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual File Modification by dns.exe (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Suspicious macOS MS Office Child Process (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1203",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Suspicious Browser Child Process (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1189",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / high",
+          "value": "Suspicious Browser Child Process (73)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

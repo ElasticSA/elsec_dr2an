@@ -1,0 +1,602 @@
+{
+  "name": "Elastic Security: Continuous Monitoring",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Logging Sink Modification (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Logging Sink Modification (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Snapshot Activity (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Snapshot Activity (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Disabled (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Service Account Creation (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Create Okta API Token (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Service Account Creation (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Attempt to Create Okta API Token (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Creation (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Suspended (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Firewall Rule Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Firewall Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Firewall Rule Deletion (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Suspended (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Firewall Rule Creation (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
+        }
+      ],
+      "score": 24
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Assume Role Policy Update (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Root Login Without MFA (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Assume Role Policy Update (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Active Directory PowerShell Sign-in (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Azure Active Directory High Risk Sign-in (73)"
+        }
+      ],
+      "score": 16
+    },
+    {
+      "techniqueID": "T1530",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM User Addition to Group (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM User Addition to Group (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Custom Admin Role Created (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Admin Role Assigned to a User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Role Modified (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Service Principal (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "User Added as Owner for Azure Application (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Custom Admin Role Created (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Admin Role Assigned to a User (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Google Workspace Role Modified (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Teams External Access Enabled (47)"
+        }
+      ],
+      "score": 22
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Threshold / medium",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Attempts to Brute Force an Okta User Account (47)"
+        },
+        {
+          "name": "Threshold / high",
+          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+        },
+        {
+          "name": "Threshold / high",
+          "value": "Attempts to Brute Force a Microsoft 365 User Account (73)"
+        },
+        {
+          "name": "Threshold / high",
+          "value": "Potential Password Spraying of Microsoft 365 User Accounts (73)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "AWS Access Secret in Secrets Manager (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Access Secret in Secrets Manager (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Storage Account Key Regenerated (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS RDS Cluster Creation (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Azure Application Credential Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Service Principal Addition (47)"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "name": "Elastic Security: Command and Control",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Remote File Download via Script Interpreter (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Apple Script Execution followed by Network Connection (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SUNBURST Command and Control Activity (73)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Apple Script Execution followed by Network Connection (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "SUNBURST Command and Control Activity (73)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "name": "Elastic Security: Discovery",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Virtual Machine Fingerprinting (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Virtual Machine Fingerprinting (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Security Software Discovery using WMIC (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1120",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Peripheral Device Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Windows Network Enumeration (47)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Remote System Discovery Commands (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Windows Network Enumeration (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1083",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "File and Directory Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / low",
+          "value": "Query Registry via reg.exe (21)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

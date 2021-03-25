@@ -1,0 +1,80 @@
+{
+  "name": "Elastic Security: Collection",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Encrypting Files with WinRar or 7z (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1114",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / medium",
+          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "New ActiveSyncAllowedDeviceID Added via PowerShell (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

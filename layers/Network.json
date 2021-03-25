@@ -1,0 +1,195 @@
+{
+  "name": "Elastic Security: Network",
+  "versions": {
+    "attack": "8",
+    "navigator": "4.2",
+    "layer": "4.1"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 37
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic version",
+      "value": "7.12.0"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1210",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Abnormally Large DNS Response (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
