@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -50,9 +50,17 @@
         {
           "name": "Query / low",
           "value": "Whoami Process Activity (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "User Discovery via Whoami (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Whoami Process Activity (21)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1087",
@@ -63,16 +71,16 @@
           "value": "Net command via SYSTEM account (21)"
         },
         {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Query / low",
+          "value": "Net command via SYSTEM account (21)"
         },
         {
           "name": "EQL / low",
           "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         },
         {
           "name": "EQL / low",
@@ -88,43 +96,35 @@
         {
           "name": "Query / low",
           "value": "Process Discovery via Tasklist (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Process Discovery via Tasklist (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1518",
+      "techniqueID": "T1082",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Security Software Discovery using WMIC (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Security Software Discovery using WMIC (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Security Software Discovery via Grep (47)"
+          "name": "Query / high",
+          "value": "Virtual Machine Fingerprinting (73)"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1120",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "Peripheral Device Discovery (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Peripheral Device Discovery (21)"
-        }
-      ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1069",
@@ -132,82 +132,18 @@
       "metadata": [
         {
           "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
           "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         },
         {
           "name": "EQL / low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1069.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1087.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1482",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1082",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Enumeration of Kernel Modules (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Virtual Machine Fingerprinting (73)"
-        }
-      ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1018",
@@ -253,6 +189,17 @@
         {
           "name": "EQL / low",
           "value": "Query Registry via reg.exe (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Security Software Discovery via Grep (47)"
         }
       ],
       "score": 1

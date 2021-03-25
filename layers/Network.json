@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -50,9 +50,21 @@
         {
           "name": "Query / medium",
           "value": "SSH (Secure Shell) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SSH (Secure Shell) from the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 5
     },
     {
       "techniqueID": "T1190",
@@ -71,23 +83,39 @@
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
-          "name": "Query / high",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         },
         {
           "name": "Query / high",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
         },
         {
           "name": "Query / medium",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "SSH (Secure Shell) from the Internet (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         }
       ],
-      "score": 7
+      "score": 11
     },
     {
       "techniqueID": "T1090",
@@ -96,9 +124,13 @@
         {
           "name": "Query / medium",
           "value": "Tor Activity to the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1090.003",
@@ -107,9 +139,13 @@
         {
           "name": "Query / medium",
           "value": "Tor Activity to the Internet (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1048",
@@ -130,9 +166,37 @@
         {
           "name": "Query / low",
           "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "SMTP on Port 26/TCP (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "SMTP to the Internet (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         }
       ],
-      "score": 4
+      "score": 11
     },
     {
       "techniqueID": "T1219",
@@ -141,6 +205,25 @@
         {
           "name": "Query / medium",
           "value": "VNC (Virtual Network Computing) to the Internet (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "VNC (Virtual Network Computing) to the Internet (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "Public IP Reconnaissance Activity (21)"
         }
       ],
       "score": 1
@@ -150,23 +233,26 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
         },
         {
           "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "value": "Halfbaked Command and Control Beacon (73)"
         }
       ],
-      "score": 4
+      "score": 2
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / critical",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1568",
@@ -174,22 +260,10 @@
       "metadata": [
         {
           "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "value": "Halfbaked Command and Control Beacon (73)"
         }
       ],
-      "score": 4
+      "score": 1
     },
     {
       "techniqueID": "T1568.002",
@@ -197,52 +271,10 @@
       "metadata": [
         {
           "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "value": "Halfbaked Command and Control Beacon (73)"
         }
       ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1105",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1210",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Abnormally Large DNS Response (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Abnormally Large DNS Response (47)"
-        }
-      ],
-      "score": 2
+      "score": 1
     }
   ]
 }

@@ -189,11 +189,29 @@ program
             var layers = Object.keys(ma_nav);
             var out_dir = conf.out_dir || "./layers"
             
-            console.log(layers)
+            layers.sort()
+            
             layers.forEach( name => {
+                var count = ma_nav[name].techniques.length + 1
+                console.log(`Layer(${name}) Count(${count})`)
                 fs.writeFileSync(`${out_dir}/${name}.json`, JSON.stringify(ma_nav[name], null, 2))
             })
             
+            console.log("\nListing layers with more than 10 techniques (!= rule count)")
+            layers.forEach( name => {
+                var count = ma_nav[name].techniques.length + 1
+//                 console.log(`${name} ${count}`)
+                if (count < 10) return
+                console.log(`${name}`)
+            })
+            
+            console.log("\nListing the remaining layers (!= rule count)")
+            layers.forEach( name => {
+                var count = ma_nav[name].techniques.length + 1
+//                console.log(`${name} ${count}`)
+                if (count >= 10) return
+                console.log(`${name}`)
+            })
             
         })
     })

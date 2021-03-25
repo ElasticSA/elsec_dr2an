@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -46,9 +46,13 @@
         {
           "name": "Query / medium",
           "value": "Zoom Meeting with no Passcode (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Zoom Meeting with no Passcode (47)"
         }
       ],
-      "score": 1
+      "score": 2
     }
   ]
 }

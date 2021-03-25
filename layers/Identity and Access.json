@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -50,9 +50,17 @@
         {
           "name": "Query / medium",
           "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Storage Account Key Regenerated (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1078",
@@ -88,19 +96,67 @@
         },
         {
           "name": "Query / low",
-          "value": "AWS IAM Password Recovery Requested (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "AWS Management Console Root Login (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "AWS Management Console Root Login (73)"
+          "value": "Azure External Guest User Invitation (21)"
         },
         {
           "name": "Query / low",
-          "value": "AWS IAM Password Recovery Requested (21)"
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Root Login Without MFA (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Assume Role Policy Update (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Threshold / medium",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP IAM Custom Role Creation (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP IAM Custom Role Creation (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Query / high",
+          "value": "AWS Root Login Without MFA (73)"
         },
         {
           "name": "Query / low",
@@ -111,7 +167,7 @@
           "value": "Azure Active Directory High Risk Sign-in (73)"
         }
       ],
-      "score": 13
+      "score": 25
     },
     {
       "techniqueID": "T1110",
@@ -122,16 +178,12 @@
           "value": "Attempts to Brute Force an Okta User Account (47)"
         },
         {
-          "name": "Threshold / high",
-          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+          "name": "Threshold / medium",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
         },
         {
           "name": "Threshold / medium",
-          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
-        },
-        {
-          "name": "Threshold / high",
-          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+          "value": "Attempts to Brute Force an Okta User Account (47)"
         },
         {
           "name": "Threshold / high",
@@ -142,7 +194,7 @@
           "value": "Potential Password Spraying of Microsoft 365 User Accounts (73)"
         }
       ],
-      "score": 6
+      "score": 5
     },
     {
       "techniqueID": "T1098",
@@ -161,20 +213,12 @@
           "value": "GCP Service Account Key Creation (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
+          "name": "Query / high",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
         },
         {
           "name": "Query / low",
-          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+          "value": "AWS IAM User Addition to Group (21)"
         },
         {
           "name": "Query / medium",
@@ -194,7 +238,15 @@
         },
         {
           "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
+          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP IAM Service Account Key Deletion (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Service Account Key Creation (21)"
         }
       ],
       "score": 12
@@ -206,9 +258,13 @@
         {
           "name": "Query / high",
           "value": "Attempted Bypass of Okta MFA (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Attempted Bypass of Okta MFA (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1566",
@@ -221,9 +277,13 @@
         {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1566.002",
@@ -232,9 +292,13 @@
         {
           "name": "Query / medium",
           "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1222",
@@ -243,6 +307,55 @@
         {
           "name": "Query / medium",
           "value": "GCP Storage Bucket Permissions Modification (47)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Storage Bucket Permissions Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "GCP Service Account Disabled (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "GCP Service Account Creation (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Creation (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1136.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS IAM Group Creation (21)"
         }
       ],
       "score": 1

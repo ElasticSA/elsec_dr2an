@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -46,6 +46,32 @@
         {
           "name": "Query / high",
           "value": "Volume Shadow Copy Deletion via VssAdmin (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Volume Shadow Copy Deletion via VssAdmin (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / medium",
+          "value": "Hosts File Modified (47)"
         }
       ],
       "score": 1

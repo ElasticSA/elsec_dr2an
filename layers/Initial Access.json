@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -53,38 +53,22 @@
         },
         {
           "name": "Query / medium",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Query / medium",
           "value": "Auditd Max Failed Login Attempts (47)"
         },
         {
           "name": "Query / medium",
           "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Auditd Login from Forbidden Location (73)"
         }
       ],
-      "score": 10
+      "score": 6
     },
     {
       "techniqueID": "T1190",
@@ -95,20 +79,20 @@
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
-          "name": "Query / high",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         },
         {
           "name": "Query / high",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         },
         {
-          "name": "Query / medium",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "name": "Query / high",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         },
         {
           "name": "EQL / medium",
@@ -134,12 +118,16 @@
           "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Query / low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Windows Script Executing PowerShell (21)"
         },
         {
           "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "value": "Suspicious MS Office Child Process (47)"
         },
         {
           "name": "EQL / medium",
@@ -150,7 +138,7 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1566.001",
@@ -161,12 +149,16 @@
           "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Query / low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Query / low",
+          "value": "Windows Script Executing PowerShell (21)"
         },
         {
           "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "value": "Suspicious MS Office Child Process (47)"
         },
         {
           "name": "EQL / medium",
@@ -177,19 +169,38 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
-      "techniqueID": "T1566.002",
+      "techniqueID": "T1048",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Query / high",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Query / low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / high",
+          "value": "Unusual Child Process of dns.exe (73)"
+        },
+        {
+          "name": "Query / high",
+          "value": "Unusual File Modification by dns.exe (73)"
         }
       ],
       "score": 2

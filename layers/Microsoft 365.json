@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -46,17 +46,9 @@
         {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1537",
@@ -65,45 +57,14 @@
         {
           "name": "Query / medium",
           "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        }
-      ],
-      "score": 4
+      "score": 1
     },
     {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
-        },
         {
           "name": "Query / medium",
           "value": "Microsoft 365 Teams Guest Access Enabled (47)"
@@ -113,7 +74,7 @@
           "value": "Microsoft 365 Teams External Access Enabled (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1110",

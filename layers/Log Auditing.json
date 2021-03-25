@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -49,22 +49,10 @@
         },
         {
           "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
+          "value": "AWS CloudWatch Log Group Deletion (47)"
         }
       ],
-      "score": 5
+      "score": 2
     },
     {
       "techniqueID": "T1562",
@@ -79,51 +67,27 @@
           "value": "GCP Logging Bucket Deletion (47)"
         },
         {
-          "name": "Query / high",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
           "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "GCP Logging Sink Deletion (47)"
         },
         {
           "name": "Query / low",
-          "value": "GCP Pub/Sub Topic Deletion (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "AWS EC2 Flow Log Deletion (73)"
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
         },
         {
           "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
+          "value": "AWS CloudTrail Log Suspended (47)"
         },
         {
           "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
+          "value": "AWS CloudWatch Log Group Deletion (47)"
         },
         {
           "name": "Query / medium",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "GCP Logging Bucket Deletion (47)"
         }
       ],
-      "score": 13
+      "score": 7
     },
     {
       "techniqueID": "T1562.001",
@@ -134,47 +98,15 @@
           "value": "AWS CloudWatch Log Group Deletion (47)"
         },
         {
-          "name": "Query / high",
-          "value": "AWS EC2 Flow Log Deletion (73)"
+          "name": "Query / medium",
+          "value": "AWS CloudTrail Log Suspended (47)"
         },
         {
           "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Event Hub Deletion (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "AWS CloudWatch Log Group Deletion (47)"
         }
       ],
-      "score": 11
+      "score": 3
     },
     {
       "techniqueID": "T1530",
@@ -186,22 +118,18 @@
         },
         {
           "name": "Query / low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
+          "value": "GCP Pub/Sub Subscription Creation (21)"
         },
         {
           "name": "Query / low",
-          "value": "AWS CloudTrail Log Created (21)"
+          "value": "AWS CloudTrail Log Updated (21)"
         },
         {
-          "name": "Query / low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "AWS CloudTrail Log Created (21)"
+          "name": "Query / medium",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1537",
@@ -210,54 +138,39 @@
         {
           "name": "Query / medium",
           "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Query / low",
+          "value": "GCP Logging Sink Modification (21)"
+        },
+        {
+          "name": "Query / medium",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Query / low",
+          "value": "AWS CloudTrail Log Updated (21)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1566",
+      "techniqueID": "T1565.001",
       "enabled": true,
       "metadata": [
         {
           "name": "Query / low",
-          "value": "AWS Execution via System Manager (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "AWS Execution via System Manager (21)"
+          "value": "AWS CloudTrail Log Updated (21)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1566.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "AWS Execution via System Manager (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "AWS Execution via System Manager (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Azure Command Execution on Virtual Machine (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Azure Command Execution on Virtual Machine (47)"
-        }
-      ],
-      "score": 2
+      "score": 1
     }
   ]
 }

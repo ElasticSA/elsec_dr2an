@@ -22,7 +22,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 44
+    "maxValue": 36
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -48,44 +48,8 @@
           "value": "Local Service Commands (21)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Connection to Internal Network via Telnet (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Connection to External Network via Telnet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Remote Desktop Tunneling Detected (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Connection to Internal Network via Telnet (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Connection to External Network via Telnet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Remote Desktop Tunneling Detected (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "EQL / low",
+          "value": "Service Command Lateral Movement (21)"
         },
         {
           "name": "EQL / medium",
@@ -112,24 +76,24 @@
           "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Remotely Started Services via RPC (47)"
-        },
-        {
           "name": "EQL / high",
           "value": "Potential SharpRDP Behavior (73)"
+        },
+        {
+          "name": "EQL / medium",
+          "value": "Remotely Started Services via RPC (47)"
         },
         {
           "name": "EQL / high",
           "value": "Execution via TSClient Mountpoint (73)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Remote Scheduled Task Creation (47)"
+          "name": "EQL / low",
+          "value": "Virtual Private Network Connection Attempt (21)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Suspicious RDP ActiveX Client Loaded (47)"
+          "name": "Query / low",
+          "value": "Local Service Commands (21)"
         },
         {
           "name": "EQL / medium",
@@ -146,66 +110,53 @@
         {
           "name": "EQL / low",
           "value": "Attempt to Mount SMB Share via Command Line (21)"
-        },
+        }
+      ],
+      "score": 17
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
         {
           "name": "EQL / low",
-          "value": "Virtual Private Network Connection Attempt (21)"
+          "value": "Service Command Lateral Movement (21)"
         }
       ],
-      "score": 27
+      "score": 1
     },
     {
-      "techniqueID": "T1210",
+      "techniqueID": "T1543.003",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Direct Outbound SMB Connection (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Abnormally Large DNS Response (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Direct Outbound SMB Connection (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Abnormally Large DNS Response (47)"
+          "name": "EQL / low",
+          "value": "Service Command Lateral Movement (21)"
         }
       ],
-      "score": 4
+      "score": 1
     },
     {
-      "techniqueID": "T1547",
+      "techniqueID": "T1569",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "EQL / low",
+          "value": "Service Command Lateral Movement (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
-      "techniqueID": "T1547.001",
+      "techniqueID": "T1569.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "EQL / low",
+          "value": "Service Command Lateral Movement (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1021.002",
@@ -248,17 +199,6 @@
         {
           "name": "EQL / medium",
           "value": "Lateral Tool Transfer (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1053",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Remote Scheduled Task Creation (47)"
         }
       ],
       "score": 1
