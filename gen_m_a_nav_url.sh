@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Either copy/paste the TopX list from elsec_dr2an
-# run: ls -1 layers/ | ./gen_m_a_nav_url.sh
+# or for all, run: ls -1 layers/ | ./gen_m_a_nav_url.sh
 
 # Credit to https://gist.github.com/cdown/1163649
 urlencode() {
@@ -42,11 +42,11 @@ while read jf; do
     fi
     
     # Force all first and Elastic last in list
-    if [ 'All.json' = "$jf" -o 'Elastic.json' = "$jf" ]; then
+    if [ 'All' = "${jf%.json}" -o 'Elastic' = "${jf%.json}" ]; then
         continue
     fi
     
-    echo ">>> $jf <<<" >&2
+#     echo ">>> $jf <<<" >&2
     URL="${URL}&layerURL=$(urlencode "${GH_PATH}${jf%.json}.json")"
 
 done

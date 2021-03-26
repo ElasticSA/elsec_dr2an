@@ -95,7 +95,6 @@ function update_entry(layer, dr, techn)
 
     mantq.metadata.push({
         "name": `${dr_types[dr.params.type].label} / ${dr.params.severity}`,
-        //"value": `${dr.name} (${srid})`
         "value": `${dr.name} (${dr.params.riskScore})`
     })
 }
