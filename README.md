@@ -1,6 +1,7 @@
 # Elastic Security: Detection Rules ATT&CK Navigator layer generator
 
-Use the gen_an_layer.sh script to generate an ATT&CK Navigator (AN) [https://mitre-attack.github.io/attack-navigator/] dashboard layer
+Generate an ATT&CK Navigator (AN) [https://mitre-attack.github.io/attack-navigator/] dashboard layer.
+Also contains pre-generated layers you can just use.
 
 ### Quick start!
 
@@ -8,7 +9,26 @@ Use the gen_an_layer.sh script to generate an ATT&CK Navigator (AN) [https://mit
 
 ## Getting Started
 
-Ensure you have the following shell tools installed: jq, dasel, & git
+### New Javascript version 
+
+This script will grab the information from any running Kibana instance.
+
+Steps:
+ - cd into this project directory
+ - run: `npm install` to get all dependancies
+ - run: `node ./main.js -h`
+ 
+Read the printed help on creating a JSON config file; we'll assume you named this file "config".
+
+Note: You could also npm to install elsec_dr2an as a shell command; here we'll just run the script from the project directory.
+
+ - run: `node ./main ./config`
+ 
+
+### Old Bash script
+
+This script will grab the information from the detection rules github repository.
+Ensure you have the following shell tools installed: jq, dasel (https://github.com/TomWright/dasel/releases), git, & bash v3+.
 
 Run the script: .\gen_an_layer.sh > output.json
 
@@ -17,14 +37,8 @@ click on "Upload from local" and select the generated file.
 
 For just a specific rule type run: .\gen_an_layer.sh TYPE > output.json
 
-### Prerequisites
 
- - bash (v3+)
- - dasel: https://github.com/TomWright/dasel/releases
- - jq
- - git 
-
-### Installing
+## Installing
 
 Copy the scripts to a target system and use as needed.
 
