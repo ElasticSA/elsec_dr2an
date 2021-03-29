@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Linux",
+  "name": "El.Sec. Linux",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,302 +69,420 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "Auditd Login from Forbidden Location (73)"
         },
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "Auditd Login from Forbidden Location (73)"
         },
         {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Auditd Max Failed Login Attempts (47)"
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
         },
         {
-          "name": "Query / high",
-          "value": "Auditd Login from Forbidden Location (73)"
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
         },
         {
-          "name": "Query / high",
-          "value": "Auditd Login from Forbidden Location (73)"
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
         }
       ],
-      "score": 6
+      "score": 8
     },
     {
       "techniqueID": "T1033",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "User Discovery via Whoami (21)"
         },
         {
-          "name": "ML / low",
-          "value": "Unusual Linux System Owner or User Discovery Activity (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Discovery via Whoami (21)"
-        },
-        {
-          "name": "ML / low",
+          "name": "ML / Low",
           "value": "Unusual Linux System Owner or User Discovery Activity (21)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1562",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Potential Disabling of SELinux (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Potential Disabling of SELinux (47)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
         }
       ],
-      "score": 2
+      "score": 6
     },
     {
       "techniqueID": "T1562.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Potential Disabling of SELinux (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Potential Disabling of SELinux (47)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
         }
       ],
-      "score": 2
+      "score": 6
     },
     {
       "techniqueID": "T1222",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "File Permission Modification in Writable Directory (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
         },
         {
-          "name": "Query / low",
-          "value": "File Permission Modification in Writable Directory (21)"
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious JAR Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious JAR Child Process (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Hex Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base64 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1049",
+      "techniqueID": "T1564.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "ML / low",
-          "value": "Unusual Linux Network Connection Discovery (21)"
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
         },
         {
-          "name": "ML / low",
-          "value": "Unusual Linux Network Connection Discovery (21)"
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "ML / low",
-          "value": "Unusual Sudo Activity (21)"
-        },
-        {
-          "name": "ML / low",
-          "value": "Unusual Sudo Activity (21)"
-        },
-        {
-          "name": "ML / low",
-          "value": "Unusual Sudo Activity (21)"
-        },
-        {
-          "name": "ML / low",
-          "value": "Unusual Sudo Activity (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
-        }
-      ],
-      "score": 5
     },
     {
       "techniqueID": "T1547",
       "enabled": true,
       "metadata": [
         {
-          "name": "ML / low",
-          "value": "Anomalous Kernel Module Activity (21)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
         },
         {
-          "name": "Query / low",
-          "value": "Persistence via Kernel Module Modification (21)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
         },
         {
-          "name": "ML / low",
-          "value": "Anomalous Kernel Module Activity (21)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1547.006",
       "enabled": true,
       "metadata": [
         {
-          "name": "ML / low",
-          "value": "Anomalous Kernel Module Activity (21)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
         },
         {
-          "name": "Query / low",
-          "value": "Persistence via Kernel Module Modification (21)"
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to Internal Network via Telnet (47)"
         },
         {
-          "name": "ML / low",
-          "value": "Anomalous Kernel Module Activity (21)"
+          "name": "EQL / Med.",
+          "value": "Connection to External Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to Internal Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to External Network via Telnet (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
       "score": 3
-    },
-    {
-      "techniqueID": "T1016",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "ML / low",
-          "value": "Unusual Linux System Network Configuration Discovery (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1082",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "ML / low",
-          "value": "Unusual Linux System Information Discovery Activity (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Virtual Machine Fingerprinting (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1505",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Potential Shell via Web Server (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1505.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Potential Shell via Web Server (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1040",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Network Sniffing via Tcpdump (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "Network Sniffing via Tcpdump (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1565",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Hosts File Modified (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1565.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / medium",
-          "value": "Hosts File Modified (47)"
-        }
-      ],
-      "score": 1
     },
     {
       "techniqueID": "T1070",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "EQL / Med.",
+          "value": "WebServer Access Logs Deleted (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "WebServer Access Logs Deleted (47)"
+        },
+        {
+          "name": "Q / Low",
           "value": "File Deletion via Shred (21)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "System Log File Deletion (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
-      "score": 4
+      "score": 5
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Process Discovery Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1070.004",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "File Deletion via Shred (21)"
         }
       ],
@@ -350,38 +493,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Timestomping using Touch Command (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / high",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious JAR Child Process (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Suspicious JAR Child Process (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1070.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
       "score": 1
@@ -391,7 +504,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Security Software Discovery via Grep (47)"
         }
       ],
@@ -402,15 +515,15 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Potential OpenSSH Backdoor Logging Activity (73)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of Standard Authentication Module or Configuration (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of OpenSSH Binaries (47)"
         }
       ],
@@ -421,7 +534,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Potential OpenSSH Backdoor Logging Activity (73)"
         }
       ],
@@ -432,11 +545,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of Standard Authentication Module or Configuration (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of OpenSSH Binaries (47)"
         }
       ],
@@ -447,7 +560,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH Authorized Keys File Modification (47)"
         }
       ],
@@ -458,7 +571,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH Authorized Keys File Modification (47)"
         }
       ],
@@ -469,7 +582,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -480,7 +593,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -491,7 +604,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -502,7 +615,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -513,7 +626,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Cookies Theft via Browser Debugging (47)"
         }
       ],
@@ -524,11 +637,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
         }
       ],
@@ -539,11 +652,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
         }
       ],
@@ -554,11 +667,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
         }
       ],
@@ -569,11 +682,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
         }
       ],
@@ -584,33 +697,22 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1548.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1068",
       "enabled": true,
       "metadata": [
         {
-          "name": "Threshold / high",
+          "name": "TH / High",
           "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
         }
       ],
@@ -621,7 +723,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of Dynamic Linker Preload Shared Object (47)"
         }
       ],
@@ -632,7 +734,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of Dynamic Linker Preload Shared Object (47)"
         }
       ],

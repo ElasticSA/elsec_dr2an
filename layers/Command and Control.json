@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Command and Control",
+  "name": "El.Sec. Command and Control",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,260 +69,224 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH (Secure Shell) from the Internet (47)"
         }
       ],
-      "score": 5
+      "score": 2
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH (Secure Shell) from the Internet (47)"
         }
       ],
-      "score": 6
+      "score": 2
     },
     {
       "techniqueID": "T1090",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Tor Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1090.003",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Tor Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1048",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "SMTP on Port 26/TCP (21)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "SMTP to the Internet (21)"
         },
         {
-          "name": "Query / low",
-          "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "SMTP on Port 26/TCP (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "SMTP to the Internet (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
         }
       ],
-      "score": 8
+      "score": 4
     },
     {
       "techniqueID": "T1219",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "VNC (Virtual Network Computing) to the Internet (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "VNC (Virtual Network Computing) to the Internet (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1105",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Remote File Copy via TeamViewer (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Remote File Download via MpCmdRun (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
         },
         {
-          "name": "EQL / low",
-          "value": "Network Connection via Certutil (21)"
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Remote File Copy via TeamViewer (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Remote File Download via MpCmdRun (47)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Remote File Download via Script Interpreter (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Remote File Download via PowerShell (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
-      "score": 9
+      "score": 7
     },
     {
       "techniqueID": "T1071",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / critical",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         },
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
-          "name": "Threshold / medium",
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "TH / Med.",
           "value": "Potential DNS Tunneling via NsLookup (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Command and Control via Internet Explorer (47)"
         },
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "SUNBURST Command and Control Activity (73)"
         }
       ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / critical",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SUNBURST Command and Control Activity (73)"
-        }
-      ],
-      "score": 2
+      "score": 7
     },
     {
       "techniqueID": "T1568",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 1
+      "score": 4
     },
     {
       "techniqueID": "T1568.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 1
+      "score": 4
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1573",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
+          "name": "EQL / Low",
           "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
         }
       ],
@@ -308,11 +297,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Remote File Download via PowerShell (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
@@ -323,8 +312,19 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Remote File Download via PowerShell (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "SUNBURST Command and Control Activity (73)"
         }
       ],
       "score": 1
@@ -334,7 +334,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "SUNBURST Command and Control Activity (73)"
         }
       ],
@@ -345,7 +345,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "SUNBURST Command and Control Activity (73)"
         }
       ],

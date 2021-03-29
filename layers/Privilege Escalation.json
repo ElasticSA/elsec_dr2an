@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Privilege Escalation",
+  "name": "El.Sec. Privilege Escalation",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,146 +69,242 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Bypass UAC via Event Viewer (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
         },
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
         },
         {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / high",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
         },
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
-      "score": 9
+      "score": 18
     },
     {
       "techniqueID": "T1548.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Bypass UAC via Event Viewer (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
         },
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
         },
         {
-          "name": "EQL / medium",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
         }
       ],
-      "score": 6
+      "score": 14
     },
     {
-      "techniqueID": "T1078",
+      "techniqueID": "T1068",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
         },
         {
-          "name": "Query / medium",
-          "value": "Execution with Explicit Credentials via Scripting (47)"
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
         },
         {
-          "name": "EQL / medium",
-          "value": "Apple Scripting Execution with Administrator Privileges (47)"
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Print Spooler Point and Print DLL (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
+        },
+        {
+          "name": "TH / High",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
       "score": 3
     },
     {
-      "techniqueID": "T1078.003",
+      "techniqueID": "T1055",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Potential Admin Group Account Addition (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1574",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+          "name": "EQL / Med.",
+          "value": "Unusual Parent-Child Relationship (47)"
         },
         {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
         },
         {
-          "name": "EQL / high",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
-      "techniqueID": "T1574.002",
+      "techniqueID": "T1055.012",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+          "name": "EQL / Med.",
+          "value": "Unusual Parent-Child Relationship (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
-      "techniqueID": "T1574.001",
+      "techniqueID": "T1548.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
         }
       ],
       "score": 1
@@ -193,56 +314,63 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Privilege Escalation via Named Pipe Impersonation (73)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1068",
+      "techniqueID": "T1574",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Suspicious Print Spooler Point and Print DLL (73)"
+          "name": "EQL / High",
+          "value": "Privilege Escalation via Windir Environment Variable (73)"
         },
         {
-          "name": "Query / high",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
-          "name": "Query / high",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
-          "name": "Threshold / high",
-          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
+          "name": "Q / Med.",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1574.007",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Privilege Escalation via Windir Environment Variable (73)"
         }
       ],
       "score": 1
     },
     {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution with Explicit Credentials via Scripting (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Apple Scripting Execution with Administrator Privileges (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Execution with Explicit Credentials via Scripting (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Scripting Execution with Administrator Privileges (47)"
         }
       ],
@@ -253,27 +381,27 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         }
       ],
@@ -284,67 +412,30 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
         }
       ],
       "score": 4
     },
     {
-      "techniqueID": "T1055",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Unusual Service Host Child Process - Childless Service (47)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Unusual Service Host Child Process - Childless Service (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1055.012",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Unusual Service Host Child Process - Childless Service (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1548.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / high",
-          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1053",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
@@ -355,7 +446,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
@@ -366,7 +457,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Modification of Dynamic Linker Preload Shared Object (47)"
         }
       ],
@@ -377,11 +468,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         }
       ],

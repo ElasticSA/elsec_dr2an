@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Execution",
+  "name": "El.Sec. Execution",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,156 +69,148 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Unusual Parent Process for cmd.exe (47)"
         },
         {
-          "name": "EQL / low",
+          "name": "EQL / Low",
           "value": "Command Prompt Network Connection (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Svchost spawning Cmd (21)"
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
         },
         {
-          "name": "EQL / medium",
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Conhost Spawned By Suspicious Parent Process (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Execution via MSSQL xp_cmdshell Stored Procedure (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Conhost Spawned By Suspicious Parent Process (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Execution via MSSQL xp_cmdshell Stored Procedure (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "Suspicious PowerShell Engine ImageLoad (47)"
         },
         {
-          "name": "EQL / high",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "PowerShell spawning Cmd (21)"
-        },
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Unusual Parent Process for cmd.exe (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "Command Prompt Network Connection (21)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Script Execution followed by Network Connection (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Persistence via Folder Action Script (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Execution with Explicit Credentials via Scripting (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Command Execution via SolarWinds Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious Automator Workflows Execution (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Shell Execution via Apple Scripting (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Scripting Execution with Administrator Privileges (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         }
       ],
-      "score": 20
+      "score": 23
     },
     {
       "techniqueID": "T1105",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
+          "name": "EQL / Low",
           "value": "Command Prompt Network Connection (21)"
         },
         {
-          "name": "EQL / low",
-          "value": "Command Prompt Network Connection (21)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Script Execution followed by Network Connection (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1569",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "PsExec Network Connection (21)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1569.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
-        },
-        {
-          "name": "EQL / low",
-          "value": "PsExec Network Connection (21)"
-        },
-        {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         },
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         }
       ],
       "score": 2
@@ -203,12 +220,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         },
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         }
       ],
       "score": 2
@@ -218,12 +235,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         },
         {
-          "name": "EQL / high",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
         }
       ],
       "score": 2
@@ -233,42 +250,65 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
-          "value": "Network Connection via Compiled HTML File (21)"
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Process Activity via Compiled HTML File (21)"
+          "name": "Q / Low",
+          "value": "Execution via Regsvcs/Regasm (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Execution via Regsvcs/Regasm (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1218.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1218.001",
+      "techniqueID": "T1204",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
-          "value": "Network Connection via Compiled HTML File (21)"
+          "name": "Q / Low",
+          "value": "Suspicious PDF Reader Child Process (21)"
         },
         {
-          "name": "Query / low",
-          "value": "Process Activity via Compiled HTML File (21)"
+          "name": "Q / Low",
+          "value": "Suspicious PDF Reader Child Process (21)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1059.001",
+      "techniqueID": "T1218.009",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
+          "name": "Q / Low",
+          "value": "Execution via Regsvcs/Regasm (21)"
         },
         {
-          "name": "Query / low",
-          "value": "PowerShell spawning Cmd (21)"
+          "name": "Q / Low",
+          "value": "Execution via Regsvcs/Regasm (21)"
         }
       ],
       "score": 2
@@ -278,70 +318,68 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / low",
+          "name": "EQL / Med.",
+          "value": "Suspicious Cmd Execution via WMI (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Cmd Execution via WMI (47)"
+        },
+        {
+          "name": "EQL / Low",
           "value": "Suspicious WMI Image Load from MS Office (21)"
         },
         {
-          "name": "EQL / low",
+          "name": "EQL / Low",
           "value": "Enumeration Command Spawned via WMIPrvSE (21)"
         },
         {
-          "name": "EQL / low",
+          "name": "EQL / Low",
           "value": "Enumeration Command Spawned via WMIPrvSE (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious PowerShell Engine ImageLoad (47)"
         }
       ],
       "score": 3
     },
     {
-      "techniqueID": "T1548",
+      "techniqueID": "T1129",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Execution via Electron Child Process Node.js Module (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
+          "name": "EQL / Med.",
+          "value": "Execution via local SxS Shared Module (47)"
+        },
         {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
+          "name": "EQL / Med.",
+          "value": "Execution via local SxS Shared Module (47)"
         }
       ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547.011",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / medium",
-          "value": "Creation of Hidden Login Item via Apple Script (47)"
-        }
-      ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1037",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Persistence via Folder Action Script (47)"
         }
       ],
@@ -352,11 +390,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Execution with Explicit Credentials via Scripting (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Apple Scripting Execution with Administrator Privileges (47)"
         }
       ],
@@ -367,7 +405,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious SolarWinds Child Process (47)"
         }
       ],
@@ -378,11 +416,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious SolarWinds Child Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Command Execution via SolarWinds Process (47)"
         }
       ],
@@ -393,11 +431,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious SolarWinds Child Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Command Execution via SolarWinds Process (47)"
         }
       ],
@@ -408,7 +446,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Outbound Scheduled Task Activity via PowerShell (47)"
         }
       ],
@@ -419,7 +457,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Suspicious Browser Child Process (73)"
         }
       ],
@@ -430,7 +468,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / high",
+          "name": "EQL / High",
           "value": "Suspicious Browser Child Process (73)"
         }
       ],
@@ -441,15 +479,15 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
         }
       ],
@@ -460,7 +498,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
         }
       ],
@@ -471,7 +509,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
         }
       ],
@@ -482,7 +520,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Execution of COM object via Xwizard (47)"
         }
       ],
@@ -493,7 +531,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Execution of COM object via Xwizard (47)"
         }
       ],

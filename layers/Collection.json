@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Collection",
+  "name": "El.Sec. Collection",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,11 +69,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Encrypting Files with WinRar or 7z (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -59,11 +84,11 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "Exporting Exchange Mailbox via PowerShell (47)"
         },
         {
-          "name": "EQL / medium",
+          "name": "EQL / Med.",
           "value": "New ActiveSyncAllowedDeviceID Added via PowerShell (47)"
         }
       ],
@@ -74,7 +99,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -85,7 +110,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],
@@ -96,7 +121,7 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Sensitive Files Compression (47)"
         }
       ],

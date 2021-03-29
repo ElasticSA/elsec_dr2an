@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Network",
+  "name": "El.Sec. Network",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,186 +69,103 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH (Secure Shell) from the Internet (47)"
         }
       ],
-      "score": 5
+      "score": 2
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "SSH (Secure Shell) from the Internet (47)"
         },
         {
-          "name": "Query / high",
+          "name": "Q / High",
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
         },
         {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "name": "Q / Med.",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
         },
         {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
         },
         {
-          "name": "Query / medium",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "Telnet Port Activity (47)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "SSH (Secure Shell) from the Internet (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "RPC (Remote Procedure Call) from the Internet (73)"
-        },
-        {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+          "name": "Q / Med.",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
         }
       ],
-      "score": 11
+      "score": 7
     },
     {
       "techniqueID": "T1090",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Tor Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1090.003",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Tor Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Tor Activity to the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1048",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "SMTP on Port 26/TCP (21)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "SMTP to the Internet (21)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
-        },
-        {
-          "name": "Query / high",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
-        {
-          "name": "Query / low",
-          "value": "SMTP on Port 26/TCP (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "SMTP to the Internet (21)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "IRC (Internet Relay Chat) Protocol Activity to the Internet (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "FTP (File Transfer Protocol) Activity to the Internet (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         }
       ],
-      "score": 11
+      "score": 4
     },
     {
       "techniqueID": "T1219",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "VNC (Virtual Network Computing) to the Internet (47)"
-        },
-        {
-          "name": "Query / high",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
-        },
-        {
-          "name": "Query / medium",
-          "value": "VNC (Virtual Network Computing) to the Internet (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1016",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Query / low",
-          "value": "Public IP Reconnaissance Activity (21)"
         }
       ],
       "score": 1
@@ -233,48 +175,99 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / critical",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         },
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
         {
-          "name": "Query / critical",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 1
+      "score": 4
     },
     {
       "techniqueID": "T1568",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 1
+      "score": 4
     },
     {
       "techniqueID": "T1568.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / high",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         }
       ],
-      "score": 1
+      "score": 4
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1210",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Abnormally Large DNS Response (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Abnormally Large DNS Response (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

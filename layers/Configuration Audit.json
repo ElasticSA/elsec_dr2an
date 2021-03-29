@@ -1,5 +1,5 @@
 {
-  "name": "Elastic Security: Configuration Audit",
+  "name": "El.Sec. Configuration Audit",
   "versions": {
     "attack": "8",
     "navigator": "4.2",
@@ -15,14 +15,35 @@
     "showID": true
   },
   "hideDisabled": false,
-  "legendItems": [],
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
   "gradient": {
     "colors": [
       "#bbffdd",
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 36
+    "maxValue": 45
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -30,12 +51,16 @@
   "selectSubtechniquesWithParent": false,
   "metadata": [
     {
-      "name": "Elastic version",
+      "name": "Elastic Stack version",
       "value": "7.12.0"
     },
     {
       "name": "Metadata format",
       "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
     }
   ],
   "techniques": [
@@ -44,47 +69,46 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "User Added as Owner for Azure Service Principal (21)"
         },
         {
-          "name": "Query / low",
+          "name": "Q / Low",
           "value": "User Added as Owner for Azure Application (21)"
         },
         {
-          "name": "Query / medium",
-          "value": "Azure Conditional Access Policy Modified (47)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
-        },
-        {
-          "name": "Query / low",
-          "value": "User Added as Owner for Azure Application (21)"
-        },
-        {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Microsoft 365 Teams Guest Access Enabled (47)"
         },
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Microsoft 365 Teams External Access Enabled (47)"
         }
       ],
-      "score": 7
+      "score": 4
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
+          "name": "Q / Med.",
           "value": "Zoom Meeting with no Passcode (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "Zoom Meeting with no Passcode (47)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
         }
       ],
       "score": 2
@@ -94,34 +118,38 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Modification (47)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
         },
         {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Deletion (47)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
         },
         {
-          "name": "Query / low",
-          "value": "GCP Firewall Rule Creation (21)"
+          "name": "Q / Low",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
         },
         {
-          "name": "Query / medium",
-          "value": "GCP Firewall Rule Modification (47)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
         }
       ],
       "score": 4
     },
     {
-      "techniqueID": "T1537",
+      "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
         {
-          "name": "Query / medium",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
         }
       ],
-      "score": 1
+      "score": 2
     }
   ]
 }

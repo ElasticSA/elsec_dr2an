@@ -9,7 +9,7 @@ const uuidb64 = require('uuid-base64');
 
 
 var ma_nav_templ = {
-    "name": "Elastic Security: ",
+    "name": "El.Sec. ",
     "versions": {
         "attack": "8",
         "navigator": "4.2",
@@ -27,7 +27,12 @@ var ma_nav_templ = {
     },
     "hideDisabled": false,
 //     "techniques": [],
-    "legendItems": [],
+    "legendItems": [
+        {
+            "label": "El.Sec. => Elastic Secrity",
+            "color": "#bbddff"
+        }
+    ],
     "gradient": {
             "colors": [
                     "#bbffdd",
@@ -42,12 +47,16 @@ var ma_nav_templ = {
     "selectSubtechniquesWithParent": false,
     "metadata": [
         {
-                "name": "Elastic version",
-                "value": "7.x"
+                "name": "Elastic Stack version",
+                "value": "7.x" //Will read from kibana
         },
         {
             "name": "Metadata format",
             "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+        },
+        {
+            "name": "Github project",
+            "value": "https://github.com/ElasticSA/elsec_dr2an"
         }
     ],
 }
@@ -57,20 +66,38 @@ var ma_nav = {}
 var dr_types = {
     "eql": {
         "colour": '#fa744e',
-        "label": "EQL"
+        "label": "EQL",
+        "title": "Event Query Language"
     },
     "machine_learning": {
         "colour": '#0077cc',
-        "label": "ML"
+        "label": "ML",
+        "title": "Machine Learning"
     },
     "query": {
         "colour": '#54bcb2',
-        "label": "Query"
+        "label": "Q",
+        "title": "Query (KQL, Lucene, Elasticsearch DSL)"
     },
     "threshold": {
         "colour": '#fec514',
-        "label": "Threshold"
+        "label": "TH",
+        "title": "Threshold"
     }
+}
+
+for ( drt in dr_types ) {
+    ma_nav_templ.legendItems.push({
+        "label": `${dr_types[drt].label} => ${dr_types[drt].title}`,
+        "color": dr_types[drt].colour
+    })
+}
+
+var relabel = {
+    "critical": "Crit.",
+    "high": "High",
+    "medium": "Med.",
+    "low": "Low",
 }
 
 var valid_tag = /^[A-Za-z0-9 ]+$/
@@ -94,7 +121,7 @@ function update_entry(layer, dr, techn)
     }
 
     mantq.metadata.push({
-        "name": `${dr_types[dr.params.type].label} / ${dr.params.severity}`,
+        "name": `${dr_types[dr.params.type].label} / ${relabel[dr.params.severity]}`,
         "value": `${dr.name} (${dr.params.riskScore})`
     })
 }
@@ -128,7 +155,7 @@ program
                     .auth(conf.un, conf.pw)
                     .accept('json')
                     
-            ma_nav_templ.metadata.find(o => o.name == "Elastic version").value = knstatus.body.version.number
+            ma_nav_templ.metadata.find(o => o.name == "Elastic Stack version").value = knstatus.body.version.number
             
             var page = 1
             var total = 1
