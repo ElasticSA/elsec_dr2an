@@ -78,6 +78,10 @@
         },
         {
           "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "Microsoft 365 Teams Guest Access Enabled (47)"
         },
         {
@@ -85,7 +89,7 @@
           "value": "Microsoft 365 Teams External Access Enabled (47)"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1190",
@@ -99,24 +103,21 @@
       "score": 1
     },
     {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
       "techniqueID": "T1562",
       "enabled": true,
       "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Firewall Rule Creation (21)"
+        },
         {
           "name": "Q / Med.",
           "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
@@ -134,7 +135,22 @@
           "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
         }
       ],
-      "score": 4
+      "score": 7
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1566",

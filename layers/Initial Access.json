@@ -78,14 +78,6 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "Auditd Max Login Sessions (47)"
         },
         {
@@ -101,7 +93,7 @@
           "value": "Auditd Login Attempt at Forbidden Time (47)"
         }
       ],
-      "score": 8
+      "score": 6
     },
     {
       "techniqueID": "T1190",
@@ -112,12 +104,12 @@
           "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+          "name": "Q / Low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         },
         {
           "name": "Q / High",
@@ -151,8 +143,12 @@
           "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Q / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Windows Script Executing PowerShell (21)"
         },
         {
           "name": "EQL / Med.",
@@ -167,7 +163,7 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1566.001",
@@ -178,8 +174,12 @@
           "value": "Suspicious MS Office Child Process (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Q / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Windows Script Executing PowerShell (21)"
         },
         {
           "name": "EQL / Med.",
@@ -194,7 +194,37 @@
           "value": "Suspicious macOS MS Office Child Process (47)"
         }
       ],
-      "score": 5
+      "score": 6
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "RDP (Remote Desktop Protocol) to the Internet (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Unusual Child Process of dns.exe (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Unusual File Modification by dns.exe (73)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1566.002",
@@ -203,13 +233,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1203",

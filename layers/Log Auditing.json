@@ -79,17 +79,9 @@
         {
           "name": "Q / Med.",
           "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1562",
@@ -104,24 +96,16 @@
           "value": "GCP Logging Bucket Deletion (47)"
         },
         {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
+          "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
         },
         {
           "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "AWS CloudTrail Log Suspended (47)"
         },
         {
           "name": "Q / Low",
@@ -148,7 +132,7 @@
           "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 13
+      "score": 11
     },
     {
       "techniqueID": "T1562.001",
@@ -159,24 +143,8 @@
           "value": "AWS CloudWatch Log Group Deletion (47)"
         },
         {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
           "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "AWS CloudTrail Log Suspended (47)"
         },
         {
           "name": "Q / High",
@@ -199,7 +167,7 @@
           "value": "Azure Event Hub Deletion (47)"
         }
       ],
-      "score": 11
+      "score": 7
     },
     {
       "techniqueID": "T1530",
@@ -211,11 +179,11 @@
         },
         {
           "name": "Q / Low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
+          "value": "GCP Pub/Sub Subscription Creation (21)"
         },
         {
           "name": "Q / Low",
-          "value": "AWS CloudTrail Log Created (21)"
+          "value": "AWS CloudTrail Log Updated (21)"
         },
         {
           "name": "Q / Low",
@@ -235,6 +203,32 @@
         {
           "name": "Q / Med.",
           "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Logging Sink Modification (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
         }
       ],
       "score": 1
@@ -246,13 +240,9 @@
         {
           "name": "Q / Low",
           "value": "AWS Execution via System Manager (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1566.002",
@@ -261,13 +251,9 @@
         {
           "name": "Q / Low",
           "value": "AWS Execution via System Manager (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1059",
@@ -276,13 +262,9 @@
         {
           "name": "Q / Med.",
           "value": "Azure Command Execution on Virtual Machine (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
-      "score": 2
+      "score": 1
     }
   ]
 }

@@ -73,24 +73,8 @@
           "value": "Local Service Commands (21)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Connection to Internal Network via Telnet (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Connection to External Network via Telnet (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Remote Desktop Tunneling Detected (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
         },
         {
           "name": "EQL / Med.",
@@ -173,7 +157,51 @@
           "value": "Attempt to Mount SMB Share via Command Line (21)"
         }
       ],
-      "score": 26
+      "score": 22
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1569",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1569.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1210",
@@ -186,17 +214,9 @@
         {
           "name": "Q / Med.",
           "value": "Abnormally Large DNS Response (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Abnormally Large DNS Response (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1547",
@@ -205,13 +225,9 @@
         {
           "name": "EQL / High",
           "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.001",
@@ -220,13 +236,9 @@
         {
           "name": "EQL / High",
           "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1021.002",

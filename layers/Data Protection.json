@@ -87,19 +87,26 @@
       "score": 1
     },
     {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "AWS Access Secret in Secrets Manager (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
           "value": "AWS EC2 Encryption Disabled (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1565.001",
@@ -108,13 +115,9 @@
         {
           "name": "Q / Med.",
           "value": "AWS EC2 Encryption Disabled (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
         }
       ],
-      "score": 2
+      "score": 1
     }
   ]
 }

@@ -92,12 +92,16 @@
           "value": "Potential Windows Error Manager Masquerading (47)"
         },
         {
-          "name": "Q / Low",
-          "value": "Microsoft Build Engine Using an Alternate Name (21)"
+          "name": "EQL / Med.",
+          "value": "Renamed AutoIt Scripts Interpreter (47)"
         },
         {
-          "name": "EQL / High",
-          "value": "Potential Process Herpaderping Attempt (73)"
+          "name": "Q / High",
+          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
         },
         {
           "name": "Q / Low",
@@ -120,7 +124,7 @@
           "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 10
+      "score": 11
     },
     {
       "techniqueID": "T1055",
@@ -143,12 +147,8 @@
           "value": "Suspicious Process from Conhost (73)"
         },
         {
-          "name": "Q / Low",
-          "value": "Process Injection by the Microsoft Build Engine (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Process Injection by the Microsoft Build Engine (21)"
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
         },
         {
           "name": "Q / Low",
@@ -167,7 +167,7 @@
           "value": "Unusual Service Host Child Process - Childless Service (47)"
         }
       ],
-      "score": 10
+      "score": 9
     },
     {
       "techniqueID": "T1553",
@@ -240,12 +240,8 @@
           "value": "Clearing Windows Event Logs (21)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "WebServer Access Logs Deleted (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+          "name": "Q / Low",
+          "value": "Modification of Boot Configuration (21)"
         },
         {
           "name": "Q / High",
@@ -280,7 +276,7 @@
           "value": "Windows Event Logs Cleared (21)"
         }
       ],
-      "score": 14
+      "score": 13
     },
     {
       "techniqueID": "T1070.004",
@@ -299,8 +295,8 @@
           "value": "Delete Volume USN Journal with Fsutil (21)"
         },
         {
-          "name": "EQL / Low",
-          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+          "name": "Q / Low",
+          "value": "Modification of Boot Configuration (21)"
         },
         {
           "name": "EQL / Low",
@@ -330,15 +326,23 @@
           "value": "Microsoft Build Engine Started by a System Process (47)"
         },
         {
+          "name": "EQL / Low",
+          "value": "Unusual Process Network Connection (21)"
+        },
+        {
           "name": "Q / Low",
-          "value": "Microsoft Build Engine Started by a Script Process (21)"
+          "value": "Trusted Developer Application Usage (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Microsoft Build Engine Started by an Office Application (73)"
         },
         {
           "name": "Q / Low",
           "value": "Microsoft Build Engine Started by a Script Process (21)"
         }
       ],
-      "score": 5
+      "score": 7
     },
     {
       "techniqueID": "T1564",
@@ -353,10 +357,6 @@
           "value": "Creation of Hidden Files and Directories (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Creation of Hidden Files and Directories (47)"
-        },
-        {
           "name": "EQL / Med.",
           "value": "Unusual Process Execution Path - Alternate Data Stream (47)"
         },
@@ -365,7 +365,7 @@
           "value": "Unusual File Creation - Alternate Data Stream (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1564.001",
@@ -378,13 +378,9 @@
         {
           "name": "Q / Med.",
           "value": "Creation of Hidden Files and Directories (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Creation of Hidden Files and Directories (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1140",
@@ -407,23 +403,11 @@
           "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         },
         {
-          "name": "Q / Low",
-          "value": "Hex Encoding/Decoding Activity (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Base64 Encoding/Decoding Activity (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
-        },
-        {
           "name": "EQL / Med.",
           "value": "Encoded Executable Stored in the Registry (47)"
         }
       ],
-      "score": 8
+      "score": 5
     },
     {
       "techniqueID": "T1562",
@@ -438,16 +422,8 @@
           "value": "Potential Disabling of SELinux (47)"
         },
         {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        },
-        {
           "name": "EQL / Med.",
-          "value": "Attempt to Remove File Quarantine Attribute (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Syslog Service (47)"
+          "value": "Remote Desktop Enabled in Windows Firewall (47)"
         },
         {
           "name": "Q / Med.",
@@ -506,7 +482,7 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         }
       ],
-      "score": 19
+      "score": 17
     },
     {
       "techniqueID": "T1562.001",
@@ -521,16 +497,8 @@
           "value": "Potential Disabling of SELinux (47)"
         },
         {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        },
-        {
           "name": "EQL / Med.",
-          "value": "Attempt to Remove File Quarantine Attribute (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Syslog Service (47)"
+          "value": "Remote Desktop Enabled in Windows Firewall (47)"
         },
         {
           "name": "Q / Med.",
@@ -589,7 +557,7 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         }
       ],
-      "score": 19
+      "score": 17
     },
     {
       "techniqueID": "T1218",
@@ -602,9 +570,25 @@
         {
           "name": "EQL / Med.",
           "value": "Unusual Network Connection via RunDLL32 (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "ImageLoad via Windows Update Auto Update Client (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Signed Binary (21)"
         }
       ],
-      "score": 2
+      "score": 6
     },
     {
       "techniqueID": "T1218.011",
@@ -628,26 +612,55 @@
         {
           "name": "Q / Low",
           "value": "File Permission Modification in Writable Directory (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Potential Evasion via Filter Manager (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1218.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1027",
+      "techniqueID": "T1218.005",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Hex Encoding/Decoding Activity (21)"
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1220",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via MsXsl (21)"
         },
         {
-          "name": "Q / Low",
-          "value": "Base64 Encoding/Decoding Activity (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
-        },
+          "name": "EQL / Med.",
+          "value": "Suspicious WMIC XSL Script Execution (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "metadata": [
         {
           "name": "Q / Low",
           "value": "Microsoft Build Engine Started an Unusual Process (21)"
@@ -665,37 +678,7 @@
           "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
         }
       ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1547.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Kernel Module Removal (73)"
-        }
-      ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1027.004",
@@ -704,6 +687,28 @@
         {
           "name": "Q / Low",
           "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
         }
       ],
       "score": 1

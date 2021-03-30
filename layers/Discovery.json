@@ -93,82 +93,6 @@
         },
         {
           "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1057",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Process Discovery via Tasklist (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1518",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1120",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Peripheral Device Discovery (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Peripheral Device Discovery (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1069",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
           "value": "Enumeration of Administrator Accounts (21)"
         },
         {
@@ -183,49 +107,26 @@
       "score": 5
     },
     {
-      "techniqueID": "T1069.002",
+      "techniqueID": "T1057",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Q / Low",
+          "value": "Process Discovery via Tasklist (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
-      "techniqueID": "T1087.002",
+      "techniqueID": "T1016",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Q / Low",
+          "value": "Public IP Reconnaissance Activity (21)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1482",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1082",
@@ -234,6 +135,88 @@
         {
           "name": "Q / Med.",
           "value": "Enumeration of Kernel Modules (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1120",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Peripheral Device Discovery (21)"
         }
       ],
       "score": 1

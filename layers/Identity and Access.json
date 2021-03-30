@@ -113,7 +113,27 @@
         },
         {
           "name": "Q / Low",
-          "value": "AWS IAM Password Recovery Requested (21)"
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Root Login Without MFA (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Assume Role Policy Update (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
         },
         {
           "name": "Q / High",
@@ -136,7 +156,7 @@
           "value": "Azure Active Directory High Risk Sign-in (73)"
         }
       ],
-      "score": 13
+      "score": 18
     },
     {
       "techniqueID": "T1110",
@@ -147,8 +167,8 @@
           "value": "Attempts to Brute Force an Okta User Account (47)"
         },
         {
-          "name": "TH / High",
-          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+          "name": "TH / Med.",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
         },
         {
           "name": "TH / Med.",
@@ -186,12 +206,12 @@
           "value": "GCP Service Account Key Creation (21)"
         },
         {
-          "name": "Q / Low",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
+          "name": "Q / High",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
         },
         {
           "name": "Q / Low",
-          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+          "value": "AWS IAM User Addition to Group (21)"
         },
         {
           "name": "Q / Low",
@@ -268,6 +288,51 @@
         {
           "name": "Q / Med.",
           "value": "GCP Storage Bucket Permissions Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Disabled (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Group Creation (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1136.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Group Creation (21)"
         }
       ],
       "score": 1

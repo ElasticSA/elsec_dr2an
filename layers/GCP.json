@@ -125,11 +125,72 @@
           "value": "GCP Logging Bucket Deletion (47)"
         },
         {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Firewall Rule Creation (21)"
+        },
+        {
           "name": "Q / Low",
           "value": "GCP Pub/Sub Topic Deletion (21)"
         }
       ],
-      "score": 2
+      "score": 7
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Disabled (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Logging Sink Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Creation (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1530",
@@ -137,7 +198,7 @@
       "metadata": [
         {
           "name": "Q / Low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
+          "value": "GCP Pub/Sub Subscription Creation (21)"
         },
         {
           "name": "Q / Low",

@@ -95,25 +95,9 @@
         {
           "name": "Q / Med.",
           "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
         }
       ],
-      "score": 11
+      "score": 7
     },
     {
       "techniqueID": "T1110",
@@ -122,9 +106,13 @@
         {
           "name": "TH / Med.",
           "value": "Attempts to Brute Force an Okta User Account (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1111",
@@ -160,6 +148,17 @@
       "score": 1
     },
     {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Create Okta API Token (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
@@ -174,21 +173,9 @@
         {
           "name": "Q / Low",
           "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Administrator Privileges Assigned to an Okta Group (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
         }
       ],
-      "score": 6
+      "score": 3
     },
     {
       "techniqueID": "T1531",
@@ -197,13 +184,9 @@
         {
           "name": "Q / Low",
           "value": "Attempt to Revoke Okta API Token (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Attempt to Revoke Okta API Token (21)"
         }
       ],
-      "score": 2
+      "score": 1
     }
   ]
 }

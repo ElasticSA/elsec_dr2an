@@ -73,26 +73,6 @@
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Sudoers File Modification (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
-        },
-        {
           "name": "Q / Low",
           "value": "Bypass UAC via Event Viewer (21)"
         },
@@ -141,7 +121,7 @@
           "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
         }
       ],
-      "score": 18
+      "score": 13
     },
     {
       "techniqueID": "T1548.002",
@@ -150,22 +130,6 @@
         {
           "name": "EQL / Med.",
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
         },
         {
           "name": "Q / Low",
@@ -204,65 +168,7 @@
           "value": "Disabling User Account Control via Registry Modification (47)"
         }
       ],
-      "score": 14
-    },
-    {
-      "techniqueID": "T1068",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Suspicious PrintSpooler SPL File Created (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious PrintSpooler SPL File Created (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Print Spooler Point and Print DLL (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1548.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sudoers File Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Sudoers File Modification (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
-        }
-      ],
-      "score": 3
+      "score": 10
     },
     {
       "techniqueID": "T1055",
@@ -308,6 +214,52 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Print Spooler Point and Print DLL (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
+        },
+        {
+          "name": "TH / High",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1134",

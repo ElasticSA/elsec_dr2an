@@ -86,6 +86,10 @@
         },
         {
           "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "Image File Execution Options Injection (41)"
         },
         {
@@ -137,7 +141,7 @@
           "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 17
+      "score": 18
     },
     {
       "techniqueID": "T1546.008",
@@ -165,9 +169,13 @@
         {
           "name": "Q / Low",
           "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1136",
@@ -193,12 +201,103 @@
       "score": 4
     },
     {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Local Scheduled Task Commands (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution via Scheduled Task (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Task Created by a Windows Script (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Cron Job (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Periodic Tasks (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Cron Job (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Periodic Tasks (21)"
+        }
+      ],
+      "score": 10
+    },
+    {
       "techniqueID": "T1543",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+          "name": "Q / Med.",
+          "value": "System Shells via Services (47)"
         },
         {
           "name": "EQL / High",
@@ -244,8 +343,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+          "name": "Q / Med.",
+          "value": "System Shells via Services (47)"
         },
         {
           "name": "EQL / High",
@@ -263,79 +362,13 @@
       "score": 4
     },
     {
-      "techniqueID": "T1053",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution via Scheduled Task (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Task Created by a Windows Script (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1137",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Microsoft Office AddIns (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Microsoft Office AddIns (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via Microsoft Outlook VBA (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
       "techniqueID": "T1547",
       "enabled": true,
       "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Persistence via Kernel Module Modification (21)"
+        },
         {
           "name": "EQL / High",
           "value": "Persistence via Hidden Run Key Detected (73)"
@@ -401,7 +434,33 @@
           "value": "Potential Persistence via Login Hook (47)"
         }
       ],
-      "score": 16
+      "score": 17
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Persistence via Kernel Module Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Microsoft Office AddIns (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Microsoft Outlook VBA (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1547.001",

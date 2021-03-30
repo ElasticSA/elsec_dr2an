@@ -20,9 +20,9 @@ Steps:
  
 Read the printed help on creating a JSON config file; we'll assume you named this file "config".
 
-Note: You could also npm to install elsec_dr2an as a shell command; here we'll just run the script from the project directory.
+Note: You could also use npm to install elsec_dr2an as a shell command; here we'll just run the script from the project directory.
 
- - run: `node ./main ./config`
+ - run: `node ./main.js ./config`
  
 
 ### Old Bash script

@@ -98,6 +98,17 @@
       "score": 1
     },
     {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1133",
       "enabled": true,
       "metadata": [

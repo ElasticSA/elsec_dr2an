@@ -98,36 +98,74 @@
       "score": 1
     },
     {
-      "techniqueID": "T1098",
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1136",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Administrator Privileges Assigned to an Okta Group (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Administrator Privileges Assigned to an Okta Group (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Administrator Role Assigned to an Okta User (47)"
+          "value": "Attempt to Create Okta API Token (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1531",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Deletion (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Attempt to Revoke Okta API Token (21)"
-        },
         {
           "name": "Q / Med.",
           "value": "AWS IAM Deactivation of MFA Device (47)"
@@ -141,53 +179,22 @@
           "value": "Attempt to Revoke Okta API Token (21)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
-      "techniqueID": "T1562",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
+          "value": "Administrator Privileges Assigned to an Okta Group (47)"
         },
         {
           "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
+          "value": "Administrator Role Assigned to an Okta User (47)"
         }
       ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        }
-      ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1078",
@@ -208,25 +215,9 @@
         {
           "name": "Q / Med.",
           "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
         }
       ],
-      "score": 8
+      "score": 4
     }
   ]
 }

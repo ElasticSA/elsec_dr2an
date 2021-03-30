@@ -78,7 +78,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
         },
         {
           "name": "Q / Low",
@@ -105,7 +105,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
         },
         {
           "name": "Q / Low",

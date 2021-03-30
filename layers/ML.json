@@ -76,6 +76,76 @@
       "score": 1
     },
     {
+      "techniqueID": "T1049",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Network Connection Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Sudo Activity (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Sudo Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Anomalous Kernel Module Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Anomalous Kernel Module Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Network Configuration Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Information Discovery Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1057",
       "enabled": true,
       "metadata": [

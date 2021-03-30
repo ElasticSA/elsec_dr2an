@@ -164,7 +164,13 @@ program
             while ( (page-1)*100 < total) {
                 
                 var res = yield req
-                    .get(`${conf.url}${kn_api}/alerts/_find?per_page=100&page=${page}&search_fields=consumer&search=siem`)
+                    .get(`${conf.url}${kn_api}/alerts/_find`)
+                    .query({
+                        "per_page": 100,
+                        "page": page,
+                        "search_fields": "consumer",
+                        "search": "siem"
+                    })
                     .set("kbn-xsrf", "true")
                     .auth(conf.un, conf.pw)
                     .accept('json')

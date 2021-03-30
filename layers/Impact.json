@@ -74,6 +74,28 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 1
     }
   ]
 }
