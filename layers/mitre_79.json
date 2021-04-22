@@ -1,5 +1,5 @@
 {
-    "name": "Elastic Security (Any)",
+    "name": "Elastic Security 7.9",
     "versions": {
         "attack": "8",
         "navigator": "4.2",
