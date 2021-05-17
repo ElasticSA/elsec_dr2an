@@ -2,8 +2,8 @@
   "name": "El.Sec. Lateral Movement",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -155,9 +155,13 @@
         {
           "name": "EQL / Low",
           "value": "Attempt to Mount SMB Share via Command Line (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
         }
       ],
-      "score": 22
+      "score": 23
     },
     {
       "techniqueID": "T1543",
@@ -292,6 +296,39 @@
         {
           "name": "EQL / Med.",
           "value": "Remote Scheduled Task Creation (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
         }
       ],
       "score": 1

@@ -2,8 +2,8 @@
   "name": "El.Sec. AWS",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -383,6 +383,28 @@
         {
           "name": "Q / Low",
           "value": "AWS Execution via System Manager (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Snapshot Activity (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
         }
       ],
       "score": 1

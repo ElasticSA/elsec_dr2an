@@ -2,8 +2,8 @@
   "name": "El.Sec. Defense Evasion",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -118,13 +118,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 11
+      "score": 10
     },
     {
       "techniqueID": "T1055",
@@ -190,23 +186,11 @@
           "value": "SIP Provider Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Gatekeeper (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
-        },
-        {
           "name": "EQL / Low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 8
+      "score": 5
     },
     {
       "techniqueID": "T1553.002",
@@ -274,9 +258,13 @@
         {
           "name": "Q / Low",
           "value": "Windows Event Logs Cleared (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
-      "score": 13
+      "score": 14
     },
     {
       "techniqueID": "T1070.004",
@@ -363,9 +351,17 @@
         {
           "name": "EQL / Med.",
           "value": "Unusual File Creation - Alternate Data Stream (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 4
+      "score": 6
     },
     {
       "techniqueID": "T1564.001",
@@ -378,9 +374,17 @@
         {
           "name": "Q / Med.",
           "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1140",
@@ -474,15 +478,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 17
+      "score": 16
     },
     {
       "techniqueID": "T1562.001",
@@ -549,15 +549,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 17
+      "score": 16
     },
     {
       "techniqueID": "T1218",
@@ -766,15 +762,11 @@
           "value": "Attempt to Install Root Certificate (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
           "name": "EQL / Low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1036.004",
@@ -783,13 +775,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574",
@@ -798,13 +786,9 @@
         {
           "name": "Q / Med.",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574.007",
@@ -813,13 +797,9 @@
         {
           "name": "Q / Med.",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1553.003",
@@ -828,13 +808,9 @@
         {
           "name": "EQL / Med.",
           "value": "SIP Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1564.004",
@@ -857,6 +833,88 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

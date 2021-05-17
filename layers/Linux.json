@@ -2,8 +2,8 @@
   "name": "El.Sec. Linux",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -91,9 +91,17 @@
         {
           "name": "Q / Med.",
           "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
         }
       ],
-      "score": 6
+      "score": 8
     },
     {
       "techniqueID": "T1033",
@@ -224,13 +232,9 @@
         {
           "name": "EQL / Med.",
           "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1547.006",
@@ -273,9 +277,13 @@
         {
           "name": "Q / Med.",
           "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1505",
@@ -375,8 +383,8 @@
           "value": "Suspicious JAR Child Process (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
         }
       ],
       "score": 4
@@ -490,9 +498,13 @@
         {
           "name": "EQL / Med.",
           "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1070.004",
@@ -656,13 +668,9 @@
         {
           "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1053.003",
@@ -671,13 +679,9 @@
         {
           "name": "Q / Low",
           "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1546",
@@ -686,13 +690,9 @@
         {
           "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1546.004",
@@ -701,13 +701,9 @@
         {
           "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1059.007",
@@ -716,13 +712,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious JAR Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1068",
@@ -753,6 +745,17 @@
         {
           "name": "Q / Med.",
           "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
       "score": 1

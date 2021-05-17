@@ -2,8 +2,8 @@
   "name": "El.Sec. Execution",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -141,11 +141,23 @@
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
           "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 19
+      "score": 22
     },
     {
       "techniqueID": "T1105",
@@ -323,13 +335,9 @@
         {
           "name": "EQL / Low",
           "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1059.001",
@@ -342,9 +350,13 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious PowerShell Engine ImageLoad (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1129",
@@ -468,13 +480,9 @@
         {
           "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1071",
@@ -516,6 +524,50 @@
         {
           "name": "EQL / Med.",
           "value": "Execution of COM object via Xwizard (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
       "score": 1

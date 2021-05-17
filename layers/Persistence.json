@@ -2,8 +2,8 @@
   "name": "El.Sec. Persistence",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -123,25 +123,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Calendar File Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 18
+      "score": 14
     },
     {
       "techniqueID": "T1546.008",
@@ -192,13 +176,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1574",
@@ -207,9 +187,17 @@
         {
           "name": "Q / Low",
           "value": "Adobe Hijack Persistence (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1574.010",
@@ -279,17 +267,9 @@
         {
           "name": "Q / Low",
           "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
         }
       ],
-      "score": 10
+      "score": 8
     },
     {
       "techniqueID": "T1543",
@@ -334,9 +314,17 @@
         {
           "name": "Q / Med.",
           "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 10
+      "score": 12
     },
     {
       "techniqueID": "T1543.003",
@@ -414,27 +402,15 @@
           "value": "Authorization Plugin Modification (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Persistence via DirectoryService Plugin Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
           "name": "Q / Med.",
           "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 17
+      "score": 14
     },
     {
       "techniqueID": "T1547.006",
@@ -566,9 +542,17 @@
         {
           "name": "EQL / Low",
           "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1037",
@@ -592,9 +576,13 @@
         {
           "name": "EQL / Med.",
           "value": "Persistence via Folder Action Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1556",
@@ -663,17 +651,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1053.003",
@@ -686,17 +666,9 @@
         {
           "name": "Q / Low",
           "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1546.004",
@@ -705,13 +677,9 @@
         {
           "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1136.001",
@@ -720,13 +688,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.003",
@@ -735,13 +699,9 @@
         {
           "name": "EQL / Med.",
           "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.002",
@@ -750,13 +710,9 @@
         {
           "name": "Q / Med.",
           "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Authorization Plugin Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.011",
@@ -765,6 +721,103 @@
         {
           "name": "Q / Med.",
           "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
       "score": 1

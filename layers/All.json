@@ -2,8 +2,8 @@
   "name": "El.Sec. All",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -117,19 +117,31 @@
           "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
           "name": "Q / High",
           "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
         }
       ],
-      "score": 15
+      "score": 18
     },
     {
       "techniqueID": "T1548.002",
@@ -320,9 +332,29 @@
         {
           "name": "Q / High",
           "value": "Azure Active Directory High Risk Sign-in (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
         }
       ],
-      "score": 30
+      "score": 35
     },
     {
       "techniqueID": "T1211",
@@ -455,11 +487,23 @@
           "value": "macOS Installer Spawns Network Event (47)"
         },
         {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
           "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 21
+      "score": 24
     },
     {
       "techniqueID": "T1036",
@@ -504,13 +548,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 11
+      "score": 10
     },
     {
       "techniqueID": "T1526",
@@ -823,9 +863,13 @@
         {
           "name": "EQL / Low",
           "value": "Attempt to Mount SMB Share via Command Line (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
         }
       ],
-      "score": 25
+      "score": 26
     },
     {
       "techniqueID": "T1090",
@@ -965,21 +1009,9 @@
         {
           "name": "Q / High",
           "value": "Dumping Account Hashes via Built-In Commands (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Searching for Saved Credentials via VaultCmd (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Dumping Account Hashes via Built-In Commands (73)"
         }
       ],
-      "score": 15
+      "score": 12
     },
     {
       "techniqueID": "T1553",
@@ -1002,23 +1034,11 @@
           "value": "SIP Provider Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Gatekeeper (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
-        },
-        {
           "name": "EQL / Low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 8
+      "score": 5
     },
     {
       "techniqueID": "T1553.002",
@@ -1109,25 +1129,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Calendar File Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 18
+      "score": 14
     },
     {
       "techniqueID": "T1546.008",
@@ -1199,9 +1203,17 @@
         {
           "name": "Q / Low",
           "value": "Windows Event Logs Cleared (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
         }
       ],
-      "score": 13
+      "score": 15
     },
     {
       "techniqueID": "T1070.004",
@@ -1253,13 +1265,9 @@
         {
           "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1219",
@@ -1400,13 +1408,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1564",
@@ -1427,9 +1431,17 @@
         {
           "name": "EQL / Med.",
           "value": "Unusual File Creation - Alternate Data Stream (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 4
+      "score": 6
     },
     {
       "techniqueID": "T1564.001",
@@ -1442,9 +1454,17 @@
         {
           "name": "Q / Med.",
           "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1485",
@@ -1650,15 +1670,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 45
+      "score": 44
     },
     {
       "techniqueID": "T1562.001",
@@ -1793,15 +1809,11 @@
           "value": "SoftwareUpdate Preferences Modification (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Modification of Safari Settings via Defaults Command (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "SoftwareUpdate Preferences Modification (47)"
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
         }
       ],
-      "score": 34
+      "score": 33
     },
     {
       "techniqueID": "T1140",
@@ -2202,9 +2214,13 @@
         {
           "name": "Q / Med.",
           "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Snapshot Activity (47)"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1218.004",
@@ -2312,30 +2328,6 @@
           "value": "Potential LSA Authentication Package Abuse (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Persistence via DirectoryService Plugin Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
           "name": "Q / Med.",
           "value": "Potential Persistence via Login Hook (47)"
         },
@@ -2346,9 +2338,13 @@
         {
           "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 26
+      "score": 21
     },
     {
       "techniqueID": "T1547.006",
@@ -2461,9 +2457,17 @@
         {
           "name": "Q / Med.",
           "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 11
+      "score": 13
     },
     {
       "techniqueID": "T1543.003",
@@ -2510,14 +2514,18 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Modification of Environment Variable via Launchctl (47)"
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1574.010",
@@ -2572,9 +2580,13 @@
         {
           "name": "Q / Med.",
           "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1505",
@@ -2658,19 +2670,11 @@
           "value": "Potential Persistence via Periodic Tasks (21)"
         },
         {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
           "name": "Q / High",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
-      "score": 13
+      "score": 11
     },
     {
       "techniqueID": "T1071",
@@ -2957,15 +2961,11 @@
           "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
         },
         {
-          "name": "Q / High",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
           "name": "TH / High",
           "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
         }
       ],
-      "score": 6
+      "score": 5
     },
     {
       "techniqueID": "T1218.009",
@@ -3023,13 +3023,9 @@
         {
           "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1069.002",
@@ -3098,13 +3094,9 @@
         {
           "name": "EQL / Low",
           "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1120",
@@ -3167,9 +3159,13 @@
         {
           "name": "EQL / Med.",
           "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1102",
@@ -3234,9 +3230,13 @@
         {
           "name": "EQL / Med.",
           "value": "Kerberos Traffic from Unusual Process (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1070.006",
@@ -3370,13 +3370,9 @@
         {
           "name": "Q / Med.",
           "value": "Modification of Environment Variable via Launchctl (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Environment Variable via Launchctl (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1560",
@@ -3448,9 +3444,17 @@
         {
           "name": "EQL / Low",
           "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1037",
@@ -3478,9 +3482,13 @@
         {
           "name": "Q / Med.",
           "value": "Azure Service Principal Addition (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1550.001",
@@ -3691,9 +3699,25 @@
         {
           "name": "EQL / High",
           "value": "Dumping of Keychain Content via Security Command (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
         }
       ],
-      "score": 1
+      "score": 5
     },
     {
       "techniqueID": "T1555.001",
@@ -3702,9 +3726,21 @@
         {
           "name": "EQL / High",
           "value": "Dumping of Keychain Content via Security Command (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
         }
       ],
-      "score": 1
+      "score": 4
     },
     {
       "techniqueID": "T1546.014",
@@ -3717,17 +3753,9 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious Emond Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Emond Rules Creation or Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Emond Child Process (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1553.004",
@@ -3738,15 +3766,11 @@
           "value": "Attempt to Install Root Certificate (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Install Root Certificate (47)"
-        },
-        {
           "name": "EQL / Low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1053.003",
@@ -3761,19 +3785,11 @@
           "value": "Potential Persistence via Periodic Tasks (21)"
         },
         {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Cron Job (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Potential Persistence via Periodic Tasks (21)"
-        },
-        {
           "name": "Q / High",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1003.001",
@@ -3782,13 +3798,9 @@
         {
           "name": "EQL / High",
           "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1546.004",
@@ -3797,13 +3809,9 @@
         {
           "name": "Q / Med.",
           "value": "Bash Shell Profile Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Bash Shell Profile Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1036.004",
@@ -3812,13 +3820,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1136.001",
@@ -3827,13 +3831,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.003",
@@ -3842,13 +3842,9 @@
         {
           "name": "EQL / Med.",
           "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.002",
@@ -3865,21 +3861,9 @@
         {
           "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
         }
       ],
-      "score": 6
+      "score": 3
     },
     {
       "techniqueID": "T1553.003",
@@ -3888,13 +3872,9 @@
         {
           "name": "EQL / Med.",
           "value": "SIP Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1059.007",
@@ -3907,35 +3887,9 @@
         {
           "name": "EQL / Med.",
           "value": "macOS Installer Spawns Network Event (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious JAR Child Process (47)"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1564.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual File Creation - Alternate Data Stream (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1574.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
-        }
-      ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1559",
@@ -3960,12 +3914,38 @@
       "score": 1
     },
     {
+      "techniqueID": "T1574.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1547.011",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
           "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
         }
       ],
       "score": 1
@@ -3984,6 +3964,102 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1555.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

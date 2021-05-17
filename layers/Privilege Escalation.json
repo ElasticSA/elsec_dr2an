@@ -2,8 +2,8 @@
   "name": "El.Sec. Privilege Escalation",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -109,19 +109,27 @@
           "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
           "name": "Q / High",
           "value": "Potential Privilege Escalation via Sudoers File Modification (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
         }
       ],
-      "score": 13
+      "score": 15
     },
     {
       "techniqueID": "T1548.002",
@@ -236,15 +244,11 @@
           "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
         },
         {
-          "name": "Q / High",
-          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
-        },
-        {
           "name": "TH / High",
           "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
         }
       ],
-      "score": 6
+      "score": 5
     },
     {
       "techniqueID": "T1548.003",
@@ -283,9 +287,17 @@
         {
           "name": "Q / Med.",
           "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1574.007",
@@ -309,9 +321,13 @@
         {
           "name": "EQL / Med.",
           "value": "Apple Scripting Execution with Administrator Privileges (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1059",
@@ -342,14 +358,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         },
         {
@@ -357,7 +365,7 @@
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         }
       ],
-      "score": 6
+      "score": 4
     },
     {
       "techniqueID": "T1547.002",
@@ -370,17 +378,9 @@
         {
           "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1053",
@@ -429,6 +429,39 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

@@ -2,8 +2,8 @@
   "name": "El.Sec. Windows",
   "versions": {
     "attack": "8",
-    "navigator": "4.2",
-    "layer": "4.1"
+    "navigator": "4.3",
+    "layer": "4.2"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 45
+    "maxValue": 44
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -208,9 +208,13 @@
         {
           "name": "EQL / Med.",
           "value": "Command Execution via SolarWinds Process (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
         }
       ],
-      "score": 9
+      "score": 10
     },
     {
       "techniqueID": "T1036",
@@ -255,13 +259,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 11
+      "score": 10
     },
     {
       "techniqueID": "T1055",
@@ -353,17 +353,9 @@
         {
           "name": "EQL / Med.",
           "value": "Searching for Saved Credentials via VaultCmd (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Searching for Saved Credentials via VaultCmd (47)"
         }
       ],
-      "score": 12
+      "score": 10
     },
     {
       "techniqueID": "T1553",
@@ -378,15 +370,11 @@
           "value": "SIP Provider Modification (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
-        },
-        {
           "name": "EQL / Low",
           "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1553.002",
@@ -737,13 +725,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1564",
@@ -1214,9 +1198,17 @@
         {
           "name": "EQL / High",
           "value": "Privilege Escalation via Windir Environment Variable (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1574.010",
@@ -1516,13 +1508,9 @@
         {
           "name": "EQL / Low",
           "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1120",
@@ -1585,18 +1573,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         },
         {
@@ -1604,7 +1580,7 @@
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         }
       ],
-      "score": 16
+      "score": 13
     },
     {
       "techniqueID": "T1547.001",
@@ -1656,9 +1632,13 @@
         {
           "name": "EQL / Med.",
           "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "PowerShell spawning Cmd (21)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1102",
@@ -2012,13 +1992,9 @@
         {
           "name": "EQL / High",
           "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1036.004",
@@ -2027,13 +2003,9 @@
         {
           "name": "EQL / Med.",
           "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1136.001",
@@ -2042,13 +2014,9 @@
         {
           "name": "Q / Low",
           "value": "User Added to Privileged Group in Active Directory (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added to Privileged Group in Active Directory (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.003",
@@ -2057,13 +2025,9 @@
         {
           "name": "EQL / Med.",
           "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1553.003",
@@ -2072,13 +2036,9 @@
         {
           "name": "EQL / Med.",
           "value": "SIP Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1547.002",
@@ -2091,25 +2051,17 @@
         {
           "name": "EQL / Med.",
           "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
-      "techniqueID": "T1564.004",
+      "techniqueID": "T1553.004",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Unusual File Creation - Alternate Data Stream (47)"
+          "name": "EQL / Low",
+          "value": "Creation or Modification of Root Certificate (21)"
         }
       ],
       "score": 1
@@ -2134,17 +2086,6 @@
       "score": 3
     },
     {
-      "techniqueID": "T1553.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Creation or Modification of Root Certificate (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1559",
       "enabled": true,
       "metadata": [
@@ -2167,6 +2108,17 @@
       "score": 1
     },
     {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1547.010",
       "enabled": true,
       "metadata": [
@@ -2180,6 +2132,28 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

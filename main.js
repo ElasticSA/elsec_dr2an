@@ -12,8 +12,8 @@ var ma_nav_templ = {
     "name": "El.Sec. ",
     "versions": {
         "attack": "8",
-        "navigator": "4.2",
-        "layer": "4.1"
+        "navigator": "4.3",
+        "layer": "4.2"
     },
     "domain": "enterprise-attack",
     "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -237,7 +237,7 @@ program
                 console.log(`${name}`)
             })
             
-            console.log("\nListing the remaining layers (!= rule count)")
+            console.log("\nListing the remaining layers")
             layers.forEach( name => {
                 var count = ma_nav[name].techniques.length + 1
 //                console.log(`${name} ${count}`)
