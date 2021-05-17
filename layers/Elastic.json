@@ -1,7 +1,7 @@
 {
   "name": "El.Sec. Elastic",
   "versions": {
-    "attack": "8",
+    "attack": "9",
     "navigator": "4.3",
     "layer": "4.2"
   },
@@ -2320,14 +2320,6 @@
           "value": "Authorization Plugin Modification (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
           "name": "Q / Med.",
           "value": "Potential Persistence via Login Hook (47)"
         },
@@ -2344,7 +2336,7 @@
           "value": "Creation of Hidden Login Item via Apple Script (47)"
         }
       ],
-      "score": 21
+      "score": 19
     },
     {
       "techniqueID": "T1547.006",
@@ -3853,17 +3845,9 @@
         {
           "name": "Q / Med.",
           "value": "Authorization Plugin Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1553.003",

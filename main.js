@@ -11,7 +11,7 @@ const uuidb64 = require('uuid-base64');
 var ma_nav_templ = {
     "name": "El.Sec. ",
     "versions": {
-        "attack": "8",
+        "attack": "9",
         "navigator": "4.3",
         "layer": "4.2"
     },

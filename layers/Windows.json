@@ -1,7 +1,7 @@
 {
   "name": "El.Sec. Windows",
   "versions": {
-    "attack": "8",
+    "attack": "9",
     "navigator": "4.3",
     "layer": "4.2"
   },
@@ -1565,14 +1565,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         },
         {
@@ -1580,7 +1572,7 @@
           "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
         }
       ],
-      "score": 13
+      "score": 11
     },
     {
       "techniqueID": "T1547.001",
@@ -2039,21 +2031,6 @@
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1547.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        }
-      ],
-      "score": 2
     },
     {
       "techniqueID": "T1553.004",
