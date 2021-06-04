@@ -1,0 +1,780 @@
+{
+  "name": "El.Sec. macOS",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.13.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1555",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1555.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1555.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Persistence via DirectoryService Plugin Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1553",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Install Root Certificate (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1553.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Install Root Certificate (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Calendar File Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Dumping Account Hashes via Built-In Commands (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kerberos Cached Credentials Dumping (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Privilege Escalation via Root Crontab File Modification (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Privilege Escalation via Root Crontab File Modification (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / High",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "WebServer Access Logs Deleted (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1056",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Prompt for Credentials with OSASCRIPT (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1056.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Prompt for Credentials with OSASCRIPT (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / Med.",
+          "value": "Potential SSH Brute Force Detected (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

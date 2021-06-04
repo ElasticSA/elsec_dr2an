@@ -1,0 +1,241 @@
+{
+  "name": "El.Sec. Initial Access",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.13.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Unusual File Modification by dns.exe (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Process of dns.exe (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

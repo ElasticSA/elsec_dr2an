@@ -1,0 +1,280 @@
+{
+  "name": "El.Sec. Command and Control",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.13.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via MpCmdRun (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via MpCmdRun (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Protocol Tunneling via EarthWorm (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        },
+        {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1568.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "VNC (Virtual Network Computing) to the Internet (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "SMTP on Port 26/TCP (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

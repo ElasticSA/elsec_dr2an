@@ -1,0 +1,3751 @@
+{
+  "name": "El.Sec. All",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.13.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1218",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Script Object Execution (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Script Object Execution (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Process Activity via Compiled HTML File (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Signed Binary (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "ImageLoad via Windows Update Auto Update Client (47)"
+        }
+      ],
+      "score": 16
+    },
+    {
+      "techniqueID": "T1218.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Administrator Privileges Assigned to an Okta Group (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "User Added as Owner for Azure Application (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Google Workspace Admin Role Assigned to a User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Administrator Role Assigned to an Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Google Workspace Custom Admin Role Created (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "User Added as Owner for Azure Service Principal (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM User Addition to Group (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP IAM Service Account Key Deletion (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Key Creation (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        }
+      ],
+      "score": 17
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via MpCmdRun (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via MpCmdRun (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Prompt Network Connection (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1127",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Activity from a Windows System Binary (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Build Engine Started by a System Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Build Engine Started by an Office Application (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Activity from a Windows System Binary (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Build Engine Started by a System Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Build Engine Started by an Office Application (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "MsBuild Making Network Connections (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started by a Script Process (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Unusual Process Network Connection (21)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1218.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1220",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious WMIC XSL Script Execution (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious WMIC XSL Script Execution (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via MsXsl (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+        }
+      ],
+      "score": 15
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Execution via System Manager (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Execution via System Manager (21)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "NullSessionPipe Registry Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Remote Desktop Shadowing Activity (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to External Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Execution via File Shares (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy to a Hidden Share (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to Internal Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution via TSClient Mountpoint (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential SharpRDP Behavior (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remotely Started Services via RPC (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Scheduled Task Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Control Spawned via Script Interpreter (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Remote Desktop Tunneling Detected (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        }
+      ],
+      "score": 24
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Network Logon Provider Registry Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1569",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "PsExec Network Connection (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1569.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "PsExec Network Connection (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Calendar File Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Image File Execution Options Injection (41)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppInit DLL (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Component Object Model Hijacking (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppCert DLL (47)"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1546.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1036",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Renamed AutoIt Scripts Interpreter (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Renamed AutoIt Scripts Interpreter (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Using an Alternate Name (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Process Herpaderping Attempt (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Program Files Directory Masquerading (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious WerFault Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Endpoint Security Parent Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Windows Error Manager Masquerading (47)"
+        }
+      ],
+      "score": 12
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Managed Code Hosting Process (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Process from Conhost (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious .NET Code Compilation (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Process from a System Virtual Process (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Parent-Child Relationship (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Information Discovery Activity (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Information Discovery Activity (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1049",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Network Connection Discovery (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Network Connection Discovery (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Owner or User Discovery Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Whoami Process Activity (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Owner or User Discovery Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Whoami Process Activity (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Zoom Meeting with no Passcode (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Zoom Meeting with no Passcode (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Telnet Port Activity (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        }
+      ],
+      "score": 13
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Suspended (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Tasks AT Command Enabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Logging Bucket Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disable Windows Firewall Rules via Netsh (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Firewall Rule Modification (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Topic Deletion (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Firewall Rule Creation (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Disabling of SELinux (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Desktop Enabled in Windows Firewall (47)"
+        }
+      ],
+      "score": 40
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Network Configuration Discovery (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "External IP Lookup fron Non-Browser Process (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Network Configuration Discovery (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "External IP Lookup fron Non-Browser Process (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Process Discovery Activity (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux Process Discovery Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1555",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1555.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access of Stored Browser Credentials (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Suspended (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Deleted (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Tasks AT Command Enabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disable Windows Firewall Rules via Netsh (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Attempt to Remove File Quarantine Attribute (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Disabling of SELinux (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Desktop Enabled in Windows Firewall (47)"
+        }
+      ],
+      "score": 28
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Prompt Network Connection (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Svchost spawning Cmd (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious PowerShell Engine ImageLoad (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Conhost Spawned By Suspicious Parent Process (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution via MSSQL xp_cmdshell Stored Procedure (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Command Execution on Virtual Machine (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Parent Process for cmd.exe (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        }
+      ],
+      "score": 17
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Management Console Root Login (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Password Recovery Requested (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP IAM Custom Role Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP IAM Custom Role Creation (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Assume Role Policy Update (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Root Login Without MFA (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+        }
+      ],
+      "score": 42
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Hidden Local User Account Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Enable the Root Account (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1555.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SystemKey Access via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Keychain Password Retrieval via Command Line (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Access to Keychain Credentials Directories (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution via Electron Child Process Node.js Module (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Bypass UAC via Event Viewer (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Sudo Activity (21)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Sudo Activity (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        }
+      ],
+      "score": 20
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Adding Hidden File Attribute via Attrib (21)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Launch Agent or Daemon (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Adding Hidden File Attribute via Attrib (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Kerberos Traffic from Unusual Process (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Persistence via DirectoryService Plugin Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Persistence via Time Provider Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Anomalous Kernel Module Activity (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Security Support Provider (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        }
+      ],
+      "score": 18
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Login Item via Apple Script (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "TCC Bypass via Mounted APFS Snapshot Access (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Access Secret in Secrets Manager (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Storage Account Key Regenerated (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1218.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Creation (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "User Account Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Group Creation (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "User Account Creation (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Create Okta API Token (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Creation (21)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1530",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Disabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP IAM Role Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Service Account Disabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS IAM Deactivation of MFA Device (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Attempt to Revoke Okta API Token (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Group Deletion (21)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Clearing Windows Event Logs (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS S3 Bucket Configuration Deletion (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Delete Volume USN Journal with Fsutil (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Log File Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Process Termination followed by Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "WebServer Access Logs Deleted (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Clearing Windows Event Logs (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "IIS HTTP Logging Disabled (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "File Deletion via Shred (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Modification of Boot Configuration (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Windows Event Logs Cleared (21)"
+        }
+      ],
+      "score": 17
+    },
+    {
+      "techniqueID": "T1070.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Delete Volume USN Journal with Fsutil (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Secure File Deletion via SDelete Utility (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "File Deletion via Shred (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Modification of Boot Configuration (21)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1218.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1210",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Abnormally Large DNS Response (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1027.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Net command via SYSTEM account (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Net command via SYSTEM account (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Encryption Disabled (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Hosts File Modified (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Evasion via Filter Manager (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Evasion via Filter Manager (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Storage Bucket Permissions Modification (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "File Permission Modification in Writable Directory (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1553",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of Root Certificate (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1553.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Install Root Certificate (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of Root Certificate (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Modification of WDigest Security Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Searching for Saved Credentials via VaultCmd (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Dumping Account Hashes via Built-In Commands (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft IIS Connection Strings Decryption (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft IIS Service Account Password Dumped (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kerberos Cached Credentials Dumping (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Build Engine Loading Windows Credential Libraries (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Mimikatz Memssp Log File Detected (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Credential Acquisition via Registry Hive Dumping (73)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1003.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Modification of WDigest Security Provider (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of COM object via Xwizard (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of COM object via Xwizard (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1047",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "WMI Incoming Lateral Movement (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Cmd Execution via WMI (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1547.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Persistence via Time Provider Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Bypass UAC via Event Viewer (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1547.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Privilege Escalation via Root Crontab File Modification (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Scheduled Job Creation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Local Scheduled Task Creation (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Scheduled Task Creation (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Privilege Escalation via Root Crontab File Modification (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / High",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1197",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via BITS Job Notify Cmdline (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Network Logon Provider Registry Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        },
+        {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "macOS Installer Spawns Network Event (47)"
+        },
+        {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1114",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Microsoft 365 New Inbox Rule Created (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1114.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Microsoft 365 New Inbox Rule Created (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1021.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "NullSessionPipe Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Execution via File Shares (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy to a Hidden Share (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Protocol Tunneling via EarthWorm (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Local Scheduled Task Creation (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS RDS Cluster Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS EC2 Network Access Control List Creation (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual File Modification by dns.exe (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Process of dns.exe (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1553.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1568.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1490",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via VssAdmin (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1204",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious PDF Reader Child Process (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Encoding or Decoding Files via CertUtil (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Anomalous Kernel Module Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1498",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Okta DoS Attack (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1499",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Okta DoS Attack (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS IAM Group Creation (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Snapshot Activity (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Logging Sink Modification (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sudoers File Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Storage Bucket Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS RDS Cluster Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1546.008",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1218.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Process Activity via Compiled HTML File (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1129",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution via local SxS Shared Module (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1120",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Peripheral Device Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "VNC (Virtual Network Computing) to the Internet (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1056",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Prompt for Credentials with OSASCRIPT (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1056.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Prompt for Credentials with OSASCRIPT (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1570",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Lateral Tool Transfer (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Setuid / Setgid Bit Set via chmod (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1211",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Unusual Executable File Creation by a System Critical Process (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / Med.",
+          "value": "Potential SSH Brute Force Detected (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
+        },
+        {
+          "name": "TH / High",
+          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Attempts to Brute Force an Okta User Account (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1546.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Image File Execution Options Injection (41)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppInit DLL (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Security Support Provider (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious PowerShell Engine ImageLoad (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1546.015",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Component Object Model Hijacking (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.009",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppCert DLL (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Microsoft Outlook VBA (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Microsoft Office AddIns (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Key Vault Modified (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Creation or Modification of Domain Backup DPAPI private key (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Key Vault Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "SMTP on Port 26/TCP (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Parent-Child Relationship (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1111",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Attempted Bypass of Okta MFA (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Creation or Modification of Domain Backup DPAPI private key (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
