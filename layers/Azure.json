@@ -1,0 +1,311 @@
+{
+  "name": "El.Sec. Azure",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.14.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "User Added as Owner for Azure Application (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "User Added as Owner for Azure Service Principal (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Storage Account Key Regenerated (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Command Execution on Virtual Machine (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Service Principal Addition (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1550.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Service Principal Addition (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Azure Active Directory High Risk Sign-in (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}

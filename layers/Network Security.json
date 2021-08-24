@@ -1,0 +1,145 @@
+{
+  "name": "El.Sec. Network Security",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 42
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.14.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS WAF Access Control List Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS EC2 Network Access Control List Creation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS EC2 Network Access Control List Creation (21)"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}
