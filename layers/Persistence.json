@@ -1,0 +1,770 @@
+{
+  "name": "El.Sec. Persistence",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 52
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.15.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Security Support Provider (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of Persistent Suspicious Program (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Persistence via Time Provider Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Startup Folder Persistence via Unsigned Process (41)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Startup Folder Persistence via Unsigned Process (41)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistent Scripts in the Startup Directory (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Persistence via DirectoryService Plugin Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Authorization Plugin Modification (47)"
+        }
+      ],
+      "score": 15
+    },
+    {
+      "techniqueID": "T1547.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Security Support Provider (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of Persistent Suspicious Program (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Startup Folder Persistence via Unsigned Process (41)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Startup Folder Persistence via Unsigned Process (41)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistent Scripts in the Startup Directory (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Component Object Model Hijacking (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppInit DLL (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppCert DLL (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Image File Execution Options Injection (41)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Bash Shell Profile Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Calendar File Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Emond Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Emond Rules Creation or Modification (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1546.015",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Component Object Model Hijacking (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1112",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Uncommon Registry Persistence Change (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Unusual Persistence via Services Registry (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Network Logon Provider Registry Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious ImagePath Service Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "LaunchDaemon Creation or Modification and Immediate Loading (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Finder Sync Plugin Registered and Enabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Persistence via Docker Shortcut Modification (47)"
+        }
+      ],
+      "score": 14
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Unusual Persistence via Services Registry (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious ImagePath Service Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1546.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppInit DLL (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.009",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppCert DLL (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Image File Execution Options Injection (41)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Bash Shell Profile Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Persistence via Time Provider Modification (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Periodic Tasks (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Scheduled Job Creation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution via Scheduled Task (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution via Scheduled Task (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Task Created by a Windows Script (47)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Potential Persistence via Periodic Tasks (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Network Logon Provider Registry Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1047",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Persistence via Login Hook (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1574.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1098.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1554",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Sublime Plugin or Application Script Modification (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Sublime Plugin or Application Script Modification (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Creation of a Hidden Local User Account (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "User Added to Privileged Group in Active Directory (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1546.014",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Emond Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Emond Rules Creation or Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Microsoft Outlook VBA (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Microsoft Outlook VBA (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Microsoft Office AddIns (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Launch Agent Creation or Modification and Immediate Loading (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Hidden Child Process of Launchd (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1197",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via BITS Job Notify Cmdline (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1037",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Login or Logout Hook (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "User Added to Privileged Group in Active Directory (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Authorization Plugin Modification (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
