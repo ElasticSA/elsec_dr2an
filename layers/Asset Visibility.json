@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -64,32 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Snapshot Activity (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1005",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        }
-      ],
-      "score": 1
-    },
     {
       "techniqueID": "T1070",
       "enabled": true,
@@ -124,12 +98,42 @@
       "score": 1
     },
     {
-      "techniqueID": "T1489",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
+          "name": "Q / Low",
+          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS EC2 VM Export Failure (21)"
+        },
+        {
           "name": "Q / Med.",
-          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+          "value": "AWS EC2 Snapshot Activity (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS EC2 VM Export Failure (21)"
         }
       ],
       "score": 1
@@ -141,6 +145,17 @@
         {
           "name": "Q / Med.",
           "value": "AWS RDS Cluster Deletion (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS RDS Instance/Cluster Stoppage (47)"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -64,33 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1530",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Created (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Subscription Creation (21)"
-        }
-      ],
-      "score": 5
-    },
     {
       "techniqueID": "T1566",
       "enabled": true,
@@ -114,27 +87,61 @@
       "score": 1
     },
     {
-      "techniqueID": "T1485",
+      "techniqueID": "T1537",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
+          "name": "Q / Low",
+          "value": "GCP Logging Sink Modification (21)"
         },
         {
           "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
         }
       ],
-      "score": 4
+      "score": 2
+    },
+    {
+      "techniqueID": "T1530",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "CyberArk Privileged Access Security Recommended Monitor (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "CyberArk Privileged Access Security Error (73)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1562",
@@ -142,7 +149,19 @@
       "metadata": [
         {
           "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "GCP Logging Bucket Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Suspended (47)"
         },
         {
           "name": "Q / Med.",
@@ -151,6 +170,10 @@
         {
           "name": "Q / Low",
           "value": "GCP Pub/Sub Subscription Deletion (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS EC2 Flow Log Deletion (73)"
         },
         {
           "name": "Q / Med.",
@@ -162,23 +185,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Suspended (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "GCP Logging Sink Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Logging Bucket Deletion (47)"
         },
         {
           "name": "Q / Low",
@@ -193,19 +200,7 @@
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
+          "value": "Azure Event Hub Deletion (47)"
         },
         {
           "name": "Q / Med.",
@@ -217,10 +212,41 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS EC2 Flow Log Deletion (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudTrail Log Deleted (47)"
         }
       ],
       "score": 7
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Stream Deletion (47)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1059",
@@ -229,13 +255,9 @@
         {
           "name": "Q / Med.",
           "value": "Azure Command Execution on Virtual Machine (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1565",
@@ -258,21 +280,6 @@
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Logging Sink Modification (21)"
-        }
-      ],
-      "score": 2
     }
   ]
 }

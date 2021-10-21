@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,19 +65,45 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1082",
+      "techniqueID": "T1083",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Virtual Machine Fingerprinting (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Enumeration of Kernel Modules (47)"
+          "name": "EQL / Low",
+          "value": "File and Directory Discovery (21)"
         }
       ],
-      "score": 2
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Network Enumeration (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Remote System Discovery Commands (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Network Enumeration (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1069",
@@ -85,22 +111,33 @@
       "metadata": [
         {
           "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         },
         {
           "name": "EQL / Low",
           "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
         },
         {
           "name": "EQL / Low",
           "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1087",
@@ -108,26 +145,18 @@
       "metadata": [
         {
           "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
         },
         {
           "name": "EQL / Low",
           "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Net command via SYSTEM account (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
         }
       ],
-      "score": 5
+      "score": 3
     },
     {
       "techniqueID": "T1518",
@@ -151,9 +180,69 @@
         {
           "name": "EQL / Med.",
           "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Whoami Process Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Net command via SYSTEM account (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Virtual Machine Fingerprinting via Grep (47)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1120",
@@ -167,79 +256,12 @@
       "score": 1
     },
     {
-      "techniqueID": "T1069.002",
+      "techniqueID": "T1016",
       "enabled": true,
       "metadata": [
         {
           "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1087.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1482",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1033",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Whoami Process Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1018",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1135",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
+          "value": "External IP Lookup from Non-Browser Process (21)"
         }
       ],
       "score": 1

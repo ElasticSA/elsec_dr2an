@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,82 +65,12 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1572",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Protocol Tunneling via EarthWorm (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1105",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Network Connection via Certutil (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Script Execution followed by Network Connection (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Download via MpCmdRun (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Copy via TeamViewer (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Script Execution followed by Network Connection (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Download via Script Interpreter (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
       "techniqueID": "T1071",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
-        {
-          "name": "TH / Med.",
-          "value": "Potential DNS Tunneling via NsLookup (47)"
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
         },
         {
           "name": "EQL / High",
@@ -151,11 +81,162 @@
           "value": "Default Cobalt Strike Team Server Certificate (99)"
         },
         {
+          "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Cobalt Strike Command and Control Beacon (73)"
+        },
+        {
+          "name": "TH / Med.",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
           "name": "EQL / Med.",
           "value": "Potential Command and Control via Internet Explorer (47)"
         }
       ],
-      "score": 9
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Script Interpreter (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Apple Script Execution followed by Network Connection (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Certutil (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via MpCmdRun (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via Desktopimgdownldr Utility (47)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Apple Script Execution followed by Network Connection (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via PowerShell (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        },
+        {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1195.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Remote Desktop Tunneling Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Protocol Tunneling via EarthWorm (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1568",
@@ -172,13 +253,9 @@
         {
           "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1568.002",
@@ -195,82 +272,84 @@
         {
           "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Script Execution followed by Network Connection (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Script Execution followed by Network Connection (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "Q / Crit.",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
         }
       ],
       "score": 3
     },
     {
-      "techniqueID": "T1195",
+      "techniqueID": "T1573",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
-      "techniqueID": "T1195.002",
+      "techniqueID": "T1071.004",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
+          "name": "TH / Med.",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
         }
       ],
-      "score": 2
+      "score": 1
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1219",
       "enabled": true,
       "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy via TeamViewer (47)"
+        },
         {
           "name": "Q / High",
           "value": "VNC (Virtual Network Computing) from the Internet (73)"
@@ -280,7 +359,7 @@
           "value": "VNC (Virtual Network Computing) to the Internet (47)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1190",
@@ -323,28 +402,6 @@
         {
           "name": "Q / Low",
           "value": "SMTP on Port 26/TCP (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1102",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1573",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
         }
       ],
       "score": 1

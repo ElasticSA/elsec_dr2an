@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,16 +65,80 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1550.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Kerberos Attack via Bifrost (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1021",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+          "name": "EQL / Med.",
+          "value": "RDP Enabled via Registry (47)"
         },
         {
           "name": "EQL / Low",
           "value": "Attempt to Mount SMB Share via Command Line (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
         },
         {
           "name": "EQL / Med.",
@@ -86,51 +150,7 @@
         },
         {
           "name": "EQL / High",
-          "value": "Execution via TSClient Mountpoint (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Control Spawned via Script Interpreter (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious RDP ActiveX Client Loaded (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Virtual Private Network Connection Attempt (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Mounting Hidden or WebDav Remote Shares (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remotely Started Services via RPC (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
+          "value": "Lateral Movement via Startup Folder (73)"
         },
         {
           "name": "EQL / Med.",
@@ -138,15 +158,43 @@
         },
         {
           "name": "EQL / Med.",
+          "value": "Connection to Internal Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Control Spawned via Script Interpreter (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Execution via File Shares (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "Remote File Copy to a Hidden Share (47)"
         },
         {
           "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Remote Desktop Tunneling Detected (73)"
+          "value": "Execution via TSClient Mountpoint (73)"
         },
         {
           "name": "EQL / High",
@@ -154,10 +202,33 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Connection to Internal Network via Telnet (47)"
+          "value": "Remotely Started Services via RPC (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Virtual Private Network Connection Attempt (21)"
         }
       ],
-      "score": 22
+      "score": 21
+    },
+    {
+      "techniqueID": "T1021.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "RDP Enabled via Registry (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential SharpRDP Behavior (73)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1021.002",
@@ -173,6 +244,10 @@
         },
         {
           "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "Mounting Hidden or WebDav Remote Shares (21)"
         },
         {
@@ -184,7 +259,81 @@
           "value": "Remote File Copy to a Hidden Share (47)"
         }
       ],
-      "score": 5
+      "score": 6
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1021.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1218",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1218.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1210",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Abnormally Large DNS Response (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1047",
@@ -198,49 +347,12 @@
       "score": 1
     },
     {
-      "techniqueID": "T1210",
+      "techniqueID": "T1570",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Abnormally Large DNS Response (47)"
-        },
         {
           "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1550",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1550.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1558",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
+          "value": "Lateral Tool Transfer (47)"
         }
       ],
       "score": 1
@@ -285,39 +397,6 @@
         {
           "name": "EQL / Low",
           "value": "Service Command Lateral Movement (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1570",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Lateral Tool Transfer (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
         }
       ],
       "score": 1

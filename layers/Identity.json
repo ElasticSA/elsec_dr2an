@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -64,25 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1110",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "TH / Med.",
-          "value": "Okta Brute Force or Password Spraying Attack (47)"
-        },
-        {
-          "name": "TH / Med.",
-          "value": "Attempts to Brute Force an Okta User Account (47)"
-        },
-        {
-          "name": "TH / Med.",
-          "value": "Attempts to Brute Force an Okta User Account (47)"
-        }
-      ],
-      "score": 3
-    },
     {
       "techniqueID": "T1078",
       "enabled": true,
@@ -100,34 +81,46 @@
           "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
         },
         {
-          "name": "TH / Med.",
-          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+          "name": "Q / Low",
+          "value": "Unauthorized Access to an Okta Application (21)"
         },
         {
-          "name": "TH / Med.",
-          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
         },
         {
-          "name": "TH / Med.",
-          "value": "High Number of Okta User Password Reset or Unlock Attempts (47)"
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Activity Reported by Okta User (47)"
         }
       ],
-      "score": 6
+      "score": 8
     },
     {
-      "techniqueID": "T1111",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Attempted Bypass of Okta MFA (73)"
+          "name": "Q / Low",
+          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
         },
         {
-          "name": "Q / High",
-          "value": "Attempted Bypass of Okta MFA (73)"
+          "name": "Q / Med.",
+          "value": "Administrator Privileges Assigned to an Okta Group (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1531",
@@ -141,23 +134,19 @@
       "score": 1
     },
     {
-      "techniqueID": "T1098",
+      "techniqueID": "T1110",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account (21)"
+          "name": "TH / Med.",
+          "value": "Attempts to Brute Force an Okta User Account (47)"
         },
         {
-          "name": "Q / Low",
-          "value": "Attempt to Deactivate MFA for an Okta User Account (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Administrator Privileges Assigned to an Okta Group (47)"
+          "name": "TH / Med.",
+          "value": "Okta Brute Force or Password Spraying Attack (47)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1136",
@@ -166,6 +155,17 @@
         {
           "name": "Q / Med.",
           "value": "Attempt to Create Okta API Token (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1111",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Attempted Bypass of Okta MFA (73)"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,50 +65,38 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1562",
+      "techniqueID": "T1110",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+          "name": "TH / High",
+          "value": "Attempts to Brute Force a Microsoft 365 User Account (73)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
+          "name": "TH / High",
+          "value": "Potential Password Spraying of Microsoft 365 User Accounts (73)"
         },
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+          "name": "TH / High",
+          "value": "O365 Excessive Single Sign-On Logon Errors (73)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
-      "techniqueID": "T1566",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+          "value": "Microsoft 365 Teams External Access Enabled (47)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+          "name": "Q / Low",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1114",
@@ -133,46 +121,89 @@
       "score": 1
     },
     {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 User Restricted from Sending Email (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1484",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "New or Modified Federation Domain (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1484.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "New or Modified Federation Domain (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1537",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
           "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
-      "techniqueID": "T1098",
+      "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams External Access Enabled (47)"
+          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
-      "techniqueID": "T1110",
+      "techniqueID": "T1485",
       "enabled": true,
       "metadata": [
         {
-          "name": "TH / High",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account (73)"
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Unusual Volume of File Deletion (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1486",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Potential ransomware activity (47)"
         }
       ],
       "score": 1

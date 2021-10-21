@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -69,16 +69,24 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
         },
         {
           "name": "Q / Med.",
           "value": "AWS WAF Rule or Rule Group Deletion (47)"
         },
         {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
           "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "value": "AWS Security Group Configuration Change Detection (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
         },
         {
           "name": "Q / Med.",
@@ -86,38 +94,30 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "AWS WAF Access Control List Deletion (47)"
         }
       ],
-      "score": 8
+      "score": 7
     },
     {
       "techniqueID": "T1562.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
         },
         {
           "name": "Q / Med.",
           "value": "AWS WAF Rule or Rule Group Deletion (47)"
         },
         {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
           "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
         },
         {
           "name": "Q / Med.",
@@ -125,22 +125,43 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "AWS WAF Access Control List Deletion (47)"
         }
       ],
-      "score": 8
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS Security Group Configuration Change Detection (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1020",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1074",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1133",

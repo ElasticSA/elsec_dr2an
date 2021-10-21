@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -64,6 +64,69 @@
     }
   ],
   "techniques": [
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Encrypting Files with WinRar or 7z (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Encrypting Files with WinRar or 7z (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1114",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1114.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+        }
+      ],
+      "score": 1
+    },
     {
       "techniqueID": "T1552",
       "enabled": true,
@@ -85,51 +148,6 @@
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1114",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "New ActiveSyncAllowedDeviceID Added via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Exporting Exchange Mailbox via PowerShell (47)"
-        }
-      ],
-      "score": 2
     }
   ]
 }

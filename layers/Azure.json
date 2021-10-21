@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,117 +65,177 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Conditional Access Policy Modified (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "User Added as Owner for Azure Application (21)"
+        },
         {
           "name": "Q / Low",
           "value": "User Added as Owner for Azure Service Principal (21)"
         },
         {
           "name": "Q / Med.",
-          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added as Owner for Azure Application (21)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "Azure Conditional Access Policy Modified (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1550",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Service Principal Addition (47)"
         },
         {
           "name": "Q / Med.",
-          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+          "value": "Azure Application Credential Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1550.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Service Principal Addition (47)"
         },
         {
+          "name": "Q / Med.",
+          "value": "Azure Application Credential Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
           "name": "Q / Low",
-          "value": "User Added as Owner for Azure Application (21)"
+          "value": "Azure Active Directory PowerShell Sign-in (21)"
         },
         {
           "name": "Q / High",
-          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+          "value": "Azure Active Directory High Risk Sign-in (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure External Guest User Invitation (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Automation Account Created (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Privilege Identity Management Role Modified (47)"
         }
       ],
-      "score": 7
+      "score": 8
+    },
+    {
+      "techniqueID": "T1078.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Active Directory PowerShell Sign-in (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Firewall Policy Deletion (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Network Watcher Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        }
+      ],
+      "score": 6
     },
     {
       "techniqueID": "T1528",
@@ -191,45 +251,6 @@
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Azure Active Directory High Risk Sign-in (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Privilege Identity Management Role Modified (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Privilege Identity Management Role Modified (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Azure Active Directory High Risk Sign-in (73)"
-        }
-      ],
-      "score": 8
     },
     {
       "techniqueID": "T1526",
@@ -254,53 +275,45 @@
       "score": 1
     },
     {
+      "techniqueID": "T1496",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Service Principal Credentials Added (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1485",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
           "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Azure Command Execution on Virtual Machine (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Command Execution on Virtual Machine (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1566",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1566.002",
+      "techniqueID": "T1552",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+          "value": "Azure Key Vault Modified (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Key Vault Modified (47)"
         }
       ],
       "score": 1
@@ -328,23 +341,34 @@
       "score": 1
     },
     {
-      "techniqueID": "T1552",
+      "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "value": "Azure Command Execution on Virtual Machine (47)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1552.001",
+      "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -69,6 +69,10 @@
       "enabled": true,
       "metadata": [
         {
+          "name": "Q / Crit.",
+          "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
           "name": "Q / High",
           "value": "Halfbaked Command and Control Beacon (73)"
         },
@@ -79,17 +83,31 @@
         {
           "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
-        },
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
         {
           "name": "Q / Crit.",
           "value": "Default Cobalt Strike Team Server Certificate (99)"
         }
       ],
-      "score": 5
+      "score": 1
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1568",
@@ -106,13 +124,9 @@
         {
           "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1568.002",
@@ -129,21 +143,29 @@
         {
           "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 4
+      "score": 3
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+        },
+        {
           "name": "Q / Med.",
           "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         },
         {
           "name": "Q / High",
@@ -154,27 +176,11 @@
           "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
         },
         {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) from the Internet (73)"
-        },
-        {
           "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
         }
       ],
-      "score": 8
+      "score": 7
     },
     {
       "techniqueID": "T1210",
@@ -186,6 +192,21 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "SMTP on Port 26/TCP (21)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1219",
@@ -216,43 +237,6 @@
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1048",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "SMTP on Port 26/TCP (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1105",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Crit.",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
-        }
-      ],
-      "score": 1
     }
   ]
 }

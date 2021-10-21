@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -74,10 +74,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
           "value": "Suspicious macOS MS Office Child Process (47)"
         },
         {
@@ -94,10 +90,10 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Suspicious macOS MS Office Child Process (47)"
+          "value": "Suspicious Explorer Child Process (47)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1566.001",
@@ -109,10 +105,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
           "value": "Suspicious macOS MS Office Child Process (47)"
         },
         {
@@ -129,18 +121,29 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "Suspicious macOS MS Office Child Process (47)"
+          "value": "Suspicious Explorer Child Process (47)"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
-      "techniqueID": "T1566.002",
+      "techniqueID": "T1203",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "EQL / High",
+          "value": "Suspicious Browser Child Process (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1189",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Browser Child Process (73)"
         }
       ],
       "score": 1
@@ -150,16 +153,24 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
+          "name": "EQL / Med.",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
         },
         {
           "name": "EQL / Med.",
           "value": "Microsoft Exchange Server UM Spawning Suspicious Processes (47)"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
+          "name": "EQL / High",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
         },
         {
           "name": "Q / Med.",
@@ -168,48 +179,21 @@
         {
           "name": "Q / High",
           "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) from the Internet (73)"
         }
       ],
-      "score": 8
+      "score": 7
     },
     {
-      "techniqueID": "T1203",
+      "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
           "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
+          "value": "Unusual File Modification by dns.exe (73)"
         },
         {
           "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1189",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
+          "value": "Unusual Child Process of dns.exe (73)"
         }
       ],
       "score": 2
@@ -228,30 +212,6 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "Auditd Login Attempt at Forbidden Time (47)"
         },
         {
@@ -265,28 +225,28 @@
         {
           "name": "Q / Med.",
           "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
         }
       ],
-      "score": 12
+      "score": 8
     },
     {
-      "techniqueID": "T1133",
+      "techniqueID": "T1566.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Unusual File Modification by dns.exe (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Unusual Child Process of dns.exe (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Unusual File Modification by dns.exe (73)"
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
         }
       ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1048",

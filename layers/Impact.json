@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 50
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.15.0"
+      "value": "7.15.1"
     },
     {
       "name": "Metadata format",
@@ -65,12 +65,12 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1490",
+      "techniqueID": "T1489",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deletion via VssAdmin (73)"
+          "name": "TH / Med.",
+          "value": "High Number of Process and/or Service Terminations (47)"
         }
       ],
       "score": 1
@@ -96,6 +96,37 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1490",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Modification of Boot Configuration (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Third-party Backup Files Deleted via Unexpected Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deleted or Resized via VssAdmin (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via PowerShell (73)"
+        }
+      ],
+      "score": 6
     }
   ]
 }
