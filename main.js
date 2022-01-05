@@ -7,6 +7,7 @@ const req = require('superagent');
 const fs = require('fs');
 const uuidb64 = require('uuid-base64');
 
+const layer_cutoff = 15;
 
 var ma_nav_templ = {
     "name": "El.Sec. ",
@@ -229,11 +230,11 @@ program
                 fs.writeFileSync(`${out_dir}/${name}.json`, JSON.stringify(ma_nav[name], null, 2))
             })
             
-            console.log("\nListing layers with more than 10 techniques (!= rule count)")
+            console.log(`\nListing layers with more than ${layer_cutoff} techniques (!= rule count)`)
             layers.forEach( name => {
                 var count = ma_nav[name].techniques.length + 1
 //                 console.log(`${name} ${count}`)
-                if (count < 10) return
+                if (count < layer_cutoff) return
                 console.log(`${name}`)
             })
             
@@ -241,7 +242,7 @@ program
             layers.forEach( name => {
                 var count = ma_nav[name].techniques.length + 1
 //                console.log(`${name} ${count}`)
-                if (count >= 10) return
+                if (count >= layer_cutoff) return
                 console.log(`${name}`)
             })
             

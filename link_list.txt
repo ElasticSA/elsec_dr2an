@@ -1,0 +1,10 @@
+AWS
+All
+Azure
+Cloud
+Elastic
+GCP
+Linux
+Windows
+macOS
+
