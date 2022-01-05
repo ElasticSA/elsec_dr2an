@@ -1,0 +1,326 @@
+{
+  "name": "El.Sec. Discovery",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.3",
+    "layer": "4.2"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 55
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "7.16.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Enumeration of Privileged Local Groups Membership (43)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Administrator Accounts (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Network Enumeration (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Remote System Discovery Commands (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1083",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "File and Directory Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Network Enumeration (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1120",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Peripheral Device Discovery (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "External IP Lookup from Non-Browser Process (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Whoami Process Activity (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Net command via SYSTEM account (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Enumeration of Privileged Local Groups Membership (43)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1106",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
