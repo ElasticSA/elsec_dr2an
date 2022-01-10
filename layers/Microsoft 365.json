@@ -2,8 +2,8 @@
   "name": "El.Sec. Microsoft 365",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -64,102 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1566",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams External Access Enabled (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1110",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "TH / High",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "Potential Password Spraying of Microsoft 365 User Accounts (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "O365 Excessive Single Sign-On Logon Errors (73)"
-        }
-      ],
-      "score": 3
-    },
     {
       "techniqueID": "T1114",
       "enabled": true,
@@ -178,6 +82,17 @@
         {
           "name": "Q / Low",
           "value": "Microsoft 365 New Inbox Rule Created (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / High",
+          "value": "O365 Excessive Single Sign-On Logon Errors (73)"
         }
       ],
       "score": 1
@@ -207,6 +122,67 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1484",

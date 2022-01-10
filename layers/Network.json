@@ -2,8 +2,8 @@
   "name": "El.Sec. Network",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -70,18 +70,22 @@
       "metadata": [
         {
           "name": "Q / High",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "value": "Halfbaked Command and Control Beacon (73)"
         },
         {
           "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
           "name": "Q / Crit.",
           "value": "Default Cobalt Strike Team Server Certificate (99)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1568",
@@ -89,14 +93,18 @@
       "metadata": [
         {
           "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
           "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1568.002",
@@ -104,23 +112,23 @@
       "metadata": [
         {
           "name": "Q / High",
+          "value": "Halfbaked Command and Control Beacon (73)"
+        },
+        {
+          "name": "Q / High",
           "value": "Cobalt Strike Command and Control Beacon (73)"
         },
         {
           "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
         {
           "name": "Q / Med.",
           "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
@@ -136,24 +144,21 @@
         {
           "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1048",
-      "enabled": true,
-      "metadata": [
+        },
         {
           "name": "Q / High",
           "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         },
         {
-          "name": "Q / Low",
-          "value": "SMTP on Port 26/TCP (21)"
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "RPC (Remote Procedure Call) from the Internet (73)"
         }
       ],
-      "score": 2
+      "score": 7
     },
     {
       "techniqueID": "T1210",
@@ -192,6 +197,21 @@
         {
           "name": "Q / Med.",
           "value": "Telnet Port Activity (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "SMTP on Port 26/TCP (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
         }
       ],
       "score": 2

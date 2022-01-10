@@ -2,8 +2,8 @@
   "name": "El.Sec. Log Auditing",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -65,13 +65,51 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1562",
+      "techniqueID": "T1530",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "GCP Logging Sink Deletion (47)"
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Subscription Creation (21)"
         },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Created (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS CloudTrail Log Updated (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "GCP Pub/Sub Topic Creation (21)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Logging Sink Modification (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
         {
           "name": "Q / High",
           "value": "AWS EC2 Flow Log Deletion (73)"
@@ -102,6 +140,10 @@
         },
         {
           "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "Azure Event Hub Deletion (47)"
         },
         {
@@ -110,7 +152,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "GCP Logging Sink Deletion (47)"
+          "value": "AWS CloudWatch Log Group Deletion (47)"
         },
         {
           "name": "Q / Med.",
@@ -118,36 +160,6 @@
         }
       ],
       "score": 12
-    },
-    {
-      "techniqueID": "T1530",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Subscription Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Created (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Logging Sink Modification (21)"
-        }
-      ],
-      "score": 1
     },
     {
       "techniqueID": "T1562.001",
@@ -179,10 +191,14 @@
         },
         {
           "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "Azure Kubernetes Events Deleted (47)"
         }
       ],
-      "score": 7
+      "score": 8
     },
     {
       "techniqueID": "T1565",
@@ -217,9 +233,13 @@
         {
           "name": "Q / Med.",
           "value": "Azure Resource Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Log Group Deletion (47)"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1566",
@@ -257,6 +277,17 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Azure Command Execution on Virtual Machine (47)"
+        }
+      ],
+      "score": 1
     }
   ]
 }

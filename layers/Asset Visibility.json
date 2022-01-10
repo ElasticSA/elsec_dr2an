@@ -2,8 +2,8 @@
   "name": "El.Sec. Asset Visibility",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -64,6 +64,58 @@
     }
   ],
   "techniques": [
+    {
+      "techniqueID": "T1526",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Azure Blob Container Access Level Modification (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS Route53 private hosted zone associated with a VPC (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS RDS Cluster Creation (21)"
+        }
+      ],
+      "score": 1
+    },
     {
       "techniqueID": "T1537",
       "enabled": true,
@@ -91,25 +143,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Route53 private hosted zone associated with a VPC (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
       "techniqueID": "T1489",
       "enabled": true,
       "metadata": [
@@ -121,45 +154,23 @@
       "score": 1
     },
     {
-      "techniqueID": "T1526",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1190",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1133",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Cluster Creation (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1070",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Low",
           "value": "AWS S3 Bucket Configuration Deletion (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS RDS Cluster Deletion (47)"
         }
       ],
       "score": 1

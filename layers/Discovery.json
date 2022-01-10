@@ -2,8 +2,8 @@
   "name": "El.Sec. Discovery",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -70,15 +70,11 @@
       "metadata": [
         {
           "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
         },
         {
           "name": "Q / Med.",
@@ -89,22 +85,7 @@
           "value": "Enumeration of Privileged Local Groups Membership (43)"
         }
       ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1069.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        }
-      ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1087",
@@ -112,130 +93,33 @@
       "metadata": [
         {
           "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / Low",
           "value": "Enumeration of Users or Groups via Built-in Commands (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1087.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1482",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1018",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
         },
         {
           "name": "EQL / Low",
-          "value": "Remote System Discovery Commands (21)"
+          "value": "AdFind Command Activity (21)"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1082",
       "enabled": true,
       "metadata": [
         {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
           "name": "Q / High",
           "value": "Virtual Machine Fingerprinting (73)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Enumeration of Kernel Modules (47)"
+          "name": "EQL / Med.",
+          "value": "Virtual Machine Fingerprinting via Grep (47)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1518",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1518.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1083",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "File and Directory Discovery (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1135",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        }
-      ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1120",
@@ -273,6 +157,99 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery using WMIC (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1069.001",

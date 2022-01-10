@@ -2,8 +2,8 @@
   "name": "El.Sec. Privilege Escalation",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -68,30 +68,6 @@
       "techniqueID": "T1548",
       "enabled": true,
       "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Bypass UAC via Event Viewer (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy (73)"
-        },
         {
           "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
@@ -130,17 +106,6 @@
         },
         {
           "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        }
-      ],
-      "score": 16
-    },
-    {
-      "techniqueID": "T1548.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
         },
         {
@@ -154,7 +119,14 @@
         {
           "name": "EQL / Med.",
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        },
+        }
+      ],
+      "score": 13
+    },
+    {
+      "techniqueID": "T1548.002",
+      "enabled": true,
+      "metadata": [
         {
           "name": "EQL / Med.",
           "value": "Disabling User Account Control via Registry Modification (47)"
@@ -181,19 +153,27 @@
         },
         {
           "name": "EQL / Med.",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Bypass UAC via Event Viewer (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
         }
       ],
-      "score": 11
+      "score": 10
     },
     {
       "techniqueID": "T1068",
       "enabled": true,
       "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious PrintSpooler SPL File Created (73)"
-        },
         {
           "name": "Q / High",
           "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service (73)"
@@ -209,6 +189,10 @@
         {
           "name": "EQL / High",
           "value": "Suspicious Print Spooler Point and Print DLL (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
         },
         {
           "name": "TH / High",
@@ -228,139 +212,6 @@
         }
       ],
       "score": 9
-    },
-    {
-      "techniqueID": "T1134",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Rogue Named Pipe Impersonation (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1574",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1574.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1574.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Scripting Execution with Administrator Privileges (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Execution with Explicit Credentials via Scripting (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Potential Admin Group Account Addition (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "CyberArk Privileged Access Security Recommended Monitor (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "CyberArk Privileged Access Security Error (73)"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Apple Scripting Execution with Administrator Privileges (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Execution with Explicit Credentials via Scripting (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1574.007",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        }
-      ],
-      "score": 1
     },
     {
       "techniqueID": "T1547",
@@ -414,6 +265,25 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Dynamic Linker Preload Shared Object (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1574.006",
@@ -487,12 +357,72 @@
       "score": 2
     },
     {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Admin Group Account Addition (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "CyberArk Privileged Access Security Recommended Monitor (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "CyberArk Privileged Access Security Error (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Execution with Explicit Credentials via Scripting (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
       "techniqueID": "T1078.003",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Med.",
           "value": "Potential Admin Group Account Addition (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1134",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Privilege Escalation via Rogue Named Pipe Impersonation (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
         }
       ],
       "score": 1
@@ -515,6 +445,17 @@
         {
           "name": "Q / High",
           "value": "Privilege Escalation via Root Crontab File Modification (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Execution with Explicit Credentials via Scripting (47)"
         }
       ],
       "score": 1

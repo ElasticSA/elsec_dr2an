@@ -2,8 +2,8 @@
   "name": "El.Sec. Linux",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -64,418 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1572",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Protocol Tunneling via EarthWorm (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1564",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Creation of Hidden Files and Directories (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1564.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Creation of Hidden Files and Directories (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1140",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1027",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1082",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Virtual Machine Fingerprinting (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Enumeration of Kernel Modules (47)"
-        },
-        {
-          "name": "ML / Low",
-          "value": "Unusual Linux System Information Discovery Activity (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1505",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Potential Shell via Web Server (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1505.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Potential Shell via Web Server (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Potential Disabling of SELinux (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable IPTables or Firewall (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Syslog Service (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Potential Disabling of SELinux (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable IPTables or Firewall (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Attempt to Disable Syslog Service (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1070",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Timestomping using Touch Command (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Tampering of Bash Command-Line History (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "File Deletion via Shred (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "System Log File Deletion (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "WebServer Access Logs Deleted (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Tampering of Bash Command-Line History (47)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1070.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Timestomping using Touch Command (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "Interactive Terminal Spawned via Perl (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Reverse Shell Activity via Terminal (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious JAVA Child Process (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1070.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Tampering of Bash Command-Line History (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Tampering of Bash Command-Line History (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1518",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1518.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1539",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Cookies Theft via Browser Debugging (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1556",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of OpenSSH Binaries (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Standard Authentication Module or Configuration (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1554",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1543",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Modification of OpenSSH Binaries (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Modification of Standard Authentication Module or Configuration (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1552",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1552.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "SSH Authorized Keys File Modification (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1098.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "SSH Authorized Keys File Modification (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
-        },
-        {
-          "name": "ML / Low",
-          "value": "Anomalous Kernel Module Activity (21)"
-        }
-      ],
-      "score": 2
-    },
     {
       "techniqueID": "T1546",
       "enabled": true,
@@ -563,6 +151,33 @@
       "score": 2
     },
     {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "File Deletion via Shred (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Log File Deletion (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "WebServer Access Logs Deleted (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
       "techniqueID": "T1070.004",
       "enabled": true,
       "metadata": [
@@ -585,6 +200,68 @@
       "score": 1
     },
     {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Auditd Login from Forbidden Location (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Login Sessions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Login Attempt at Forbidden Time (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Auditd Max Failed Login Attempts (47)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Enumeration of Kernel Modules (47)"
+        },
+        {
+          "name": "ML / Low",
+          "value": "Unusual Linux System Information Discovery Activity (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Virtual Machine Fingerprinting (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Virtual Machine Fingerprinting via Grep (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
       "techniqueID": "T1222",
       "enabled": true,
       "metadata": [
@@ -594,6 +271,52 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Disabling of SELinux (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable IPTables or Firewall (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Disable Syslog Service (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Potential Disabling of SELinux (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        }
+      ],
+      "score": 4
     },
     {
       "techniqueID": "T1049",
@@ -607,15 +330,38 @@
       "score": 1
     },
     {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "ML / Low",
+          "value": "Anomalous Kernel Module Activity (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via KDE AutoStart Script or Desktop File Modification (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1547.006",
       "enabled": true,
       "metadata": [
         {
           "name": "ML / Low",
           "value": "Anomalous Kernel Module Activity (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Kernel Module Removal (73)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1016",
@@ -657,6 +403,132 @@
         {
           "name": "EQL / Med.",
           "value": "Connection to External Network via Telnet (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Connection to Internal Network via Telnet (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Protocol Tunneling via EarthWorm (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Creation of Hidden Files and Directories (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Base16 or Base32 Encoding/Decoding Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Potential Shell via Web Server (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1070.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Timestomping using Touch Command (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Perl (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Reverse Shell Activity via Terminal (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Interactive Terminal Spawned via Python (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious JAVA Child Process (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Tampering of Bash Command-Line History (47)"
         }
       ],
       "score": 1
@@ -704,6 +576,210 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Security Software Discovery via Grep (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1539",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Cookies Theft via Browser Debugging (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Cookies Theft via Browser Debugging (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1554",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential OpenSSH Backdoor Logging Activity (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of OpenSSH Binaries (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Modification of Standard Authentication Module or Configuration (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1098.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "SSH Authorized Keys File Modification (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

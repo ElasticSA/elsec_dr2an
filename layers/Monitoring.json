@@ -2,8 +2,8 @@
   "name": "El.Sec. Monitoring",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -65,6 +65,83 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS ElastiCache Security Group Created (21)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "AWS Config Service Tampering (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Azure Diagnostic Settings Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "AWS CloudWatch Alarm Deletion (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS GuardDuty Detector Deletion (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "AWS Configuration Recorder Stopped (73)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Attempt to Create Okta API Token (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS RDS Security Group Creation (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1531",
       "enabled": true,
       "metadata": [
@@ -75,24 +152,17 @@
         {
           "name": "Q / Med.",
           "value": "AWS IAM Deactivation of MFA Device (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
         },
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Create Okta API Token (47)"
+          "name": "Q / Low",
+          "value": "AWS IAM Group Deletion (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Attempt to Revoke Okta API Token (21)"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1136.003",
@@ -135,13 +205,9 @@
         {
           "name": "Q / Med.",
           "value": "Possible Okta DoS Attack (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Possible Okta DoS Attack (47)"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1499",
@@ -150,71 +216,9 @@
         {
           "name": "Q / Med.",
           "value": "Possible Okta DoS Attack (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Possible Okta DoS Attack (47)"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        }
-      ],
-      "score": 5
+      "score": 1
     },
     {
       "techniqueID": "T1098",
@@ -226,7 +230,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "Administrator Role Assigned to an Okta User (47)"
+          "value": "Administrator Privileges Assigned to an Okta Group (47)"
         }
       ],
       "score": 2
@@ -249,9 +253,13 @@
         {
           "name": "Q / Low",
           "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "AWS ElastiCache Security Group Created (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1040",

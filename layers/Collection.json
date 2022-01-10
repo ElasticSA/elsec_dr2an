@@ -2,8 +2,8 @@
   "name": "El.Sec. Collection",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -64,58 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1552",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1552.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        }
-      ],
-      "score": 2
-    },
     {
       "techniqueID": "T1114",
       "enabled": true,
@@ -211,6 +159,66 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Sensitive Files Compression (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }

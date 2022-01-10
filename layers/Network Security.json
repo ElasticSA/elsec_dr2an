@@ -2,8 +2,8 @@
   "name": "El.Sec. Network Security",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -70,6 +70,10 @@
       "metadata": [
         {
           "name": "Q / Med.",
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "Azure Network Watcher Deletion (47)"
         },
         {
@@ -78,15 +82,11 @@
         },
         {
           "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
           "value": "AWS WAF Access Control List Deletion (47)"
         },
         {
           "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
         },
         {
           "name": "Q / Low",
@@ -105,11 +105,11 @@
       "metadata": [
         {
           "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
+          "value": "AWS WAF Rule or Rule Group Deletion (47)"
         },
         {
           "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
+          "value": "Azure Network Watcher Deletion (47)"
         },
         {
           "name": "Q / Med.",
@@ -117,7 +117,7 @@
         },
         {
           "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+          "value": "AWS EC2 Network Access Control List Deletion (47)"
         },
         {
           "name": "Q / Low",
@@ -131,23 +131,23 @@
       "score": 6
     },
     {
-      "techniqueID": "T1562.007",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Low",
           "value": "AWS EC2 Network Access Control List Creation (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1562.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "AWS Security Group Configuration Change Detection (21)"
         }
       ],
       "score": 1

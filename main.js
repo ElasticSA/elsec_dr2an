@@ -13,8 +13,8 @@ var ma_nav_templ = {
     "name": "El.Sec. ",
     "versions": {
         "attack": "9",
-        "navigator": "4.3",
-        "layer": "4.2"
+        "navigator": "4.5",
+        "layer": "4.3"
     },
     "domain": "enterprise-attack",
     "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",

@@ -2,8 +2,8 @@
   "name": "El.Sec. GCP",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -65,39 +65,50 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1098",
+      "techniqueID": "T1530",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Low",
-          "value": "GCP Service Account Key Creation (21)"
+          "value": "GCP Pub/Sub Subscription Creation (21)"
         },
         {
           "name": "Q / Low",
-          "value": "GCP IAM Service Account Key Deletion (21)"
+          "value": "GCP Pub/Sub Topic Creation (21)"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1136",
+      "techniqueID": "T1537",
       "enabled": true,
       "metadata": [
         {
           "name": "Q / Low",
-          "value": "GCP Service Account Creation (21)"
+          "value": "GCP Logging Sink Modification (21)"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1562",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "GCP Logging Sink Deletion (47)"
+          "name": "Q / Low",
+          "value": "GCP IAM Service Account Key Deletion (21)"
         },
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Key Creation (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
         {
           "name": "Q / Low",
           "value": "GCP Pub/Sub Subscription Deletion (21)"
@@ -116,40 +127,18 @@
         },
         {
           "name": "Q / Med.",
+          "value": "GCP Logging Sink Deletion (47)"
+        },
+        {
+          "name": "Q / Med.",
           "value": "GCP Firewall Rule Modification (47)"
         },
         {
           "name": "Q / Med.",
           "value": "GCP Firewall Rule Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Logging Sink Deletion (47)"
         }
       ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1530",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Subscription Creation (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Logging Sink Modification (21)"
-        }
-      ],
-      "score": 1
+      "score": 7
     },
     {
       "techniqueID": "T1222",
@@ -180,6 +169,17 @@
         }
       ],
       "score": 3
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "GCP Service Account Creation (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1485",

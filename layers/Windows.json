@@ -2,8 +2,8 @@
   "name": "El.Sec. Windows",
   "versions": {
     "attack": "9",
-    "navigator": "4.3",
-    "layer": "4.2"
+    "navigator": "4.5",
+    "layer": "4.3"
   },
   "domain": "enterprise-attack",
   "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 55
+    "maxValue": 57
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -52,7 +52,7 @@
   "metadata": [
     {
       "name": "Elastic Stack version",
-      "value": "7.16.1"
+      "value": "7.16.2"
     },
     {
       "name": "Metadata format",
@@ -64,2112 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Startup Shell Folder Modification (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Hidden Run Key Detected (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of Persistent Suspicious Program (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Startup Folder Persistence via Unsigned Process (41)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Persistence via Time Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential LSA Authentication Package Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via WMI Standard Registry Provider (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Startup or Run Key Registry Modification (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Uncommon Registry Persistence Change (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Shortcut File Written or Modified for Persistence (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistent Scripts in the Startup Directory (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Installation of Security Support Provider (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Hidden Run Key Detected (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of Persistent Suspicious Program (47)"
-        }
-      ],
-      "score": 18
-    },
-    {
-      "techniqueID": "T1547.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Startup Shell Folder Modification (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Hidden Run Key Detected (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of Persistent Suspicious Program (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Startup Folder Persistence via Unsigned Process (41)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via WMI Standard Registry Provider (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Startup or Run Key Registry Modification (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Uncommon Registry Persistence Change (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Shortcut File Written or Modified for Persistence (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistent Scripts in the Startup Directory (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Hidden Run Key Detected (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of Persistent Suspicious Program (47)"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1069",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Enumeration of Privileged Local Groups Membership (43)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1069.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1087",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration of Administrator Accounts (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1087.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1482",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1018",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Remote System Discovery Commands (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1218",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "ImageLoad via Windows Update Auto Update Client (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Network Connection via RunDLL32 (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Network Connection via Registration Utility (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Unusual Child Processes of RunDLL32 (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Script Object Execution (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Mshta Making Network Connections (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution from a Mounted Device (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Network Connection via DllHost (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Network Connection via Signed Binary (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Control Panel Process with Unusual Arguments (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Process Activity via Compiled HTML File (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "InstallUtil Process Making Network Connections (21)"
-        }
-      ],
-      "score": 13
-    },
-    {
-      "techniqueID": "T1490",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Modification of Boot Configuration (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deletion via WMIC (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Deleting Backup Catalogs with Wbadmin (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deleted or Resized via VssAdmin (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Third-party Backup Files Deleted via Unexpected Process (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deletion via PowerShell (73)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Mimikatz Memssp Log File Detected (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "LSASS Memory Dump Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Searching for Saved Credentials via VaultCmd (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Microsoft Build Engine Loading Windows Credential Libraries (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "NTDS or SAM Database File Copied (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "LSASS Memory Dump Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Credential Access via DuplicateHandle in LSASS (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Renamed COM+ Services DLL (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential LSASS Clone Creation via PssCaptureSnapShot (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "Potential LSASS Memory Dump via PssCaptureSnapShot (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell MiniDump Script (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via LSASS Memory Dump (73)"
-        }
-      ],
-      "score": 17
-    },
-    {
-      "techniqueID": "T1134",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Parent Process PID Spoofing (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Rogue Named Pipe Impersonation (73)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1134.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Parent Process PID Spoofing (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1197",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via BITS Job Notify Cmdline (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Modification of AmsiEnable Registry Key (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "IIS HTTP Logging Disabled (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Tasks AT Command Enabled (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SolarWinds Process Disabling Services via Registry (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Windows Defender Disabled via Registry Modification (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disable Windows Firewall Rules via Netsh (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Evasion via Filter Manager (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Desktop Enabled in Windows Firewall (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Enable Host Network Discovery via Netsh (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Tasks AT Command Enabled (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Defender Exclusions Added via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling Windows Defender Security Settings via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Firewall Disabled via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "DNS-over-HTTPS Enabled via Registry (21)"
-        }
-      ],
-      "score": 14
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Modification of AmsiEnable Registry Key (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Tasks AT Command Enabled (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SolarWinds Process Disabling Services via Registry (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Windows Defender Disabled via Registry Modification (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Evasion via Filter Manager (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Tasks AT Command Enabled (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Defender Exclusions Added via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling Windows Defender Security Settings via PowerShell (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1021",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential Remote Desktop Shadowing Activity (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution via TSClient Mountpoint (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious RDP ActiveX Client Loaded (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "RDP Enabled via Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "NullSessionPipe Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Control Spawned via Script Interpreter (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Mounting Hidden or WebDav Remote Shares (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Copy to a Hidden Share (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution via TSClient Mountpoint (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious RDP ActiveX Client Loaded (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential SharpRDP Behavior (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remotely Started Services via RPC (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Incoming Execution via WinRM Remote Shell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Incoming Execution via PowerShell Remoting (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement with MMC (73)"
-        }
-      ],
-      "score": 23
-    },
-    {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Bypass UAC via Event Viewer (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1548.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Bypass UAC via Event Viewer (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Disabling User Account Control via Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1036",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Microsoft Build Engine Using an Alternate Name (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Process Herpaderping Attempt (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Program Files Directory Masquerading (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Renamed AutoIt Scripts Interpreter (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Executable File Creation with Multiple Extensions (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious WerFault Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Endpoint Security Parent Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Program Files Directory Masquerading (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Windows Error Manager Masquerading (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Zoom Child Process (47)"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1036.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Microsoft Build Engine Using an Alternate Name (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Renamed AutoIt Scripts Interpreter (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1546",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Potential Application Shimming via Sdbinst (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Potential Application Shimming via Sdbinst (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Persistence via WMI Event Subscription (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Image File Execution Options Injection (41)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Registry Persistence via AppCert DLL (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Registry Persistence via AppInit DLL (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Installation of Custom Shim Databases (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Modification of Accessibility Binaries (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Modification of Accessibility Binaries (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Component Object Model Hijacking (47)"
-        }
-      ],
-      "score": 10
-    },
-    {
-      "techniqueID": "T1546.011",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Potential Application Shimming via Sdbinst (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Potential Application Shimming via Sdbinst (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Installation of Custom Shim Databases (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1562.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "IIS HTTP Logging Disabled (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1566",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious MS Office Child Process (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Windows Script Executing PowerShell (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Suspicious MS Outlook Child Process (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1566.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious MS Office Child Process (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Windows Script Executing PowerShell (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Suspicious MS Outlook Child Process (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1553",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SIP Provider Modification (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Creation or Modification of Root Certificate (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1553.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1055",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Unusual Child Process from a System Virtual Process (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Managed Code Hosting Process (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Parent-Child Relationship (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Process from Conhost (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Service Host Child Process - Childless Service (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Service Host Child Process - Childless Service (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Zoom Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Process Creation CallTrace (43)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Potential Process Injection via PowerShell (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious .NET Reflection via PowerShell (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Process Access via Direct System Call (73)"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "User Account Creation (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Creation of a Hidden Local User Account (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1136.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "User Account Creation (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Creation of a Hidden Local User Account (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Conhost Spawned By Suspicious Parent Process (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Command Execution via SolarWinds Process (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Command Shell Activity Started via RunDLL32 (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Command Prompt Network Connection (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Svchost spawning Cmd (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Parent Process for cmd.exe (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution from a Mounted Device (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Download via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Defender Exclusions Added via PowerShell (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Portable Executable Encoded in Powershell Script (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious .NET Reflection via PowerShell (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell MiniDump Script (73)"
-        }
-      ],
-      "score": 17
-    },
-    {
-      "techniqueID": "T1021.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "NullSessionPipe Registry Modification (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Mounting Hidden or WebDav Remote Shares (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Copy to a Hidden Share (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1068",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious PrintSpooler SPL File Created (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential PrintNightmare File Modification (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential PrintNightmare Exploit Registry Modification (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Print Spooler Point and Print DLL (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Print Spooler Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Print Spooler File Deletion (47)"
-        }
-      ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1569",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "PsExec Network Connection (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1569.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "PsExec Network Connection (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1036.005",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Program Files Directory Masquerading (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Program Files Directory Masquerading (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Command Shell Activity Started via RunDLL32 (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution from a Mounted Device (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious PowerShell Engine ImageLoad (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote File Download via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Defender Exclusions Added via PowerShell (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Suspicious Portable Executable Encoded in Powershell Script (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Suspicious .NET Reflection via PowerShell (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell MiniDump Script (73)"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1573",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1102",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1567",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1567.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1567.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Connection to Commonly Abused Web Services (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1053",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution via Scheduled Task (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via Scheduled Job Creation (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution via Scheduled Task (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Task Created by a Windows Script (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Outbound Scheduled Task Activity via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Local Scheduled Task Creation (21)"
-        }
-      ],
-      "score": 9
-    },
-    {
-      "techniqueID": "T1053.005",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution via Scheduled Task (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via Scheduled Job Creation (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Execution via Scheduled Task (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Scheduled Task Created by a Windows Script (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Outbound Scheduled Task Activity via PowerShell (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Local Scheduled Task Creation (21)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1003.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "NTDS or SAM Database File Copied (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1003.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Credential Acquisition via Registry Hive Dumping (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1543",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious ImagePath Service Creation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via WMI Standard Registry Provider (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Network Logon Provider Registry Modification (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Update Orchestrator Service Hijack (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Unusual Persistence via Services Registry (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious ImagePath Service Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "System Shells via Services (47)"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1543.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious ImagePath Service Creation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via WMI Standard Registry Provider (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Update Orchestrator Service Hijack (73)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Unusual Persistence via Services Registry (21)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious ImagePath Service Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "System Shells via Services (47)"
-        }
-      ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1003.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "LSASS Memory Dump Creation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Modification of WDigest Security Provider (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "LSASS Memory Dump Creation (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Credential Access via DuplicateHandle in LSASS (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Renamed COM+ Services DLL (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential LSASS Clone Creation via PssCaptureSnapShot (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "Potential LSASS Memory Dump via PssCaptureSnapShot (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "PowerShell MiniDump Script (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via LSASS Memory Dump (73)"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1003.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Credential Access via Windows Utilities (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1137",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via Microsoft Outlook VBA (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Persistence via Microsoft Office AddIns (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Persistence via Microsoft Outlook VBA (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1572",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Port Forwarding Rule Addition (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential Remote Desktop Tunneling Detected (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Port Forwarding Rule Addition (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1140",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Encoded Executable Stored in the Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encoded Executable Stored in the Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious CertUtil Commands (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1112",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Encoded Executable Stored in the Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Uncommon Registry Persistence Change (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Encoded Executable Stored in the Registry (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1574",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1574.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1574.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1566.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by PDF Reader (21)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Execution of File Written or Modified by Microsoft Office (21)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1021.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "RDP Enabled via Registry (47)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Potential SharpRDP Behavior (73)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1071",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Command and Control via Internet Explorer (47)"
-        },
-        {
-          "name": "TH / Med.",
-          "value": "Potential DNS Tunneling via NsLookup (47)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1195",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SolarWinds Process Disabling Services via Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious SolarWinds Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Command Execution via SolarWinds Process (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1195.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "SUNBURST Command and Control Activity (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "SolarWinds Process Disabling Services via Registry (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious SolarWinds Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Command Execution via SolarWinds Process (47)"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1106",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Suspicious SolarWinds Child Process (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1539",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Cookies Theft via Browser Debugging (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1562.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Windows Defender Disabled via Registry Modification (21)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Defender Exclusions Added via PowerShell (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1559",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Command and Control via Internet Explorer (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of COM object via Xwizard (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1559.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Potential Command and Control via Internet Explorer (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Execution of COM object via Xwizard (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1546.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "Persistence via WMI Event Subscription (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1574.007",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Privilege Escalation via Windir Environment Variable (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1489",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "TH / Med.",
-          "value": "High Number of Process and/or Service Terminations (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1564",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Process Execution Path - Alternate Data Stream (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual File Creation - Alternate Data Stream (47)"
-        },
-        {
-          "name": "EQL / Low",
-          "value": "Adding Hidden File Attribute via Attrib (21)"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1564.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual Process Execution Path - Alternate Data Stream (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Unusual File Creation - Alternate Data Stream (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Encrypting Files with WinRar or 7z (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1083",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "File and Directory Discovery (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1135",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Network Enumeration (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        }
-      ],
-      "score": 2
-    },
     {
       "techniqueID": "T1098",
       "enabled": true,
@@ -2232,6 +126,79 @@
       "score": 2
     },
     {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Enumeration Command Spawned via WMIPrvSE (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1036",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Executable File Creation with Multiple Extensions (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious WerFault Child Process (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Using an Alternate Name (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Process Herpaderping Attempt (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Program Files Directory Masquerading (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential DLL SideLoading via Trusted Microsoft Programs (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Endpoint Security Parent Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Windows Error Manager Masquerading (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
       "techniqueID": "T1036.004",
       "enabled": true,
       "metadata": [
@@ -2255,11 +222,15 @@
           "value": "Suspicious PDF Reader Child Process (21)"
         },
         {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        },
+        {
           "name": "EQL / Med.",
           "value": "Process Activity via Compiled HTML File (47)"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1204.002",
@@ -2270,11 +241,86 @@
           "value": "Executable File Creation with Multiple Extensions (47)"
         },
         {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        },
+        {
           "name": "EQL / Med.",
           "value": "Process Activity via Compiled HTML File (47)"
         }
       ],
-      "score": 2
+      "score": 3
+    },
+    {
+      "techniqueID": "T1003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Searching for Saved Credentials via VaultCmd (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Modification of WDigest Security Provider (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft Build Engine Loading Windows Credential Libraries (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "NTDS or SAM Database File Copied (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Mimikatz Memssp Log File Detected (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Credential Acquisition via Registry Hive Dumping (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via Windows Utilities (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "LSASS Memory Dump Creation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft IIS Service Account Password Dumped (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Microsoft IIS Connection Strings Decryption (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Credential Access via DuplicateHandle in LSASS (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via Renamed COM+ Services DLL (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential LSASS Clone Creation via PssCaptureSnapShot (73)"
+        },
+        {
+          "name": "TH / High",
+          "value": "Potential LSASS Memory Dump via PssCaptureSnapShot (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell MiniDump Script (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via LSASS Memory Dump (73)"
+        }
+      ],
+      "score": 16
     },
     {
       "techniqueID": "T1555",
@@ -2303,6 +349,116 @@
       "score": 1
     },
     {
+      "techniqueID": "T1003.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Modification of WDigest Security Provider (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via Windows Utilities (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "LSASS Memory Dump Creation (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Credential Access via DuplicateHandle in LSASS (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via Renamed COM+ Services DLL (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential LSASS Clone Creation via PssCaptureSnapShot (73)"
+        },
+        {
+          "name": "TH / High",
+          "value": "Potential LSASS Memory Dump via PssCaptureSnapShot (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell MiniDump Script (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via LSASS Memory Dump (73)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Persistence via Time Provider Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential LSA Authentication Package Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Uncommon Registry Persistence Change (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistent Scripts in the Startup Directory (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Security Support Provider (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of Persistent Suspicious Program (47)"
+        }
+      ],
+      "score": 15
+    },
+    {
       "techniqueID": "T1547.003",
       "enabled": true,
       "metadata": [
@@ -2312,6 +468,100 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Bypass UAC via Event Viewer (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1548.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling User Account Control via Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Bypass UAC via Event Viewer (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer (47)"
+        }
+      ],
+      "score": 10
     },
     {
       "techniqueID": "T1547.002",
@@ -2329,6 +579,32 @@
       "score": 2
     },
     {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Adding Hidden File Attribute via Attrib (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual File Creation - Alternate Data Stream (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1547.010",
       "enabled": true,
       "metadata": [
@@ -2344,6 +620,153 @@
       "score": 2
     },
     {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of COM object via Xwizard (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of COM object via Xwizard (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Startup or Run Key Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Uncommon Registry Persistence Change (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Shortcut File Written or Modified for Persistence (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistent Scripts in the Startup Directory (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Startup Shell Folder Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Hidden Run Key Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Execution of Persistent Suspicious Program (47)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Network Logon Provider Registry Modification (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Unusual Persistence via Services Registry (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious ImagePath Service Creation (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via WMI Standard Registry Provider (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Update Orchestrator Service Hijack (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Unusual Persistence via Services Registry (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious ImagePath Service Creation (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "System Shells via Services (47)"
+        }
+      ],
+      "score": 6
+    },
+    {
       "techniqueID": "T1556",
       "enabled": true,
       "metadata": [
@@ -2353,6 +776,233 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Remote Desktop Tunneling Detected (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Port Forwarding Rule Addition (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Command Prompt Network Connection (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Svchost spawning Cmd (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Conhost Spawned By Suspicious Parent Process (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious PowerShell Engine ImageLoad (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Parent Process for cmd.exe (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution from a Mounted Device (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution via MSSQL xp_cmdshell Stored Procedure (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Defender Exclusions Added via PowerShell (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Portable Executable Encoded in Powershell Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell Keylogging Script (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious .NET Reflection via PowerShell (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell MiniDump Script (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        }
+      ],
+      "score": 18
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Command Shell Activity Started via RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious PowerShell Engine ImageLoad (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution from a Mounted Device (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Download via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Defender Exclusions Added via PowerShell (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "Suspicious Portable Executable Encoded in Powershell Script (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell Keylogging Script (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious .NET Reflection via PowerShell (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "PowerShell MiniDump Script (73)"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution via Scheduled Task (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Scheduled Job Creation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Scheduled Task Creation (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Task Created by a Windows Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Outbound Scheduled Task Activity via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Local Scheduled Task Creation (21)"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution via Scheduled Task (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Scheduled Job Creation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Scheduled Task Creation (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Task Created by a Windows Script (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Outbound Scheduled Task Activity via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Local Scheduled Task Creation (21)"
+        }
+      ],
+      "score": 8
     },
     {
       "techniqueID": "T1070",
@@ -2413,6 +1063,214 @@
       "score": 3
     },
     {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential PrintNightmare File Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential PrintNightmare Exploit Registry Modification (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Print Spooler Point and Print DLL (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious PrintSpooler SPL File Created (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious PrintSpooler Service Executable File Creation (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Print Spooler Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Print Spooler File Deletion (47)"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "NullSessionPipe Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Control Spawned via Script Interpreter (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy to a Hidden Share (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Lateral Movement via Startup Folder (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Remote Desktop Shadowing Activity (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Execution via File Shares (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution via TSClient Mountpoint (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious RDP ActiveX Client Loaded (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Scheduled Task Creation (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential SharpRDP Behavior (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remotely Started Services via RPC (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming Execution via WinRM Remote Shell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming Execution via PowerShell Remoting (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+        }
+      ],
+      "score": 19
+    },
+    {
+      "techniqueID": "T1021.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "NullSessionPipe Registry Modification (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote File Copy to a Hidden Share (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Direct Outbound SMB Connection (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Execution via File Shares (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1218",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via RunDLL32 (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Registration Utility (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Processes of RunDLL32 (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Script Object Execution (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Mshta Making Network Connections (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "ImageLoad via Windows Update Auto Update Client (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Execution from a Mounted Device (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Network Connection via DllHost (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Signed Binary (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Control Panel Process with Unusual Arguments (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Process Activity via Compiled HTML File (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "InstallUtil Process Making Network Connections (21)"
+        }
+      ],
+      "score": 14
+    },
+    {
       "techniqueID": "T1218.011",
       "enabled": true,
       "metadata": [
@@ -2441,6 +1299,65 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Managed Code Hosting Process (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Parent-Child Relationship (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Process from a System Virtual Process (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Process from Conhost (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Unusual Service Host Child Process - Childless Service (47)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "Q / Low",
+          "value": "Process Injection by the Microsoft Build Engine (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Zoom Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Process Creation CallTrace (43)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Potential Process Injection via PowerShell (73)"
+        },
+        {
+          "name": "Q / High",
+          "value": "Suspicious .NET Reflection via PowerShell (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious Process Access via Direct System Call (73)"
+        }
+      ],
+      "score": 13
     },
     {
       "techniqueID": "T1055.012",
@@ -2482,6 +1399,84 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Suspicious MS Outlook Child Process (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Script Executing PowerShell (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious MS Office Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+        }
+      ],
+      "score": 8
     },
     {
       "techniqueID": "T1120",
@@ -2530,6 +1525,48 @@
       "score": 7
     },
     {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Explorer Child Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by PDF Reader (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Execution of File Written or Modified by Microsoft Office (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "TH / Med.",
+          "value": "Potential DNS Tunneling via NsLookup (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Command and Control via Internet Explorer (47)"
+        }
+      ],
+      "score": 4
+    },
+    {
       "techniqueID": "T1071.004",
       "enabled": true,
       "metadata": [
@@ -2560,6 +1597,57 @@
       "score": 3
     },
     {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Image File Execution Options Injection (41)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppCert DLL (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Registry Persistence via AppInit DLL (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential Modification of Accessibility Binaries (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Persistence via WMI Event Subscription (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Component Object Model Hijacking (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Persistence via WMI Event Subscription (21)"
+        }
+      ],
+      "score": 11
+    },
+    {
       "techniqueID": "T1546.012",
       "enabled": true,
       "metadata": [
@@ -2580,6 +1668,21 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1112",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Uncommon Registry Persistence Change (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Encoded Executable Stored in the Registry (47)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1546.010",
@@ -2604,6 +1707,59 @@
       "score": 1
     },
     {
+      "techniqueID": "T1003.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "NTDS or SAM Database File Copied (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Credential Acquisition via Registry Hive Dumping (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1569",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "PsExec Network Connection (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1569.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Service Command Lateral Movement (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "PsExec Network Connection (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable (47)"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1219",
       "enabled": true,
       "metadata": [
@@ -2624,6 +1780,25 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1546.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Installation of Custom Shim Databases (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Potential Application Shimming via Sdbinst (21)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1127",
@@ -2695,6 +1870,69 @@
       "score": 2
     },
     {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Disable Windows Firewall Rules via Netsh (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Evasion via Filter Manager (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Modification of AmsiEnable Registry Key (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Tasks AT Command Enabled (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "IIS HTTP Logging Disabled (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Remote Desktop Enabled in Windows Firewall (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Enable Host Network Discovery via Netsh (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Defender Exclusions Added via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling Windows Defender Security Settings via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Firewall Disabled via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "DNS-over-HTTPS Enabled via Registry (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        }
+      ],
+      "score": 14
+    },
+    {
       "techniqueID": "T1562.004",
       "enabled": true,
       "metadata": [
@@ -2716,6 +1954,37 @@
         }
       ],
       "score": 4
+    },
+    {
+      "techniqueID": "T1490",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deleted or Resized via VssAdmin (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Modification of Boot Configuration (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Third-party Backup Files Deleted via Unexpected Process (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Volume Shadow Copy Deletion via PowerShell (73)"
+        }
+      ],
+      "score": 6
     },
     {
       "techniqueID": "T1564.001",
@@ -2785,6 +2054,60 @@
       "score": 2
     },
     {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Evasion via Filter Manager (47)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Modification of AmsiEnable Registry Key (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Scheduled Tasks AT Command Enabled (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Defender Exclusions Added via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Disabling Windows Defender Security Settings via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Persistence via Microsoft Office AddIns (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via Microsoft Outlook VBA (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1546.008",
       "enabled": true,
       "metadata": [
@@ -2798,6 +2121,356 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1546.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Persistence via WMI Event Subscription (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Persistence via WMI Event Subscription (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        },
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Enumeration of Privileged Local Groups Membership (43)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "AdFind Command Activity (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1134",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Parent Process PID Spoofing (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Privilege Escalation via Named Pipe Impersonation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Privilege Escalation via Rogue Named Pipe Impersonation (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1134.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Parent Process PID Spoofing (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1197",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Persistence via BITS Job Notify Cmdline (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1036.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Using an Alternate Name (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "User Account Creation (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Creation of a Hidden Local User Account (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Creation of a Hidden Local User Account (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1136.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "User Account Creation (21)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Creation of a Hidden Local User Account (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Creation of a Hidden Local User Account (73)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1036.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Program Files Directory Masquerading (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1102",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1567.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Connection to Commonly Abused Web Services (21)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1003.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Credential Acquisition via Registry Hive Dumping (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1003.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential Credential Access via Windows Utilities (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Encoded Executable Stored in the Registry (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious CertUtil Commands (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable (73)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable (73)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1562.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "IIS HTTP Logging Disabled (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1553",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "SIP Provider Modification (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Creation or Modification of Root Certificate (21)"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1553.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Low",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) (21)"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1190",
@@ -2862,9 +2535,13 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious .NET Code Compilation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1027.004",
@@ -2873,9 +2550,54 @@
         {
           "name": "EQL / Med.",
           "value": "Suspicious .NET Code Compilation (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Microsoft Build Engine Started an Unusual Process (21)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Adobe Hijack Persistence (21)"
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1218.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Low",
+          "value": "Network Connection via Compiled HTML File (21)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Process Activity via Compiled HTML File (47)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Unusual File Modification by dns.exe (73)"
+        },
+        {
+          "name": "EQL / High",
+          "value": "Unusual Child Process of dns.exe (73)"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1546.015",
@@ -2898,6 +2620,25 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1562.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Windows Defender Exclusions Added via PowerShell (47)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        },
+        {
+          "name": "EQL / Low",
+          "value": "Windows Defender Disabled via Registry Modification (21)"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1114",
@@ -2980,6 +2721,17 @@
         {
           "name": "EQL / Med.",
           "value": "Kerberos Traffic from Unusual Process (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1021.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "Potential SharpRDP Behavior (73)"
         }
       ],
       "score": 1
@@ -3070,6 +2822,17 @@
       "score": 1
     },
     {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        }
+      ],
+      "score": 1
+    },
+    {
       "techniqueID": "T1069.001",
       "enabled": true,
       "metadata": [
@@ -3080,6 +2843,21 @@
         {
           "name": "EQL / Med.",
           "value": "Enumeration of Privileged Local Groups Membership (43)"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1106",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Q / Med.",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious SolarWinds Child Process (47)"
         }
       ],
       "score": 2
@@ -3118,17 +2896,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1218.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Med.",
-          "value": "Process Activity via Compiled HTML File (47)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1218.004",
       "enabled": true,
       "metadata": [
@@ -3138,6 +2905,86 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious SolarWinds Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1195.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / High",
+          "value": "SUNBURST Command and Control Activity (73)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "SolarWinds Process Disabling Services via Registry (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Suspicious SolarWinds Child Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Command Execution via SolarWinds Process (47)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1539",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Cookies Theft via Browser Debugging (47)"
+        },
+        {
+          "name": "EQL / Med.",
+          "value": "Potential Cookies Theft via Browser Debugging (47)"
+        }
+      ],
+      "score": 2
     }
   ]
 }
