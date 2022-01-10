@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,43 +65,62 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "High Number of Process and/or Service Terminations [TH]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "High Number of Process and/or Service Terminations [TH]"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1490",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deleted or Resized via VssAdmin (73)"
+          "name": "High / 73",
+          "value": "Volume Shadow Copy Deletion via WMIC [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Modification of Boot Configuration (21)"
+          "name": "High / 73",
+          "value": "Volume Shadow Copy Deleted or Resized via VssAdmin [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Deleting Backup Catalogs with Wbadmin (21)"
+          "name": "Low / 21",
+          "value": "Modification of Boot Configuration [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deletion via WMIC (73)"
+          "name": "Low / 21",
+          "value": "Deleting Backup Catalogs with Wbadmin [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Third-party Backup Files Deleted via Unexpected Process (47)"
+          "name": "High / 73",
+          "value": "Volume Shadow Copy Deletion via WMIC [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Volume Shadow Copy Deletion via PowerShell (73)"
+          "name": "Med. / 47",
+          "value": "Third-party Backup Files Deleted via Unexpected Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Volume Shadow Copy Deletion via PowerShell [EQL]"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Hosts File Modified (47)"
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
         }
       ],
       "score": 1
@@ -111,8 +130,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Hosts File Modified (47)"
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
         }
       ],
       "score": 1

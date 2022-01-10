@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,12 +65,47 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams External Access Enabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Conditional Access Policy Modified [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "User Added as Owner for Azure Application [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams Guest Access Enabled [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams External Access Enabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Conditional Access Policy Modified [Q]"
+        }
+      ],
+      "score": 7
+    },
+    {
       "techniqueID": "T1114",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 New Inbox Rule Created (21)"
+          "name": "Low / 21",
+          "value": "Microsoft 365 New Inbox Rule Created [Q]"
         }
       ],
       "score": 1
@@ -80,8 +115,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 New Inbox Rule Created (21)"
+          "name": "Low / 21",
+          "value": "Microsoft 365 New Inbox Rule Created [Q]"
         }
       ],
       "score": 1
@@ -91,46 +126,23 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 User Restricted from Sending Email (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 User Restricted from Sending Email [Q]"
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "User Added as Owner for Azure Application (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
-        }
-      ],
-      "score": 4
     },
     {
       "techniqueID": "T1537",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Transport Rule Creation [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Transport Rule Modification [Q]"
         }
       ],
       "score": 2
@@ -140,32 +152,32 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
+          "name": "Low / 21",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "GCP Firewall Rule Creation (21)"
+          "name": "Low / 21",
+          "value": "GCP Firewall Rule Creation [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange DLP Policy Removed [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "GCP Firewall Rule Modification (47)"
+          "name": "Med. / 47",
+          "value": "GCP Firewall Rule Modification [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "GCP Firewall Rule Deletion (47)"
+          "name": "Med. / 47",
+          "value": "GCP Firewall Rule Deletion [Q]"
         }
       ],
       "score": 7
@@ -175,12 +187,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion [Q]"
         }
       ],
       "score": 2
@@ -190,8 +202,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Zoom Meeting with no Passcode (47)"
+          "name": "Med. / 47",
+          "value": "Zoom Meeting with no Passcode [Q]"
         }
       ],
       "score": 1
@@ -201,8 +213,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
+          "name": "Low / 21",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
         }
       ],
       "score": 1
@@ -212,8 +224,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Unusual Volume of File Deletion (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Unusual Volume of File Deletion [Q]"
         }
       ],
       "score": 1
@@ -223,8 +235,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Potential ransomware activity (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Potential ransomware activity [Q]"
         }
       ],
       "score": 1

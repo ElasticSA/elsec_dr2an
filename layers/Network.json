@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,93 +69,105 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / Crit.",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+          "name": "Crit. / 99",
+          "value": "Default Cobalt Strike Team Server Certificate [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1568",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1568.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Halfbaked Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Cobalt Strike Command and Control Beacon (73)"
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Possible FIN7 DGA Command and Control Behavior (73)"
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1190",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
+          "name": "Med. / 47",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Telnet Port Activity (47)"
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) to the Internet [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) from the Internet (73)"
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) from the Internet [Q]"
         }
       ],
       "score": 7
@@ -165,8 +177,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Abnormally Large DNS Response (47)"
+          "name": "Med. / 47",
+          "value": "Abnormally Large DNS Response [Q]"
         }
       ],
       "score": 1
@@ -176,12 +188,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "VNC (Virtual Network Computing) from the Internet (73)"
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "VNC (Virtual Network Computing) to the Internet (47)"
+          "name": "Med. / 47",
+          "value": "VNC (Virtual Network Computing) to the Internet [Q]"
         }
       ],
       "score": 2
@@ -191,12 +203,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "RDP (Remote Desktop Protocol) from the Internet (47)"
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Telnet Port Activity (47)"
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
         }
       ],
       "score": 2
@@ -206,12 +218,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "SMTP on Port 26/TCP (21)"
+          "name": "Low / 21",
+          "value": "SMTP on Port 26/TCP [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
         }
       ],
       "score": 2
@@ -221,8 +233,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Crit.",
-          "value": "Default Cobalt Strike Team Server Certificate (99)"
+          "name": "Crit. / 99",
+          "value": "Default Cobalt Strike Team Server Certificate [Q]"
         }
       ],
       "score": 1
@@ -232,8 +244,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet (47)"
+          "name": "Med. / 47",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet [Q]"
         }
       ],
       "score": 1

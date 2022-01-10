@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,12 +65,46 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1526",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
+          "name": "Low / 21",
+          "value": "Azure Blob Container Access Level Modification [Q]"
         }
       ],
       "score": 1
@@ -80,8 +114,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
+          "name": "Low / 21",
+          "value": "Azure Blob Container Access Level Modification [Q]"
         }
       ],
       "score": 1
@@ -91,64 +125,27 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transfer Lock Disabled [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transferred to Another Account [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route53 private hosted zone associated with a VPC (21)"
+          "name": "Low / 21",
+          "value": "AWS Route53 private hosted zone associated with a VPC [Q]"
         }
       ],
       "score": 3
-    },
-    {
-      "techniqueID": "T1133",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Cluster Creation (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Snapshot Activity (47)"
-        }
-      ],
-      "score": 2
     },
     {
       "techniqueID": "T1005",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1489",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
         }
       ],
       "score": 1
@@ -158,8 +155,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS S3 Bucket Configuration Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS S3 Bucket Configuration Deletion [Q]"
         }
       ],
       "score": 1
@@ -169,8 +166,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS RDS Cluster Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS RDS Cluster Deletion [Q]"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,74 +69,82 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
+          "name": "Med. / 47",
+          "value": "Azure Network Watcher Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
+          "name": "Low / 21",
+          "value": "Azure Firewall Policy Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
         }
       ],
-      "score": 7
+      "score": 8
     },
     {
       "techniqueID": "T1562.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
+          "name": "Med. / 47",
+          "value": "Azure Network Watcher Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
+          "name": "Low / 21",
+          "value": "Azure Firewall Policy Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS EC2 Network Access Control List Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS EC2 Network Access Control List Creation [Q]"
         }
       ],
       "score": 1
@@ -146,8 +154,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
         }
       ],
       "score": 1
@@ -157,8 +165,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1
@@ -168,8 +176,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1

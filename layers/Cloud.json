@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,106 +65,480 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1110",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "TH / Med.",
-          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
-        },
-        {
-          "name": "TH / High",
-          "value": "O365 Excessive Single Sign-On Logon Errors (73)"
-        },
-        {
-          "name": "TH / High",
-          "value": "AWS Management Console Brute Force of Root User Identity (73)"
-        }
-      ],
-      "score": 3
-    },
-    {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS IAM User Addition to Group (21)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams External Access Enabled [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Azure Global Administrator Role Addition to PIM User (73)"
+          "name": "Med. / 47",
+          "value": "Azure Conditional Access Policy Modified [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "GCP IAM Service Account Key Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM User Addition to Group [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
+          "name": "High / 73",
+          "value": "Azure Global Administrator Role Addition to PIM User [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "User Added as Owner for Azure Service Principal (21)"
+          "name": "Low / 21",
+          "value": "GCP IAM Service Account Key Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transfer Lock Disabled [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Admin Role Assigned to a User (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Admin Role Assigned to a User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Multi-Factor Authentication Disabled for an Azure User (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Management Group Role Assignment [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "GCP Service Account Key Creation (21)"
+          "name": "Med. / 47",
+          "value": "Multi-Factor Authentication Disabled for an Azure User [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
+          "name": "Low / 21",
+          "value": "GCP Service Account Key Creation [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "User Added as Owner for Azure Application (21)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transferred to Another Account [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Custom Admin Role Created (47)"
+          "name": "Low / 21",
+          "value": "User Added as Owner for Azure Application [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Role Modified (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Custom Admin Role Created [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Teams Guest Access Enabled (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Role Modified [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams Guest Access Enabled [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route53 private hosted zone associated with a VPC (21)"
+          "name": "Low / 21",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS Route53 private hosted zone associated with a VPC [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams External Access Enabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Conditional Access Policy Modified [Q]"
         }
       ],
-      "score": 17
+      "score": 20
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS IAM Brute Force of Assume Role Policy [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "O365 Excessive Single Sign-On Logon Errors [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Management Console Brute Force of Root User Identity [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Logging Sink Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Transport Rule Creation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Transport Rule Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "AWS Root Login Without MFA [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 User Restricted from Sending Email [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Privilege Identity Management Role Modified [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Privilege Identity Management Role Modified [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure External Guest User Invitation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure External Guest User Invitation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Automation Account Created [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Automation Account Created [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Root Login Without MFA [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM Assume Role Policy Update [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP IAM Custom Role Creation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP IAM Custom Role Creation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Active Directory High Risk User Sign-in Heuristic [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Azure Active Directory High Risk Sign-in [Q]"
+        }
+      ],
+      "score": 18
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Malware Filter Rule Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Topic Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP Logging Bucket Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Suspended [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Firewall Rule Creation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Network Watcher Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange DLP Policy Removed [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP Logging Sink Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP Firewall Rule Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Firewall Policy Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "GCP Firewall Rule Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Event Hub Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Resource Group Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Kubernetes Events Deleted [Q]"
+        }
+      ],
+      "score": 29
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Suspended [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Network Watcher Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Firewall Policy Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Event Hub Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Resource Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Kubernetes Events Deleted [Q]"
+        }
+      ],
+      "score": 16
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "GCP Service Account Creation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Service Account Creation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM Group Creation [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1526",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
+          "name": "Low / 21",
+          "value": "Azure Blob Container Access Level Modification [Q]"
         }
       ],
       "score": 1
@@ -174,8 +548,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Azure Blob Container Access Level Modification (21)"
+          "name": "Low / 21",
+          "value": "Azure Blob Container Access Level Modification [Q]"
         }
       ],
       "score": 1
@@ -185,288 +559,31 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Subscription Creation (21)"
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Subscription Creation [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Created (21)"
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Created [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
+          "name": "Med. / 47",
+          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Topic Creation (21)"
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Topic Creation [Q]"
         }
       ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "GCP Logging Sink Modification (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Creation (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Transport Rule Modification (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Snapshot Activity (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Authorization Rule Created or Updated (47)"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Subscription Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Policy Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Microsoft 365 Exchange Safe Attachment Rule Disabled (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Malware Filter Rule Modification (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Pub/Sub Topic Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Logging Bucket Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Suspended (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Firewall Rule Creation (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange DLP Policy Removed (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Logging Sink Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Firewall Rule Modification (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Firewall Rule Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Kubernetes Events Deleted (47)"
-        }
-      ],
-      "score": 33
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Suspended (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Network Watcher Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Firewall Policy Deletion (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Event Hub Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Kubernetes Events Deleted (47)"
-        }
-      ],
-      "score": 19
+      "score": 4
     },
     {
       "techniqueID": "T1114",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 New Inbox Rule Created (21)"
+          "name": "Low / 21",
+          "value": "Microsoft 365 New Inbox Rule Created [Q]"
         }
       ],
       "score": 1
@@ -476,221 +593,46 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Microsoft 365 New Inbox Rule Created (21)"
+          "name": "Low / 21",
+          "value": "Microsoft 365 New Inbox Rule Created [Q]"
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 User Restricted from Sending Email (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Password Recovery Requested (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Privilege Identity Management Role Modified (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Privilege Identity Management Role Modified (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure External Guest User Invitation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Active Directory PowerShell Sign-in (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Management Console Root Login (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Management Console Root Login (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Automation Account Created (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Root Login Without MFA (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Assume Role Policy Update (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP IAM Custom Role Creation (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP IAM Custom Role Creation (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Active Directory High Risk User Sign-in Heuristic (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Azure Active Directory High Risk Sign-in (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "Azure Active Directory High Risk Sign-in (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Active Directory PowerShell Sign-in (21)"
-        }
-      ],
-      "score": 20
-    },
-    {
-      "techniqueID": "T1565",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1565.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1528",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "AWS Access Secret in Secrets Manager (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Storage Account Key Regenerated (21)"
-        }
-      ],
-      "score": 3
     },
     {
       "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Cluster Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 Network Access Control List Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS EC2 Network Access Control List Creation [Q]"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1485",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "GCP Storage Bucket Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Resource Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Unusual Volume of File Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS RDS Cluster Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EFS File System or Mount Deleted (47)"
-        }
-      ],
-      "score": 7
+      "score": 1
     },
     {
       "techniqueID": "T1566",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Safe Link Policy Disabled (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Safe Link Policy Disabled [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Anti-Phish Rule Modification [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+          "name": "Med. / 47",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
+          "name": "Low / 21",
+          "value": "AWS Execution via System Manager [Q]"
         }
       ],
       "score": 5
@@ -700,12 +642,27 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Possible Consent Grant Attack via Azure-Registered Application (47)"
+          "name": "Med. / 47",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
+          "name": "Low / 21",
+          "value": "AWS Execution via System Manager [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Possible Consent Grant Attack via Azure-Registered Application [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Storage Account Key Regenerated [Q]"
         }
       ],
       "score": 2
@@ -715,8 +672,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "name": "Med. / 47",
+          "value": "Azure Key Vault Modified [Q]"
         }
       ],
       "score": 1
@@ -726,8 +683,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "name": "Med. / 47",
+          "value": "Azure Key Vault Modified [Q]"
         }
       ],
       "score": 1
@@ -737,12 +694,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "GCP Storage Bucket Permissions Modification (47)"
+          "name": "Med. / 47",
+          "value": "GCP Storage Bucket Permissions Modification [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Blob Permissions Modification (47)"
+          "name": "Med. / 47",
+          "value": "Azure Blob Permissions Modification [Q]"
         }
       ],
       "score": 2
@@ -752,28 +709,28 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "GCP Service Account Deletion (47)"
+          "name": "Med. / 47",
+          "value": "GCP Service Account Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "GCP Service Account Disabled (47)"
+          "name": "Med. / 47",
+          "value": "GCP Service Account Disabled [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS IAM Deactivation of MFA Device (47)"
+          "name": "Med. / 47",
+          "value": "AWS IAM Deactivation of MFA Device [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "GCP IAM Role Deletion (21)"
+          "name": "Low / 21",
+          "value": "GCP IAM Role Deletion [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Deletion [Q]"
         }
       ],
       "score": 6
@@ -783,46 +740,23 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "Azure Active Directory PowerShell Sign-in (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Azure Active Directory PowerShell Sign-in (21)"
+          "name": "Low / 21",
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "GCP Service Account Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Creation (21)"
-        }
-      ],
-      "score": 3
+      "score": 1
     },
     {
       "techniqueID": "T1136.003",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Creation [Q]"
         }
       ],
       "score": 2
@@ -832,8 +766,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
         }
       ],
       "score": 1
@@ -843,16 +777,16 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
         }
       ],
       "score": 3
@@ -862,19 +796,30 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Service Principal Credentials Added (47)"
+          "name": "Med. / 47",
+          "value": "Azure Service Principal Credentials Added [Q]"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1489",
+      "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
       "score": 1
@@ -884,19 +829,50 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS S3 Bucket Configuration Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS S3 Bucket Configuration Deletion [Q]"
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "GCP Storage Bucket Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Resource Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Unusual Volume of File Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Cluster Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EFS File System or Mount Deleted [Q]"
+        }
+      ],
+      "score": 6
     },
     {
       "techniqueID": "T1484",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "New or Modified Federation Domain (21)"
+          "name": "Low / 21",
+          "value": "New or Modified Federation Domain [Q]"
         }
       ],
       "score": 1
@@ -906,8 +882,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "New or Modified Federation Domain (21)"
+          "name": "Low / 21",
+          "value": "New or Modified Federation Domain [Q]"
         }
       ],
       "score": 1
@@ -917,8 +893,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation (21)"
+          "name": "Low / 21",
+          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
         }
       ],
       "score": 1
@@ -928,8 +904,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1
@@ -939,8 +915,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1
@@ -950,12 +926,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         }
       ],
       "score": 2
@@ -965,24 +941,24 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Service Principal Addition (47)"
+          "name": "Med. / 47",
+          "value": "Azure Service Principal Addition [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Application Credential Modification (47)"
+          "name": "Med. / 47",
+          "value": "Azure Application Credential Modification [Q]"
         }
       ],
       "score": 5
@@ -992,24 +968,24 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Service Principal Addition (47)"
+          "name": "Med. / 47",
+          "value": "Azure Service Principal Addition [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Application Credential Modification (47)"
+          "name": "Med. / 47",
+          "value": "Azure Application Credential Modification [Q]"
         }
       ],
       "score": 5
@@ -1019,8 +995,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Command Execution on Virtual Machine (47)"
+          "name": "Med. / 47",
+          "value": "Azure Command Execution on Virtual Machine [Q]"
         }
       ],
       "score": 1
@@ -1030,8 +1006,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Microsoft 365 Potential ransomware activity (47)"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Potential ransomware activity [Q]"
         }
       ],
       "score": 1
@@ -1041,8 +1017,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "Azure Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,12 +65,50 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Encrypting Files with WinRar or 7z [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Encrypting Files with WinRar or 7z [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Encrypting Files with WinRar or 7z [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Encrypting Files with WinRar or 7z [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1114",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+          "name": "Med. / 47",
+          "value": "Exporting Exchange Mailbox via PowerShell [EQL]"
         }
       ],
       "score": 1
@@ -80,8 +118,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+          "name": "Med. / 47",
+          "value": "Exporting Exchange Mailbox via PowerShell [EQL]"
         }
       ],
       "score": 1
@@ -91,8 +129,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Exporting Exchange Mailbox via PowerShell (47)"
+          "name": "Med. / 47",
+          "value": "Exporting Exchange Mailbox via PowerShell [EQL]"
         }
       ],
       "score": 1
@@ -102,8 +140,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Script with Audio Capture Capabilities [Q]"
         }
       ],
       "score": 1
@@ -113,12 +151,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Script with Audio Capture Capabilities [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
+          "name": "High / 73",
+          "value": "PowerShell Keylogging Script [Q]"
         }
       ],
       "score": 2
@@ -128,12 +166,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Script with Audio Capture Capabilities (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Script with Audio Capture Capabilities [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
+          "name": "High / 73",
+          "value": "PowerShell Keylogging Script [Q]"
         }
       ],
       "score": 2
@@ -143,8 +181,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
+          "name": "High / 73",
+          "value": "PowerShell Keylogging Script [Q]"
         }
       ],
       "score": 1
@@ -154,8 +192,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "PowerShell Keylogging Script (73)"
+          "name": "High / 73",
+          "value": "PowerShell Keylogging Script [Q]"
         }
       ],
       "score": 1
@@ -165,60 +203,22 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1552.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Sensitive Files Compression (47)"
-        }
-      ],
-      "score": 2
+      "score": 1
     }
   ]
 }

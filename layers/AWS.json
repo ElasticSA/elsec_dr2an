@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,16 +65,187 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "AWS Root Login Without MFA [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Root Login Without MFA [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM Assume Role Policy Update [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Suspended [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        }
+      ],
+      "score": 13
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Rule or Rule Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Deleted [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudTrail Log Suspended [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS WAF Access Control List Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Network Access Control List Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1110",
       "enabled": true,
       "metadata": [
         {
-          "name": "TH / Med.",
-          "value": "AWS IAM Brute Force of Assume Role Policy (47)"
+          "name": "Med. / 47",
+          "value": "AWS IAM Brute Force of Assume Role Policy [TH]"
         },
         {
-          "name": "TH / High",
-          "value": "AWS Management Console Brute Force of Root User Identity (73)"
+          "name": "High / 73",
+          "value": "AWS Management Console Brute Force of Root User Identity [TH]"
         }
       ],
       "score": 2
@@ -84,20 +255,20 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS IAM User Addition to Group (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM User Addition to Group [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transfer Lock Disabled (21)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transfer Lock Disabled [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route 53 Domain Transferred to Another Account (21)"
+          "name": "Low / 21",
+          "value": "AWS Route 53 Domain Transferred to Another Account [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Route53 private hosted zone associated with a VPC (21)"
+          "name": "Low / 21",
+          "value": "AWS Route53 private hosted zone associated with a VPC [Q]"
         }
       ],
       "score": 4
@@ -107,263 +278,38 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Created (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Suspended (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        }
-      ],
-      "score": 15
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Rule or Rule Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS EC2 Flow Log Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Deleted (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudTrail Log Suspended (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS WAF Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Network Access Control List Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1565",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1565.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS CloudTrail Log Updated (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1528",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "AWS Access Secret in Secrets Manager (73)"
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Created [Q]"
         }
       ],
       "score": 1
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Password Recovery Requested (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Management Console Root Login (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Management Console Root Login (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Root Login Without MFA (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Assume Role Policy Update (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
-        }
-      ],
-      "score": 6
     },
     {
       "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Cluster Creation (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 Network Access Control List Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS EC2 Network Access Control List Creation [Q]"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1485",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Stream Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS RDS Cluster Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Log Group Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EFS File System or Mount Deleted (47)"
-        }
-      ],
-      "score": 4
+      "score": 1
     },
     {
       "techniqueID": "T1531",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS IAM Deactivation of MFA Device (47)"
+          "name": "Med. / 47",
+          "value": "AWS IAM Deactivation of MFA Device [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Deletion [Q]"
         }
       ],
       "score": 3
@@ -373,12 +319,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Creation [Q]"
         }
       ],
       "score": 2
@@ -388,27 +334,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Creation (21)"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Snapshot Activity (47)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Creation [Q]"
         }
       ],
       "score": 2
@@ -418,8 +349,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS EC2 VM Export Failure (21)"
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
         }
       ],
       "score": 1
@@ -429,27 +360,38 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Security Group Configuration Change Detection (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Group Configuration Change Detection [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
         }
       ],
       "score": 3
     },
     {
-      "techniqueID": "T1489",
+      "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS RDS Instance/Cluster Stoppage (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
       "score": 1
@@ -459,8 +401,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS S3 Bucket Configuration Deletion (21)"
+          "name": "Low / 21",
+          "value": "AWS S3 Bucket Configuration Deletion [Q]"
         }
       ],
       "score": 1
@@ -470,8 +412,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
+          "name": "Low / 21",
+          "value": "AWS Execution via System Manager [Q]"
         }
       ],
       "score": 1
@@ -481,8 +423,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS Execution via System Manager (21)"
+          "name": "Low / 21",
+          "value": "AWS Execution via System Manager [Q]"
         }
       ],
       "score": 1
@@ -492,8 +434,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1
@@ -503,8 +445,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1
@@ -514,12 +456,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         }
       ],
       "score": 2
@@ -529,16 +471,16 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
         }
       ],
       "score": 3
@@ -548,16 +490,35 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS STS GetSessionToken Abuse (21)"
+          "name": "Low / 21",
+          "value": "AWS STS GetSessionToken Abuse [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS Security Token Service (STS) AssumeRole Usage (21)"
+          "name": "Low / 21",
+          "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS SAML Activity (21)"
+          "name": "Low / 21",
+          "value": "AWS SAML Activity [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1485",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Cluster Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Group Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EFS File System or Mount Deleted [Q]"
         }
       ],
       "score": 3

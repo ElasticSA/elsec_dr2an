@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,8 +69,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Zoom Meeting with no Passcode (47)"
+          "name": "Med. / 47",
+          "value": "Zoom Meeting with no Passcode [Q]"
         }
       ],
       "score": 1

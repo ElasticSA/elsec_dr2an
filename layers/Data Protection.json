@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,23 +65,12 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1528",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / High",
-          "value": "AWS Access Secret in Secrets Manager (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1552",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "name": "Med. / 47",
+          "value": "Azure Key Vault Modified [Q]"
         }
       ],
       "score": 1
@@ -91,8 +80,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Key Vault Modified (47)"
+          "name": "Med. / 47",
+          "value": "Azure Key Vault Modified [Q]"
         }
       ],
       "score": 1
@@ -102,8 +91,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
       "score": 1
@@ -113,8 +102,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EC2 Encryption Disabled (47)"
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
       "score": 1
@@ -124,8 +113,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS EFS File System or Mount Deleted (47)"
+          "name": "Med. / 47",
+          "value": "AWS EFS File System or Mount Deleted [Q]"
         }
       ],
       "score": 1

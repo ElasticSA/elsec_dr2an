@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,112 +65,46 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1562",
+      "techniqueID": "T1531",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Deletion [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
+          "name": "Med. / 47",
+          "value": "AWS IAM Deactivation of MFA Device [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
+          "name": "Low / 21",
+          "value": "AWS IAM Group Deletion [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
+          "name": "Low / 21",
+          "value": "Attempt to Revoke Okta API Token [Q]"
         }
       ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "AWS Config Service Tampering (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Azure Diagnostic Settings Deletion (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS CloudWatch Alarm Deletion (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS GuardDuty Detector Deletion (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "AWS Configuration Recorder Stopped (73)"
-        }
-      ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1136",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Attempt to Create Okta API Token (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
         }
       ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1531",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Deletion (21)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "AWS IAM Deactivation of MFA Device (47)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "AWS IAM Group Deletion (21)"
-        },
-        {
-          "name": "Q / Low",
-          "value": "Attempt to Revoke Okta API Token (21)"
-        }
-      ],
-      "score": 4
+      "score": 1
     },
     {
       "techniqueID": "T1136.003",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS RDS Security Group Creation (21)"
+          "name": "Low / 21",
+          "value": "AWS RDS Security Group Creation [Q]"
         }
       ],
       "score": 1
@@ -180,20 +114,20 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Suspicious Activity Reported by Okta User (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
         }
       ],
       "score": 4
@@ -203,8 +137,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Possible Okta DoS Attack (47)"
+          "name": "Med. / 47",
+          "value": "Possible Okta DoS Attack [Q]"
         }
       ],
       "score": 1
@@ -214,23 +148,69 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Possible Okta DoS Attack (47)"
+          "name": "Med. / 47",
+          "value": "Possible Okta DoS Attack [Q]"
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Alarm Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS GuardDuty Detector Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Configuration Recorder Stopped [Q]"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Administrator Role Assigned to an Okta User (47)"
+          "name": "Med. / 47",
+          "value": "Administrator Role Assigned to an Okta User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Administrator Privileges Assigned to an Okta Group (47)"
+          "name": "Med. / 47",
+          "value": "Administrator Privileges Assigned to an Okta Group [Q]"
         }
       ],
       "score": 2
@@ -240,8 +220,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "GCP Storage Bucket Deletion (47)"
+          "name": "Med. / 47",
+          "value": "GCP Storage Bucket Deletion [Q]"
         }
       ],
       "score": 1
@@ -251,12 +231,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Modified or Deleted (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Modified or Deleted [Q]"
         },
         {
-          "name": "Q / Low",
-          "value": "AWS ElastiCache Security Group Created (21)"
+          "name": "Low / 21",
+          "value": "AWS ElastiCache Security Group Created [Q]"
         }
       ],
       "score": 2
@@ -266,8 +246,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Azure Full Network Packet Capture Detected (47)"
+          "name": "Med. / 47",
+          "value": "Azure Full Network Packet Capture Detected [Q]"
         }
       ],
       "score": 1

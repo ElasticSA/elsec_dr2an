@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,20 +69,20 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Admin Role Assigned to a User (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Admin Role Assigned to a User [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Custom Admin Role Created (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Custom Admin Role Created [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Google Workspace Role Modified (47)"
+          "name": "Med. / 47",
+          "value": "Google Workspace Role Modified [Q]"
         }
       ],
       "score": 4

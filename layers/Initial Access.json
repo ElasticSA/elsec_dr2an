@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,67 +69,94 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious macOS MS Office Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Suspicious MS Outlook Child Process (21)"
+          "name": "Med. / 47",
+          "value": "Suspicious macOS MS Office Child Process [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+          "name": "Med. / 47",
+          "value": "Windows Script Interpreter Executing Process via WMI [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Windows Script Executing PowerShell (21)"
+          "name": "Low / 21",
+          "value": "Windows Script Executing PowerShell [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious MS Office Child Process (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1566.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious macOS MS Office Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Suspicious MS Outlook Child Process (21)"
+          "name": "Med. / 47",
+          "value": "Suspicious macOS MS Office Child Process [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+          "name": "Med. / 47",
+          "value": "Windows Script Interpreter Executing Process via WMI [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Windows Script Executing PowerShell (21)"
+          "name": "Low / 21",
+          "value": "Windows Script Executing PowerShell [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious MS Office Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Inbound Connection to an Unsecure Elasticsearch Node [Q]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Windows Script Interpreter Executing Process via WMI (47)"
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) to the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) from the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes [EQL]"
         }
       ],
       "score": 7
@@ -139,82 +166,39 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Auditd Login from Forbidden Location (73)"
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Auditd Max Login Sessions (47)"
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Auditd Login Attempt at Forbidden Time (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Failed Login Attempts (47)"
-        },
-        {
-          "name": "Q / Med.",
-          "value": "Auditd Max Failed Login Attempts (47)"
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
         }
       ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1190",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "Inbound Connection to an Unsecure Elasticsearch Node (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Microsoft Exchange Server UM Writing Suspicious Files (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes (47)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) to the Internet (73)"
-        },
-        {
-          "name": "Q / High",
-          "value": "RPC (Remote Procedure Call) from the Internet (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Microsoft Exchange Worker Spawning Suspicious Processes (73)"
-        }
-      ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1566.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious Explorer Child Process (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
         }
       ],
       "score": 1
@@ -224,8 +208,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "SMB (Windows File Sharing) Activity to the Internet (73)"
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
         }
       ],
       "score": 1
@@ -235,12 +219,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Unusual File Modification by dns.exe (73)"
+          "name": "High / 73",
+          "value": "Unusual File Modification by dns.exe [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Unusual Child Process of dns.exe (73)"
+          "name": "High / 73",
+          "value": "Unusual Child Process of dns.exe [EQL]"
         }
       ],
       "score": 2
@@ -250,30 +234,22 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1189",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
-        },
-        {
-          "name": "EQL / High",
-          "value": "Suspicious Browser Child Process (73)"
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
         }
       ],
-      "score": 2
+      "score": 1
     }
   ]
 }

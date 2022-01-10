@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,131 +69,154 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "NullSessionPipe Registry Modification (47)"
+          "name": "Med. / 47",
+          "value": "RDP Enabled via Registry [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Service Control Spawned via Script Interpreter (21)"
+          "name": "Med. / 47",
+          "value": "NullSessionPipe Registry Modification [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+          "name": "Med. / 21",
+          "value": "Mounting Hidden or WebDav Remote Shares [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remote File Copy to a Hidden Share (47)"
+          "name": "Med. / 47",
+          "value": "Remote File Copy to a Hidden Share [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
+          "name": "Low / 21",
+          "value": "Service Command Lateral Movement [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Virtual Private Network Connection Attempt (21)"
+          "name": "Low / 21",
+          "value": "Virtual Private Network Connection Attempt [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "High / 73",
+          "value": "Lateral Movement via Startup Folder [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Connection to External Network via Telnet (47)"
+          "name": "Med. / 47",
+          "value": "Connection to External Network via Telnet [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Potential Remote Desktop Shadowing Activity (73)"
+          "name": "High / 73",
+          "value": "Potential Remote Desktop Shadowing Activity [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
+          "name": "Med. / 47",
+          "value": "Direct Outbound SMB Connection [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
+          "name": "Med. / 47",
+          "value": "Remote Execution via File Shares [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Execution via TSClient Mountpoint (73)"
+          "name": "High / 73",
+          "value": "Execution via TSClient Mountpoint [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Suspicious RDP ActiveX Client Loaded (47)"
+          "name": "Med. / 47",
+          "value": "Suspicious RDP ActiveX Client Loaded [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Attempt to Mount SMB Share via Command Line (21)"
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
         },
         {
-          "name": "Q / Med.",
-          "value": "Remote SSH Login Enabled via systemsetup Command (47)"
+          "name": "Med. / 47",
+          "value": "Remote SSH Login Enabled via systemsetup Command [Q]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Connection to Internal Network via Telnet (47)"
+          "name": "Med. / 47",
+          "value": "Connection to Internal Network via Telnet [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
+          "name": "Med. / 47",
+          "value": "Remote Scheduled Task Creation [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement via MSHTA [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Potential SharpRDP Behavior (73)"
+          "name": "High / 73",
+          "value": "Potential SharpRDP Behavior [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remotely Started Services via RPC (47)"
+          "name": "Med. / 47",
+          "value": "Remotely Started Services via RPC [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Incoming Execution via WinRM Remote Shell (47)"
+          "name": "Med. / 47",
+          "value": "Incoming Execution via WinRM Remote Shell [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Incoming Execution via PowerShell Remoting (47)"
+          "name": "Med. / 47",
+          "value": "Incoming Execution via PowerShell Remoting [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+          "name": "Med. / 47",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement with MMC [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP Enabled via Registry [EQL]"
         }
       ],
-      "score": 24
+      "score": 25
+    },
+    {
+      "techniqueID": "T1021.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "RDP Enabled via Registry [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential SharpRDP Behavior [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP Enabled via Registry [EQL]"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1021.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "NullSessionPipe Registry Modification (47)"
+          "name": "Med. / 47",
+          "value": "NullSessionPipe Registry Modification [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Mounting Hidden or WebDav Remote Shares (21)"
+          "name": "Med. / 21",
+          "value": "Mounting Hidden or WebDav Remote Shares [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remote File Copy to a Hidden Share (47)"
+          "name": "Med. / 47",
+          "value": "Remote File Copy to a Hidden Share [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Direct Outbound SMB Connection (47)"
+          "name": "Med. / 47",
+          "value": "Direct Outbound SMB Connection [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Remote Execution via File Shares (47)"
+          "name": "Med. / 47",
+          "value": "Remote Execution via File Shares [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Attempt to Mount SMB Share via Command Line (21)"
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
         }
       ],
       "score": 6
@@ -203,8 +226,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Abnormally Large DNS Response (47)"
+          "name": "Med. / 47",
+          "value": "Abnormally Large DNS Response [Q]"
         }
       ],
       "score": 1
@@ -214,8 +237,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
+          "name": "Low / 21",
+          "value": "Service Command Lateral Movement [EQL]"
         }
       ],
       "score": 1
@@ -225,8 +248,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
+          "name": "Low / 21",
+          "value": "Service Command Lateral Movement [EQL]"
         }
       ],
       "score": 1
@@ -236,8 +259,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
+          "name": "Low / 21",
+          "value": "Service Command Lateral Movement [EQL]"
         }
       ],
       "score": 1
@@ -247,8 +270,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Service Command Lateral Movement (21)"
+          "name": "Low / 21",
+          "value": "Service Command Lateral Movement [EQL]"
         }
       ],
       "score": 1
@@ -258,8 +281,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "High / 73",
+          "value": "Lateral Movement via Startup Folder [EQL]"
         }
       ],
       "score": 1
@@ -269,8 +292,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Lateral Movement via Startup Folder (73)"
+          "name": "High / 73",
+          "value": "Lateral Movement via Startup Folder [EQL]"
         }
       ],
       "score": 1
@@ -280,8 +303,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
+          "name": "Med. / 47",
+          "value": "Remote Scheduled Task Creation [EQL]"
         }
       ],
       "score": 1
@@ -291,8 +314,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Remote Scheduled Task Creation (47)"
+          "name": "Med. / 47",
+          "value": "Remote Scheduled Task Creation [EQL]"
         }
       ],
       "score": 1
@@ -302,8 +325,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Lateral Tool Transfer (47)"
+          "name": "Med. / 47",
+          "value": "Lateral Tool Transfer [EQL]"
         }
       ],
       "score": 1
@@ -313,16 +336,16 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement via MSHTA [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows (47)"
+          "name": "Med. / 47",
+          "value": "Incoming DCOM Lateral Movement with ShellBrowserWindow or ShellWindows [EQL]"
         },
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement with MMC (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement with MMC [EQL]"
         }
       ],
       "score": 3
@@ -332,8 +355,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement via MSHTA [EQL]"
         }
       ],
       "score": 1
@@ -343,19 +366,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / High",
-          "value": "Incoming DCOM Lateral Movement via MSHTA (73)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1021.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / High",
-          "value": "Potential SharpRDP Behavior (73)"
+          "name": "High / 73",
+          "value": "Incoming DCOM Lateral Movement via MSHTA [EQL]"
         }
       ],
       "score": 1
@@ -365,8 +377,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "WMI Incoming Lateral Movement (47)"
+          "name": "Med. / 47",
+          "value": "WMI Incoming Lateral Movement [EQL]"
         }
       ],
       "score": 1
@@ -376,8 +388,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
         }
       ],
       "score": 1
@@ -387,8 +399,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
         }
       ],
       "score": 1
@@ -398,8 +410,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
         }
       ],
       "score": 1
@@ -409,8 +421,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "Potential Kerberos Attack via Bifrost (73)"
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
         }
       ],
       "score": 1

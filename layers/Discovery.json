@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -65,58 +65,154 @@
   ],
   "techniques": [
     {
+      "techniqueID": "T1083",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File and Directory Discovery [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File and Directory Discovery [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Remote System Discovery Commands [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Remote System Discovery Commands [EQL]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1069",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Low / 21",
+          "value": "Enumeration of Users or Groups via Built-in Commands [EQL]"
         },
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Enumeration of Privileged Local Groups Membership (43)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        },
+        {
+          "name": "Med. / 43",
+          "value": "Enumeration of Privileged Local Groups Membership [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
         }
       ],
-      "score": 4
+      "score": 6
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
+        }
+      ],
+      "score": 3
     },
     {
       "techniqueID": "T1087",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Enumeration of Users or Groups via Built-in Commands (21)"
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Low / 21",
+          "value": "Enumeration of Users or Groups via Built-in Commands [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1082",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "Enumeration of Kernel Modules (47)"
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "Virtual Machine Fingerprinting (73)"
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Virtual Machine Fingerprinting via Grep (47)"
+          "name": "Med. / 47",
+          "value": "Virtual Machine Fingerprinting via Grep [EQL]"
         }
       ],
       "score": 3
@@ -126,8 +222,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Peripheral Device Discovery (21)"
+          "name": "Low / 21",
+          "value": "Peripheral Device Discovery [EQL]"
         }
       ],
       "score": 1
@@ -137,8 +233,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "External IP Lookup from Non-Browser Process (21)"
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
         }
       ],
       "score": 1
@@ -148,34 +244,23 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "Whoami Process Activity (21)"
+          "name": "Low / 21",
+          "value": "Whoami Process Activity [EQL]"
         },
         {
-          "name": "EQL / Low",
-          "value": "Net command via SYSTEM account (21)"
+          "name": "Low / 21",
+          "value": "Net command via SYSTEM account [EQL]"
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1069.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
     },
     {
       "techniqueID": "T1087.002",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
         }
       ],
       "score": 1
@@ -185,19 +270,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1018",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "EQL / Low",
-          "value": "AdFind Command Activity (21)"
+          "name": "Low / 21",
+          "value": "AdFind Command Activity [EQL]"
         }
       ],
       "score": 1
@@ -207,61 +281,42 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
+          "name": "Med. / 47",
+          "value": "Security Software Discovery using WMIC [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1518.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery using WMIC (47)"
+          "name": "Med. / 47",
+          "value": "Security Software Discovery using WMIC [EQL]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
-        },
-        {
-          "name": "EQL / Med.",
-          "value": "Security Software Discovery via Grep (47)"
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1135",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
-        }
-      ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1069.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
         },
         {
-          "name": "EQL / Med.",
-          "value": "Enumeration of Privileged Local Groups Membership (43)"
+          "name": "Med. / 43",
+          "value": "Enumeration of Privileged Local Groups Membership [EQL]"
         }
       ],
       "score": 2
@@ -271,8 +326,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
         }
       ],
       "score": 1
@@ -282,8 +337,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
         }
       ],
       "score": 1
@@ -293,8 +348,8 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / Med.",
-          "value": "PowerShell Suspicious Discovery Related Windows API Functions (47)"
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
         }
       ],
       "score": 1

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 57
+    "maxValue": 52
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -69,12 +69,12 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Q / High",
-          "value": "CyberArk Privileged Access Security Recommended Monitor (73)"
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Recommended Monitor [Q]"
         },
         {
-          "name": "Q / High",
-          "value": "CyberArk Privileged Access Security Error (73)"
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Error [Q]"
         }
       ],
       "score": 2
