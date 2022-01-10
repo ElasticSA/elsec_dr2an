@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -83,9 +83,17 @@
         {
           "name": "Med. / 47",
           "value": "Google Workspace Role Modified [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Custom Admin Role Created [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Role Modified [Q]"
         }
       ],
-      "score": 4
+      "score": 6
     }
   ]
 }

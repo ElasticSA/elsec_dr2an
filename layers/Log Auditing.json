@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -77,12 +77,12 @@
           "value": "AWS CloudTrail Log Created [Q]"
         },
         {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Updated [Q]"
         },
         {
           "name": "Low / 21",
-          "value": "GCP Pub/Sub Topic Creation [Q]"
+          "value": "AWS CloudTrail Log Updated [Q]"
         }
       ],
       "score": 4
@@ -94,18 +94,38 @@
         {
           "name": "Low / 21",
           "value": "GCP Logging Sink Modification [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1562",
       "enabled": true,
       "metadata": [
+        {
+          "name": "High / 73",
+          "value": "AWS EC2 Flow Log Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Subscription Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS EC2 Flow Log Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Subscription Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
+        },
         {
           "name": "Med. / 47",
           "value": "AWS CloudTrail Log Deleted [Q]"
@@ -128,27 +148,31 @@
         },
         {
           "name": "Med. / 47",
-          "value": "Azure Event Hub Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "AWS CloudWatch Log Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
           "value": "Azure Kubernetes Events Deleted [Q]"
         }
       ],
-      "score": 9
+      "score": 12
     },
     {
       "techniqueID": "T1562.001",
       "enabled": true,
       "metadata": [
+        {
+          "name": "High / 73",
+          "value": "AWS EC2 Flow Log Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS EC2 Flow Log Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
+        },
         {
           "name": "Med. / 47",
           "value": "AWS CloudTrail Log Deleted [Q]"
@@ -159,56 +183,37 @@
         },
         {
           "name": "Med. / 47",
-          "value": "Azure Event Hub Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "AWS CloudWatch Log Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
           "value": "Azure Kubernetes Events Deleted [Q]"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
-      "techniqueID": "T1566",
+      "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS Execution via System Manager [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1566.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "AWS Execution via System Manager [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "CyberArk Privileged Access Security Recommended Monitor [Q]"
+          "value": "AWS CloudTrail Log Updated [Q]"
         },
         {
-          "name": "High / 73",
-          "value": "CyberArk Privileged Access Security Error [Q]"
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Updated [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Updated [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS CloudTrail Log Updated [Q]"
         }
       ],
       "score": 2
@@ -219,25 +224,14 @@
       "metadata": [
         {
           "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
         },
         {
           "name": "Med. / 47",
-          "value": "AWS CloudWatch Log Group Deletion [Q]"
+          "value": "AWS CloudWatch Log Stream Deletion [Q]"
         }
       ],
       "score": 2
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Command Execution on Virtual Machine [Q]"
-        }
-      ],
-      "score": 1
     }
   ]
 }

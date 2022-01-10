@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -65,32 +65,89 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1059",
+      "techniqueID": "T1572",
       "enabled": true,
       "metadata": [
         {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
+          "name": "High / 73",
+          "value": "Potential Remote Desktop Tunneling Detected [EQL]"
         },
         {
           "name": "Med. / 47",
-          "value": "Remote File Download via PowerShell [EQL]"
+          "value": "Port Forwarding Rule Addition [EQL]"
         },
         {
           "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
+          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Port Forwarding Rule Addition [EQL]"
         }
       ],
-      "score": 3
+      "score": 4
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential DNS Tunneling via NsLookup [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "SUNBURST Command and Control Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1568.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1105",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
-        },
         {
           "name": "Low / 21",
           "value": "Network Connection via Certutil [EQL]"
@@ -109,126 +166,14 @@
         },
         {
           "name": "Med. / 47",
-          "value": "Remote File Download via PowerShell [EQL]"
-        },
-        {
-          "name": "Med. / 47",
           "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet [Q]"
         },
         {
           "name": "Med. / 47",
           "value": "Remote File Download via Script Interpreter [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
         }
       ],
-      "score": 9
-    },
-    {
-      "techniqueID": "T1071",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Halfbaked Command and Control Beacon [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential DNS Tunneling via NsLookup [TH]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Command and Control via Internet Explorer [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "Crit. / 99",
-          "value": "Default Cobalt Strike Team Server Certificate [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "SUNBURST Command and Control Activity [EQL]"
-        }
-      ],
-      "score": 8
-    },
-    {
-      "techniqueID": "T1568",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Halfbaked Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1568.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Halfbaked Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1572",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Potential Remote Desktop Tunneling Detected [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Port Forwarding Rule Addition [EQL]"
-        }
-      ],
-      "score": 3
+      "score": 6
     },
     {
       "techniqueID": "T1071.004",
@@ -306,37 +251,19 @@
       "score": 1
     },
     {
-      "techniqueID": "T1559",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Potential Command and Control via Internet Explorer [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1559.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Potential Command and Control via Internet Explorer [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1573",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
           "value": "Connection to Commonly Abused Free SSL Certificate Providers [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1102",
@@ -345,9 +272,13 @@
         {
           "name": "Low / 21",
           "value": "Connection to Commonly Abused Web Services [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Web Services [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1567",
@@ -356,9 +287,13 @@
         {
           "name": "Low / 21",
           "value": "Connection to Commonly Abused Web Services [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Web Services [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1567.001",
@@ -367,9 +302,13 @@
         {
           "name": "Low / 21",
           "value": "Connection to Commonly Abused Web Services [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Web Services [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1567.002",
@@ -378,32 +317,21 @@
         {
           "name": "Low / 21",
           "value": "Connection to Commonly Abused Web Services [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Web Services [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1071.001",
       "enabled": true,
       "metadata": [
         {
-          "name": "Crit. / 99",
-          "value": "Default Cobalt Strike Team Server Certificate [Q]"
-        },
-        {
           "name": "High / 73",
           "value": "SUNBURST Command and Control Activity [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1059.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Remote File Download via PowerShell [EQL]"
         }
       ],
       "score": 1
@@ -426,6 +354,28 @@
         {
           "name": "High / 73",
           "value": "SUNBURST Command and Control Activity [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
         }
       ],
       "score": 1

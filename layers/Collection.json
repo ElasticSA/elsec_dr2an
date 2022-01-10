@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,44 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1560",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Encrypting Files with WinRar or 7z [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Sensitive Files Compression [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Encrypting Files with WinRar or 7z [EQL]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1560.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Encrypting Files with WinRar or 7z [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Sensitive Files Compression [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Encrypting Files with WinRar or 7z [EQL]"
-        }
-      ],
-      "score": 3
-    },
     {
       "techniqueID": "T1114",
       "enabled": true,
@@ -205,9 +167,13 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1552.001",
@@ -216,9 +182,43 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 2
     }
   ]
 }

@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -65,34 +65,15 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "GCP Service Account Creation [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP Service Account Creation [Q]"
-        }
-      ],
-      "score": 2
-    },
-    {
       "techniqueID": "T1530",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
           "value": "GCP Pub/Sub Subscription Creation [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP Pub/Sub Topic Creation [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1537",
@@ -126,6 +107,14 @@
       "metadata": [
         {
           "name": "Low / 21",
+          "value": "GCP Pub/Sub Subscription Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Pub/Sub Subscription Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
           "value": "GCP Pub/Sub Topic Deletion [Q]"
         },
         {
@@ -139,14 +128,6 @@
         {
           "name": "Med. / 47",
           "value": "GCP Logging Sink Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "GCP Firewall Rule Modification [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "GCP Firewall Rule Deletion [Q]"
         }
       ],
       "score": 6
@@ -173,39 +154,20 @@
         {
           "name": "Med. / 47",
           "value": "GCP Service Account Disabled [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP IAM Role Deletion [Q]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1485",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "GCP Storage Bucket Deletion [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "GCP IAM Custom Role Creation [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "GCP IAM Custom Role Creation [Q]"
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "GCP Service Account Creation [Q]"
+        }
+      ],
+      "score": 1
     }
   ]
 }

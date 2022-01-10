@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -70,11 +70,15 @@
       "metadata": [
         {
           "name": "Med. / 47",
-          "value": "RDP Enabled via Registry [EQL]"
+          "value": "NullSessionPipe Registry Modification [EQL]"
         },
         {
-          "name": "Med. / 47",
-          "value": "NullSessionPipe Registry Modification [EQL]"
+          "name": "Low / 21",
+          "value": "Service Control Spawned via Script Interpreter [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Service Control Spawned via Script Interpreter [EQL]"
         },
         {
           "name": "Med. / 21",
@@ -101,8 +105,12 @@
           "value": "Connection to External Network via Telnet [EQL]"
         },
         {
-          "name": "High / 73",
-          "value": "Potential Remote Desktop Shadowing Activity [EQL]"
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote SSH Login Enabled via systemsetup Command [Q]"
         },
         {
           "name": "Med. / 47",
@@ -129,12 +137,24 @@
           "value": "Remote SSH Login Enabled via systemsetup Command [Q]"
         },
         {
-          "name": "Med. / 47",
-          "value": "Connection to Internal Network via Telnet [EQL]"
+          "name": "High / 73",
+          "value": "Potential Remote Desktop Shadowing Activity [EQL]"
         },
         {
           "name": "Med. / 47",
-          "value": "Remote Scheduled Task Creation [EQL]"
+          "value": "Direct Outbound SMB Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote Execution via File Shares [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution via TSClient Mountpoint [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious RDP ActiveX Client Loaded [EQL]"
         },
         {
           "name": "High / 73",
@@ -163,32 +183,9 @@
         {
           "name": "High / 73",
           "value": "Incoming DCOM Lateral Movement with MMC [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "RDP Enabled via Registry [EQL]"
         }
       ],
-      "score": 25
-    },
-    {
-      "techniqueID": "T1021.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "RDP Enabled via Registry [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential SharpRDP Behavior [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "RDP Enabled via Registry [EQL]"
-        }
-      ],
-      "score": 3
+      "score": 29
     },
     {
       "techniqueID": "T1021.002",
@@ -207,6 +204,10 @@
           "value": "Remote File Copy to a Hidden Share [EQL]"
         },
         {
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
+        },
+        {
           "name": "Med. / 47",
           "value": "Direct Outbound SMB Connection [EQL]"
         },
@@ -217,9 +218,17 @@
         {
           "name": "Low / 21",
           "value": "Attempt to Mount SMB Share via Command Line [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Direct Outbound SMB Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote Execution via File Shares [EQL]"
         }
       ],
-      "score": 6
+      "score": 9
     },
     {
       "techniqueID": "T1210",
@@ -299,28 +308,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1053",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Remote Scheduled Task Creation [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1053.005",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Remote Scheduled Task Creation [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1570",
       "enabled": true,
       "metadata": [
@@ -368,6 +355,17 @@
         {
           "name": "High / 73",
           "value": "Incoming DCOM Lateral Movement via MSHTA [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1021.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential SharpRDP Behavior [EQL]"
         }
       ],
       "score": 1

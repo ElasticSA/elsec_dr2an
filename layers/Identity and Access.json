@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -68,14 +68,6 @@
       "techniqueID": "T1110",
       "enabled": true,
       "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
-        },
         {
           "name": "Med. / 47",
           "value": "AWS IAM Brute Force of Assume Role Policy [TH]"
@@ -90,32 +82,87 @@
         },
         {
           "name": "Med. / 47",
+          "value": "Okta Brute Force or Password Spraying Attack [TH]"
+        },
+        {
+          "name": "Med. / 47",
           "value": "Attempts to Brute Force an Okta User Account [TH]"
         },
         {
           "name": "Med. / 47",
           "value": "Okta Brute Force or Password Spraying Attack [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
         }
       ],
-      "score": 9
+      "score": 6
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM User Addition to Group [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Azure Global Administrator Role Addition to PIM User [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP IAM Service Account Key Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Deactivate MFA for an Okta User Account [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Deactivate MFA for an Okta User Account [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Admin Role Assigned to a User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Management Group Role Assignment [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Multi-Factor Authentication Disabled for an Azure User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Custom Admin Role Created [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Role Modified [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "GCP Service Account Key Creation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Custom Admin Role Created [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Google Workspace Role Modified [Q]"
+        }
+      ],
+      "score": 14
     },
     {
       "techniqueID": "T1078",
       "enabled": true,
       "metadata": [
         {
-          "name": "High / 73",
-          "value": "AWS Root Login Without MFA [Q]"
-        },
-        {
           "name": "Med. / 47",
           "value": "High Number of Okta User Password Reset or Unlock Attempts [TH]"
         },
@@ -126,6 +173,14 @@
         {
           "name": "Med. / 47",
           "value": "High Number of Okta User Password Reset or Unlock Attempts [TH]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM Password Recovery Requested [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS IAM Password Recovery Requested [Q]"
         },
         {
           "name": "Med. / 47",
@@ -145,7 +200,7 @@
         },
         {
           "name": "Low / 21",
-          "value": "Azure Active Directory PowerShell Sign-in [Q]"
+          "value": "AWS IAM Assume Role Policy Update [Q]"
         },
         {
           "name": "High / 73",
@@ -172,16 +227,20 @@
           "value": "AWS IAM Assume Role Policy Update [Q]"
         },
         {
-          "name": "Med. / 47",
-          "value": "GCP IAM Custom Role Creation [Q]"
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
         },
         {
-          "name": "Med. / 47",
-          "value": "GCP IAM Custom Role Creation [Q]"
+          "name": "High / 73",
+          "value": "AWS Management Console Root Login [Q]"
         },
         {
           "name": "Low / 21",
-          "value": "Unauthorized Access to an Okta Application [Q]"
+          "value": "Azure Automation Account Created [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Automation Account Created [Q]"
         },
         {
           "name": "Low / 21",
@@ -194,79 +253,17 @@
         {
           "name": "High / 73",
           "value": "Azure Active Directory High Risk Sign-in [Q]"
-        }
-      ],
-      "score": 21
-    },
-    {
-      "techniqueID": "T1136",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "GCP Service Account Creation [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP Service Account Creation [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "AWS IAM Group Creation [Q]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "AWS IAM User Addition to Group [Q]"
         },
         {
           "name": "High / 73",
-          "value": "Azure Global Administrator Role Addition to PIM User [Q]"
+          "value": "Azure Active Directory High Risk Sign-in [Q]"
         },
         {
           "name": "Low / 21",
-          "value": "GCP IAM Service Account Key Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Google Workspace API Access Granted via Domain-Wide Delegation of Authority [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Google Workspace Admin Role Assigned to a User [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Multi-Factor Authentication Disabled for an Azure User [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP Service Account Key Creation [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Google Workspace Custom Admin Role Created [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Google Workspace Role Modified [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account [Q]"
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
         }
       ],
-      "score": 11
+      "score": 25
     },
     {
       "techniqueID": "T1111",
@@ -312,13 +309,9 @@
         {
           "name": "Med. / 47",
           "value": "Possible Consent Grant Attack via Azure-Registered Application [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Storage Account Key Regenerated [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1222",
@@ -346,21 +339,17 @@
         {
           "name": "Med. / 47",
           "value": "GCP Service Account Disabled [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "GCP IAM Role Deletion [Q]"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
-      "techniqueID": "T1078.004",
+      "techniqueID": "T1136",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "Azure Active Directory PowerShell Sign-in [Q]"
+          "value": "GCP Service Account Creation [Q]"
         }
       ],
       "score": 1
@@ -377,41 +366,15 @@
       "score": 1
     },
     {
-      "techniqueID": "T1484",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "New or Modified Federation Domain [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1484.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "New or Modified Federation Domain [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1548",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS STS GetSessionToken Abuse [Q]"
-        },
-        {
-          "name": "Low / 21",
           "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1550",
@@ -419,10 +382,6 @@
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS STS GetSessionToken Abuse [Q]"
-        },
-        {
-          "name": "Low / 21",
           "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
@@ -438,7 +397,7 @@
           "value": "Azure Application Credential Modification [Q]"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
       "techniqueID": "T1550.001",
@@ -446,10 +405,6 @@
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS STS GetSessionToken Abuse [Q]"
-        },
-        {
-          "name": "Low / 21",
           "value": "AWS Security Token Service (STS) AssumeRole Usage [Q]"
         },
         {
@@ -465,15 +420,15 @@
           "value": "Azure Application Credential Modification [Q]"
         }
       ],
-      "score": 5
+      "score": 4
     },
     {
-      "techniqueID": "T1136.003",
+      "techniqueID": "T1078.004",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS IAM Group Creation [Q]"
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
         }
       ],
       "score": 1

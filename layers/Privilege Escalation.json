@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -68,14 +68,6 @@
       "techniqueID": "T1548",
       "enabled": true,
       "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
         {
           "name": "Med. / 47",
           "value": "Disabling User Account Control via Registry Modification [EQL]"
@@ -93,6 +85,22 @@
           "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
         },
         {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
           "name": "High / 73",
           "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
         },
@@ -103,6 +111,18 @@
         {
           "name": "High / 73",
           "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Bypass UAC via Event Viewer [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
         },
         {
           "name": "Med. / 47",
@@ -119,109 +139,9 @@
         {
           "name": "Med. / 47",
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
         }
       ],
-      "score": 15
-    },
-    {
-      "techniqueID": "T1574",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1574.007",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Admin Group Account Addition [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "CyberArk Privileged Access Security Recommended Monitor [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "CyberArk Privileged Access Security Error [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution with Explicit Credentials via Scripting [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution with Explicit Credentials via Scripting [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        }
-      ],
-      "score": 3
+      "score": 18
     },
     {
       "techniqueID": "T1548.002",
@@ -252,6 +172,18 @@
           "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
         },
         {
+          "name": "High / 73",
+          "value": "Bypass UAC via Event Viewer [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
           "name": "Med. / 47",
           "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
         },
@@ -268,7 +200,7 @@
           "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
         }
       ],
-      "score": 10
+      "score": 13
     },
     {
       "techniqueID": "T1068",
@@ -292,6 +224,10 @@
         },
         {
           "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
           "value": "Suspicious PrintSpooler SPL File Created [EQL]"
         },
         {
@@ -300,18 +236,10 @@
         },
         {
           "name": "High / 73",
-          "value": "Suspicious PrintSpooler Service Executable File Creation [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Print Spooler Child Process [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Print Spooler File Deletion [EQL]"
+          "value": "Suspicious PrintSpooler SPL File Created [EQL]"
         }
       ],
-      "score": 9
+      "score": 8
     },
     {
       "techniqueID": "T1547",
@@ -367,6 +295,25 @@
       "score": 2
     },
     {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1574.006",
       "enabled": true,
       "metadata": [
@@ -384,9 +331,77 @@
         {
           "name": "High / 73",
           "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 3
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Parent-Child Relationship [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Parent-Child Relationship [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Parent-Child Relationship [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Parent-Child Relationship [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Admin Group Account Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1078.003",
@@ -400,6 +415,36 @@
       "score": 1
     },
     {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1134",
       "enabled": true,
       "metadata": [
@@ -409,10 +454,14 @@
         },
         {
           "name": "High / 73",
+          "value": "Privilege Escalation via Named Pipe Impersonation [EQL]"
+        },
+        {
+          "name": "High / 73",
           "value": "Privilege Escalation via Rogue Named Pipe Impersonation [EQL]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1574.002",
@@ -437,49 +486,12 @@
       "score": 1
     },
     {
-      "techniqueID": "T1053",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1053.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1055",
+      "techniqueID": "T1059",
       "enabled": true,
       "metadata": [
         {
           "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1055.012",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
         }
       ],
       "score": 1

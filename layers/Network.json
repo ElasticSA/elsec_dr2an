@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -70,26 +70,14 @@
       "metadata": [
         {
           "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
           "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
           "name": "High / 73",
           "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "Crit. / 99",
-          "value": "Default Cobalt Strike Team Server Certificate [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 5
+      "score": 2
     },
     {
       "techniqueID": "T1568",
@@ -97,22 +85,14 @@
       "metadata": [
         {
           "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
           "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
           "name": "High / 73",
           "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1568.002",
@@ -120,22 +100,14 @@
       "metadata": [
         {
           "name": "High / 73",
-          "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
           "value": "Halfbaked Command and Control Beacon [Q]"
         },
         {
           "name": "High / 73",
           "value": "Cobalt Strike Command and Control Beacon [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1190",
@@ -163,14 +135,10 @@
         },
         {
           "name": "High / 73",
-          "value": "RPC (Remote Procedure Call) to the Internet [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "RPC (Remote Procedure Call) from the Internet [Q]"
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
         }
       ],
-      "score": 7
+      "score": 6
     },
     {
       "techniqueID": "T1210",
@@ -224,20 +192,13 @@
         {
           "name": "High / 73",
           "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1071.001",
-      "enabled": true,
-      "metadata": [
+        },
         {
-          "name": "Crit. / 99",
-          "value": "Default Cobalt Strike Team Server Certificate [Q]"
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1105",

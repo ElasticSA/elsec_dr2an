@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -69,12 +69,16 @@
       "enabled": true,
       "metadata": [
         {
-          "name": "Med. / 47",
-          "value": "Azure Conditional Access Policy Modified [Q]"
-        },
-        {
           "name": "High / 73",
           "value": "Azure Global Administrator Role Addition to PIM User [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "User Added as Owner for Azure Service Principal [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "User Added as Owner for Azure Service Principal [Q]"
         },
         {
           "name": "Med. / 47",
@@ -83,10 +87,6 @@
         {
           "name": "Low / 21",
           "value": "User Added as Owner for Azure Application [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Conditional Access Policy Modified [Q]"
         }
       ],
       "score": 5
@@ -114,6 +114,44 @@
       "score": 1
     },
     {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Azure Diagnostic Settings Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Diagnostic Settings Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Kubernetes Events Deleted [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Azure Diagnostic Settings Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Diagnostic Settings Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Azure Kubernetes Events Deleted [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
       "techniqueID": "T1078",
       "enabled": true,
       "metadata": [
@@ -135,7 +173,11 @@
         },
         {
           "name": "Low / 21",
-          "value": "Azure Active Directory PowerShell Sign-in [Q]"
+          "value": "Azure Automation Account Created [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Automation Account Created [Q]"
         },
         {
           "name": "Low / 21",
@@ -152,9 +194,17 @@
         {
           "name": "High / 73",
           "value": "Azure Active Directory High Risk Sign-in [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Azure Active Directory High Risk Sign-in [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
         }
       ],
-      "score": 9
+      "score": 12
     },
     {
       "techniqueID": "T1566",
@@ -185,13 +235,9 @@
         {
           "name": "Med. / 47",
           "value": "Possible Consent Grant Attack via Azure-Registered Application [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Storage Account Key Regenerated [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1552",
@@ -216,129 +262,12 @@
       "score": 1
     },
     {
-      "techniqueID": "T1078.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Azure Active Directory PowerShell Sign-in [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Network Watcher Deletion [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Firewall Policy Deletion [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Kubernetes Events Deleted [Q]"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1562.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Network Watcher Deletion [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Firewall Policy Deletion [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Azure Frontdoor Web Application Firewall (WAF) Policy Deleted [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Azure Kubernetes Events Deleted [Q]"
-        }
-      ],
-      "score": 6
-    },
-    {
       "techniqueID": "T1496",
       "enabled": true,
       "metadata": [
         {
           "name": "Med. / 47",
           "value": "Azure Service Principal Credentials Added [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1485",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Resource Group Deletion [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1530",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Event Hub Authorization Rule Created or Updated [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Azure Command Execution on Virtual Machine [Q]"
         }
       ],
       "score": 1
@@ -394,6 +323,17 @@
         }
       ],
       "score": 2
+    },
+    {
+      "techniqueID": "T1078.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Azure Active Directory PowerShell Sign-in [Q]"
+        }
+      ],
+      "score": 1
     }
   ]
 }

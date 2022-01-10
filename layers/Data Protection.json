@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,6 +64,21 @@
     }
   ],
   "techniques": [
+    {
+      "techniqueID": "T1528",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "AWS Access Secret in Secrets Manager [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "AWS Access Secret in Secrets Manager [Q]"
+        }
+      ],
+      "score": 2
+    },
     {
       "techniqueID": "T1552",
       "enabled": true,
@@ -93,9 +108,13 @@
         {
           "name": "Med. / 47",
           "value": "AWS EC2 Encryption Disabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1565.001",
@@ -104,9 +123,13 @@
         {
           "name": "Med. / 47",
           "value": "AWS EC2 Encryption Disabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Encryption Disabled [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1485",

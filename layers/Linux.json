@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,29 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1082",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Virtual Machine Fingerprinting [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Unusual Linux System Information Discovery Activity [ML]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Virtual Machine Fingerprinting [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Virtual Machine Fingerprinting via Grep [EQL]"
-        }
-      ],
-      "score": 4
-    },
     {
       "techniqueID": "T1546",
       "enabled": true,
@@ -141,6 +118,22 @@
         },
         {
           "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
           "value": "Unusual Sudo Activity [ML]"
         },
         {
@@ -148,7 +141,7 @@
           "value": "Unusual Sudo Activity [ML]"
         }
       ],
-      "score": 3
+      "score": 7
     },
     {
       "techniqueID": "T1548.003",
@@ -157,9 +150,17 @@
         {
           "name": "High / 73",
           "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1070",
@@ -184,9 +185,17 @@
         {
           "name": "Med. / 47",
           "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
         }
       ],
-      "score": 5
+      "score": 7
     },
     {
       "techniqueID": "T1070.004",
@@ -198,6 +207,106 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Information Discovery Activity [ML]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1562",
@@ -216,8 +325,8 @@
           "value": "Potential Disabling of SELinux [Q]"
         },
         {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
         }
       ],
       "score": 4
@@ -239,42 +348,11 @@
           "value": "Potential Disabling of SELinux [Q]"
         },
         {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
         }
       ],
       "score": 4
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Max Login Sessions [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Max Login Sessions [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Login Attempt at Forbidden Time [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Login Attempt at Forbidden Time [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Max Failed Login Attempts [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Auditd Max Failed Login Attempts [Q]"
-        }
-      ],
-      "score": 6
     },
     {
       "techniqueID": "T1049",
@@ -296,15 +374,11 @@
           "value": "Anomalous Kernel Module Activity [ML]"
         },
         {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
-        },
-        {
           "name": "Med. / 47",
           "value": "Persistence via KDE AutoStart Script or Desktop File Modification [EQL]"
         }
       ],
-      "score": 3
+      "score": 2
     },
     {
       "techniqueID": "T1547.006",
@@ -313,13 +387,9 @@
         {
           "name": "Low / 21",
           "value": "Anomalous Kernel Module Activity [ML]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1016",
@@ -361,10 +431,74 @@
         {
           "name": "Med. / 47",
           "value": "Connection to External Network via Telnet [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
         },
         {
           "name": "Med. / 47",
-          "value": "Connection to Internal Network via Telnet [EQL]"
+          "value": "Timestomping using Touch Command [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
         }
       ],
       "score": 2
@@ -447,62 +581,6 @@
       "score": 1
     },
     {
-      "techniqueID": "T1070.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Timestomping using Touch Command [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Interactive Terminal Spawned via Perl [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Interactive Terminal Spawned via Python [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious JAVA Child Process [EQL]"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1070.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Tampering of Bash Command-Line History [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1068",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
-        }
-      ],
-      "score": 1
-    },
-    {
       "techniqueID": "T1565",
       "enabled": true,
       "metadata": [
@@ -542,9 +620,13 @@
         {
           "name": "Med. / 47",
           "value": "Security Software Discovery via Grep [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1518.001",
@@ -553,9 +635,13 @@
         {
           "name": "Med. / 47",
           "value": "Security Software Discovery via Grep [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1539",
@@ -564,9 +650,13 @@
         {
           "name": "Med. / 47",
           "value": "Potential Cookies Theft via Browser Debugging [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Cookies Theft via Browser Debugging [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1556",
@@ -583,9 +673,21 @@
         {
           "name": "Med. / 47",
           "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
         }
       ],
-      "score": 3
+      "score": 6
     },
     {
       "techniqueID": "T1554",
@@ -594,9 +696,13 @@
         {
           "name": "High / 73",
           "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1543",
@@ -609,9 +715,17 @@
         {
           "name": "Med. / 47",
           "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
         }
       ],
-      "score": 2
+      "score": 4
     },
     {
       "techniqueID": "T1552",
@@ -620,9 +734,13 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1552.001",
@@ -631,9 +749,13 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1560",
@@ -642,9 +764,13 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1560.001",
@@ -653,9 +779,13 @@
         {
           "name": "Med. / 47",
           "value": "Sensitive Files Compression [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1098",
@@ -664,9 +794,13 @@
         {
           "name": "Med. / 47",
           "value": "SSH Authorized Keys File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1098.004",
@@ -675,9 +809,13 @@
         {
           "name": "Med. / 47",
           "value": "SSH Authorized Keys File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     }
   ]
 }

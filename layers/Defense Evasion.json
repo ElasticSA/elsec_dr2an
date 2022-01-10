@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -65,282 +65,9 @@
   ],
   "techniques": [
     {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution via Electron Child Process Node.js Module [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1564",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Process Execution Path - Alternate Data Stream [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual File Creation - Alternate Data Stream [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Adding Hidden File Attribute via Attrib [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Hidden Child Process of Launchd [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Creation of Hidden Files and Directories [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Process Execution Path - Alternate Data Stream [EQL]"
-        }
-      ],
-      "score": 7
-    },
-    {
-      "techniqueID": "T1564.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Process Execution Path - Alternate Data Stream [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual File Creation - Alternate Data Stream [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Process Execution Path - Alternate Data Stream [EQL]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1036",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Renamed AutoIt Scripts Interpreter [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Executable File Creation with Multiple Extensions [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Microsoft Build Engine Using an Alternate Name [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Process Herpaderping Attempt [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Program Files Directory Masquerading [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential DLL SideLoading via Trusted Microsoft Programs [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Endpoint Security Parent Process [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Agent Spoofing - Multiple Hosts Using Same Agent [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Agent Spoofing - Mismatched Agent ID [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Windows Error Manager Masquerading [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Zoom Child Process [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Renamed AutoIt Scripts Interpreter [EQL]"
-        }
-      ],
-      "score": 12
-    },
-    {
-      "techniqueID": "T1036.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Renamed AutoIt Scripts Interpreter [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Microsoft Build Engine Using an Alternate Name [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Renamed AutoIt Scripts Interpreter [EQL]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1562",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "IIS HTTP Logging Disabled [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Modification of Safari Settings via Defaults Command [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "SoftwareUpdate Preferences Modification [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Attempt to Disable IPTables or Firewall [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Disable Windows Firewall Rules via Netsh [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Attempt to Disable Syslog Service [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Evasion via Filter Manager [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Modification of AmsiEnable Registry Key [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Attempt to Remove File Quarantine Attribute [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Disabling of SELinux [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Scheduled Tasks AT Command Enabled [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "IIS HTTP Logging Disabled [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Remote Desktop Enabled in Windows Firewall [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Enable Host Network Discovery via Netsh [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Windows Defender Exclusions Added via PowerShell [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Disabling Windows Defender Security Settings via PowerShell [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Windows Firewall Disabled via PowerShell [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "DNS-over-HTTPS Enabled via Registry [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "SolarWinds Process Disabling Services via Registry [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Windows Defender Disabled via Registry Modification [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
-        }
-      ],
-      "score": 23
-    },
-    {
-      "techniqueID": "T1562.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "IIS HTTP Logging Disabled [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "IIS HTTP Logging Disabled [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
       "techniqueID": "T1553",
       "enabled": true,
       "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) [Q]"
-        },
         {
           "name": "Med. / 47",
           "value": "Attempt to Disable Gatekeeper [Q]"
@@ -348,6 +75,14 @@
         {
           "name": "Med. / 47",
           "value": "Attempt to Install Root Certificate [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SIP Provider Modification [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Creation or Modification of Root Certificate [EQL]"
         },
         {
           "name": "Low / 21",
@@ -362,22 +97,7 @@
           "value": "Creation or Modification of Root Certificate [EQL]"
         }
       ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1553.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) [Q]"
-        }
-      ],
-      "score": 2
+      "score": 7
     },
     {
       "techniqueID": "T1553.004",
@@ -390,9 +110,13 @@
         {
           "name": "Low / 21",
           "value": "Creation or Modification of Root Certificate [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Creation or Modification of Root Certificate [EQL]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1574",
@@ -401,13 +125,9 @@
         {
           "name": "Med. / 47",
           "value": "Modification of Environment Variable via Launchctl [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable [EQL]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1574.007",
@@ -419,6 +139,57 @@
         }
       ],
       "score": 1
+    },
+    {
+      "techniqueID": "T1036",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Executable File Creation with Multiple Extensions [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious WerFault Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious WerFault Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Process Herpaderping Attempt [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Program Files Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential DLL SideLoading via Trusted Microsoft Programs [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Microsoft Build Engine Using an Alternate Name [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Process Herpaderping Attempt [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Program Files Directory Masquerading [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Windows Error Manager Masquerading [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Zoom Child Process [EQL]"
+        }
+      ],
+      "score": 11
     },
     {
       "techniqueID": "T1036.004",
@@ -454,6 +225,105 @@
       "score": 1
     },
     {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Safari Settings via Defaults Command [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SoftwareUpdate Preferences Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable IPTables or Firewall [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disable Windows Firewall Rules via Netsh [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable Syslog Service [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Evasion via Filter Manager [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Tasks AT Command Enabled [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "IIS HTTP Logging Disabled [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Modification of AmsiEnable Registry Key [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Remove File Quarantine Attribute [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Tasks AT Command Enabled [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Windows Defender Exclusions Added via PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling Windows Defender Security Settings via PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Windows Firewall Disabled via PowerShell [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "DNS-over-HTTPS Enabled via Registry [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Attempt to Unload Elastic Endpoint Security Kernel Extension [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SolarWinds Process Disabling Services via Registry [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Defender Disabled via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Defender Disabled via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
+        }
+      ],
+      "score": 23
+    },
+    {
       "techniqueID": "T1562.001",
       "enabled": true,
       "metadata": [
@@ -478,6 +348,14 @@
           "value": "Potential Evasion via Filter Manager [EQL]"
         },
         {
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Tasks AT Command Enabled [EQL]"
+        },
+        {
           "name": "High / 73",
           "value": "Modification of AmsiEnable Registry Key [EQL]"
         },
@@ -492,10 +370,6 @@
         {
           "name": "Med. / 47",
           "value": "Scheduled Tasks AT Command Enabled [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
         },
         {
           "name": "Med. / 47",
@@ -520,9 +394,55 @@
         {
           "name": "Med. / 47",
           "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Defender Disabled via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
         }
       ],
-      "score": 16
+      "score": 19
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual File Creation - Alternate Data Stream [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Adding Hidden File Attribute via Attrib [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Hidden Child Process of Launchd [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Files and Directories [EQL]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1564.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual File Creation - Alternate Data Stream [EQL]"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1070",
@@ -535,6 +455,14 @@
         {
           "name": "Low / 21",
           "value": "File Deletion via Shred [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Delete Volume USN Journal with Fsutil [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Delete Volume USN Journal with Fsutil [EQL]"
         },
         {
           "name": "Med. / 47",
@@ -561,8 +489,12 @@
           "value": "Tampering of Bash Command-Line History [EQL]"
         },
         {
-          "name": "Low / 21",
-          "value": "Disable Windows Event and Security Logs Using Built-in Tools [EQL]"
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
         },
         {
           "name": "Low / 21",
@@ -573,7 +505,7 @@
           "value": "Clearing Windows Console History [EQL]"
         }
       ],
-      "score": 11
+      "score": 14
     },
     {
       "techniqueID": "T1070.004",
@@ -588,35 +520,32 @@
           "value": "File Deletion via Shred [Q]"
         },
         {
+          "name": "Low / 21",
+          "value": "Delete Volume USN Journal with Fsutil [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Delete Volume USN Journal with Fsutil [EQL]"
+        },
+        {
           "name": "Med. / 47",
           "value": "Process Termination followed by Deletion [EQL]"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1070.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Windows Event Logs Cleared [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Disable Windows Event and Security Logs Using Built-in Tools [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Clearing Windows Event Logs [EQL]"
-        }
-      ],
-      "score": 3
+      "score": 5
     },
     {
       "techniqueID": "T1218",
       "enabled": true,
       "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Network Connection via RunDLL32 [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Network Connection via RunDLL32 [EQL]"
+        },
         {
           "name": "High / 21",
           "value": "Unusual Child Processes of RunDLL32 [EQL]"
@@ -630,22 +559,6 @@
           "value": "Mshta Making Network Connections [EQL]"
         },
         {
-          "name": "Med. / 47",
-          "value": "ImageLoad via Windows Update Auto Update Client [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Network Connection via DllHost [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Network Connection via Signed Binary [EQL]"
-        },
-        {
           "name": "High / 73",
           "value": "Control Panel Process with Unusual Arguments [EQL]"
         },
@@ -654,19 +567,115 @@
           "value": "InstallUtil Process Making Network Connections [EQL]"
         }
       ],
-      "score": 9
+      "score": 7
     },
     {
       "techniqueID": "T1218.011",
       "enabled": true,
       "metadata": [
         {
-          "name": "High / 21",
-          "value": "Unusual Child Processes of RunDLL32 [EQL]"
+          "name": "Med. / 47",
+          "value": "Unusual Network Connection via RunDLL32 [EQL]"
         },
         {
           "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
+          "value": "Unusual Network Connection via RunDLL32 [EQL]"
+        },
+        {
+          "name": "High / 21",
+          "value": "Unusual Child Processes of RunDLL32 [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1211",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Unusual Executable File Creation by a System Critical Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Unusual Executable File Creation by a System Critical Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious Managed Code Hosting Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Managed Code Hosting Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Process from Conhost [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Process from Conhost [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Unusual Child Process from a System Virtual Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Zoom Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Process Creation CallTrace [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Process Injection via PowerShell [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious .NET Reflection via PowerShell [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Process Access via Direct System Call [EQL]"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Windows Event Logs Cleared [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Clearing Windows Event Logs [EQL]"
         }
       ],
       "score": 2
@@ -749,8 +758,8 @@
           "value": "Microsoft Build Engine Started by an Office Application [EQL]"
         },
         {
-          "name": "Low / 21",
-          "value": "Microsoft Build Engine Started by a Script Process [EQL]"
+          "name": "High / 73",
+          "value": "Microsoft Build Engine Started by an Office Application [EQL]"
         }
       ],
       "score": 6
@@ -772,8 +781,8 @@
           "value": "Microsoft Build Engine Started by an Office Application [EQL]"
         },
         {
-          "name": "Low / 21",
-          "value": "Microsoft Build Engine Started by a Script Process [EQL]"
+          "name": "High / 73",
+          "value": "Microsoft Build Engine Started by an Office Application [EQL]"
         }
       ],
       "score": 4
@@ -803,10 +812,6 @@
         },
         {
           "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
-        },
-        {
-          "name": "Med. / 47",
           "value": "Windows Defender Exclusions Added via PowerShell [EQL]"
         },
         {
@@ -814,7 +819,18 @@
           "value": "Suspicious .NET Reflection via PowerShell [Q]"
         }
       ],
-      "score": 4
+      "score": 3
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution via Electron Child Process Node.js Module [Q]"
+        }
+      ],
+      "score": 1
     },
     {
       "techniqueID": "T1562.004",
@@ -826,18 +842,10 @@
         },
         {
           "name": "Med. / 47",
-          "value": "Remote Desktop Enabled in Windows Firewall [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Enable Host Network Discovery via Netsh [EQL]"
-        },
-        {
-          "name": "Med. / 47",
           "value": "Windows Firewall Disabled via PowerShell [EQL]"
         }
       ],
-      "score": 4
+      "score": 2
     },
     {
       "techniqueID": "T1218.005",
@@ -846,13 +854,9 @@
         {
           "name": "Med. / 21",
           "value": "Mshta Making Network Connections [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
         }
       ],
-      "score": 2
+      "score": 1
     },
     {
       "techniqueID": "T1006",
@@ -861,6 +865,122 @@
         {
           "name": "High / 73",
           "value": "TCC Bypass via Mounted APFS Snapshot Access [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1553.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "SIP Provider Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SIP Provider Modification [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Clearing Windows Console History [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1036.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Program Files Directory Masquerading [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Program Files Directory Masquerading [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Encoded Executable Stored in the Registry [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Base16 or Base32 Encoding/Decoding Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious CertUtil Commands [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1112",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Encoded Executable Stored in the Registry [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1562.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "IIS HTTP Logging Disabled [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1553.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Windows CryptoAPI Spoofing Vulnerability (CVE-2020-0601 - CurveBall) [Q]"
         }
       ],
       "score": 1
@@ -888,238 +1008,23 @@
       "score": 1
     },
     {
-      "techniqueID": "T1140",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Base16 or Base32 Encoding/Decoding Activity [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Encoded Executable Stored in the Registry [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious CertUtil Commands [EQL]"
-        }
-      ],
-      "score": 3
-    },
-    {
       "techniqueID": "T1027",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
           "value": "Base16 or Base32 Encoding/Decoding Activity [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious .NET Code Compilation [EQL]"
-        },
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1036.003",
+      "enabled": true,
+      "metadata": [
         {
           "name": "Low / 21",
-          "value": "Microsoft Build Engine Started an Unusual Process [EQL]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1055",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Unusual Child Process from a System Virtual Process [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious Process from Conhost [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Process Injection by the Microsoft Build Engine [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Process Injection by the Microsoft Build Engine [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Zoom Child Process [EQL]"
-        },
-        {
-          "name": "Med. / 43",
-          "value": "Suspicious Process Creation CallTrace [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Process Injection via PowerShell [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious .NET Reflection via PowerShell [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious Process Access via Direct System Call [EQL]"
-        }
-      ],
-      "score": 11
-    },
-    {
-      "techniqueID": "T1070.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Timestomping using Touch Command [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1070.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Tampering of Bash Command-Line History [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Clearing Windows Console History [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1036.005",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Program Files Directory Masquerading [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1112",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Encoded Executable Stored in the Registry [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1553.003",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "SIP Provider Modification [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1055.012",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1027.004",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious .NET Code Compilation [EQL]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Microsoft Build Engine Started an Unusual Process [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1218.010",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1059.001",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Execution from a Mounted Device [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Windows Defender Exclusions Added via PowerShell [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Suspicious .NET Reflection via PowerShell [Q]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1574.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Potential DLL Side-Loading via Microsoft Antimalware Service Executable [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1547.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Kernel Module Removal [Q]"
+          "value": "Microsoft Build Engine Using an Alternate Name [EQL]"
         }
       ],
       "score": 1
@@ -1135,6 +1040,25 @@
         {
           "name": "Low / 21",
           "value": "Windows Defender Disabled via Registry Modification [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Defender Disabled via Registry Modification [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Windows Defender Exclusions Added via PowerShell [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious .NET Reflection via PowerShell [Q]"
         }
       ],
       "score": 2

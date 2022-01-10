@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -95,13 +95,47 @@
         {
           "name": "Med. / 47",
           "value": "Suspicious Activity Reported by Okta User [Q]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Deactivate MFA for an Okta User Account [Q]"
         },
         {
           "name": "Low / 21",
-          "value": "Unauthorized Access to an Okta Application [Q]"
+          "value": "Attempt to Deactivate MFA for an Okta User Account [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Administrator Role Assigned to an Okta User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Administrator Role Assigned to an Okta User [Q]"
         }
       ],
-      "score": 8
+      "score": 4
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Create Okta API Token [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Create Okta API Token [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1111",
@@ -120,6 +154,10 @@
       "metadata": [
         {
           "name": "Med. / 47",
+          "value": "Okta Brute Force or Password Spraying Attack [TH]"
+        },
+        {
+          "name": "Med. / 47",
           "value": "Attempts to Brute Force an Okta User Account [TH]"
         },
         {
@@ -127,7 +165,7 @@
           "value": "Okta Brute Force or Password Spraying Attack [TH]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1498",
@@ -136,9 +174,13 @@
         {
           "name": "Med. / 47",
           "value": "Possible Okta DoS Attack [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Possible Okta DoS Attack [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1499",
@@ -147,39 +189,13 @@
         {
           "name": "Med. / 47",
           "value": "Possible Okta DoS Attack [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Administrator Role Assigned to an Okta User [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "Attempt to Reset MFA Factors for an Okta User Account [Q]"
         },
         {
           "name": "Med. / 47",
-          "value": "Administrator Privileges Assigned to an Okta Group [Q]"
+          "value": "Possible Okta DoS Attack [Q]"
         }
       ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1531",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Attempt to Revoke Okta API Token [Q]"
-        }
-      ],
-      "score": 1
+      "score": 2
     }
   ]
 }

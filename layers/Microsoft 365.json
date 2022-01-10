@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,60 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1098",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Microsoft 365 Teams External Access Enabled [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Microsoft 365 Exchange Management Group Role Assignment [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Microsoft 365 Teams Guest Access Enabled [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Microsoft 365 Teams External Access Enabled [Q]"
-        }
-      ],
-      "score": 5
-    },
-    {
-      "techniqueID": "T1110",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "O365 Excessive Single Sign-On Logon Errors [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Attempts to Brute Force a Microsoft 365 User Account [TH]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Password Spraying of Microsoft 365 User Accounts [TH]"
-        }
-      ],
-      "score": 5
-    },
     {
       "techniqueID": "T1114",
       "enabled": true,
@@ -136,6 +82,17 @@
         {
           "name": "Low / 21",
           "value": "Microsoft 365 New Inbox Rule Created [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "O365 Excessive Single Sign-On Logon Errors [TH]"
         }
       ],
       "score": 1
@@ -181,9 +138,13 @@
         {
           "name": "Med. / 47",
           "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange Anti-Phish Policy Deletion [Q]"
         }
       ],
-      "score": 3
+      "score": 4
     },
     {
       "techniqueID": "T1562",
@@ -204,53 +165,32 @@
         {
           "name": "Med. / 47",
           "value": "Microsoft 365 Exchange DLP Policy Removed [Q]"
-        }
-      ],
-      "score": 4
-    },
-    {
-      "techniqueID": "T1484",
-      "enabled": true,
-      "metadata": [
+        },
         {
-          "name": "Low / 21",
-          "value": "New or Modified Federation Domain [Q]"
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Exchange DLP Policy Removed [Q]"
         }
       ],
-      "score": 1
+      "score": 5
     },
     {
-      "techniqueID": "T1484.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "New or Modified Federation Domain [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1098.002",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "O365 Exchange Suspicious Mailbox Right Delegation [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1485",
+      "techniqueID": "T1098",
       "enabled": true,
       "metadata": [
         {
           "name": "Med. / 47",
-          "value": "Microsoft 365 Unusual Volume of File Deletion [Q]"
+          "value": "Microsoft 365 Exchange Management Group Role Assignment [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams Guest Access Enabled [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft 365 Teams Guest Access Enabled [Q]"
         }
       ],
-      "score": 1
+      "score": 3
     },
     {
       "techniqueID": "T1486",

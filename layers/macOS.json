@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,150 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1548",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution via Electron Child Process Node.js Module [Q]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
-        }
-      ],
-      "score": 6
-    },
-    {
-      "techniqueID": "T1059",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Shell Execution via Apple Scripting [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Automator Workflows Execution [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution via Electron Child Process Node.js Module [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Persistence via Folder Action Script [EQL]"
-        },
-        {
-          "name": "High / 73",
-          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "macOS Installer Spawns Network Event [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious JAVA Child Process [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution with Explicit Credentials via Scripting [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Shell Execution via Apple Scripting [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Suspicious Automator Workflows Execution [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        }
-      ],
-      "score": 15
-    },
-    {
-      "techniqueID": "T1105",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Script Execution followed by Network Connection [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1078",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Admin Group Account Addition [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Potential Hidden Local User Account Creation [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Attempt to Enable the Root Account [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Execution with Explicit Credentials via Scripting [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
-        }
-      ],
-      "score": 6
-    },
     {
       "techniqueID": "T1566",
       "enabled": true,
@@ -241,9 +97,13 @@
         {
           "name": "Med. / 47",
           "value": "Potential Cookies Theft via Browser Debugging [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Cookies Theft via Browser Debugging [EQL]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1553",
@@ -279,17 +139,9 @@
         {
           "name": "Med. / 47",
           "value": "Suspicious Calendar File Modification [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Unexpected Child Process of macOS Screensaver Engine [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Screensaver Plist File Modified by Unexpected Process [EQL]"
         }
       ],
-      "score": 6
+      "score": 4
     },
     {
       "techniqueID": "T1546.014",
@@ -429,9 +281,13 @@
         {
           "name": "Med. / 47",
           "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1562.001",
@@ -456,9 +312,13 @@
         {
           "name": "Med. / 47",
           "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Privacy Control Bypass via TCCDB Modification [EQL]"
         }
       ],
-      "score": 5
+      "score": 6
     },
     {
       "techniqueID": "T1068",
@@ -471,9 +331,13 @@
         {
           "name": "High / 73",
           "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1053",
@@ -486,9 +350,13 @@
         {
           "name": "High / 73",
           "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1053.003",
@@ -501,9 +369,13 @@
         {
           "name": "High / 73",
           "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1547.011",
@@ -521,15 +393,69 @@
       "score": 2
     },
     {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution via Electron Child Process Node.js Module [Q]"
+        }
+      ],
+      "score": 6
+    },
+    {
       "techniqueID": "T1548.003",
       "enabled": true,
       "metadata": [
         {
           "name": "High / 73",
           "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 3
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        }
+      ],
+      "score": 2
     },
     {
       "techniqueID": "T1056",
@@ -591,9 +517,13 @@
         {
           "name": "High / 73",
           "value": "Dumping of Keychain Content via Security Command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Dumping of Keychain Content via Security Command [EQL]"
         }
       ],
-      "score": 6
+      "score": 7
     },
     {
       "techniqueID": "T1555.001",
@@ -614,9 +544,13 @@
         {
           "name": "High / 73",
           "value": "Dumping of Keychain Content via Security Command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Dumping of Keychain Content via Security Command [EQL]"
         }
       ],
-      "score": 4
+      "score": 5
     },
     {
       "techniqueID": "T1070",
@@ -629,9 +563,36 @@
         {
           "name": "Med. / 47",
           "value": "Timestomping using Touch Command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
         }
       ],
-      "score": 2
+      "score": 3
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Admin Group Account Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Hidden Local User Account Creation [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Enable the Root Account [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        }
+      ],
+      "score": 4
     },
     {
       "techniqueID": "T1078.003",
@@ -681,14 +642,6 @@
         },
         {
           "name": "Low / 21",
-          "value": "Launch Agent Creation or Modification and Immediate Loading [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Finder Sync Plugin Registered and Enabled [EQL]"
-        },
-        {
-          "name": "Low / 21",
           "value": "LaunchDaemon Creation or Modification and Immediate Loading [EQL]"
         },
         {
@@ -698,9 +651,25 @@
         {
           "name": "Med. / 47",
           "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Docker Shortcut Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Launch Agent Creation or Modification and Immediate Loading [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Finder Sync Plugin Registered and Enabled [EQL]"
         }
       ],
-      "score": 7
+      "score": 9
     },
     {
       "techniqueID": "T1543.001",
@@ -752,6 +721,45 @@
       "score": 2
     },
     {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution via Electron Child Process Node.js Module [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "macOS Installer Spawns Network Event [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "macOS Installer Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Folder Action Script [EQL]"
+        }
+      ],
+      "score": 8
+    },
+    {
       "techniqueID": "T1059.002",
       "enabled": true,
       "metadata": [
@@ -777,9 +785,17 @@
         {
           "name": "Med. / 47",
           "value": "Remote SSH Login Enabled via systemsetup Command [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote SSH Login Enabled via systemsetup Command [Q]"
         }
       ],
-      "score": 3
+      "score": 5
     },
     {
       "techniqueID": "T1006",
@@ -788,43 +804,6 @@
         {
           "name": "High / 73",
           "value": "TCC Bypass via Mounted APFS Snapshot Access [Q]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1037",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Persistence via Folder Action Script [EQL]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "Persistence via Login or Logout Hook [EQL]"
-        }
-      ],
-      "score": 2
-    },
-    {
-      "techniqueID": "T1554",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Low / 21",
-          "value": "Sublime Plugin or Application Script Modification [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1070.006",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Timestomping using Touch Command [EQL]"
         }
       ],
       "score": 1
@@ -839,10 +818,14 @@
         },
         {
           "name": "Med. / 47",
+          "value": "macOS Installer Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
           "value": "Suspicious JAVA Child Process [EQL]"
         }
       ],
-      "score": 2
+      "score": 3
     },
     {
       "techniqueID": "T1071",
@@ -851,9 +834,13 @@
         {
           "name": "Med. / 47",
           "value": "macOS Installer Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "macOS Installer Spawns Network Event [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1071.001",
@@ -862,9 +849,13 @@
         {
           "name": "Med. / 47",
           "value": "macOS Installer Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "macOS Installer Spawns Network Event [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1003",
@@ -876,7 +867,7 @@
         },
         {
           "name": "High / 73",
-          "value": "Kerberos Cached Credentials Dumping [Q]"
+          "value": "Dumping Account Hashes via Built-In Commands [Q]"
         }
       ],
       "score": 2
@@ -888,47 +879,25 @@
         {
           "name": "Low / 21",
           "value": "Attempt to Mount SMB Share via Command Line [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1082",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "Virtual Machine Fingerprinting via Grep [EQL]"
-        }
-      ],
-      "score": 1
-    },
-    {
-      "techniqueID": "T1558",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "High / 73",
-          "value": "Kerberos Cached Credentials Dumping [Q]"
         },
         {
-          "name": "High / 73",
-          "value": "Potential Kerberos Attack via Bifrost [Q]"
+          "name": "Low / 21",
+          "value": "Attempt to Mount SMB Share via Command Line [EQL]"
         }
       ],
       "score": 2
     },
     {
-      "techniqueID": "T1558.003",
+      "techniqueID": "T1070.006",
       "enabled": true,
       "metadata": [
         {
-          "name": "High / 73",
-          "value": "Kerberos Cached Credentials Dumping [Q]"
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
         },
         {
-          "name": "High / 73",
-          "value": "Potential Kerberos Attack via Bifrost [Q]"
+          "name": "Med. / 47",
+          "value": "Timestomping using Touch Command [EQL]"
         }
       ],
       "score": 2
@@ -978,15 +947,56 @@
       "score": 1
     },
     {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1558.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Kerberos Attack via Bifrost [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1037",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Login or Logout Hook [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Folder Action Script [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
       "techniqueID": "T1518",
       "enabled": true,
       "metadata": [
         {
           "name": "Med. / 47",
           "value": "Security Software Discovery via Grep [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1518.001",
@@ -995,9 +1005,13 @@
         {
           "name": "Med. / 47",
           "value": "Security Software Discovery via Grep [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1556",
@@ -1006,9 +1020,13 @@
         {
           "name": "Med. / 47",
           "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1098",
@@ -1017,9 +1035,13 @@
         {
           "name": "Med. / 47",
           "value": "SSH Authorized Keys File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1098.004",
@@ -1028,9 +1050,13 @@
         {
           "name": "Med. / 47",
           "value": "SSH Authorized Keys File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1203",
@@ -1039,9 +1065,13 @@
         {
           "name": "High / 73",
           "value": "Suspicious Browser Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1189",
@@ -1050,6 +1080,21 @@
         {
           "name": "High / 73",
           "value": "Suspicious Browser Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1554",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Sublime Plugin or Application Script Modification [EQL]"
         }
       ],
       "score": 1

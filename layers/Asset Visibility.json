@@ -43,7 +43,7 @@
       "#44ff66"
     ],
     "minValue": 0,
-    "maxValue": 52
+    "maxValue": 54
   },
   "showTacticRowBackground": true,
   "tacticRowBackground": "#bbddff",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Metadata format",
-      "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
     },
     {
       "name": "Github project",
@@ -64,40 +64,6 @@
     }
   ],
   "techniques": [
-    {
-      "techniqueID": "T1537",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "AWS EC2 Snapshot Activity [Q]"
-        },
-        {
-          "name": "Low / 21",
-          "value": "AWS EC2 VM Export Failure [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "AWS EC2 Snapshot Activity [Q]"
-        }
-      ],
-      "score": 3
-    },
-    {
-      "techniqueID": "T1489",
-      "enabled": true,
-      "metadata": [
-        {
-          "name": "Med. / 47",
-          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
-        },
-        {
-          "name": "Med. / 47",
-          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
-        }
-      ],
-      "score": 2
-    },
     {
       "techniqueID": "T1526",
       "enabled": true,
@@ -140,15 +106,19 @@
       "score": 3
     },
     {
-      "techniqueID": "T1005",
+      "techniqueID": "T1133",
       "enabled": true,
       "metadata": [
         {
           "name": "Low / 21",
-          "value": "AWS EC2 VM Export Failure [Q]"
+          "value": "AWS RDS Cluster Creation [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS RDS Cluster Creation [Q]"
         }
       ],
-      "score": 1
+      "score": 2
     },
     {
       "techniqueID": "T1070",
@@ -157,17 +127,47 @@
         {
           "name": "Low / 21",
           "value": "AWS S3 Bucket Configuration Deletion [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS S3 Bucket Configuration Deletion [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1537",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS EC2 Snapshot Activity [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "AWS RDS Instance/Cluster Stoppage [Q]"
         }
       ],
       "score": 1
     },
     {
-      "techniqueID": "T1485",
+      "techniqueID": "T1005",
       "enabled": true,
       "metadata": [
         {
-          "name": "Med. / 47",
-          "value": "AWS RDS Cluster Deletion [Q]"
+          "name": "Low / 21",
+          "value": "AWS EC2 VM Export Failure [Q]"
         }
       ],
       "score": 1

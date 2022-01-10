@@ -53,7 +53,7 @@ var ma_nav_templ = {
         },
         {
             "name": "Metadata format",
-            "value": "<Type> / <Severity>: <Name> (<Risk_score>)"
+            "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
         },
         {
             "name": "Github project",
