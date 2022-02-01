@@ -23,7 +23,7 @@
     "chalk": "^4.1.0",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^7.2.0",
+    "commander": "^9.0.0",
     "superagent": "^6.1.0",
     "uuid-base64": "^1.0.0"
   }
