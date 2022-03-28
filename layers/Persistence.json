@@ -1,0 +1,916 @@
+{
+  "name": "El.Sec. Persistence",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 56
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.1.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Adobe Hijack Persistence [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Startup Shell Folder Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Installation of Security Support Provider [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via Hidden Run Key Detected [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via WMI Standard Registry Provider [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Startup or Run Key Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 41",
+          "value": "Startup Folder Persistence via Unsigned Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Persistence via Time Provider Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Persistence via Time Provider Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution of Persistent Suspicious Program [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistent Scripts in the Startup Directory [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Authorization Plugin Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Authorization Plugin Modification [Q]"
+        }
+      ],
+      "score": 13
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Hidden Child Process of Launchd [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via Update Orchestrator Service Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious ImagePath Service Creation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Persistence via Services Registry [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via WMI Standard Registry Provider [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Docker Shortcut Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Finder Sync Plugin Registered and Enabled [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "LaunchDaemon Creation or Modification and Immediate Loading [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Launch Agent Creation or Modification and Immediate Loading [EQL]"
+        }
+      ],
+      "score": 14
+    },
+    {
+      "techniqueID": "T1543.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Hidden Child Process of Launchd [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Launch Agent Creation or Modification and Immediate Loading [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Hidden Child Process of Launchd [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Launch Agent or Daemon [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Hidden Child Process of Launchd [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Shell via Web Server [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Webshell Detection: Script Process Child of Common Web Processes [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Shell via Web Server [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Webshell Detection: Script Process Child of Common Web Processes [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "New ActiveSyncAllowedDeviceID Added via PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Account Password Reset Remotely [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "User Added to Privileged Group in Active Directory [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "KRBTGT Delegation Backdoor [Q]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1098.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "New ActiveSyncAllowedDeviceID Added via PowerShell [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Persistence via Update Orchestrator Service Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious ImagePath Service Creation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Persistence via Services Registry [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via WMI Standard Registry Provider [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1098.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Potential Persistence via Periodic Tasks [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Suspicious Image Load (taskschd.dll) from MS Office [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Execution via Scheduled Task [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Scheduled Job Creation [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Scheduled Job Creation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Local Scheduled Task Creation [EQL]"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Creation or Modification of a new GPO Scheduled Task or Service [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via TelemetryController Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Execution via Scheduled Task [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Scheduled Job Creation [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Scheduled Job Creation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Local Scheduled Task Creation [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Calendar File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Registry Persistence via AppInit DLL [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Emond Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Component Object Model Hijacking [EQL]"
+        },
+        {
+          "name": "Med. / 41",
+          "value": "Image File Execution Options Injection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Emond Rules Creation or Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Bash Shell Profile Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Screensaver Plist File Modified by Unexpected Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unexpected Child Process of macOS Screensaver Engine [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unexpected Child Process of macOS Screensaver Engine [EQL]"
+        },
+        {
+          "name": "Med. / 21",
+          "value": "Installation of Custom Shim Databases [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Modification of Accessibility Binaries [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Modification of Accessibility Binaries [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Potential Application Shimming via Sdbinst [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Potential Application Shimming via Sdbinst [EQL]"
+        }
+      ],
+      "score": 15
+    },
+    {
+      "techniqueID": "T1547.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious Startup Shell Folder Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via Hidden Run Key Detected [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Persistence via WMI Standard Registry Provider [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Startup or Run Key Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 41",
+          "value": "Startup Folder Persistence via Unsigned Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution of Persistent Suspicious Program [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistent Scripts in the Startup Directory [EQL]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1137",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Persistence via Microsoft Office AddIns [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Microsoft Outlook VBA [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Microsoft Outlook VBA [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1547.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Installation of Security Support Provider [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Registry Persistence via AppInit DLL [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.014",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Emond Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Emond Rules Creation or Modification [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1546.015",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Component Object Model Hijacking [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 41",
+          "value": "Image File Execution Options Injection [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1047",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Persistence via WMI Standard Registry Provider [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1037",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Login or Logout Hook [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Potential Persistence via Periodic Tasks [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Creation of a Hidden Local User Account [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "User Account Creation [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1136.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Creation of a Hidden Local User Account [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "User Account Creation [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1546.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Bash Shell Profile Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Webshell Detection: Script Process Child of Common Web Processes [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1554",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Sublime Plugin or Application Script Modification [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Persistence via Time Provider Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Persistence via Time Provider Modification [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1546.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 21",
+          "value": "Installation of Custom Shim Databases [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Potential Application Shimming via Sdbinst [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Potential Application Shimming via Sdbinst [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1546.008",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Modification of Accessibility Binaries [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Modification of Accessibility Binaries [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Adobe Hijack Persistence [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Authorization Plugin Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Authorization Plugin Modification [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "KRBTGT Delegation Backdoor [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
