@@ -24,7 +24,7 @@
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^9.1.0",
-    "superagent": "^6.1.0",
+    "superagent": "^7.1.2",
     "uuid-base64": "^1.0.0"
   }
 }
