@@ -87,7 +87,13 @@ for dr in */*toml; do
         
         add_seen_tid "$TID"
         
-        TYPE="$(get_info "$dr" "internal.release" | cut -c1-4 |jq -Rs)"
+        if get_info "$dr" "internal.release" | grep -q production ; then
+            TYPE='"Prod"'
+        else
+            TYPE='"Diag"'
+        fi
+        
+#         TYPE="$(get_info "$dr" "internal.release" | cut -c1-4 |jq -Rs)"
         DESC="$(get_info "$dr" "rule.name"):${NL}$(get_info "$dr" "rule.description")"
         add_info2tid "$TID" "$TYPE" "$(echo $DESC | jq -Rs)"
 
@@ -110,9 +116,9 @@ cat <<_EOM_
 {
     "name": "Elastic Security (Endpoint)",
     "versions": {
-        "attack": "9",
+        "attack": "11",
         "navigator": "4.3",
-        "layer": "4.2"
+        "layer": "4.3"
     },
     "domain": "enterprise-attack",
     "description": "Mapping Elastic Endpoint Secrity EPP Rules to ATTACK Navigator",
