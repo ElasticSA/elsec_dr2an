@@ -1,0 +1,665 @@
+{
+  "name": "El.Sec. Privilege Escalation",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 57
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.2.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Task Execution at Scale via GPO [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Root Crontab File Modification [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1574.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare File Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare Exploit Registry Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Child Process of Adobe Acrobat Reader Update Service [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious Print Spooler Point and Print DLL [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare File Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare Exploit Registry Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler Service Executable File Creation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler SPL File Created [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler Service Executable File Creation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler SPL File Created [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Print Spooler Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Print Spooler File Deletion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Print Spooler File Deletion [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via InstallerFileTakeOver [EQL]"
+        }
+      ],
+      "score": 17
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Error [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Admin Group Account Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Error [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1547.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1547.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1078.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Admin Group Account Addition [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Service Creation via Local Kerberos Authentication [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Service Creation via Local Kerberos Authentication [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Local Kerberos Relay over LDAP [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        }
+      ],
+      "score": 13
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1055.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Local Kerberos Relay over LDAP [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Service Creation via Local Kerberos Authentication [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Local Kerberos Relay over LDAP [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1484",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Task Execution at Scale via GPO [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1484.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Task Execution at Scale via GPO [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1078.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privileged Escalation via SamAccountName Spoofing [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1134",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Rogue Named Pipe Impersonation [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Scheduled Task Execution at Scale via GPO [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

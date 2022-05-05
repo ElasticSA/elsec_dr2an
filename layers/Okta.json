@@ -1,0 +1,188 @@
+{
+  "name": "El.Sec. Okta",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 57
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.2.0"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Okta Brute Force or Password Spraying Attack [TH]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempts to Brute Force an Okta User Account [TH]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Okta Brute Force or Password Spraying Attack [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Abuse of Repeated MFA Push Notifications [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1111",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Attempted Bypass of Okta MFA [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1498",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Possible Okta DoS Attack [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1499",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Possible Okta DoS Attack [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Reset MFA Factors for an Okta User Account [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Administrator Privileges Assigned to an Okta Group [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Administrator Role Assigned to an Okta User [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1531",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Attempt to Revoke Okta API Token [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Activity Reported by Okta User [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1136",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Create Okta API Token [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
