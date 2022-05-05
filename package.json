@@ -20,11 +20,11 @@
     "elsec_dr2an": "./main.js"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^5.0.1",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^7.2.0",
-    "superagent": "^6.1.0",
+    "commander": "^9.1.0",
+    "superagent": "^7.1.2",
     "uuid-base64": "^1.0.0"
   }
 }
