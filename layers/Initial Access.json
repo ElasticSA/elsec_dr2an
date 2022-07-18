@@ -1,0 +1,271 @@
+{
+  "name": "El.Sec. Initial Access",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 70
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.3.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Unusual File Modification by dns.exe [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Unusual Child Process of dns.exe [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Unusual File Modification by dns.exe [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Unusual Child Process of dns.exe [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "O365 Email Reported by User as Malware or Phish [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Script Executing PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "O365 Email Reported by User as Malware or Phish [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Windows Script Executing PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious MS Office Child Process [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Explorer Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "O365 Email Reported by User as Malware or Phish [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Writing Suspicious Files [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Microsoft Exchange Server UM Spawning Suspicious Processes [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Microsoft Exchange Worker Spawning Suspicious Processes [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) to the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "RPC (Remote Procedure Call) from the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "SMB (Windows File Sharing) Activity to the Internet [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "O365 Mailbox Audit Logging Bypass [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "O365 Mailbox Audit Logging Bypass [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "O365 Mailbox Audit Logging Bypass [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "O365 Mailbox Audit Logging Bypass [Q]"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}

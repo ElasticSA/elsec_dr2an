@@ -1,0 +1,338 @@
+{
+  "name": "El.Sec. Command and Control",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 70
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.3.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1573",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Connection to Commonly Abused Free SSL Certificate Providers [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Crit. / 99",
+          "value": "Default Cobalt Strike Team Server Certificate [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Crit. / 99",
+          "value": "Default Cobalt Strike Team Server Certificate [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via MpCmdRun [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Certutil [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via Desktopimgdownldr Utility [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via MpCmdRun [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Certutil [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via Desktopimgdownldr Utility [EQL]"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1568.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1095",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        },
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        },
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        },
+        {
+          "name": "Med. / 43",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}

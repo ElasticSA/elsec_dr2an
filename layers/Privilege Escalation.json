@@ -1,0 +1,599 @@
+{
+  "name": "El.Sec. Privilege Escalation",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 70
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.3.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privacy Control Bypass via Localhost Secure Copy [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        }
+      ],
+      "score": 22
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1574.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious DLL Loaded for Persistence or Privilege Escalation [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler SPL File Created [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Print Spooler Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Print Spooler File Deletion [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler SPL File Created [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Print Spooler Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Print Spooler File Deletion [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare File Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential PrintNightmare Exploit Registry Modification [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Suspicious PrintSpooler Service Executable File Creation [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Strace Process Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Strace Process Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via InstallerFileTakeOver [EQL]"
+        }
+      ],
+      "score": 14
+    },
+    {
+      "techniqueID": "T1548.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via Windows Firewall Snap-In Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Windows Directory Masquerading [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt via Privileged IFileOperation COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Disabling User Account Control via Registry Modification [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface [EQL]"
+        }
+      ],
+      "score": 18
+    },
+    {
+      "techniqueID": "T1134",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Named Pipe Impersonation [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Named Pipe Impersonation [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Error [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "CyberArk Privileged Access Security Recommended Monitor [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1547.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential LSA Authentication Package Abuse [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Port Monitor or Print Processor Registration Abuse [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Privilege Escalation via Windir Environment Variable [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Windows Service Installed via an Unusual Client [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1055.012",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Unusual Service Host Child Process - Childless Service [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1484",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1484.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 2
+    }
+  ]
+}

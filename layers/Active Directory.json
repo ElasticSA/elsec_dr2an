@@ -1,0 +1,209 @@
+{
+  "name": "El.Sec. Active Directory",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 70
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.3.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1078.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Remote Computer Account DnsHostName Update [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1558",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "User account exposed to Kerberoasting [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1558.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "User account exposed to Kerberoasting [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1484",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1484.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Group Policy Abuse for Privilege Addition [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Startup/Logon Script added to Group Policy Object [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Credential Access via DCSync [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1003.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Credential Access via DCSync [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Account Configured with Never-Expiring Password [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
