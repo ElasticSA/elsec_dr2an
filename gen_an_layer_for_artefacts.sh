@@ -122,7 +122,7 @@ echo "--- SEEN $SEEN_TID ---" >&2
 
 cat <<_EOM_
 {
-    "name": "Elastic Security (Endpoint Artefacts)",
+    "name": "El.Sec. Endpoint Artefacts",
     "versions": {
         "attack": "11",
         "navigator": "4.3",
