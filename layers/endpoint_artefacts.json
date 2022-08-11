@@ -1,0 +1,967 @@
+{
+    "name": "Elastic Security (Endpoint Artefacts)",
+    "versions": {
+        "attack": "11",
+        "navigator": "4.3",
+        "layer": "4.3"
+    },
+    "domain": "enterprise-attack",
+    "description": "Mapping Elastic Endpoint Secrity Aretfact Rules to ATTACK Navigator",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "macOS",
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "showName": true,
+        "showID": true
+    },
+    "hideDisabled": false,
+    "techniques": [
+    
+    {
+        "techniqueID": "T1543.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Windows Service Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1574.007",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Privilege Escalation via Windir or SystemRoot Environment Variable"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1068",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "linux", "value": "Privilege Escalation via PKEXEC Exploitation"},
+{"name": "linux", "value": "Sudo Heap-Based Buffer Overflow Attempt"},
+{"name": "macos", "value": "Sudo Heap-Based Buffer Overflow Attempt"},
+{"name": "windows", "value": "Unusual Child Process Integrity Level"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1053.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Potential Privilege Escalation via Root Crontab File Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1134.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Potential Privilege Escalation via Rogue WinRM"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1574.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        8,
+        "metadata": [
+{"name": "windows", "value": "Potential Privilege Escalation via DLL Redirection"},
+{"name": "windows", "value": "Potential Privilege Escalation via Elevated IFileOperation"},
+{"name": "windows", "value": "Potential Privilege Escalation via Missing DLL"},
+{"name": "windows", "value": "UAC Bypass Attempt via Consent DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via DCCW DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via MMC DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via SilentCleanup Task DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass via Windows Firewall Snap-In Hijack"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1129",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Potential Privilege Escalation via DLL Redirection"},
+{"name": "windows", "value": "UAC Bypass Attempt via Consent DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via DCCW DLL Search Order Hijacking"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1548.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       25,
+        "metadata": [
+{"name": "windows", "value": "Elevated Execution via ShellExecute RunAs Administrator"},
+{"name": "windows", "value": "Potential Privilege Escalation via Elevated IFileOperation"},
+{"name": "windows", "value": "UAC Bypass Attempt via CDSSync Scheduled Task Hijack"},
+{"name": "windows", "value": "UAC Bypass Attempt via Consent DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via DCCW DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via DismCore DLL Side-Loading"},
+{"name": "windows", "value": "UAC Bypass Attempt via DLL Side-Loading from Windows Media Player Folder"},
+{"name": "windows", "value": "UAC Bypass Attempt via Elevated COM Internet Explorer Add-On Installer"},
+{"name": "windows", "value": "UAC Bypass Attempt via MMC DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via SilentCleanup Task DLL Search Order Hijacking"},
+{"name": "windows", "value": "UAC Bypass Attempt via Windows Directory Masquerading"},
+{"name": "windows", "value": "UAC Bypass Attempt via WOW64 Logger DLL Side-Loading"},
+{"name": "windows", "value": "UAC Bypass Attempt with IEditionUpgradeManager Elevated COM Interface"},
+{"name": "windows", "value": "UAC Bypass via ComputerDefaults Execution Hijack"},
+{"name": "windows", "value": "UAC Bypass via Control Panel Execution Hijack"},
+{"name": "windows", "value": "UAC Bypass via DelegateExecute Registry Modification"},
+{"name": "windows", "value": "UAC Bypass via DiskCleanup Scheduled Task Hijack"},
+{"name": "windows", "value": "UAC Bypass via Event Viewer"},
+{"name": "windows", "value": "UAC Bypass via FodHelper Execution Hijack"},
+{"name": "windows", "value": "UAC Bypass via ICMLuaUtil Elevated COM Interface"},
+{"name": "windows", "value": "UAC Bypass via Malicious MMC Snap-In Execution"},
+{"name": "windows", "value": "UAC Bypass via Sdclt"},
+{"name": "windows", "value": "UAC Bypass via Windows Activation Execution Hijack"},
+{"name": "windows", "value": "UAC Bypass via Windows Firewall Snap-In Hijack"},
+{"name": "windows", "value": "UAC Bypass via WSReset Execution Hijack"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1036.005",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Scheduled Task Creation via Masqueraded XML File"},
+{"name": "windows", "value": "Unusual File Written or Modified in Startup Folder"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1053.005",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Scheduled Task Creation"},
+{"name": "windows", "value": "Suspicious Scheduled Task Creation via Masqueraded XML File"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1543.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Suspicious Property List File Creation or Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1546.014",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Potential Persistence via Emond"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1550.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Potential Kerberos Attack via Bifrost"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1021.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "ImageLoad of a File dropped via SMB"},
+{"name": "windows", "value": "Suspicious NullSessionPipe Registry Modification"},
+{"name": "windows", "value": "Unexpected SMB Connection from User-mode Process"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1574.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        5,
+        "metadata": [
+{"name": "windows", "value": "Signed Binary Execution via Microsoft Office"},
+{"name": "windows", "value": "UAC Bypass Attempt via CDSSync Scheduled Task Hijack"},
+{"name": "windows", "value": "UAC Bypass Attempt via DismCore DLL Side-Loading"},
+{"name": "windows", "value": "UAC Bypass Attempt via DLL Side-Loading from Windows Media Player Folder"},
+{"name": "windows", "value": "UAC Bypass Attempt via WOW64 Logger DLL Side-Loading"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1547.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       15,
+        "metadata": [
+{"name": "windows", "value": "Microsoft Office Process Setting Persistence via Startup"},
+{"name": "windows", "value": "Registry Modification via Microsoft Office"},
+{"name": "windows", "value": "Network Connection via Startup Item"},
+{"name": "windows", "value": "Registry Persistence via Microsoft Office Descendant Process"},
+{"name": "windows", "value": "Registry Run Key Modified by Unusual Process"},
+{"name": "windows", "value": "Registry Run Key Prefixed with Asterisk"},
+{"name": "windows", "value": "Script File Written to Startup Folder"},
+{"name": "windows", "value": "Script Interpreter Process Writing to Commonly Abused Persistence Locations"},
+{"name": "windows", "value": "Startup Persistence via Microsoft Office Descendant Process"},
+{"name": "windows", "value": "Startup Persistence via Unusual Process"},
+{"name": "windows", "value": "Startup Persistence via Windows Script Interpreter"},
+{"name": "windows", "value": "Suspicious String Value Written to Registry Run Key"},
+{"name": "windows", "value": "Untrusted Process Writing to Commonly Abused Persistence Locations"},
+{"name": "windows", "value": "Unusual File Written or Modified in Startup Folder"},
+{"name": "windows", "value": "Unusual Startup Shell Folder Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "File Execution via Microsoft HTML Help"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1203",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Execution of File Written or Modified by Microsoft Equation Editor"},
+{"name": "windows", "value": "Microsoft Equation Editor Child Process"},
+{"name": "windows", "value": "Suspicious Network Connection from Microsoft Equation Editor"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1485",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Potential Data wiping Attack Behavior"},
+{"name": "windows", "value": "Potential Ransomware Note File"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1486",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "linux", "value": "DARKRADIATION Ransomware Infection"},
+{"name": "macos", "value": "DARKRADIATION Ransomware Infection"},
+{"name": "windows", "value": "Inhibit System Recovery Followed by a Suspicious File Rename"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1490",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        7,
+        "metadata": [
+{"name": "windows", "value": "BCDEdit Safe Mode Command Execution"},
+{"name": "windows", "value": "Inhibit System Recovery via Microsoft Office Process"},
+{"name": "windows", "value": "Inhibit System Recovery via Obfuscated Commands"},
+{"name": "windows", "value": "Inhibit System Recovery via Renamed Utilities"},
+{"name": "windows", "value": "Inhibit System Recovery via Signed Binary Proxy"},
+{"name": "windows", "value": "Inhibit System Recovery via Untrusted Parent Process"},
+{"name": "windows", "value": "Inhibit System Recovery via Windows Command Shell"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1059.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Windows Shortcut File Embedded Object Execution"},
+{"name": "windows", "value": "Windows Command Shell Spawned via Microsoft Office"},
+{"name": "windows", "value": "Potential Lateral Movement via SMBExec"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1204.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Windows Shortcut File Creation or Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1132.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "linux", "value": "Empire Stager Execution"},
+{"name": "macos", "value": "Empire Stager Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1566.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       33,
+        "metadata": [
+{"name": "windows", "value": "Embedded Executable via Windows Shortcut File"},
+{"name": "windows", "value": "Execution via Outlook Application COM Object"},
+{"name": "windows", "value": "Shell Execution via Windows Shortcut File"},
+{"name": "windows", "value": "Suspicious PowerShell Downloads"},
+{"name": "windows", "value": "Suspicious Windows Script File Name"},
+{"name": "windows", "value": "Suspicious Windows Shortcut File Creation or Modification"},
+{"name": "windows", "value": "Windows Shortcut File Embedded Object Execution"},
+{"name": "windows", "value": "Inhibit System Recovery via Microsoft Office Process"},
+{"name": "windows", "value": "Execution from a Downloaded ISO File"},
+{"name": "windows", "value": "Execution of File Written or Modified by Microsoft Equation Editor"},
+{"name": "windows", "value": "File Execution via Microsoft HTML Help"},
+{"name": "windows", "value": "Microsoft Equation Editor Child Process"},
+{"name": "windows", "value": "Microsoft Office File Execution via Script Interpreter"},
+{"name": "windows", "value": "Microsoft Office File Execution via WMI"},
+{"name": "windows", "value": "Microsoft Office Loaded a Dropped Executable File"},
+{"name": "windows", "value": "Microsoft Office Process Setting Persistence via Startup"},
+{"name": "windows", "value": "Potential Remote File Execution via MSIEXEC"},
+{"name": "windows", "value": "PowerShell Obfuscation Spawned via Microsoft Office"},
+{"name": "windows", "value": "Registry Modification via Microsoft Office"},
+{"name": "windows", "value": "RunDLL32/Regsvr32 Loads Dropped Executable"},
+{"name": "windows", "value": "Script File Written by Microsoft Office Process"},
+{"name": "windows", "value": "Signed Binary Execution via Microsoft Office"},
+{"name": "windows", "value": "Suspicious Execution via a Mounted Image File"},
+{"name": "windows", "value": "Suspicious Execution via ShellBrowserWindow/ShellWindow COM"},
+{"name": "windows", "value": "Suspicious Microsoft Office Child Process"},
+{"name": "windows", "value": "Suspicious MS Office Execution via DCOM"},
+{"name": "windows", "value": "Suspicious Network Connection from Microsoft Equation Editor"},
+{"name": "windows", "value": "Untrusted File Execution via Microsoft Office"},
+{"name": "windows", "value": "Windows Command Shell Spawned via Microsoft Office"},
+{"name": "windows", "value": "WMI Image Load via Microsoft Office"},
+{"name": "windows", "value": "Registry Persistence via Microsoft Office Descendant Process"},
+{"name": "windows", "value": "Startup Persistence via Microsoft Office Descendant Process"},
+{"name": "windows", "value": "Elevated Execution via ShellExecute RunAs Administrator"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1059.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        8,
+        "metadata": [
+{"name": "linux", "value": "EggShell Backdoor Execution"},
+{"name": "macos", "value": "EggShell Backdoor Execution"},
+{"name": "linux", "value": "Empire Stager Execution"},
+{"name": "macos", "value": "Empire Stager Execution"},
+{"name": "linux", "value": "Privilege Escalation Enumeration via LinPEAS"},
+{"name": "macos", "value": "Privilege Escalation Enumeration via LinPEAS"},
+{"name": "linux", "value": "Sudo Heap-Based Buffer Overflow Attempt"},
+{"name": "macos", "value": "Sudo Heap-Based Buffer Overflow Attempt"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1059.007",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "macos", "value": "Download and Execution of JavaScript Payload"},
+{"name": "macos", "value": "Execution via Electron Child Process Node.js Module"},
+{"name": "macos", "value": "Suspicious Automator Workflows Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1082",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Potential Virtual Machine Fingerprinting via Grep"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1518.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "linux", "value": "Potential Security Software Discovery via Grep"},
+{"name": "macos", "value": "Potential Security Software Discovery via Grep"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1016",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "External IP Address Discovery via a Trusted Program"},
+{"name": "windows", "value": "External IP Address Discovery via Untrusted Program"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1562.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Windows Firewall Exception List Modified via Untrusted Process"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1047",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        8,
+        "metadata": [
+{"name": "windows", "value": "Suspicious WMIC XSL Script Execution"},
+{"name": "windows", "value": "Suspicious Cmd Execution via WMI"},
+{"name": "windows", "value": "Suspicious Execution via Windows Management Instrumentation"},
+{"name": "windows", "value": "Inhibit System Recovery via Microsoft Office Process"},
+{"name": "windows", "value": "Inhibit System Recovery via Obfuscated Commands"},
+{"name": "windows", "value": "Inhibit System Recovery via Windows Command Shell"},
+{"name": "windows", "value": "Microsoft Office File Execution via WMI"},
+{"name": "windows", "value": "WMI Image Load via Microsoft Office"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1059.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       18,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Execution from a Mounted Device"},
+{"name": "windows", "value": "Suspicious Windows Defender Exclusions Added via PowerShell"},
+{"name": "windows", "value": "Command Shell Activity Started via RunDLL32"},
+{"name": "windows", "value": "Delayed Execution via Ping"},
+{"name": "windows", "value": "Embedded Executable via Windows Shortcut File"},
+{"name": "windows", "value": "Execution via Outlook Application COM Object"},
+{"name": "windows", "value": "Shell Execution via Windows Shortcut File"},
+{"name": "windows", "value": "Suspicious PowerShell Downloads"},
+{"name": "windows", "value": "Suspicious PowerShell Execution via Windows Scripts"},
+{"name": "windows", "value": "Unusual PowerShell Engine ImageLoad"},
+{"name": "windows", "value": "BCDEdit Safe Mode Command Execution"},
+{"name": "windows", "value": "PowerShell Obfuscation Spawned via Microsoft Office"},
+{"name": "windows", "value": "RunDLL32/Regsvr32 Loads Dropped Executable"},
+{"name": "windows", "value": "Script File Written by Microsoft Office Process"},
+{"name": "windows", "value": "Suspicious Execution via ShellBrowserWindow/ShellWindow COM"},
+{"name": "windows", "value": "Network Connection via Startup Item"},
+{"name": "windows", "value": "Script Interpreter Process Writing to Commonly Abused Persistence Locations"},
+{"name": "windows", "value": "Startup Persistence via Windows Script Interpreter"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1546.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "SolarMarker Backdoor Registry Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1216.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Scriptlet Proxy Execution via PubPrn"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Scriptlet Execution via CMSTP"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1220",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Script Execution via MSXSL"},
+{"name": "windows", "value": "Suspicious WMIC XSL Script Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1197",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "RunDLL32/Regsvr32 Loads a DLL Downloaded via BITS"},
+{"name": "windows", "value": "Suspicious Bitsadmin Activity"},
+{"name": "windows", "value": "Execution of a Windows Script Downloaded via a LOLBIN"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1036.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "windows", "value": "Renamed AutoIt Scripts Interpreter"},
+{"name": "windows", "value": "Renamed Third Party Administrator Tools"},
+{"name": "windows", "value": "Renamed Windows Automaton Script Interpreter"},
+{"name": "windows", "value": "Suspicious Windows LUA Script Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.007",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Remote File Execution via MSIEXEC"},
+{"name": "windows", "value": "Remote MSI Package Installation via MSIEXEC"},
+{"name": "windows", "value": "Potential Remote File Execution via MSIEXEC"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.010",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        6,
+        "metadata": [
+{"name": "windows", "value": "Regsvr32 Scriptlet Execution"},
+{"name": "windows", "value": "Regsvr32 with Unusual Arguments"},
+{"name": "windows", "value": "Suspicious ImageLoad from an ISO Mounted Device"},
+{"name": "windows", "value": "Unusual DLL Extension Loaded by Rundll32 or Regsvr32"},
+{"name": "windows", "value": "RunDLL32/Regsvr32 Loads Dropped Executable"},
+{"name": "windows", "value": "ImageLoad of a File dropped via SMB"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1211",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Protected Process Light Bypass via DLL Tampering"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1055.013",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Process Executable Image Tampering Attempt"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1070.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Potential Self Deletion of a Running Executable"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1548",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "macos", "value": "Potential Privacy Control Bypass via Localhost Secure Copy"},
+{"name": "macos", "value": "Potential Privacy Control Bypass via Localhost Secure Copy"},
+{"name": "macos", "value": "Execution via Electron Child Process Node.js Module"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1134.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Parent Process PID Spoofing"},
+{"name": "windows", "value": "Potential Parent Process PID Spoofing via MalSecLogon"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1127.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "MSBuild with Unusual Arguments"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1562.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "macos", "value": "Modification of Safari Settings via Defaults Command"},
+{"name": "macos", "value": "Operating System Security Updates Disabled"},
+{"name": "windows", "value": "Potential Defense Evasion via Filter Manager Control Program"},
+{"name": "windows", "value": "Suspicious Windows Defender Exclusions Added via PowerShell"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1055",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Managed .NET Code Execution via Windows Script Interpreter"},
+{"name": "windows", "value": "Unusual Network Connection via RunDLL32"},
+{"name": "windows", "value": "Suspicious Windows Script Interpreter Child Process"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1059.005",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       17,
+        "metadata": [
+{"name": "windows", "value": "Managed .NET Code Execution via Windows Script Interpreter"},
+{"name": "windows", "value": "Script Execution via MSXSL"},
+{"name": "windows", "value": "Scriptlet Execution via CMSTP"},
+{"name": "windows", "value": "Scriptlet Execution via Rundll32"},
+{"name": "windows", "value": "Scriptlet Proxy Execution via PubPrn"},
+{"name": "windows", "value": "Dynwrapx Image Load via Windows Scripts"},
+{"name": "windows", "value": "Execution from Unusual Directory"},
+{"name": "windows", "value": "Execution of a File Written by Windows Script Host"},
+{"name": "windows", "value": "Execution of a Windows Script Downloaded via a LOLBIN"},
+{"name": "windows", "value": "Execution of a Windows Script with Unusual File Extension"},
+{"name": "windows", "value": "Potential Execution via ZIPExec"},
+{"name": "windows", "value": "Suspicious Java Execution via a Windows Script"},
+{"name": "windows", "value": "Suspicious Windows Script File Name"},
+{"name": "windows", "value": "Suspicious Windows Script Interpreter Child Process"},
+{"name": "windows", "value": "Suspicious Windows Script Process Execution"},
+{"name": "windows", "value": "Inhibit System Recovery via Signed Binary Proxy"},
+{"name": "windows", "value": "Elevated Execution via ShellExecute RunAs Administrator"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Control Panel Process with Unusual Arguments"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.011",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "windows", "value": "Binary Proxy Execution via Rundll32"},
+{"name": "windows", "value": "RunDLL32 with Unusual Arguments"},
+{"name": "windows", "value": "Scriptlet Execution via Rundll32"},
+{"name": "windows", "value": "Command Shell Activity Started via RunDLL32"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1036.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Binary Masquerading via Untrusted Path"},
+{"name": "windows", "value": "Potential Masquerading as SVCHOST"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1555.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Web Browsers Password Access via Command Line"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1539",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Access to Web Browser Credential Stores"},
+{"name": "windows", "value": "Web Browser Credential Access via Unsigned Process"},
+{"name": "windows", "value": "Web Browser Credential Access via Unusual Process"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1003.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Access to LSA Secrets Registry"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1003.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Suspicious Access to Active Directory Database File"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1021.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Sensitive File Access - SSH Saved Keys"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1021.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "windows", "value": "Sensitive File Access - Remote Desktop Connection Manager"},
+{"name": "windows", "value": "Unusual Remote Desktop Client Process"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1552.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        5,
+        "metadata": [
+{"name": "windows", "value": "Sensitive File Access - Cloud Credentials"},
+{"name": "windows", "value": "Sensitive File Access - Remote Desktop Connection Manager"},
+{"name": "windows", "value": "Sensitive File Access - SSH Saved Keys"},
+{"name": "windows", "value": "Sensitive File Access - System Admin Utilities"},
+{"name": "windows", "value": "Sensitive File Access - Unattended Panther"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1003.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Security Account Manager (SAM) File Access"},
+{"name": "windows", "value": "Security Account Manager (SAM) Registry Access"},
+{"name": "windows", "value": "System BootKey Registry Access"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1056.002",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "macos", "value": "Potential Credentials Phishing via OSASCRIPT"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1555.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "windows", "value": "Potential Credential Access via Windows Credential History"},
+{"name": "windows", "value": "Potential Discovery of DPAPI Master Keys"},
+{"name": "windows", "value": "Potential Discovery of Windows Credential Manager Store"},
+{"name": "windows", "value": "Suspicious Access to Windows Vault Files"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1558.003",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        2,
+        "metadata": [
+{"name": "macos", "value": "Potential Access to Kerberos Cached Credentials"},
+{"name": "macos", "value": "Potential Kerberos Attack via Bifrost"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1003.001",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        3,
+        "metadata": [
+{"name": "windows", "value": "Credential Access via Known Utilities"},
+{"name": "windows", "value": "LSA Dump via SilentProcessExit"},
+{"name": "windows", "value": "Potential Credential Access via Mimikatz"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1219",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        1,
+        "metadata": [
+{"name": "windows", "value": "Suspicious NetSupport Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1112",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":       11,
+        "metadata": [
+{"name": "windows", "value": "NetWire RAT Registry Modification"},
+{"name": "windows", "value": "Remcos RAT Registry or File Modification"},
+{"name": "windows", "value": "CrashDump Disabled via Registry Modification"},
+{"name": "windows", "value": "SolarMarker Backdoor Registry Modification"},
+{"name": "windows", "value": "Registry Modification via Microsoft Office"},
+{"name": "windows", "value": "Suspicious MS Office Execution via DCOM"},
+{"name": "windows", "value": "Suspicious NullSessionPipe Registry Modification"},
+{"name": "windows", "value": "Registry Persistence via Microsoft Office Descendant Process"},
+{"name": "windows", "value": "Untrusted Process Writing to Commonly Abused Persistence Locations"},
+{"name": "windows", "value": "Unusual Startup Shell Folder Modification"},
+{"name": "windows", "value": "UAC Bypass via DelegateExecute Registry Modification"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1105",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "windows", "value": "Execution of a File Written by a Signed Binary Proxy"},
+{"name": "macos", "value": "Shlayer Malware Infection"},
+{"name": "windows", "value": "Execution of a Windows Script Downloaded via a LOLBIN"},
+{"name": "macos", "value": "Suspicious Apple Script Execution"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218.005",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        9,
+        "metadata": [
+{"name": "windows", "value": "Execution of a File Written by a Signed Binary Proxy"},
+{"name": "windows", "value": "Script Execution via Microsoft HTML Application"},
+{"name": "windows", "value": "Suspicious Execution from a Mounted Device"},
+{"name": "windows", "value": "Execution via Outlook Application COM Object"},
+{"name": "windows", "value": "BCDEdit Safe Mode Command Execution"},
+{"name": "windows", "value": "Script File Written by Microsoft Office Process"},
+{"name": "windows", "value": "Suspicious Execution via ShellBrowserWindow/ShellWindow COM"},
+{"name": "windows", "value": "Network Connection via Startup Item"},
+{"name": "windows", "value": "Elevated Execution via ShellExecute RunAs Administrator"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1071.004",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        4,
+        "metadata": [
+{"name": "windows", "value": "Connection to Dynamic DNS Provider by a Signed Binary Proxy"},
+{"name": "windows", "value": "Connection to Dynamic DNS Provider by an Unsigned Binary"},
+{"name": "windows", "value": "Connection to WebService by a Signed Binary Proxy"},
+{"name": "windows", "value": "Connection to WebService by an Unsigned Binary"}
+        ]
+    }
+    ,
+    {
+        "techniqueID": "T1218",
+        "color": "#44FF88",
+        "enabled": true,
+        "score":        7,
+        "metadata": [
+{"name": "windows", "value": "Connection to Dynamic DNS Provider by a Signed Binary Proxy"},
+{"name": "windows", "value": "Connection to WebService by a Signed Binary Proxy"},
+{"name": "windows", "value": "Execution via Internet Explorer Exporter"},
+{"name": "windows", "value": "Execution via Renamed Signed Binary Proxy"},
+{"name": "windows", "value": "Suspicious ImageLoad via Windows Update Auto Update Client"},
+{"name": "windows", "value": "Execution from Unusual Directory"},
+{"name": "windows", "value": "Inhibit System Recovery via Renamed Utilities"}
+        ]
+    }
+    ],
+    "legendItems": [
+    ],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#bbddff",
+    "selectTechniquesAcrossTactics": false,
+    "selectSubtechniquesWithParent": false
+}
