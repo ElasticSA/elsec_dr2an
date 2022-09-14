@@ -1,0 +1,359 @@
+{
+  "name": "El.Sec. Discovery",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1083",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File and Directory Discovery [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Hping Process Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Virtual Machine Fingerprinting via Grep [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1614",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Remote System Discovery Commands [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1016.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "External IP Lookup from Non-Browser Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1120",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Peripheral Device Discovery [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1046",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Nping Process Activity [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Whoami Process Activity [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Account Discovery Command via SYSTEM Account [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1482",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumerating Domain Trusts via NLTEST.EXE [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1613",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Suspicious Self-Subject Review [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Remote System Discovery Commands [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1135",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Windows Network Enumeration [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Users or Groups via Built-in Commands [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1069.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Administrator Accounts [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration of Users or Groups via Built-in Commands [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1069.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1106",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell Suspicious Discovery Related Windows API Functions [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

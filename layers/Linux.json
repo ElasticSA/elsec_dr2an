@@ -1,0 +1,1264 @@
+{
+  "name": "El.Sec. Linux",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Login Sessions [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Auditd Login from Forbidden Location [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Max Failed Login Attempts [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Auditd Login Attempt at Forbidden Time [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Username [ML]"
+        }
+      ],
+      "score": 9
+    },
+    {
+      "techniqueID": "T1562",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable IPTables or Firewall [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable Syslog Service [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Kernel Module Removal [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable Syslog Service [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Elastic Agent Service Terminated [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1562.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable IPTables or Firewall [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable Syslog Service [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Disabling of SELinux [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Kernel Module Removal [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Attempt to Disable Syslog Service [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Elastic Agent Service Terminated [EQL]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Strace Process Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Sudo Heap-Based Buffer Overflow Attempt [TH]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Python [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "BPF filter applied using TC [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Netcat Network Activity [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "EggShell Backdoor Execution [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Binary Executed from Shared Memory Directory [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Process Started from Process ID (PID) File [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 26
+    },
+    {
+      "techniqueID": "T1059.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "BPF filter applied using TC [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 16
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Kernel Module Activity [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kernel module load via insmod [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Kernel Module Removal [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via KDE AutoStart Script or Desktop File Modification [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Kernel Module Activity [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kernel module load via insmod [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Kernel Module Removal [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1565",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1565.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Hosts File Modified [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1070",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File Deletion via Shred [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File Deletion via Shred [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1070.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File Deletion via Shred [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File Deletion via Shred [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Information Discovery Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Information Discovery Activity [ML]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Hping Process Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Virtual Machine Fingerprinting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Enumeration of Kernel Modules [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Virtual Machine Fingerprinting via Grep [EQL]"
+        }
+      ],
+      "score": 8
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sudoers File Modification [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via Sudoers File Modification [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1070.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Tampering of Bash Command-Line History [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1222",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "File made Immutable by Chattr [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "File Permission Modification in Writable Directory [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Linux Host [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Process For a Linux Population [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Linux Host [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Process For a Linux Population [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Connection to External Network via Telnet [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Connection to Internal Network via Telnet [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1140",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Base16 or Base32 Encoding/Decoding Activity [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1027",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Base16 or Base32 Encoding/Decoding Activity [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Setuid / Setgid Bit Set via chmod [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1588",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1588.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Owner or User Discovery Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Owner or User Discovery Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1049",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Network Connection Discovery [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Network Connection Discovery [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Network Configuration Discovery [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Discovery Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1552.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Calling the Metadata Service [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential DNS Tunneling via Iodine [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1046",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Nping Process Activity [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1222.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "File made Immutable by Chattr [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1564",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Shared Object File [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Files and Directories via CommandLine [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1564.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Shared Object File [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Files and Directories via CommandLine [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1037",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Chkconfig Service Add [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1037.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Chkconfig Service Add [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1574",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Dynamic Linker Copy [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1574.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Dynamic Linker Copy [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Dynamic Linker Preload Shared Object [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1543.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious File Creation in /etc for Persistence [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1489",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "High Number of Process Terminations [TH]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Shell via Web Server [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1505.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Shell via Web Server [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1098.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "SSH Authorized Keys File Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1560",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1560.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Sensitive Files Compression [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Bash Shell Profile Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1546.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Bash Shell Profile Modification [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Security Software Discovery via Grep [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1556",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Modification of Standard Authentication Module or Configuration [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Modification of OpenSSH Binaries [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1539",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Cookies Theft via Browser Debugging [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1554",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential OpenSSH Backdoor Logging Activity [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "EggShell Backdoor Execution [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1574.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential Privilege Escalation via PKEXEC [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1203",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1106",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Abnormal Process ID or Lock File Created [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Abnormal Process ID or Lock File Created [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1095",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

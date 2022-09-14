@@ -1,0 +1,128 @@
+{
+  "name": "El.Sec. Kubernetes",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1611",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostNetwork [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod created with a Sensitive hostPath Volume [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostIPC [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostPID [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Privileged Pod Created [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Exposed Service Created With Type NodePort [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1613",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Suspicious Self-Subject Review [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1609",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes User Exec into Pod [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

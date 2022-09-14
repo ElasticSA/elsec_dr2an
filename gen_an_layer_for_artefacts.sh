@@ -60,10 +60,13 @@ add_info2tid()
     ITEM="TINFO_${1//\./_}"
     
 debug "1($1) 2($2) 3($3)"
+
+    local NEW="{\"name\": $(echo -n "$2" | jq -Rs), \"value\": $(echo -n "$3" | jq -Rs)}"
+
     if [ -z "${!ITEM}" ]; then
-        printf -v "$ITEM" "%s" "{\"name\": $(echo -n "$2" | jq -Rs), \"value\": $(echo -n "$3" | jq -Rs)}"
+        printf -v "$ITEM" "%s" "$NEW"
     else
-        printf -v "$ITEM" "%s" "${!ITEM},$NL{\"name\": $(echo -n "$2" | jq -Rs), \"value\": $(echo -n "$3" | jq -Rs)}"
+        printf -v "$ITEM" "%s" "${!ITEM},$NL$NEW"
     fi
     
     if [ "$1" = "$DEBUG_TID" ]; then

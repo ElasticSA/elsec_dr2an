@@ -1,0 +1,466 @@
+{
+  "name": "El.Sec. Command and Control",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Roshal Archive (RAR) or PowerShell File Downloaded from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via MpCmdRun [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via Desktopimgdownldr Utility [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via MpCmdRun [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Certutil [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via Script Interpreter [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web Request [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual DNS Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web User Agent [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "SUNBURST Command and Control Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "techniqueID": "T1568",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1568.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Halfbaked Command and Control Beacon [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Possible FIN7 DGA Command and Control Behavior [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Cobalt Strike Command and Control Beacon [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1219",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Copy via TeamViewer [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "VNC (Virtual Network Computing) to the Internet [Q]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1048",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "SMTP on Port 26/TCP [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Potential DNS Tunneling via Iodine [Q]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "DNS Tunneling [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Port Forwarding Rule Addition [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Potential Protocol Tunneling via EarthWorm [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1021",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1190",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Telnet Port Activity [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "VNC (Virtual Network Computing) from the Internet [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "RDP (Remote Desktop Protocol) from the Internet [Q]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web Request [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web User Agent [ML]"
+        },
+        {
+          "name": "High / 73",
+          "value": "SUNBURST Command and Control Activity [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1071.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual DNS Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Potential Command and Control via Internet Explorer [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via PowerShell [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Remote File Download via PowerShell [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "SUNBURST Command and Control Activity [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1195.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "SUNBURST Command and Control Activity [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1095",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1548.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Network Connection Attempt by Root [EQL]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

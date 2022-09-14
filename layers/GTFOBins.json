@@ -1,0 +1,202 @@
+{
+  "name": "El.Sec. GTFOBins",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 15
+    },
+    {
+      "techniqueID": "T1059.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 15
+    }
+  ]
+}

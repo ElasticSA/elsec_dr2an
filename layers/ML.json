@@ -1,0 +1,450 @@
+{
+  "name": "El.Sec. ML",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Kernel Module Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Kernel Module Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1543",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Linux Host [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Windows Process Creation [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Process For a Windows Population [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Windows Host [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Path Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Process For a Linux Population [ML]"
+        }
+      ],
+      "score": 7
+    },
+    {
+      "techniqueID": "T1543.003",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Linux Host [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Process For a Windows Host [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Path Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Process For a Linux Population [ML]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1082",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Information Discovery Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Information Discovery Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1588",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1588.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Anomalous Linux Compiler Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1033",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Owner or User Discovery Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Owner or User Discovery Activity [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Sudo Activity [ML]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1049",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Network Connection Discovery [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Network Connection Discovery [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1016",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux System Network Configuration Discovery [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1057",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Discovery Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1552",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Process Calling the Metadata Service [ML]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1552.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux User Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Process Calling the Metadata Service [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Process Calling the Metadata Service [ML]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1110",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Login Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Spike in Logon Events from a Source IP [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Spike in Failed Logon Events [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Spike in Logon Events [ML]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web Request [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual DNS Activity [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web User Agent [ML]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web Request [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Web User Agent [ML]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1572",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "DNS Tunneling [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual DNS Activity [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Unusual Linux Username [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Remote User [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Windows Username [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Source IP for a User to Logon from [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Unusual Hour for a User to Logon [ML]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Rare User Logon [ML]"
+        }
+      ],
+      "score": 6
+    },
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Suspicious Powershell Script [ML]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Suspicious Powershell Script [ML]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}

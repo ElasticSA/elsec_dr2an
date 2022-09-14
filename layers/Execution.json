@@ -1,0 +1,906 @@
+{
+  "name": "El.Sec. Execution",
+  "versions": {
+    "attack": "9",
+    "navigator": "4.5",
+    "layer": "4.3"
+  },
+  "domain": "enterprise-attack",
+  "description": "Mapping Elastic Secrity (https://www.elastic.co/security) Detection Rules to MITRE ATT&CK Navigator",
+  "filters": {},
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "legendItems": [
+    {
+      "label": "El.Sec. => Elastic Secrity",
+      "color": "#bbddff"
+    },
+    {
+      "label": "EQL => Event Query Language",
+      "color": "#fa744e"
+    },
+    {
+      "label": "ML => Machine Learning",
+      "color": "#0077cc"
+    },
+    {
+      "label": "Q => Query (KQL, Lucene, Elasticsearch DSL)",
+      "color": "#54bcb2"
+    },
+    {
+      "label": "TH => Threshold",
+      "color": "#fec514"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#bbffdd",
+      "#44ff66"
+    ],
+    "minValue": 0,
+    "maxValue": 79
+  },
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#bbddff",
+  "selectTechniquesAcrossTactics": false,
+  "selectSubtechniquesWithParent": false,
+  "metadata": [
+    {
+      "name": "Elastic Stack version",
+      "value": "8.4.1"
+    },
+    {
+      "name": "Metadata format",
+      "value": "<Severity> / <Risk_score>: <Name> [<Rule_type>]"
+    },
+    {
+      "name": "Github project",
+      "value": "https://github.com/ElasticSA/elsec_dr2an"
+    }
+  ],
+  "techniques": [
+    {
+      "techniqueID": "T1059",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Conhost Spawned By Suspicious Parent Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Python [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious PowerShell Engine ImageLoad [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Command Shell Activity Started via RunDLL32 [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential Reverse Shell Activity via Terminal [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution via Electron Child Process Node.js Module [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Svchost spawning Cmd [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Command Prompt Network Connection [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "BPF filter applied using TC [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Netcat Network Activity [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Suspicious Powershell Script [ML]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Interactive Terminal Spawned via Perl [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Folder Action Script [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Command Execution via SolarWinds Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Shell Execution via Apple Scripting [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Portable Executable Encoded in Powershell Script [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "EggShell Backdoor Execution [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Automator Workflows Execution [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell PSReflect Script [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Binary Executed from Shared Memory Directory [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Process Started from Process ID (PID) File [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 44
+    },
+    {
+      "techniqueID": "T1059.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the expect command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the mysql command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  apt/apt-get Changelog Escape [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the find command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via c89/c99 Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the vi command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via cpulimit Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via awk Commands [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via busybox Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via flock Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the gcc command [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via crash Shell evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via env Shell Evasion [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via the ssh command [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "BPF filter applied using TC [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Linux Restricted Shell Breakout via  Linux Binary(s) [EQL]"
+        }
+      ],
+      "score": 16
+    },
+    {
+      "techniqueID": "T1569",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "PsExec Network Connection [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1569.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Process Execution via Renamed PsExec Executable [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "PsExec Network Connection [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1566",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by Microsoft Office [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1566.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by Microsoft Office [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1566.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by PDF Reader [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Execution of File Written or Modified by Microsoft Office [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1059.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious PowerShell Engine ImageLoad [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Command Shell Activity Started via RunDLL32 [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Suspicious Powershell Script [ML]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious Portable Executable Encoded in Powershell Script [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell PSReflect Script [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1047",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Suspicious WMI Image Load from MS Office [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Enumeration Command Spawned via WMIPrvSE [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution via Electron Child Process Node.js Module [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1547",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1547.011",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Creation of Hidden Login Item via Apple Script [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1105",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Command Prompt Network Connection [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Script Execution followed by Network Connection [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1611",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostNetwork [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod created with a Sensitive hostPath Volume [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostIPC [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Pod Created With HostPID [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Privileged Pod Created [Q]"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "techniqueID": "T1133",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes Exposed Service Created With Type NodePort [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1204",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Process Activity via Compiled HTML File [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Compiled HTML File [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Suspicious PDF Reader Child Process [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1204.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Process Activity via Compiled HTML File [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Compiled HTML File [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1218",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Process Activity via Compiled HTML File [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Registration Utility [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Compiled HTML File [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1218.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Process Activity via Compiled HTML File [EQL]"
+        },
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Compiled HTML File [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1068",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Exploit - Prevented - Elastic Endgame [Q]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Exploit - Detected - Elastic Endgame [Q]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1218.010",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Network Connection via Registration Utility [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1078",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Apple Scripting Execution with Administrator Privileges [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1548.004",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution with Explicit Credentials via Scripting [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1037",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Persistence via Folder Action Script [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1106",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious SolarWinds Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "PowerShell PSReflect Script [Q]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Abnormal Process ID or Lock File Created [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Abnormal Process ID or Lock File Created [EQL]"
+        }
+      ],
+      "score": 4
+    },
+    {
+      "techniqueID": "T1195",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious SolarWinds Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Command Execution via SolarWinds Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1195.002",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious SolarWinds Child Process [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Command Execution via SolarWinds Process [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1053",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Outbound Scheduled Task Activity via PowerShell [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1053.005",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Outbound Scheduled Task Activity via PowerShell [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.007",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        },
+        {
+          "name": "Med. / 47",
+          "value": "Suspicious JAVA Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        }
+      ],
+      "score": 3
+    },
+    {
+      "techniqueID": "T1071",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1071.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "MacOS Installer Package Spawns Network Event [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1059.006",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "EggShell Backdoor Execution [Q]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution of COM object via Xwizard [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1559.001",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Execution of COM object via Xwizard [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1203",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
+        },
+        {
+          "name": "High / 73",
+          "value": "Potential JAVA/JNDI Exploitation Attempt [EQL]"
+        }
+      ],
+      "score": 2
+    },
+    {
+      "techniqueID": "T1189",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "High / 73",
+          "value": "Suspicious Browser Child Process [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1018",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration Command Spawned via WMIPrvSE [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1087",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration Command Spawned via WMIPrvSE [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1518",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Low / 21",
+          "value": "Enumeration Command Spawned via WMIPrvSE [EQL]"
+        }
+      ],
+      "score": 1
+    },
+    {
+      "techniqueID": "T1609",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Med. / 47",
+          "value": "Kubernetes User Exec into Pod [Q]"
+        }
+      ],
+      "score": 1
+    }
+  ]
+}
