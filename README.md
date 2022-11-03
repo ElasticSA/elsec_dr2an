@@ -1,3 +1,7 @@
+**Please note the https://github.com/elastic/detection-rules/ now auto generates an att&ck navigator layer, so we will no longer be updating layers here for new Elastic Security releases**
+
+The link [https://ela.st/tj-mitre-an] will now redirect to that auto generated layer. However these scripts will remain here for those that want to use them for their own purposes.
+
 # Elastic Security: Detection Rules ATT&CK Navigator layer generator
 
 Generate an ATT&CK Navigator (AN) [https://mitre-attack.github.io/attack-navigator/] dashboard layer.
